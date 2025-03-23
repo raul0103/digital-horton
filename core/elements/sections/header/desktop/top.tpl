@@ -1,4 +1,4 @@
-<div class="header-desktop__top mb-24">
+<div class="header-desktop__top">
   <div class="container">
     <div class="header-desktop__top-row">
       <a href="/"><img src="/assets/template/images/logo.png" /></a>
