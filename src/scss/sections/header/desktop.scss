@@ -1,9 +1,11 @@
 .header-desktop {
   &__top {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    justify-content: space-between;
+    &-row {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      justify-content: space-between;
+    }
   }
   &__address-block {
     max-width: 250px;
@@ -26,6 +28,17 @@
     a {
       width: 38px;
       height: 38px;
+    }
+  }
+
+  &__main {
+    .container {
+      padding: 0;
+    }
+    &-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 }
