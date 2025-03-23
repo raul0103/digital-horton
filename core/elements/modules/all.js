@@ -1,0 +1,52 @@
+// modules
+import Modals from "./modals/js/Modals.js";
+import CatalogInit from "./catalog/js/main.js";
+import MobileMenuInit from "./mobile-menu/js/main.js";
+import MltReviewAjaxForm from "./reviews/js/main.js";
+import FastSearch from "./fast-search/js/main.js";
+
+document.addEventListener("DOMContentLoaded", function () {
+  let functions = [
+    {
+      init: CatalogInit,
+      name: "CatalogInit",
+    },
+    {
+      init: MobileMenuInit,
+      name: "MobileMenuInit",
+    },
+    {
+      init: MltReviewAjaxForm.init,
+      name: "MltReviewAjaxForm",
+    },
+  ];
+
+  functions.forEach((_function) => {
+    try {
+      _function.init();
+    } catch (e) {
+      console.error(`Ошибка в функции ${_function.name}: ${e}`);
+    }
+  });
+
+  let classes = [
+    {
+      constructor: FastSearch,
+      name: "FastSearch",
+    },
+  ];
+
+  classes.forEach((_class) => {
+    try {
+      new _class.constructor().init();
+    } catch (e) {
+      console.error(`Ошибка в классе ${_class.name}: ${e}`);
+    }
+  });
+
+  try {
+    window.modals = new Modals();
+  } catch (e) {
+    console.error(`Ошибка в классе Modals: ${e}`);
+  }
+});

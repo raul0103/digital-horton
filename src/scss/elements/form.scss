@@ -1,0 +1,17 @@
+.form {
+  input {
+    background-color: $secondary-light-gray;
+    padding: 18px 24px;
+    border-radius: 100px;
+    border: 1px solid transparent;
+    color: $primary-dark;
+    font-weight: 500;
+    width: 100%;
+    &:focus {
+      border-color: $primary-dark;
+    }
+    &::placeholder {
+      color: $secondary-gray;
+    }
+  }
+}

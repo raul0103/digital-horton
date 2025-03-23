@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+
+  color: $primary-dark;
+
+  font-family: "Montserrat";
+}
+
+.container {
+  padding: 0 40px;
+  width: 100%;
+  max-width: 1840px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.7;
+  }
+}

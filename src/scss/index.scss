@@ -1,0 +1,23 @@
+@import "./fonts/main.scss";
+@import "./fonts/sizes.scss";
+@import "./utils/variables.scss";
+@import "./utils/classes.scss";
+@import "./utils/icons.scss";
+
+// base
+@import "./base.scss";
+
+// elements
+@import "./elements/all.scss";
+
+// sections
+@import "./sections/all.scss";
+
+// blocks
+@import "./blocks/all.scss";
+
+// pages
+@import "./pages/all.scss";
+
+// modules
+@import "../../core/elements/modules/all.scss";

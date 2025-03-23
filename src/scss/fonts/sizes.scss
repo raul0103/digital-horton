@@ -1,0 +1,59 @@
+/* Десктоп */
+h1 {
+  font-size: 64px;
+  line-height: 1.2;
+}
+h2 {
+  font-size: 56px;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 48px;
+  line-height: 1.2;
+}
+h4 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+h5 {
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: calc(64px / 1.2);
+  }
+  h2 {
+    font-size: calc(56px / 1.2);
+  }
+  h3 {
+    font-size: calc(48px / 1.2);
+  }
+  h4 {
+    font-size: calc(32px / 1.2);
+  }
+  h5 {
+    font-size: calc(28px / 1.2);
+  }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+  h1 {
+    font-size: calc(64px / (1.2 * 1.2));
+  }
+  h2 {
+    font-size: calc(56px / (1.2 * 1.2));
+  }
+  h3 {
+    font-size: calc(48px / (1.2 * 1.2));
+  }
+  h4 {
+    font-size: calc(32px / (1.2 * 1.2));
+  }
+  h5 {
+    font-size: calc(28px / (1.2 * 1.2));
+  }
+}

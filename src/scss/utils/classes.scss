@@ -1,0 +1,46 @@
+/* color */
+.primary-dark-color{color: $primary-dark;}
+.primary-blue-color{color: $primary-blue;}
+.primary-light-color{color: $primary-light;}
+.blue-light-color{color: $blue-light;}
+
+.primary-blue-bg{background-color: $primary-blue;}
+.primary-light-bg{background-color: $primary-light;}
+.secondary-gray-bg{background-color: $secondary-gray;}
+.blue-light-bg{background-color: $blue-light;}
+
+/* display and everything */
+.d-flex{display: flex;align-items: center;}
+.d-grid{display: grid;}
+.flex-wrap{flex-wrap:wrap}
+.align-center{align-items: center;}
+.align-end{align-items: end;}
+.align-start{align-items: start;}
+.gap-4{gap:4px}
+.gap-8{gap:8px}
+.gap-16{gap:16px}
+.gap-24{gap:24px}
+.gap-32{gap:32px}
+
+/* text */
+.text-center{text-align: center;}
+.text-start{text-align: start;}
+.text-end{text-align: end;}
+.text-uppercase{text-transform: uppercase;}
+
+.text-solid{ border-bottom: 1px solid;}
+.text-dashed{ border-bottom: 1px dashed;}
+
+/* font-sizes */
+.fs-14,.fs-14 *{font-size: 14px;}
+.fs-15,.fs-15 *{font-size: 15px;}
+.fs-16,.fs-16 *{font-size: 16px;}
+.fs-18,.fs-18 *{font-size: 18px;}
+
+.fw-400{font-weight: 400;}
+.fw-500{font-weight: 500;}
+.fw-600{font-weight: 600;}
+.fw-700{font-weight: 700;}
+
+/* other */
+.cursor-pointer{cursor: pointer;}
