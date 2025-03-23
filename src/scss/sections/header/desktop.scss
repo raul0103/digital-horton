@@ -1,4 +1,6 @@
 .header-desktop {
+  box-shadow: 0px 3px 15px 0px #18264126;
+
   &__top {
     &-row {
       display: flex;
@@ -38,7 +40,97 @@
     &-row {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      // justify-content: space-between;
+    }
+  }
+
+  &__menu {
+    &__nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      // gap: 16px;
+
+      &-item {
+        position: relative;
+        &:hover > .header-desktop__menu__nav-submenu {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        a {
+          // color: #fff;
+          font-weight: 600;
+          padding: 20px 28px;
+          transition: 0.2s;
+          width: 100%;
+          min-width: max-content;
+          border-bottom: 3px solid transparent;
+          opacity: 1;
+          &:hover {
+            border-color: inherit;
+          }
+        }
+
+        &.has-submenu {
+          &.level-1 > a {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            &:after {
+              content: url("/assets/template/icons/icon-arrow-botom.svg");
+              margin-top: -4px;
+            }
+          }
+
+          &:not(.level-1) > a {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            align-items: center;
+            &:after {
+              content: url("/assets/template/icons/icon-arrow-bottom-active.svg");
+              transform: rotate(270deg);
+            }
+          }
+        }
+      }
+
+      &-submenu {
+        top: 100%;
+        z-index: 2;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.2s;
+        padding: 32px 32px 12px;
+        border-radius: $primary-radius;
+        box-shadow: 0px 5px 20px 0px #1826411a;
+        background-color: #fff;
+        min-width: 250px;
+        a {
+          display: block;
+          padding: 20px 0;
+        }
+
+        li {
+          &:first-child {
+            a {
+              padding-top: 0;
+            }
+          }
+        }
+
+        .header-desktop__menu__nav-submenu {
+          position: absolute;
+          left: calc(100% + 4px);
+          width: max-content;
+          top: -4px;
+          box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1098039216);
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
     }
   }
 }
