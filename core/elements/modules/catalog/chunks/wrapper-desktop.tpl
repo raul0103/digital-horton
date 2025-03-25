@@ -1,25 +1,18 @@
-{if $_modx->resource.template == 1}
-  {set $output = "@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
+{set $output = "@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
   'data' => $_modx->getPlaceholder('map-catalog-transfer')
-  ]}
-{/if}
+]}
 
-<div class="catalog-header">
-  <button
-    data-catalog-open="catalog-modal-desktop"
-    class="btn btn-primary catalog-header__btn"
-    {if $_modx->resource.template != 1}onclick="window.catalog.api.getCatalog('{$_modx->getPlaceholder('catalog_cache_name')}','desktop')"{/if}
-  >
-    <div class="catalog-header__btn-icon">
-      <span></span>
-      <span></span>
-      <span></span>
+<div id="catalog-desktop" class="catalog-header">
+  <div class="catalog-header__container">
+    <button class="btn btn-circle" data-opened-btn="catalog-desktop">
+      <svg class="arrow-bg" width="16" height="16" class="icon">
+        <use
+          xlink:href="/assets/template/icons/sprite.svg?v=14#close" stroke="#fff"
+        ></use>
+      </svg>
+    </button>
+    <div class="catalog-header__title fs-24 white-color fw-700">
+      Каталог Horton
     </div>
-    <span>Каталог</span>
-  </button>
-
-  <div id="catalog-modal-desktop" class="catalog-header__nav">
-    <div class="catalog-header__nav-overlay" data-catalog-close></div>
-    <div class="catalog-header__nav-container" id="catalog-menu-desktop">{$output?:"Загрузка..."}</div>
   </div>
 </div>

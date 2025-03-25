@@ -55,11 +55,16 @@
     />
 
   </head>
-  <body>
+  <body data-opened-element="catalog-desktop">
  
-    {include 'file:sections/header/wrapper.tpl'}
-    {block 'content'}{/block}
-    {include 'file:sections/footer/wrapper.tpl'}
+    <div class="main">
+      {include 'file:modules/catalog/chunks/wrapper-desktop.tpl'}
+      <div class="main__content">
+        {include 'file:sections/header/wrapper.tpl'}
+        {block 'content'}{/block}
+        {include 'file:sections/footer/wrapper.tpl'}
+      </div>
+    </div>
 
     {include "file:modules/modals/chunks/all.tpl"}
 

@@ -2,7 +2,8 @@
   <div class="container">
     <div class="header-desktop__main-row">
       <button
-        class="btn btn-primary border-radius-right d-flex gap-8 fs-20 big-padding mr-20"
+        class="catalog-button btn btn-primary border-radius-right d-flex gap-8 fs-20 big-padding mr-20"
+        data-opened-btn="catalog-desktop"
       >
         <svg width="16" height="16" class="icon">
           <use xlink:href="/assets/template/icons/sprite.svg?v=9#catalog"></use>
