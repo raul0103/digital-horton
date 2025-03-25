@@ -6,7 +6,7 @@ $cache_name = md5(serialize($scriptProperties));
 
 if ($save_cache_name) {
     // Плейсхолдер используется для передачи названия в api и получения данных для каталога
-    $modx->setPlaceholder('catalog_cache_name', $cache_name);
+    $modx->setPlaceholder($save_cache_name, $cache_name);
 }
 
 $cache_options = [
@@ -32,10 +32,8 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
         $where = [];
     }
 
-    $where['deleted'] = 0;
     $where['hidemenu'] = 0;
     $where['published'] = 1;
-    $where['context_key'] = $modx->resource->context_key;
 
     if (isset($resources)) {
         $where['id:in'] = "($resources)";
@@ -101,7 +99,7 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
                 LEFT JOIN {$table_prefix}site_tmplvar_contentvalues AS stc
                     ON st.id = stc.tmplvarid
                 WHERE stc.contentid IN (" . implode(',', $resources_prev_ids) . ") 
-                AND st.name IN $includeTVs;";
+                AND st.name IN ($includeTVs);";
 
             $result = $modx->query($sql);
             $rows = $result->fetchAll(PDO::FETCH_ASSOC);

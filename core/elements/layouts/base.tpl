@@ -13,7 +13,6 @@
     'sortby' => [159,138,200,227,462]
     'where' => '{"class_key":"msCategory"}'
     'depth' => 3
-    'save_cache_name' => true
   ]}
 
   {"@FILE modules/map-resources/mapResources.php" | snippet : [
@@ -22,7 +21,6 @@
     'includeTVs' => 'main_image'
     'where' => '{"class_key":"msCategory"}'
     'depth' => 10
-    'save_cache_name' => true
   ]}
 {else}
   Не найдена опция catalog_id
