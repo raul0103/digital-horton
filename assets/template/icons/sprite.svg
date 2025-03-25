@@ -125,4 +125,37 @@
       stroke-width="1.5"
     />
   </symbol>
+
+  <symbol id="arrow-left" viewBox="0 0 16 14" fill="none">
+    <path
+      d="M6.83333 13L1 7M1 7L6.83333 1M1 7H15"
+      stroke="#182641"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
+  <symbol id="arrow-right" viewBox="0 0 16 14" fill="none">
+    <path
+      d="M9.16667 1L15 7M15 7L9.16667 13M15 7L1 7"
+      stroke="#182641"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
+
+  <symbol id="arrow-left-bg" viewBox="0 0 63 130" fill="none">
+    <path
+      d="M0.031746 0.499998C0.031746 17.8882 14.1277 31.9841 31.5159 31.9841C48.9041 31.9841 63 46.0801 63 63.4683V66.5317C63 83.9199 48.9041 98.0159 31.5159 98.0159C14.1277 98.0159 0.031746 112.112 0.031746 129.5V130H0V0H0.031746V0.499998Z"
+      fill="#F2F5F8"
+    />
+  </symbol>
+
+  <symbol id="arrow-right-bg" viewBox="0 0 63 130" fill="none">
+    <path
+      d="M62.9683 0.499998C62.9683 17.8882 48.8723 31.9841 31.4841 31.9841C14.0959 31.9841 0 46.0801 0 63.4683V66.5317C0 83.9199 14.0959 98.0159 31.4841 98.0159C48.8723 98.0159 62.9683 112.112 62.9683 129.5V130H63V0H62.9683V0.499998Z"
+      fill="#F2F5F8"
+    />
+  </symbol>
 </svg>
