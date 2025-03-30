@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  @media (max-width: $breakpoint-sm) {
+  @media (max-width: $bp-sm) {
     height: 0;
     opacity: 0;
   }

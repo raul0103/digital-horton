@@ -3,47 +3,49 @@
     <div class="header-desktop__top-row">
       <a href="/"><img src="/assets/template/images/logo.png" /></a>
 
-      <a class="d-flex fs-15 gap-4 cursor-pointer fw-500">
-        <svg width="16" height="16" class="icon">
-          <use
-            xlink:href="/assets/template/icons/sprite.svg?v=4#location"
-          ></use>
-        </svg>
-        <span class="text-dashed">Москва</span>
-        <svg width="10" height="10" class="icon">
-          <use
-            xlink:href="/assets/template/icons/sprite.svg?v=4#icon-arrow-down"
-          ></use>
-        </svg>
-      </a>
+      <div class="header-desktop__top-centered">
+        <a class="d-flex fs-15 gap-4 cursor-pointer fw-500">
+          <svg width="16" height="16" class="icon">
+            <use
+              xlink:href="/assets/template/icons/sprite.svg?v=4#location"
+            ></use>
+          </svg>
+          <span class="text-dashed">Москва</span>
+          <svg width="10" height="10" class="icon">
+            <use
+              xlink:href="/assets/template/icons/sprite.svg?v=4#icon-arrow-down"
+            ></use>
+          </svg>
+        </a>
 
-      <form class="form header-desktop__search-block">
-        <input type="text" placeholder="Поиск по сайту" />
-        <button class="btn btn-circle">
-          <svg width="16" height="16" class="icon">
-            <use
-              xlink:href="/assets/template/icons/sprite.svg?v=8#search"
-            ></use>
-          </svg>
-        </button>
-      </form>
+        <form class="form header-desktop__search-block">
+          <input type="text" placeholder="Поиск по сайту" />
+          <button class="btn btn-circle">
+            <svg width="16" height="16" class="icon">
+              <use
+                xlink:href="/assets/template/icons/sprite.svg?v=8#search"
+              ></use>
+            </svg>
+          </button>
+        </form>
 
-      <div class="d-grid gap-16 fw-500 header-desktop__address-block">
-        <div class="d-flex gap-8">
-          <svg width="16" height="16" class="icon">
-            <use
-              xlink:href="/assets/template/icons/sprite.svg?v=5c#house"
-            ></use>
-          </svg>
-          {'address' | config}
-        </div>
-        <div class="d-flex gap-8">
-          <svg width="16" height="16" class="icon">
-            <use
-              xlink:href="/assets/template/icons/sprite.svg?v=5#letter"
-            ></use>
-          </svg>
-          <a href="mailto:{'email' | config}">{'email' | config}</a>
+        <div class="d-grid gap-16 fw-500 header-desktop__address-block">
+          <div class="d-flex gap-8">
+            <svg width="16" height="16" class="icon">
+              <use
+                xlink:href="/assets/template/icons/sprite.svg?v=5c#house"
+              ></use>
+            </svg>
+            {'address' | config}
+          </div>
+          <div class="d-flex gap-8">
+            <svg width="16" height="16" class="icon">
+              <use
+                xlink:href="/assets/template/icons/sprite.svg?v=5#letter"
+              ></use>
+            </svg>
+            <a href="mailto:{'email' | config}">{'email' | config}</a>
+          </div>
         </div>
       </div>
 

@@ -52,4 +52,10 @@
       letter-spacing: -2%;
     }
   }
+
+  .container {
+    @media (max-width: $bp-md) {
+      padding: 0;
+    }
+  }
 }
