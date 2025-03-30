@@ -10,13 +10,14 @@
     'toPlaceholder' => 'map-catalog'
     'where' => '{"class_key":"msCategory", "template":4}'
     'depth' => 1
+    'includeTVs' => 'main_image'
   ]}
 
   {"@FILE modules/map-resources/mapResources.php" | snippet : [
     'parents' => 'catalog_id' | config
     'toPlaceholder' => 'map-categories'
     'includeTVs' => 'main_image'
-    'where' => '{"class_key":"msCategory"}'
+    'where' => '{"class_key":"msCategory", "template":4}'
     'depth' => 10
   ]}
 {else}

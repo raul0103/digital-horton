@@ -1,12 +1,10 @@
-@use "../utils/variables.scss";
-
 .banner {
   .swiper {
-    border-radius: variables.$big-radius;
+    border-radius: $big-radius;
     overflow: hidden;
   }
   .swiper-slide {
-    border-radius: variables.$big-radius;
+    border-radius: $big-radius;
     overflow: hidden;
     height: 334px;
     width: 100%;
@@ -59,7 +57,7 @@
   }
 
   .container {
-    @media (max-width: $bp-md) {
+    @media (max-width: $bp-sm) {
       padding: 0;
     }
   }

@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner section-margin">
   <div class="container">
     <div class="swiper" data-swiper="banner">
       <div class="swiper-wrapper">
@@ -14,8 +14,8 @@
         </div>
         {/foreach}
       </div>
-{include "file:chunks/buttons/swiper-left.tpl"}
-{include "file:chunks/buttons/swiper-right.tpl"}
+      {include "file:chunks/buttons/swiper-left.tpl"}
+      {include "file:chunks/buttons/swiper-right.tpl"}
     </div>
   </div>
 </div>

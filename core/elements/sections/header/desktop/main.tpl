@@ -36,9 +36,9 @@
                 {else}
                   <a>{$menutitle}</a>
                 {/if}
-                <svg width="10" height="10" class="icon">
+                <svg width="10" height="10" class="icon" stroke-width="2">
                   <use
-                    xlink:href="/assets/template/icons/sprite.svg?v=23#icon-arrow-down" stroke="#182641"
+                    xlink:href="/assets/template/icons/sprite.svg?v=17#icon-arrow-down" stroke="#182641"
                   ></use>
                 </svg>
                 {$wrapper}
