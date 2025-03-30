@@ -73,6 +73,7 @@
           // height: 63px;
           @media (max-width: $bp-md) {
             width: calc(50% - 8px);
+            font-size: 12px;
           }
 
           a {
