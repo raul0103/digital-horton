@@ -23,15 +23,5 @@
       <div class="modal-icon-close" data-modal-close></div>
     </div>
 
-    <div
-      class="modal__success-window ta-center fw-600 main-color"
-      data-modal-body-after
-    >
-      <div class="modal-callback-success__icon">
-        <img src="assets/template/icons/success-bordered.svg" />
-      </div>
-      <div class="modal-title fs-title-1">Ваша заявка принята!</div>
-      <button data-modal-close class="btn btn-primary">ОК</button>
-    </div>
   </div>
 </div>
