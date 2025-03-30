@@ -36,12 +36,8 @@
 
   &__dropdown {
     margin-top: 24px;
-    // display: none;
     display: grid;
     gap: 8px;
-    // &.opened {
-    //   display: grid;
-    // }
 
     li {
       a {

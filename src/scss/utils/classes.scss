@@ -52,6 +52,10 @@
 .mb-24{margin-bottom: 24px;}
 .ml-auto{margin-left: auto;}
 .ml-right{margin-right: auto;}
+.section-margin{
+    margin-bottom: 16px;
+    @media (max-width: $bp-sm) { margin-bottom: 24px; }
+}
 
 /* other */
 .cursor-pointer{cursor: pointer;}
