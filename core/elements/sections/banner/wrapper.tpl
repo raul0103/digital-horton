@@ -8,7 +8,7 @@
         ] as $slide}
         <div class="swiper-slide" style=" background-image: url('/assets/template/images/sections/banner.jpg');" >
           <div class="banner__content">
-            <div class="banner__content-title">{$slide['title']}</div>
+            <div class="banner__content-title font-candara">{$slide['title']}</div>
             <div class="banner__content-text">{$slide['text']}</div>
           </div>
         </div>

@@ -27,14 +27,13 @@
                 </div>
                 <div class="categories__blocks__item-childs" data-opened-element="cb-{$catalog_item['id']}">
                     {foreach $catalog_item['children'] as $child}
-                    <div class="categories__blocks__item-childs-item">
+                      <a href="{$child['uri']}" class="categories__blocks__item-childs-item">
                         {if $child['main_image']}
                             <img src="{$child['main_image']}" />
                         {/if}
-                        <a href="{$child['uri']}">
-                            {$child['menutitle']}
-                        </a>
-                    </div>
+
+                        {$child['menutitle']}
+                      </a>
                     {/foreach}
                 </div>
             </div>

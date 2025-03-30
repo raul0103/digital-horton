@@ -12,6 +12,7 @@
     background-size: cover;
     padding: 6%;
     padding-left: 10%;
+    padding-left: 12%;
     position: relative;
     display: flex;
     align-items: center;
@@ -28,6 +29,9 @@
         rgba(24, 38, 65, 0.8) 0%,
         rgba(24, 38, 65, 0) 100%
       );
+    }
+    @media (max-width: $bp-sm) {
+      height: 294px;
     }
   }
 
@@ -53,6 +57,9 @@
       color: #fff;
       line-height: 120%;
       letter-spacing: -2%;
+      @media (max-width: $bp-sm) {
+        font-size: 14px;
+      }
     }
   }
 
