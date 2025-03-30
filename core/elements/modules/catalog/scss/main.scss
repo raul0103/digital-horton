@@ -36,11 +36,12 @@
 
   &__dropdown {
     margin-top: 24px;
-    display: none;
+    // display: none;
+    display: grid;
     gap: 8px;
-    &.opened {
-      display: grid;
-    }
+    // &.opened {
+    //   display: grid;
+    // }
 
     li {
       a {
@@ -52,6 +53,16 @@
   &__item {
     padding: 24px 16px;
     border-bottom: 1px solid #2b3c5e;
+    max-height: 89px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    &.opened {
+      max-height: 1000px;
+      transition: max-height 0.3s ease-in;
+      button {
+        transform: rotate(180deg) translateY(0);
+      }
+    }
     a {
       color: #fff;
       width: 100%;
