@@ -1,5 +1,5 @@
 {set $output = "@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
-  'data' => $_modx->getPlaceholder('map-catalog-transfer')
+  'data' => $_modx->getPlaceholder('map-catalog')
 ]}
 
 <div id="catalog-desktop" class="catalog-header">
@@ -11,8 +11,7 @@
         ></use>
       </svg>
     </button>
-    <div class="catalog-header__title fs-24 white-color fw-700">
-      Каталог Horton
-    </div>
+    <div class="catalog-header__title fs-24 white-color fw-700">Каталог Horton</div>
+    {$output}
   </div>
 </div>

@@ -1,39 +1,38 @@
 <?php
 
-$cat_html = '<ul class="catalog-header__nav-items">';
-$subcat_html = '';
+$outer = '<ul class="catalog-header__items">';
 foreach ($data as $catalog_item) {
-
     // Идем по категориям
     if ($catalog_item['children'] && $catalog_item['id']) {
-        // HTML подкатегорий
-        $subcat_html .= "<div class='catalog-header__nav-items' id='catalog-subcat-{$catalog_item['id']}'>
-                            <div class='catalog-header__nav-items-title fs-title-1'>
-                                {$catalog_item['menutitle']}
-                            </div>
-                            <ul class='catalog-header__nav-items-row'>";
-
         // Идем по подкатегориям
-        foreach ($catalog_item['children'] as $subcat) {
-            $subcat_html .= "<li class='catalog-header__nav-item'>
+        if (count($catalog_item['children']) > 0) {
+            $subcat_html = "<ul class='catalog-header__dropdown' data-opened-element='catalog-subcat-{$catalog_item['id']}'>";
+            foreach ($catalog_item['children'] as $subcat) {
+                $subcat_html .= "<li>
                                      <a href='{$subcat['uri']}'>{$subcat['menutitle']}</a>
                                  </li>";
+            }
+            $subcat_html .= "</ul>";
         }
-        $subcat_html .= "</ul></div>";
 
-        $bestseller = $catalog_item['bestseller'] ? '<div class="rating-stars-static"><span class="full"></span></div>' : '';
-        $cat_html .= "<li class='catalog-header__nav-item has-submenu' data-subcategories-open='catalog-subcat-{$catalog_item['id']}'>
-                              <a href='{$catalog_item['uri']}' class='pseudo-arrow pseudo-arrow__right d-flex gap-8'>$bestseller {$catalog_item['menutitle']}</a>
-                          </li>";
+        $outer .= "<li class='catalog-header__item'>
+                        <div class='catalog-header__item-title'>
+                          <a href='{$catalog_item['uri']}'>$bestseller {$catalog_item['menutitle']}</a>
+                          <button data-opened-btn='catalog-subcat-{$catalog_item['id']}'>
+                                <svg width='10' height='10' class='icon'>
+                                    <use stroke='white' xlink:href='/assets/template/icons/sprite.svg?v=16#icon-arrow-down'></use>
+                                </svg>
+                          </button>
+                        </div>
+                        $subcat_html
+                   </li>";
     } else {
-        $cat_html .= "<li class='catalog-header__nav-item' data-subcategories-open>
-                              <a href='{$catalog_item['uri']}'>{$catalog_item['menutitle']}</a>
-                          </li>";
+        $outer .= "<li>
+                        <a href='{$catalog_item['uri']}'>{$catalog_item['menutitle']}</a>
+                   </li>";
     }
 }
 
-$cat_html .= '</ul>';
-$outer = "<div class='catalog-header__nav-categories'>$cat_html</div>
-              <div class='catalog-header__nav-subcategories'>$subcat_html</div>";
+$outer .= '</ul>';
 
 return $outer;

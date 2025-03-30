@@ -13,7 +13,7 @@
           <span class="text-dashed">Москва</span>
           <svg width="10" height="10" class="icon">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v=4#icon-arrow-down"
+              xlink:href="/assets/template/icons/sprite.svg?v=4#icon-arrow-down" stroke="#182641"
             ></use>
           </svg>
         </a>

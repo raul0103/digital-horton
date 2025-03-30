@@ -11,6 +11,7 @@
 
   &__title {
     margin: auto;
+    margin-bottom: 24px;
     width: max-content;
   }
   &__container {
@@ -28,7 +29,46 @@
       svg {
         path {
           stroke: #fff !important;
-          fill: red;
+        }
+      }
+    }
+  }
+
+  &__dropdown {
+    margin-top: 24px;
+    display: none;
+    gap: 8px;
+    &.opened {
+      display: grid;
+    }
+
+    li {
+      a {
+        color: #b5c3dc;
+        font-size: 13px;
+      }
+    }
+  }
+  &__item {
+    padding: 24px 16px;
+    border-bottom: 1px solid #2b3c5e;
+    a {
+      color: #fff;
+      width: 100%;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      button {
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s;
+        &:hover {
+          opacity: 0.7;
         }
       }
     }
