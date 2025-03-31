@@ -10,6 +10,10 @@
   font-family: "Montserrat";
 }
 
+body {
+  background-color: #eef2f5;
+}
+
 .container {
   padding: 0 40px;
   width: 100%;
@@ -96,15 +100,15 @@ a {
 }
 // <<< swiper button
 
-.main {
-  display: grid;
-  grid-template-columns: 0 100%;
-  width: 100%;
-  transition: 0.3s;
-  max-width: 1840px;
-  margin: auto;
-  &__content {
-    width: 100%;
-    background-color: #eef2f5;
-  }
-}
+// .main {
+//   display: grid;
+//   grid-template-columns: 0 100%;
+//   width: 100%;
+//   transition: 0.3s;
+//   max-width: 1840px;
+//   margin: auto;
+//   &__content {
+//     width: 100%;
+//     background-color: #eef2f5;
+//   }
+// }

@@ -1,23 +1,53 @@
 @use "../../../../../src/scss/utils/variables.scss";
 
 .catalog-header {
-  background-color: variables.$primary-dark;
-  border-top-right-radius: variables.$primary-radius;
-  border-bottom-right-radius: variables.$primary-radius;
+  position: fixed;
+  z-index: 9999;
+  // right: 0;
+  width: 100%;
+  left: -100%;
+  top: 0;
+  bottom: 0;
 
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.2s;
+  transition: .8s;
 
   &__title {
     margin: auto;
     margin-bottom: 24px;
     width: max-content;
   }
-  &__container {
-    position: sticky;
-    z-index: 999;
+
+  &-overlay {
+    position: absolute;
+    width: 200%;
+    left: 0;
     top: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    transition: 1s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.opened {
+    left: 0;
+    // transition: 1s;
+    .catalog-header-overlay {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  &__container {
+    background-color: variables.$primary-dark;
+    border-top-right-radius: variables.$primary-radius;
+    border-bottom-right-radius: variables.$primary-radius;
+    height: 100%;
+    max-width: 400px;
+
+    // position: sticky;
+    // z-index: 999;
+    // top: 0;
     padding-top: 40px;
     .btn.btn-circle {
       position: absolute;
@@ -104,20 +134,20 @@
   }
 }
 
-.catalog-button {
-  transition: width 0.3s, padding 0.3s;
-}
+// .catalog-button {
+//   transition: width 0.3s, padding 0.3s;
+// }
 
-body.opened {
-  .catalog-header {
-    opacity: 1;
-    pointer-events: all;
-  }
-  .main {
-    grid-template-columns: 20% 80%;
-  }
-  .catalog-button,
-  .categories__menu {
-    display: none;
-  }
-}
+// body.opened {
+//   .catalog-header {
+//     opacity: 1;
+//     pointer-events: all;
+//   }
+//   .main {
+//     grid-template-columns: 20% 80%;
+//   }
+//   .catalog-button,
+//   .categories__menu {
+//     display: none;
+//   }
+// }

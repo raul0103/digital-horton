@@ -3,4 +3,5 @@
 {block 'content'}
     {include "file:sections/banner/wrapper.tpl"}
     {include "file:sections/categories/wrapper.tpl"}
+    {include "file:sections/about/wrapper.tpl"}
 {/block}
