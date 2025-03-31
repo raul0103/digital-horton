@@ -19,6 +19,9 @@ body {
   width: 100%;
   max-width: 1840px;
   margin: auto;
+  @media (max-width: $bp-sm) {
+    padding: 0 16px;
+  }
 }
 
 a {

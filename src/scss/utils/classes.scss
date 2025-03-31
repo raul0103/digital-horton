@@ -1,9 +1,10 @@
 /* color */
-.primary-dark-color{color: $primary-dark;}
-.primary-blue-color{color: $primary-blue;}
-.primary-light-color{color: $primary-light;}
-.blue-light-color{color: $blue-light;}
-.white-color{color:#fff}
+.primary-dark-color{color: $primary-dark!important;}
+.primary-blue-color{color: $primary-blue!important;}
+.primary-light-color{color: $primary-light!important;}
+.blue-light-color{color: $blue-light!important;}
+.white-color{color:#fff!important}
+.blind-gray-color{color: $blind-gray!important;}
 
 .primary-dark-bg{background-color: $primary-dark;}
 .primary-blue-bg{background-color: $primary-blue;}
@@ -39,9 +40,13 @@
 .fs-14,.fs-14 *{font-size: 14px;}
 .fs-15,.fs-15 *{font-size: 15px;}
 .fs-16,.fs-16 *{font-size: 16px;}
+.fs-17,.fs-17 *{font-size: 17px;}
 .fs-18,.fs-18 *{font-size: 18px;}
 .fs-20,.fs-20 *{font-size: 20px;}
 .fs-24,.fs-24 *{font-size: 24px;}
+.fs-21-15{ font-size: 21px; @media (max-width: $bp-md) { font-size: 15px; } }
+.fs-24-17{ font-size: 24px; @media (max-width: $bp-md) { font-size: 17px; } }
+.fs-96-32{ font-size: 96px; @media (max-width: $bp-md) { font-size: 32px; } }
 
 .fw-400{font-weight: 400;}
 .fw-500{font-weight: 500;}
@@ -50,6 +55,7 @@
 
 /* paddings or margins */
 .mr-20{margin-right: 20px;}
+.mb-16{margin-bottom: 16px;}
 .mb-24{margin-bottom: 24px;}
 .ml-auto{margin-left: auto;}
 .ml-right{margin-right: auto;}
@@ -57,6 +63,9 @@
     margin-bottom: 16px;
     @media (max-width: $bp-sm) { margin-bottom: 24px; }
 }
+
+.mb-16-8{ margin-bottom: 16px; @media (max-width: $bp-sm) { margin-bottom: 8px; } }
+.mb-24-16{ margin-bottom: 24px; @media (max-width: $bp-sm) { margin-bottom: 16px; } }
 
 /* other */
 .cursor-pointer{cursor: pointer;}
