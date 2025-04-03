@@ -8,7 +8,6 @@ import "swiper/css/pagination";
 export default function iniSliders() {
   new Swiper('[data-swiper="banner"]', {
     modules: [Autoplay, Navigation],
-    slidesPerView: "auto",
     loop: false,
     slidesPerView: 1,
     spaceBetween: 24,
@@ -39,4 +38,36 @@ export default function iniSliders() {
     },
     direction: "horizontal",
   });
+
+  if (window.innerWidth > 768)
+    new Swiper('[data-swiper="reviews"]', {
+      modules: [Navigation],
+      // slidesPerView: "auto",
+      loop: false,
+      spaceBetween: 44,
+      // slidesPerView: 1,
+      lazy: { loadPrevNext: true },
+      slideClass: "reviews-section__item", // Указываем класс слайдов
+
+      breakpoints: {
+        1280: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+      },
+
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      direction: "horizontal",
+    });
 }
