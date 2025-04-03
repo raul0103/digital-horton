@@ -91,7 +91,7 @@
 
   &__block {
     background: #fff;
-    border-radius: 10px;
+    border-radius: $primary-radius;
     padding: 64px 0;
     @media (max-width: $bp-sm) {
       padding: 16px 12px;
