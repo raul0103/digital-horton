@@ -1,3 +1,10 @@
+{set $info_items = [
+  ['value' => '10+', 'text' => 'лет на рынке'],
+  ['value' => '10 000+', 'text' => 'клиентов по всей России'],
+  ['value' => '18', 'text' => 'тонн полимерных труб поставлено'],
+  ['value' => '300+', 'text' => 'заводов по всей России'],
+]}
+
 <div class="about section-margin">
   <div class="container">
     <div class="about__wrap">
@@ -25,6 +32,14 @@
       <div class="about__image">
         <img src="/assets/template/images/sections/about/3.png" />
       </div>
+    </div>
+    <div class="about__info">
+      {foreach $info_items as $item}
+      <div class="about__info-item">
+        <div class="about__info-item-value">{$item['value']}</div>
+        <div class="about__info-item-text">{$item['text']}</div>
+      </div>
+      {/foreach}
     </div>
   </div>
 </div>
