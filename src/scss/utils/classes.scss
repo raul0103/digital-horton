@@ -26,6 +26,7 @@
 .gap-16{gap:16px}
 .gap-24{gap:24px}
 .gap-32{gap:32px}
+.col-2{grid-template-columns: 1fr 1fr;}
 
 /* text */
 .text-center{text-align: center;}
@@ -46,6 +47,8 @@
 .fs-24,.fs-24 *{font-size: 24px;}
 .fs-21-15{ font-size: 21px; @media (max-width: $bp-md) { font-size: 15px; } }
 .fs-24-17{ font-size: 24px; @media (max-width: $bp-md) { font-size: 17px; } }
+.fs-28-19{ font-size: 28px; @media (max-width: $bp-md) { font-size: 19px; } }
+.fs-48-33{ font-size: 48px; @media (max-width: $bp-md) { font-size: 33px; } }
 .fs-56-39{ font-size: 56px; @media (max-width: $bp-md) { font-size: 39px; } }
 .fs-96-32{ font-size: 96px; @media (max-width: $bp-md) { font-size: 32px; } }
 
@@ -75,3 +78,5 @@
 .primary-radius{border-radius:$primary-radius}
 .font-candara{font-family: "Candara";}
 .sm-d-none{@media (max-width: $bp-sm) {display: none;}}
+.xs-d-none{@media (max-width: $bp-xs) {display: none;}}
+.xs-d-block{@media (min-width: $bp-xs) {display: none;}}

@@ -2,7 +2,6 @@
   <symbol id="icon-arrow-down" viewBox="0 0 10 6">
     <path
       d="M8.19995 1.28201L4.99995 4.48201L1.79995 1.28201"
-      
       stroke-linecap="round"
       stroke-linejoin="round"
       fill="none"
@@ -164,10 +163,15 @@
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <path d="M15 1L1 15M15 15L1 1" stroke-width="2" stroke-linecap="round" />
+  </symbol>
+
+  <symbol id="skrepka" width="15" height="13" viewBox="0 0 15 13" fill="none">
     <path
-      d="M15 1L1 15M15 15L1 1"
-      stroke-width="2"
+      d="M11.1736 3.92199L6.44031 8.65523C5.87748 9.21806 4.96494 9.21806 4.40211 8.65523C3.8381 8.09122 3.83945 7.17635 4.40513 6.61401L8.07562 2.96519L8.9974 2.04341C10.119 0.921851 11.9374 0.921852 13.0589 2.04341C14.1805 3.16497 14.1805 4.98337 13.0589 6.10493L12.151 7.01285L8.71 10.4539C6.93005 12.308 4.23297 12.5901 2.34723 10.7798C0.484587 8.99165 0.8003 6.31081 2.68363 4.42748L6.11108 0.999512"
+      stroke-width="1.5"
       stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </symbol>
 </svg>

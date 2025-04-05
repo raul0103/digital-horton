@@ -5,4 +5,5 @@
     {include "file:sections/categories/wrapper.tpl"}
     {include "file:sections/about/wrapper.tpl"}
     {include "file:modules/reviews/chunks/wrapper.tpl"}
+    {include "file:sections/big-form/wrapper.tpl"}
 {/block}

@@ -34,6 +34,15 @@
     justify-content: center;
   }
 
+  &-bordered {
+    background: transparent;
+    border: 2px solid;
+    &.white {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+
   &.big-padding {
     padding: 20px 40px;
   }

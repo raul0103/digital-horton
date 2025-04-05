@@ -1,15 +1,15 @@
 // modules
 import Modals from "./modals/js/Modals.js";
-import CatalogInit from "./catalog/js/main.js";
 import MobileMenuInit from "./mobile-menu/js/main.js";
 import MltReviewAjaxForm from "./reviews/js/main.js";
 import FastSearch from "./fast-search/js/main.js";
+import initCustomSelect from "./custom-select/main.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   let functions = [
     {
-      init: CatalogInit,
-      name: "CatalogInit",
+      init: initCustomSelect,
+      name: "initCustomSelect",
     },
     {
       init: MobileMenuInit,

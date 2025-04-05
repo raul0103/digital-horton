@@ -3,15 +3,73 @@
     background-color: $secondary-light-gray;
     padding: 18px 24px;
     border-radius: 100px;
-    border: 1px solid transparent;
+    border: 1px solid $secondary-light-gray;
     color: $primary-dark;
     font-weight: 500;
     width: 100%;
+    transition: 0.2s;
     &:focus {
       border-color: $primary-dark;
     }
     &::placeholder {
       color: $secondary-gray;
     }
+  }
+  label {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  &.dark {
+    input {
+      background-color: transparent;
+      color: #fff;
+      &:focus {
+        border-color: $blue-light;
+      }
+    }
+    label {
+      color: #fff;
+    }
+
+    .custom-select {
+      button {
+        background-color: transparent;
+        color: $secondary-gray;
+        &:after {
+          border-color: #fff;
+        }
+        &.active {
+          border-color: $blue-light;
+        }
+        &.selected {
+          color: #fff;
+        }
+      }
+    }
+
+    .custom-checkbox {
+      .checkmark {
+        background: #fff;
+        &:after {
+          border-color: $primary-dark;
+        }
+      }
+      input:checked + .checkmark {
+        background-color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+
+  .custom-select {
+    button {
+      color: $secondary-gray;
+    }
+  }
+  label {
+    font-size: 15px;
+    padding: 0 24px;
+    font-weight: 500;
   }
 }
