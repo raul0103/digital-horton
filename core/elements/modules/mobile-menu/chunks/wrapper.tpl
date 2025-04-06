@@ -10,7 +10,7 @@
 
 {if $_modx->resource.template == 1}
   {set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
-    'data' => $_modx->getPlaceholder('map-catalog-transfer')
+    'data' => $_modx->getPlaceholder('map-resources.catalog-transfer')
   ]}
 {/if}
 

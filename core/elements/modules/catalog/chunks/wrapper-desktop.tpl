@@ -1,5 +1,5 @@
 {set $output = "@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
-  'data' => $_modx->getPlaceholder('map-catalog')
+  'data' => $_modx->getPlaceholder('map-resources.catalog')
 ]}
 
 <div id="catalog-desktop" class="catalog-header" data-opened-element="catalog-desktop">

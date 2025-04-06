@@ -13,7 +13,8 @@
           <span class="text-dashed">Москва</span>
           <svg width="10" height="10" class="icon" stroke-width="2">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v=17#icon-arrow-down" stroke="#182641"
+              xlink:href="/assets/template/icons/sprite.svg?v=17#icon-arrow-down"
+              stroke="#182641"
             ></use>
           </svg>
         </a>
@@ -31,17 +32,17 @@
 
         <div class="d-grid gap-16 fw-500 header-desktop__address-block">
           <div class="d-flex gap-8">
-            <svg width="16" height="16" class="icon">
+            <svg width="16" height="16" class="icon" stroke="#182641">
               <use
-                xlink:href="/assets/template/icons/sprite.svg?v=5c#house"
+                xlink:href="/assets/template/icons/sprite.svg?v=19c#house"
               ></use>
             </svg>
             {'address' | config}
           </div>
           <div class="d-flex gap-8">
-            <svg width="16" height="16" class="icon">
+            <svg width="16" height="16" class="icon" stroke="#182641">
               <use
-                xlink:href="/assets/template/icons/sprite.svg?v=5#letter"
+                xlink:href="/assets/template/icons/sprite.svg?v=19#letter"
               ></use>
             </svg>
             <a href="mailto:{'email' | config}">{'email' | config}</a>
@@ -63,9 +64,9 @@
             class="d-flex gap-8 fs-18 fw-700 w-content"
             href="tel:{'phone' | config}"
           >
-            <svg width="16" height="16" class="icon">
+            <svg width="16" height="16" class="icon" stroke="#182641">
               <use
-                xlink:href="/assets/template/icons/sprite.svg?v=7#phone"
+                xlink:href="/assets/template/icons/sprite.svg?v=19#phone"
               ></use>
             </svg>
             {'phone' | config}

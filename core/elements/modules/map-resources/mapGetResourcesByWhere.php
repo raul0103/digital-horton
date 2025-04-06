@@ -20,27 +20,50 @@ if (!function_exists('filterResources')) {
         $result = [];
 
         $handler = function ($items) use (&$handler, &$result, $where) {
-
             foreach ($items as $item) {
-                $condition_count = count($where);
-                $condition_founds = 0;
+                $matched = true;
+
                 foreach ($where as $key => $value) {
-                    if ($item[$key] == $value) {
-                        $condition_founds++;
+                    $field = $key;
+                    $operator = '=';
+
+                    // Разделяем ключ на поле и оператор
+                    if (strpos($key, ':') !== false) {
+                        [$field, $operator] = explode(':', $key, 2);
                     }
-                }
-                if ($condition_count == $condition_founds) {
-                    $result[] = $item;
+
+                    // Выполняем проверку в зависимости от оператора
+                    switch ($operator) {
+                        case 'in':
+                            if (!in_array($item[$field] ?? null, $value)) {
+                                $matched = false;
+                            }
+                            break;
+
+                        case '=':
+                        default:
+                            if (($item[$field] ?? null) != $value) {
+                                $matched = false;
+                            }
+                            break;
+                    }
+
+                    // Если уже не совпало — выходим
+                    if (!$matched) break;
                 }
 
-                // Если есть дочерние элементы, обрабатываем их
+                // Обрабатываем потомков, если есть
                 if (isset($item['children']) && is_array($item['children'])) {
                     $handler($item['children']);
+                }
+
+                if ($matched) {
+                    unset($item['children']);
+                    $result[] = $item;
                 }
             }
         };
 
-        // Заполняем мапу
         $handler($data);
 
         return $result;

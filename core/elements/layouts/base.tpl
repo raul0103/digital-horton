@@ -7,7 +7,7 @@
 {if $catalog_id}
   {"@FILE modules/map-resources/mapResources.php" | snippet : [
     'parents' => 'catalog_id' | config
-    'toPlaceholder' => 'map-catalog'
+    'toPlaceholder' => 'map-resources.catalog'
     'where' => '{"class_key":"msCategory", "template":4}'
     'depth' => 1
     'includeTVs' => 'main_image'
@@ -15,7 +15,7 @@
 
   {"@FILE modules/map-resources/mapResources.php" | snippet : [
     'parents' => 'catalog_id' | config
-    'toPlaceholder' => 'map-categories'
+    'toPlaceholder' => 'map-resources.categories'
     'includeTVs' => 'main_image'
     'where' => '{"class_key":"msCategory", "template":4}'
     'depth' => 10
@@ -24,6 +24,12 @@
   Не найдена опция catalog_id
 {/if}
 
+{"@FILE modules/map-resources/mapResources.php" | snippet : [
+  'parents' => 0
+  'depth' => 2
+  'where' => '{"class_key":"modDocument"}'
+  'toPlaceholder' => 'map-resources.menu'
+]}
 
 <!DOCTYPE html>
 <html lang="en">
