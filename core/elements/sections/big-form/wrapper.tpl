@@ -1,4 +1,4 @@
-<div class="big-form">
+<div class="big-form mb-24">
   <div class="container">
     <div class="big-form__row">
       <div class="big-form__info">
@@ -22,7 +22,7 @@
             </div>
             <div class="w-100">
               <label>Телефон *</label>
-              <input type="tel" value="+7" />
+              <input type="tel" placeholder="+7" required />
             </div>
           </div>
 

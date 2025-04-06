@@ -6,4 +6,5 @@
     {include "file:sections/about/wrapper.tpl"}
     {include "file:modules/reviews/chunks/wrapper.tpl"}
     {include "file:sections/big-form/wrapper.tpl"}
+    {include "file:sections/main-map/wrapper.tpl"}
 {/block}

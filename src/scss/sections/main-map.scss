@@ -1,0 +1,17 @@
+.main-map {
+  &__wrap {
+    padding: 64px 16px 16px;
+    background-color: #fff;
+    display: grid;
+    gap: 32px;
+    border-radius: $primary-radius;
+    text-align: center;
+    @media (max-width: $bp-sm) {
+      padding: 16px;
+    }
+    iframe {
+      border-radius: $primary-radius;
+      filter: grayscale(1);
+    }
+  }
+}
