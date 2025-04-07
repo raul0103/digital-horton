@@ -6,7 +6,7 @@ if (!function_exists("generateModal")) {
     function generateModal(&$menu_modals, $data)
     {
         $menu_modals .= "<div class='mobile-menu__modal' data-mobile-modal='mobile-modal-{$data['id']}'>
-        <div class='mobile-menu__back' data-mobile-modal-back><svg width='16' height='16' class='icon' stroke='#fff'> <use xlink:href='/assets/template/icons/sprite.svg?v=2.27#arrow-left'></use> </svg> Назад</div>                    
+        <div class='mobile-menu__back' data-mobile-modal-back><svg width='16' height='16' class='icon' stroke='#fff'> <use xlink:href='/assets/template/icons/sprite.svg?v=3.11#arrow-left'></use> </svg> Назад</div>                    
         <div class='mobile-menu__items'>";
 
         foreach ($data['children'] as $children) {

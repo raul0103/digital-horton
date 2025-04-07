@@ -78,16 +78,16 @@
     }
   }
   &__catalog {
-    padding: 0 16px;
     position: relative;
-    background: $primary-dark;
 
     border-radius: $primary-radius;
 
     &-items {
+      padding: 0 16px;
+      background: $primary-dark;
       border-radius: $primary-radius;
 
-      transition: 0.3s ease-out;
+      transition: 0.6s ease-out;
       // transition: all 0.3s ease-in;
 
       max-height: 1000px;
@@ -103,7 +103,6 @@
 
   &__menu {
     display: grid;
-    padding: 0 16px;
 
     a {
       font-weight: 700;
@@ -112,6 +111,7 @@
     }
 
     &-items {
+      padding: 0 16px;
       transition: 0.3s ease-out;
       // transition: all 0.3s ease-in;
 
