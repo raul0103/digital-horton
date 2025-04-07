@@ -1,6 +1,7 @@
 <div class="categories section-margin">
   <div class="container">
     <div class="categories__row">
+      {if $show_sidebar}
       <div class="categories__menu primary-radius primary-dark-bg">
         <ul>
           {foreach $_modx->getPlaceholder('map-resources.catalog') as $catalog_item}
@@ -15,6 +16,7 @@
           {/foreach}
         </ul>
       </div>
+      {/if}
       <div class="categories__blocks">
         {foreach $_modx->getPlaceholder('map-resources.catalog') as $index => $catalog_item}
             {if $index < 4}

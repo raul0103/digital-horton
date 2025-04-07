@@ -70,4 +70,31 @@ export default function iniSliders() {
 
       direction: "horizontal",
     });
+
+  new Swiper('[data-swiper="product-slider"]', {
+    modules: [Navigation],
+    loop: false,
+    spaceBetween: 16,
+    lazy: { loadPrevNext: true },
+    slideClass: "product-card",
+
+    breakpoints: {
+      1280: {
+        slidesPerView: 4.8,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+    },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    direction: "horizontal",
+  });
 }

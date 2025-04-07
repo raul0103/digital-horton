@@ -53,7 +53,7 @@
         <a
           class="btn btn-primary d-grid gap-4 border-radius-left fs-15 fw-700 place-center"
         >
-          <svg width="16" height="16" class="icon">
+          <svg width="16" height="16" class="icon" stroke="white">
             <use
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#favorites"
             ></use>

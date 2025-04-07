@@ -4,9 +4,19 @@ import MobileMenuInit from "./mobile-menu/js/main.js";
 import MltReviewAjaxForm from "./reviews/js/main.js";
 import FastSearch from "./fast-search/js/main.js";
 import initCustomSelect from "./custom-select/main.js";
+import initCart from "./cart/frontend/js/main.js";
+import initProductCard from "./product-cards/js/main.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   let functions = [
+    {
+      init: initProductCard,
+      name: "initProductCard",
+    },
+    {
+      init: initCart,
+      name: "initCart",
+    },
     {
       init: initCustomSelect,
       name: "initCustomSelect",

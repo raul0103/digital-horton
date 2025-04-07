@@ -1,0 +1,70 @@
+.product-cart-controls {
+  display: grid;
+  gap: 8px;
+
+  button {
+    font-size: 14px;
+    padding: 0 11px;
+
+    height: 40px;
+    @media (max-width: $bp-xs) {
+      min-width: auto;
+    }
+  }
+
+  &__row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .show-active {
+    display: none;
+  }
+  &.active {
+    .hide-active {
+      display: none;
+    }
+    .show-active {
+      display: block;
+    }
+  }
+
+  &__main-btn {
+    min-width: max-content;
+    width: calc(50% - 8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    @media (max-width: $bp-xs) {
+      width: calc(30% - 8px);
+    }
+
+    &-checkmark {
+      display: block;
+      &:after {
+        content: "";
+        display: block;
+        width: 3px;
+        height: 8px;
+        border: solid #000;
+        border-width: 0 1px 1px 0;
+        transform: rotate(45deg);
+        position: relative;
+      }
+    }
+    &-text {
+      @media (max-width: $bp-xs) {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        &::before {
+          content: "";
+        }
+      }
+    }
+  }
+}

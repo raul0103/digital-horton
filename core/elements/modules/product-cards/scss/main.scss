@@ -1,0 +1,49 @@
+@import "./cart-controls.scss";
+
+.product-card {
+  flex-shrink: 0;
+
+  //   min-width: 368px;
+  //   max-width: 368px;
+  padding: 24px;
+  background: #fff;
+  border-radius: $primary-radius;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  &__controls {
+    margin-top: auto;
+  }
+  &__image {
+    height: 268px;
+    margin-bottom: 24px;
+    background-color: $light-gray;
+    border-radius: $primary-radius;
+  }
+  &__title {
+    margin-bottom: 8px;
+  }
+  &__price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: end;
+    margin-bottom: 24px;
+    .discount {
+      margin-left: auto;
+    }
+  }
+
+  &__top {
+    position: absolute;
+    right: 24px;
+    top: 12px;
+    display: flex;
+    gap: 6px;
+    button {
+      width: 72px;
+      background-color: #ffffff93;
+    }
+  }
+}
