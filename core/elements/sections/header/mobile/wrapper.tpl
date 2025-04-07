@@ -1,20 +1,23 @@
+{set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
+  'data' => $_modx->getPlaceholder('map-resources.categories')
+]}
+
 <div class="header-mobile">
   <div class="container">
     <div class="header-mobile__wrap">
-      <div class="header-mobile__icon-open">
+      <div class="header-mobile__icon-open" data-mobile-menu-open="mobile-menu">
         <svg width="19" height="14" stroke="#182641">
           <use
             xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#burger"
           ></use>
         </svg>
-      </div>
-      <div class="header-mobile__icon-close">
         <svg width="14" height="14" stroke="#182641">
           <use
             xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#close"
           ></use>
         </svg>
       </div>
+
       <a class="header-mobile__logo" href="/">
         <img src="/assets/template/images/logo.png" />
       </a>
@@ -37,5 +40,15 @@
         {'phone' | config}
       </a>
     </div>
+  </div>
+</div>
+<div class="header-mobile__modal" id="mobile-menu">
+  {include "file:sections/header/common/search.tpl"}
+
+  <div class="header-mobile__catalog">
+    <div class="header-mobile__catalog-items" data-mobile-modal-items>
+      {$catalog_html["menu-items"]}
+    </div>
+    {$catalog_html["menu-modals"]}
   </div>
 </div>

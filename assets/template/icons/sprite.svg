@@ -124,7 +124,6 @@
   <symbol id="arrow-left" viewBox="0 0 16 14" fill="none">
     <path
       d="M6.83333 13L1 7M1 7L6.83333 1M1 7H15"
-      stroke="#182641"
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"

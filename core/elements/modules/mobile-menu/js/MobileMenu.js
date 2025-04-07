@@ -5,6 +5,7 @@ export default class MobileMenu {
       open_modal: "[data-mobile-modal-open]",
       back_modal: "[data-mobile-modal-back]",
       modal: "[data-mobile-modal]",
+      modal_items: "[data-mobile-modal-items]",
     };
 
     this.events_init = {};
@@ -66,6 +67,12 @@ export default class MobileMenu {
 
           // Открываем новую
           modal.classList.add("opened");
+          let modal_items = this.mobile_menu.querySelector(
+            this.selectors.modal_items
+          );
+          if (modal_items) {
+            modal_items.classList.add("hidden");
+          }
         });
       });
     },
@@ -77,6 +84,7 @@ export default class MobileMenu {
       if (!active_menu) return;
 
       active_menu.classList.remove("opened");
+
       return active_menu;
     },
     backModal: () => {
@@ -88,10 +96,19 @@ export default class MobileMenu {
         back_modal.classList.add("isinit");
 
         back_modal.addEventListener("click", () => {
-          this.events.hideActiveModal(this.mobile_menu);
+          this.events.hideActiveModal();
 
           let prev_menu = this.history_active_menus.pop();
-          if (!prev_menu) return;
+          if (!prev_menu) {
+            let modal_items = this.mobile_menu.querySelector(
+              this.selectors.modal_items
+            );
+            if (modal_items) {
+              modal_items.classList.remove("hidden");
+            }
+
+            return;
+          }
 
           prev_menu.classList.add("opened");
         });

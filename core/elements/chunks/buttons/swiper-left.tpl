@@ -1,6 +1,6 @@
 <div class="swiper-button-wrap left">
   <button class="swiper-button-prev">
-    <svg width="16" height="16" class="icon">
+    <svg width="16" height="16" class="icon" stroke="#182641">
       <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-left"></use>
     </svg>
   </button>

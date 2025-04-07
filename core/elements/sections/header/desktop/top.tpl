@@ -19,16 +19,8 @@
           </svg>
         </a>
 
-        <form class="form header-desktop__search-block">
-          <input type="text" placeholder="Поиск по сайту" />
-          <button class="btn btn-circle">
-            <svg width="16" height="16" class="icon">
-              <use
-                xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#search"
-              ></use>
-            </svg>
-          </button>
-        </form>
+        
+        {include "file:sections/header/common/search.tpl"}
 
         <div class="d-grid gap-16 fw-500 header-desktop__address-block">
           <div class="d-flex gap-8">

@@ -6,8 +6,8 @@ if (!function_exists("generateModal")) {
     function generateModal(&$menu_modals, $data)
     {
         $menu_modals .= "<div class='mobile-menu__modal' data-mobile-modal='mobile-modal-{$data['id']}'>
-                            <div class='mobile-menu__items'>
-                            <div class='mobile-menu__back pseudo-arrow-before pseudo-arrow-before__left pseudo-text-back' data-mobile-modal-back></div>";
+        <div class='mobile-menu__back' data-mobile-modal-back><svg width='16' height='16' class='icon' stroke='#fff'> <use xlink:href='/assets/template/icons/sprite.svg?v=2.27#arrow-left'></use> </svg> Назад</div>                    
+        <div class='mobile-menu__items'>";
 
         foreach ($data['children'] as $children) {
             $menutitle = $children['menutitle'] ?: $children['pagetitle'];
@@ -15,8 +15,8 @@ if (!function_exists("generateModal")) {
             if ($children['children']) {
                 $open_btn = "<span 
                             data-mobile-modal-open='mobile-modal-{$children['id']}'
-                            class='pseudo-arrow pseudo-arrow__right'
-                            ></span>";
+                            class='pseudo-arrow'
+                            > -> </span>";
 
                 $menu_modals .= "<div class='mobile-menu__item'>
                                     <a href='{$children['uri']}'>$menutitle</a>
@@ -41,22 +41,25 @@ if (!function_exists("generateModal")) {
 
 $menu_items = "";
 $menu_modals = "";
-foreach ($data as $catalog_item) {
+foreach ($data as $index => $catalog_item) {
     $menutitle = $catalog_item['menutitle'] ?: $catalog_item['pagetitle'];
 
-    $bestseller = $catalog_item['bestseller'] ? '<div class="rating-stars-static"><span class="full"></span></div>' : '';
+    // $bestseller = $catalog_item['bestseller'] ? '<div class="rating-stars-static"><span class="full"></span></div>' : '';
     $open_btn = "";
     if ($catalog_item['children']) {
         $open_btn = "<span 
                         data-mobile-modal-open='mobile-modal-{$catalog_item['id']}'
-                        class='pseudo-arrow pseudo-arrow__right'
                     ></span>";
 
         generateModal($menu_modals, $catalog_item);
     }
 
-    $menu_items .= "<div class='mobile-menu__item'>
-                        <a href='{$catalog_item['uri']}' class='d-flex gap-8'>$bestseller $menutitle</a>
+    if($index == 0){
+        $image = "";
+    }
+
+    $menu_items .= "<div class='mobile-menu__item' xxx='$index'>
+                        <a href='{$catalog_item['uri']}'><img src='{$catalog_item['main_image']}'/> $menutitle</a>
                         $open_btn
                     </div>";
 }

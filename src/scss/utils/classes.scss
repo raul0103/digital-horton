@@ -85,3 +85,4 @@
 .sm-d-none{@media (max-width: $bp-sm) {display: none;}}
 .xs-d-none{@media (max-width: $bp-xs) {display: none;}}
 .xs-d-block{@media (min-width: $bp-xs) {display: none;}}
+.block-scroll {overflow: hidden;}
