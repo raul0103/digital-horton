@@ -16,7 +16,7 @@ if (!function_exists("generateModal")) {
                 $open_btn = "<span 
                             data-mobile-modal-open='mobile-modal-{$children['id']}'
                             class='pseudo-arrow'
-                            > -> </span>";
+                            ></span>";
 
                 $menu_modals .= "<div class='mobile-menu__item'>
                                     <a href='{$children['uri']}'>$menutitle</a>
@@ -41,7 +41,7 @@ if (!function_exists("generateModal")) {
 
 $menu_items = "";
 $menu_modals = "";
-foreach ($data as $index => $catalog_item) {
+foreach ($data as $catalog_item) {
     $menutitle = $catalog_item['menutitle'] ?: $catalog_item['pagetitle'];
 
     // $bestseller = $catalog_item['bestseller'] ? '<div class="rating-stars-static"><span class="full"></span></div>' : '';
@@ -54,11 +54,7 @@ foreach ($data as $index => $catalog_item) {
         generateModal($menu_modals, $catalog_item);
     }
 
-    if($index == 0){
-        $image = "";
-    }
-
-    $menu_items .= "<div class='mobile-menu__item' xxx='$index'>
+    $menu_items .= "<div class='mobile-menu__item'>
                         <a href='{$catalog_item['uri']}'><img src='{$catalog_item['main_image']}'/> $menutitle</a>
                         $open_btn
                     </div>";

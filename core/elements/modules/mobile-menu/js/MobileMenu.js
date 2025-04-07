@@ -67,11 +67,13 @@ export default class MobileMenu {
 
           // Открываем новую
           modal.classList.add("opened");
-          let modal_items = this.mobile_menu.querySelector(
+          let modal_items = this.mobile_menu.querySelectorAll(
             this.selectors.modal_items
           );
           if (modal_items) {
-            modal_items.classList.add("hidden");
+            modal_items.forEach((modal_item) => {
+              modal_item.classList.add("hidden");
+            });
           }
         });
       });
@@ -100,11 +102,13 @@ export default class MobileMenu {
 
           let prev_menu = this.history_active_menus.pop();
           if (!prev_menu) {
-            let modal_items = this.mobile_menu.querySelector(
+            let modal_items = this.mobile_menu.querySelectorAll(
               this.selectors.modal_items
             );
             if (modal_items) {
-              modal_items.classList.remove("hidden");
+              modal_items.forEach((modal_item) => {
+                modal_item.classList.remove("hidden");
+              });
             }
 
             return;

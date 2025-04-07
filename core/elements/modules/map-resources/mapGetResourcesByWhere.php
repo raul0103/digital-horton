@@ -58,7 +58,7 @@ if (!function_exists('filterResources')) {
                 }
 
                 if ($matched) {
-                    unset($item['children']);
+                    // unset($item['children']);
                     $result[] = $item;
                 }
             }

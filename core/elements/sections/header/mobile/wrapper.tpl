@@ -2,6 +2,15 @@
   'data' => $_modx->getPlaceholder('map-resources.categories')
 ]}
 
+{set $menu_items = "@FILE modules/map-resources/mapGetResourcesByWhere.php" | snippet : [
+  'data' => $_modx->getPlaceholder('map-resources.menu'),
+  'where' => '{"id:in":['~'header_menu_ids'|config~']}'
+]}
+
+{set $menu_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
+  'data' => $menu_items
+]}
+
 <div class="header-mobile">
   <div class="container">
     <div class="header-mobile__wrap">
@@ -45,10 +54,20 @@
 <div class="header-mobile__modal" id="mobile-menu">
   {include "file:sections/header/common/search.tpl"}
 
-  <div class="header-mobile__catalog">
+  <div class="header-mobile__catalog mb-16">
     <div class="header-mobile__catalog-items" data-mobile-modal-items>
       {$catalog_html["menu-items"]}
     </div>
     {$catalog_html["menu-modals"]}
   </div>
+
+
+  
+  <div class="header-mobile__menu mb-16">
+    <div class="header-mobile__menu-items" data-mobile-modal-items>
+      {$menu_html["menu-items"]}
+    </div>
+    {$menu_html["menu-modals"]}
+  </div>
+
 </div>
