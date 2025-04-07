@@ -1,0 +1,22 @@
+.breadcrumbs {
+  margin: 24px 0;
+
+  @media (max-width: $bp-sm) {
+    overflow-x: auto;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: max-content;
+  }
+
+  .breadcrumbs-item {
+    color: $primary-dark;
+
+    a {
+      color: $primary-dark;
+    }
+  }
+}

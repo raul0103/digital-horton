@@ -5,7 +5,7 @@
   class="breadcrumb-item"
 >
   <span itemprop="item">
-    <span itemprop="name">{$menutitle ?: $pagetitle}</span>
+    <span itemprop="name">{$menutitle}</span>
     <meta itemprop="position" content="{$idx}">
   </span>
 </li>

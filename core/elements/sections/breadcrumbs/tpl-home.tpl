@@ -2,10 +2,10 @@
   itemscope
   itemprop="itemListElement"
   itemtype="https://schema.org/ListItem"
-  class="breadcrumb-item"
+  class="breadcrumbs-item"
 >
-  <span itemprop="item">
-    <span itemprop="name">{$menutitle ?: $pagetitle}</span>
+  <a itemprop="item" href="/">
+    <span itemprop="name">{$menutitle}</span>
     <meta itemprop="position" content="{$idx}">
-  </span>
+  </a>
 </li>
