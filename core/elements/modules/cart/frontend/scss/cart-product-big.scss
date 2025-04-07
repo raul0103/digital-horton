@@ -49,6 +49,13 @@
     // }
   }
 
+  &__main-btn {
+    padding: 20px !important;
+    @media (max-width: variables.$bp-sm) {
+      padding: 14px !important;
+    }
+  }
+
   .show-active {
     display: none;
   }
