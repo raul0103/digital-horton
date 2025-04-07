@@ -1,0 +1,33 @@
+.header-mobile {
+  background-color: #fff;
+  box-shadow: 0px 3px 15px 0px #18264126;
+  min-height: 56px;
+  display: flex;
+
+  &__wrap {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin: auto;
+    // gap: 16px;
+  }
+  &__logo {
+    img {
+      max-width: 123px;
+    }
+  }
+  &__phone {
+    margin-left: auto;
+  }
+  &__icon-close,
+  &__icon-open {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon-close {
+    display: none;
+  }
+}

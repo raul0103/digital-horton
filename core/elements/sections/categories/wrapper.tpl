@@ -21,7 +21,7 @@
             <div class="categories__blocks__item">
                 <div class="categories__blocks__item-title font-candara d-flex gap-8" data-opened-btn="cb-{$catalog_item['id']}">
                     <svg width="16" height="16" class="icon">
-                        <use xlink:href="/assets/template/icons/sprite.svg?v=11#arrow-right"></use>
+                        <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-right"></use>
                     </svg>
                     {$catalog_item['menutitle']}
                 </div>

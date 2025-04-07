@@ -57,7 +57,7 @@
             <label class="btn btn-bordered white d-flex gap-8 cursor-pointer">
               <svg stroke="white" width="15" height="15">
                 <use
-                  xlink:href="/assets/template/icons/sprite.svg?v=13#skrepka"
+                  xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#skrepka"
                 ></use>
               </svg>
               Прикрепить реквизиты
@@ -71,7 +71,7 @@
             <label class="btn btn-bordered white d-flex gap-8 cursor-pointer">
               <svg stroke="white" width="15" height="15">
                 <use
-                  xlink:href="/assets/template/icons/sprite.svg?v=13#skrepka"
+                  xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#skrepka"
                 ></use>
               </svg>
               Прикрепить документы

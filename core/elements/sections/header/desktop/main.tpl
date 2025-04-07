@@ -6,7 +6,7 @@
         data-opened-btn="catalog-desktop"
       >
         <svg width="16" height="16" class="icon">
-          <use xlink:href="/assets/template/icons/sprite.svg?v=9#catalog"></use>
+          <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#catalog"></use>
         </svg>
         Каталог
       </button>
@@ -38,7 +38,7 @@
                 {/if}
                 <svg width="10" height="10" class="icon" stroke-width="2">
                   <use
-                    xlink:href="/assets/template/icons/sprite.svg?v=17#icon-arrow-down" stroke="#182641"
+                    xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#icon-arrow-down" stroke="#182641"
                   ></use>
                 </svg>
                 {$wrapper}
@@ -55,7 +55,7 @@
         >
           <svg width="16" height="16" class="icon">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v=10#favorites"
+              xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#favorites"
             ></use>
           </svg>
           Избранное
@@ -65,7 +65,7 @@
         >
           <svg width="16" height="16" class="icon">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v=10#comparison"
+              xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#comparison"
             ></use>
           </svg>
           Сравнение
@@ -74,7 +74,7 @@
           class="btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
         >
           <svg width="16" height="16" class="icon">
-            <use xlink:href="/assets/template/icons/sprite.svg?v=10#cart"></use>
+            <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#cart"></use>
           </svg>
           Корзина
         </a>
@@ -83,7 +83,7 @@
         >
           <svg width="16" height="16" class="icon">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v=10#login"
+              xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#login"
             ></use>
           </svg>
           Войти

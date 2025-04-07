@@ -3,7 +3,7 @@
     <span>Адрес:</span>
     <div class="fs-18 fw-500 d-flex gap-8">
       <svg width="20" height="20" class="icon" stroke="white">
-        <use xlink:href="/assets/template/icons/sprite.svg?v=19#house"></use>
+        <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#house"></use>
       </svg>
       {'address' | config}
     </div>
@@ -13,7 +13,7 @@
     <span>E-mail:</span>
     <div class="fs-18 fw-500 d-flex gap-8">
       <svg width="20" height="20" class="icon" stroke="white">
-        <use xlink:href="/assets/template/icons/sprite.svg?v=19#letter"></use>
+        <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#letter"></use>
       </svg>
       <a href="tel:{'email' | config}">{'email' | config}</a>
     </div>
@@ -32,8 +32,8 @@
     <div class="d-grid gap-8 footer__contacts-item">
       <span>Телефон:</span>
       <div class="fs-24 fw-700 fw-500 d-flex gap-8">
-        <svg width="20" height="20" class="icon" stroke="white">
-          <use xlink:href="/assets/template/icons/sprite.svg?v=19#phone"></use>
+        <svg width="20" height="20" class="icon" stroke="white" fill="white">
+          <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#phone"></use>
         </svg>
         <a href="tel:{'phone' | config}">{'phone' | config}</a>
       </div>

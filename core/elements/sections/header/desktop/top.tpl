@@ -7,13 +7,13 @@
         <a class="d-flex fs-15 gap-4 cursor-pointer fw-500">
           <svg width="16" height="16" class="icon">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v=4#location"
+              xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#location"
             ></use>
           </svg>
           <span class="text-dashed">Москва</span>
           <svg width="10" height="10" class="icon" stroke-width="2">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v=17#icon-arrow-down"
+              xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#icon-arrow-down"
               stroke="#182641"
             ></use>
           </svg>
@@ -24,7 +24,7 @@
           <button class="btn btn-circle">
             <svg width="16" height="16" class="icon">
               <use
-                xlink:href="/assets/template/icons/sprite.svg?v=8#search"
+                xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#search"
               ></use>
             </svg>
           </button>
@@ -42,7 +42,7 @@
           <div class="d-flex gap-8">
             <svg width="16" height="16" class="icon" stroke="#182641">
               <use
-                xlink:href="/assets/template/icons/sprite.svg?v=19#letter"
+                xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#letter"
               ></use>
             </svg>
             <a href="mailto:{'email' | config}">{'email' | config}</a>
@@ -66,7 +66,7 @@
           >
             <svg width="16" height="16" class="icon" stroke="#182641">
               <use
-                xlink:href="/assets/template/icons/sprite.svg?v=19#phone"
+                xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#phone"
               ></use>
             </svg>
             {'phone' | config}
