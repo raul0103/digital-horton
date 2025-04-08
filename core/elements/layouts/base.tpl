@@ -8,7 +8,7 @@
   {"@FILE modules/map-resources/mapResources.php" | snippet : [
     'parents' => 'catalog_id' | config
     'toPlaceholder' => 'map-resources.catalog'
-    'where' => '{"class_key":"msCategory", "template":4}'
+    'where' => '{"class_key":"msCategory", "template":4, "deleted":0}'
     'depth' => 1
     'includeTVs' => 'main_image'
   ]}
@@ -17,7 +17,7 @@
     'parents' => 'catalog_id' | config
     'toPlaceholder' => 'map-resources.categories'
     'includeTVs' => 'main_image'
-    'where' => '{"class_key":"msCategory", "template":4}'
+    'where' => '{"class_key":"msCategory", "template":4, "deleted":0}'
     'depth' => 10
   ]}
 {else}

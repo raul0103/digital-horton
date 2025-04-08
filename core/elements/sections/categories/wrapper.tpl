@@ -19,14 +19,14 @@
       {/if}
       <div class="categories__blocks">
         {foreach $_modx->getPlaceholder('map-resources.catalog') as $index => $catalog_item}
-            {if $index < 4}
             <div class="categories__blocks__item">
-                <div class="categories__blocks__item-title font-candara d-flex gap-8" data-opened-btn="cb-{$catalog_item['id']}">
+                <div class="categories__blocks__item-title font-candara d-flex gap-8" data-opened-btn="cb-{$catalog_item['id']}" {if !$catalog_item['children']}style="margin-bottom:0"{/if}>
                     <svg width="16" height="16" stroke="#182641">
                         <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-right"></use>
                     </svg>
                     {$catalog_item['menutitle']}
                 </div>
+                {if $catalog_item['children']}
                 <div class="categories__blocks__item-childs" data-opened-element="cb-{$catalog_item['id']}">
                     {foreach $catalog_item['children'] as $child}
                       <a href="{$child['uri']}" class="categories__blocks__item-childs-item">
@@ -38,8 +38,8 @@
                       </a>
                     {/foreach}
                 </div>
+                {/if}
             </div>
-            {/if}
         {/foreach}
       </div>
     </div>
