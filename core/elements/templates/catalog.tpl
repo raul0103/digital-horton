@@ -10,7 +10,7 @@
     </div>
 
     {include "file:sections/popular-products/wrapper.tpl"}
-    
+    {include "file:sections/collapse-content/wrapper.tpl"}
     {include "file:sections/big-form/wrapper.tpl"}
     {include "file:sections/main-map/wrapper.tpl"}
 {/block}

@@ -1,0 +1,20 @@
+.collapse-content {
+  .btn-show-more {
+    @media (min-width: $bp-sm) {
+      display: none;
+    }
+  }
+
+  .container {
+    max-width: 1530px;
+  }
+
+  &__wrap {
+    @media (max-width: $bp-sm) {
+      display: none;
+    }
+    &.opened {
+      display: block;
+    }
+  }
+}

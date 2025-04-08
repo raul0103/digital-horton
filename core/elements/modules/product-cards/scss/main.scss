@@ -45,6 +45,8 @@
       align-items: normal;
     }
     .discount {
+      display: flex;
+      gap: 4px;
       margin-left: auto;
     }
   }

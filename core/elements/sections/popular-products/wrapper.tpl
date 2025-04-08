@@ -5,7 +5,7 @@
 ]}
 
 {if $products}
-<div class="popular-products ">
+<div class="popular-products section-margin">
     <div class="container">
         <h2 class="section-title">Популярные товары</h2>
         {include "file:sections/product-slider/wrapper.tpl" items_html=$products}

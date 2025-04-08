@@ -1,4 +1,4 @@
-<div class="product-slider section-margin">
+<div class="product-slider">
         <div class="swiper" data-swiper="product-slider">
             <div class="swiper-wrapper">
                 {$items_html}
