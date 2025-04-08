@@ -68,7 +68,7 @@
     {include "file:modules/modals/chunks/all.tpl"}
 
     <script src="/assets/template/js/main.js?{'file_version' | config}" defer ></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     
     {if $_modx->isAuthenticated('mgr')}
       <!-- {$_modx->getInfo('', true, '@INLINE {$key} => {$value} <br>')} -->

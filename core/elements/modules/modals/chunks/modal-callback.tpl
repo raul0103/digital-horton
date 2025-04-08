@@ -9,7 +9,7 @@
   {set $email_subject = 'Сообщение со страницы '~$_modx->resource.pagetitle}
   {'!FetchIt' | snippet : [
     'form' => '@INLINE 
-      <form class="fs-body-2 form" data-modal-id="modal-callback">
+      <form class="form" data-modal-id="modal-callback">
         <div class="form__group">
           <label>Ваше имя <span class="error-color">*</span></label>
           <input type="text" name="name" aria-label="user-name"/>

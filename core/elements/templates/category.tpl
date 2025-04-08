@@ -6,6 +6,7 @@
         <h1 class="section-title">{$_modx->resource.pagetitle}</h1>
     </div>
     {include "file:sections/subcat-slider/wrapper.tpl"}
+    {include "file:sections/category-listing/wrapper.tpl"}
     {include "file:sections/collapse-content/wrapper.tpl"}
     {include "file:sections/advantages/wrapper.tpl"}
     {include "file:sections/big-form/wrapper.tpl"}

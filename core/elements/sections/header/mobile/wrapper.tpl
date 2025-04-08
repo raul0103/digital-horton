@@ -15,12 +15,12 @@
   <div class="container">
     <div class="header-mobile__wrap">
       <div class="header-mobile__icon-open" data-mobile-menu-open="mobile-menu">
-        <svg width="19" height="14" stroke="#182641">
+        <svg width="19" height="14" class="primary-stroke">
           <use
             xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#burger"
           ></use>
         </svg>
-        <svg width="14" height="14" stroke="#182641">
+        <svg width="14" height="14" class="primary-stroke">
           <use
             xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#close"
           ></use>
@@ -38,8 +38,7 @@
         <svg
           width="16"
           height="16"
-          class="icon"
-          stroke="#182641"
+          class="primary-stroke"
           fill="#182641"
         >
           <use

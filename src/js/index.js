@@ -8,6 +8,7 @@ import iniSliders from "./modules/swipers";
 import initOpened from "./modules/opened";
 import initInputMask from "./modules/input-mask.js";
 import Notifications from "./modules/notifications.js";
+import FilterWindow from "./modules/filter-window.js";
 
 import "../../core/elements/modules/all";
 
@@ -23,4 +24,5 @@ document.addEventListener("DOMContentLoaded", function () {
   initInputMask();
 
   window.notifications = new Notifications();
+  new FilterWindow().init();
 });

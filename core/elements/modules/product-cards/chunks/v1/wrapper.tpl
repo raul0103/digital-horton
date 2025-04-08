@@ -6,7 +6,7 @@
 <div class="product-card">
   <div class="product-card__top">
     <button class="btn btn-bordered">
-      <svg width="18" height="22" stroke="#182641">
+      <svg width="18" height="22" class="primary-stroke">
         <use
           xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#favorites"
         ></use>

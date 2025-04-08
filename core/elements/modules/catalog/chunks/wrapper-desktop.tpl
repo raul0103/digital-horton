@@ -6,7 +6,7 @@
   <div class="catalog-header__container">
 {*
   <button class="btn btn-circle" data-opened-btn="catalog-desktop">
-    <svg class="arrow-bg" width="16" height="16" class="icon">
+    <svg class="arrow-bg" width="16" height="16" class="primary-stroke">
       <use
         xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#close" stroke="#fff"
       ></use>

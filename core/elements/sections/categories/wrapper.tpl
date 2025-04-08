@@ -21,7 +21,7 @@
         {foreach $_modx->getPlaceholder('map-resources.catalog') as $index => $catalog_item}
             <div class="categories__blocks__item">
                 <div class="categories__blocks__item-title font-candara d-flex gap-8" data-opened-btn="cb-{$catalog_item['id']}" {if !$catalog_item['children']}style="margin-bottom:0"{/if}>
-                    <svg width="16" height="16" stroke="#182641">
+                    <svg width="16" height="16" class="primary-stroke">
                         <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-right"></use>
                     </svg>
                     {$catalog_item['menutitle']}

@@ -1,0 +1,228 @@
+.category-listing {
+  fieldset {
+    border: none;
+  }
+
+  &__filters {
+    width: 17%;
+    height: max-content;
+    position: relative;
+
+    padding: 16px 20px;
+    background: #fff;
+
+    @media (max-width: $bp-md) {
+      width: 25%;
+    }
+
+    @media (max-width: $bp-sm) {
+      overflow: auto;
+      height: 100vh;
+
+      visibility: hidden;
+      opacity: 0;
+      left: -100%;
+
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      background: #eef2f5;
+      z-index: 1001;
+      padding: 20px;
+      transition: 0.3s;
+
+      &.opened {
+        visibility: visible;
+        opacity: 1;
+        left: 0;
+      }
+    }
+
+    @media (min-width: $bp-sm) {
+      border-radius: $primary-radius;
+    }
+
+    &-header {
+      padding: 21px;
+      position: absolute;
+      height: 56px;
+      width: 100%;
+      background: #fff;
+      top: 0;
+      left: 0;
+      box-shadow: 0px 3px 15px 0px rgba(24, 38, 65, 0.1490196078);
+    }
+
+    &__wrap {
+      border-radius: $primary-radius;
+      @media (max-width: $bp-sm) {
+        background: #fff;
+        padding: 16px 20px;
+        margin-top: 45px;
+      }
+    }
+
+    &-close {
+      color: $secondary-gray;
+      font-size: 14px;
+
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      svg {
+        stroke: $secondary-gray;
+      }
+    }
+
+    &-title {
+      margin-bottom: 24px;
+      font-size: 21px;
+
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-row {
+      gap: 24px;
+    }
+  }
+
+  &__filter {
+    // height: 21px;
+    // overflow: hidden;
+    // &.opened {
+    //   height: max-content;
+    // }
+    margin-bottom: 24px;
+
+    &-more-btn {
+      width: max-content;
+      padding-right: 35px;
+      margin-top: 13px;
+      cursor: pointer;
+      color: $primary-blue;
+
+      font-weight: 500;
+      font-size: 14px;
+
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      &:after {
+        content: "";
+        transform: rotate(45deg);
+        display: inline-block;
+        margin-top: -2px;
+        border-style: solid;
+        border-color: $primary-blue;
+        border-image: initial;
+        border-width: 0px 2px 2px 0px;
+        padding: 2px;
+        transition: 0.2s;
+        width: 0px;
+        height: 0px;
+      }
+
+      &.active {
+        &:after {
+          transform: rotate(-136deg) translate(-4px, -2px);
+        }
+      }
+    }
+
+    &-row {
+      display: grid;
+      gap: 12px;
+
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: 500px;
+      &.opened {
+        .category-listing__filter-value.hidden {
+          display: block;
+        }
+      }
+    }
+
+    &-value {
+      line-height: 1;
+      &.hidden {
+        display: none;
+      }
+    }
+
+    &-title {
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .search-by-words {
+      margin-bottom: 12px;
+      position: relative;
+      svg {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+      }
+    }
+
+    &-price-inputs {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      position: relative;
+
+      // input {
+      //   max-width: 80px;
+      // }
+    }
+
+    .ui-slider-horizontal {
+      height: 2px;
+      border: none !important;
+      background: red;
+      margin-bottom: 0 !important;
+
+      max-width: 90%;
+      margin: auto;
+      top: -10px;
+      margin-top: 20px;
+
+      cursor: pointer;
+
+      .ui-slider-range {
+        background-color: red;
+      }
+      .ui-slider-handle {
+        width: 16px;
+        height: 16px;
+        border-radius: 80px;
+        cursor: pointer;
+        top: -6px;
+
+        &:first-of-type {
+          background-color: red;
+          border: none;
+        }
+        &:last-of-type {
+          border: 2px solid red;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  input {
+    color: $secondary-gray !important;
+  }
+  .custom-checkbox {
+    margin: 0;
+  }
+}

@@ -1,4 +1,4 @@
-<form action="[[+action]]" id="review-form" class="fs-body-2 form">
+<form action="[[+action]]" id="review-form" class="form">
   <div class="form__group">
     <label>Ваше имя <span class="error-color">*</span></label>
     <input type="text" name="user_name" aria-label="user-name"/>

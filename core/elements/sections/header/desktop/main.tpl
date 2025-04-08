@@ -5,7 +5,7 @@
         class="catalog-button btn btn-primary border-radius-right d-flex gap-8 fs-20 big-padding mr-20"
         data-opened-btn="catalog-desktop"
       >
-        <svg width="16" height="16" class="icon">
+        <svg width="16" height="16" class="primary-stroke">
           <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#catalog"></use>
         </svg>
         Каталог
@@ -36,9 +36,9 @@
                 {else}
                   <a>{$menutitle}</a>
                 {/if}
-                <svg width="10" height="10" class="icon" stroke-width="2">
+                <svg width="10" height="10" class="primary-stroke" stroke-width="2">
                   <use
-                    xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#icon-arrow-down" stroke="#182641"
+                    xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#icon-arrow-down" class="primary-stroke"
                   ></use>
                 </svg>
                 {$wrapper}
@@ -53,7 +53,7 @@
         <a
           class="btn btn-primary d-grid gap-4 border-radius-left fs-15 fw-700 place-center"
         >
-          <svg width="16" height="16" class="icon" stroke="white">
+          <svg width="16" height="16" stroke="white">
             <use
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#favorites"
             ></use>
@@ -63,7 +63,7 @@
         <a
           class="btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
         >
-          <svg width="16" height="16" class="icon">
+          <svg width="16" height="16">
             <use
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#comparison"
             ></use>
@@ -73,7 +73,7 @@
         <a
           class="btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
         >
-          <svg width="16" height="16" class="icon">
+          <svg width="16" height="16">
             <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#cart"></use>
           </svg>
           Корзина
@@ -81,7 +81,7 @@
         <a
           class="btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
         >
-          <svg width="16" height="16" class="icon">
+          <svg width="16" height="16">
             <use
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#login"
             ></use>

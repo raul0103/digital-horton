@@ -70,6 +70,12 @@
     }
   }
 
+  &-simple {
+    background: none;
+    padding: 0;
+    text-transform: capitalize;
+  }
+
   &.big-padding {
     padding: 20px 40px;
   }

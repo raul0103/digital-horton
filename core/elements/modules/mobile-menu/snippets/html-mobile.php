@@ -15,7 +15,6 @@ if (!function_exists("generateModal")) {
             if ($children['children']) {
                 $open_btn = "<span 
                             data-mobile-modal-open='mobile-modal-{$children['id']}'
-                            class='pseudo-arrow'
                             ></span>";
 
                 $menu_modals .= "<div class='mobile-menu__item'>
