@@ -39,11 +39,15 @@
       </button>
 
       <a
-        class="show-active nohover"
+        class="show-active nohover arrow-link xs-d-none"
         href="{$_modx->getPlaceholder('makeurls.cart')}"
       >
         В корзину
+        <svg width="12" height="12">
+          <use xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#arrow-right"></use>
+        </svg>
       </a>
     </div>
   </div>
 </form>
+

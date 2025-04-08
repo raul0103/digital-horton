@@ -86,8 +86,8 @@
 .w-100{width: 100%!important;}
 .primary-radius{border-radius:$primary-radius}
 .font-candara{font-family: "Candara";}
-.sm-d-none{@media (max-width: $bp-sm) {display: none;}}
-.xs-d-none{@media (max-width: $bp-xs) {display: none;}}
-.xs-d-block{@media (min-width: $bp-xs) {display: none;}}
+.sm-d-none{@media (max-width: $bp-sm) {display: none!important;}}
+.xs-d-none{@media (max-width: $bp-xs) {display: none!important;}}
+.xs-d-block{@media (min-width: $bp-xs) {display: none!important;}}
 .block-scroll {overflow: hidden;}
 .old-price{color: $secondary-gray;text-decoration: line-through; font-size: 21px;@media (max-width: $bp-md) { font-size: 15px; }}

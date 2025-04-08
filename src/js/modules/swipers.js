@@ -83,9 +83,9 @@ export default function iniSliders() {
         slidesPerView: 4.8,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 3,
       },
-      640: {
+      200: {
         slidesPerView: 2,
       },
     },

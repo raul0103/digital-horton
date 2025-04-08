@@ -23,14 +23,18 @@
   <div class="product-card__image">
     <img src="" />
   </div>
-  <a class="mb-16 d-block fs-28-19 fw-700 font-candara" href="{$uri}">{$menutitle}</a>
+  <a class="fs-28-19 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle}</a>
   <div class="product-card__price">
-    <span class="fs-28-19">{$price}</span>
+    <div class="d-flex flex-wrap gap-4">
+    <span class="fs-28-19">{$price} руб.</span>
+      {if $old_price && $old_price != 0}
+        <span class="old-price">{$old_price} руб.</span>
+      {/if}
+    </div>
     {if $old_price && $old_price != 0}
-    <span class="old-price">{$old_price}</span>
     <span class="discount fs-14 secondary-gray-color"
       ><span class="xs-d-none secondary-gray-color">Скидка </span
-      >{$discount}%</span
+      ><span class="xs-d-block">-</span>{$discount}%</span
     >
     {/if}
   </div>
