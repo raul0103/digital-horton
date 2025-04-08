@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Сертификаты качества ",
+    "image": "/assets/template/images/sections/advantages/1.png",
+    "text": "Высокое качество продукции, подтвержденное сертификатами и действующими ГОСТ"
+  },
+  {
+    "title": "Высокая экспертность",
+    "image": "/assets/template/images/sections/advantages/2.png",
+    "text": "Бесплатная консультация менеджера для подбора наиболее оптимального варианта под ваши нужды."
+  },
+  {
+    "title": "Низкие цены ",
+    "image": "/assets/template/images/sections/advantages/3.png",
+    "text": "Лучшая цена на материалы, так как является одним из крупнейших поставщиков."
+  },
+  {
+    "title": "Быстрая доставка ",
+    "image": "/assets/template/images/sections/advantages/4.png",
+    "text": "Круглосуточная доставка в любую точку России"
+  },
+  {
+    "title": "Огромный ассортимент ",
+    "image": "/assets/template/images/sections/advantages/5.png",
+    "text": "В наличии более 100 000 наименований "
+  }
+]

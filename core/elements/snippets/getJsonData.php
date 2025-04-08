@@ -16,7 +16,7 @@ if (file_exists($path)) {
     $data = json_decode($json_content, true);
 
     if (json_last_error() === JSON_ERROR_NONE) {
-        return ["status" => "success", "message" => $data];
+        return ["status" => "success", "data" => $data];
     } else {
         return ["status" => "error", "message" => "Ошибка при декодировании"];
     }
