@@ -25,7 +25,7 @@
   </div>
   <a class="fs-28-19 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle}</a>
   
-  <div class="mt-auto">
+ 
     <div class="d-flex justify-between flex-wrap gap-8 mb-12">
       {include "file:chunks/availability.tpl"}
       {include "file:chunks/rating-stars.tpl"}
@@ -47,9 +47,8 @@
     </div>
 
     {include "file:modules/product-cards/chunks/v2/options.tpl"}
-  </div>
 
-  <div class="product-card__controls">
+  <div class="product-card__controls mt-auto">
     {include "file:modules/cart/frontend/chunks/cart-controls-big.tpl" product_id=$id}
     <button class="btn btn-simple-v2 m-auto">Купить в 1 клик</button>
   </div>

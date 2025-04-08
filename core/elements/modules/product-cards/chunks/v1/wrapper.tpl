@@ -39,7 +39,7 @@
     {/if}
   </div>
 
-  <div class="product-card__controls">
+  <div class="product-card__controls mt-auto">
     {include "file:modules/cart/frontend/chunks/cart-controls-big.tpl" product_id=$id}
   </div>
 </div>
