@@ -97,4 +97,32 @@ export default function iniSliders() {
 
     direction: "horizontal",
   });
+
+  new Swiper('[data-swiper="subcat-slider"]', {
+    modules: [Navigation],
+    loop: false,
+    slidesPerView: "auto",
+    slideClass: "subcat-slider__item",
+    
+    // spaceBetween: 16,
+
+    // breakpoints: {
+    //   1280: {
+    //     slidesPerView: 4.8,
+    //   },
+    //   1024: {
+    //     slidesPerView: 3,
+    //   },
+    //   200: {
+    //     slidesPerView: 2,
+    //   },
+    // },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    direction: "horizontal",
+  });
 }
