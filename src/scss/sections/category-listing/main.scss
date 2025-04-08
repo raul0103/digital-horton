@@ -18,22 +18,22 @@
 
   &__row {
     display: flex;
-    gap: 32px;
+    gap: 16px;
   }
 
   &__products {
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 16px;
     margin-bottom: 16px;
     @media (max-width: $bp-md) {
       gap: 8px;
     }
 
     .product-card {
-      width: calc(25% - 24px);
+      width: calc(25% - 12px);
       @media (max-width: $bp-lg) {
-        width: calc(33% - 19px);
+        width: calc(33% - 9px);
       }
       @media (max-width: $bp-md) {
         width: calc(50% - 4px);

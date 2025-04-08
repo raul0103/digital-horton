@@ -13,12 +13,14 @@
   display: flex;
   flex-direction: column;
 
-  @media (max-width: $bp-xs) {
-    padding: 8px;
+  @media (max-width: $bp-md) {
+    padding: 8px 8px 12px;
   }
 
   &__controls {
-    margin-top: auto;
+    display: grid;
+    text-align: center;
+    gap: 16px;
   }
   &__image {
     height: 268px;
@@ -43,6 +45,7 @@
     margin-bottom: 24px;
     @media (max-width: $bp-xs) {
       align-items: normal;
+      margin-bottom: 16px;
     }
     .discount {
       display: flex;
@@ -68,6 +71,33 @@
         width: max-content;
         border: none;
       }
+    }
+  }
+
+  &__options {
+    margin-bottom: 24px;
+    display: grid;
+    gap: 10px;
+    @media (max-width: $bp-xs) {
+      display: none;
+    }
+  }
+  &__option-item {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    span {
+      font-size: 15px;
+    }
+    span:not(.delimiter) {
+      background-color: #fff;
+      z-index: 1;
+    }
+    .delimiter {
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px dashed $blind-gray;
+      bottom: 3px;
     }
   }
 }

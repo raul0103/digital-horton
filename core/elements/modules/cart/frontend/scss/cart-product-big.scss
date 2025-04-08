@@ -11,6 +11,9 @@
       width: 100%;
       justify-content: space-between;
     }
+    @media (min-width: variables.$bp-xs) {
+      width: calc(50% - 4px);
+    }
     button {
       // height: 100%;
       padding: 0;
@@ -22,7 +25,7 @@
       align-items: center;
       justify-content: center;
 
-      @media (max-width: variables.$bp-sm) {
+      @media (max-width: variables.$bp-md) {
         width: 40px;
         height: 40px;
         min-width: 40px;
@@ -45,9 +48,10 @@
 
   &__row {
     display: flex;
+    // flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 8px;
 
     // @media (max-width: variables.$bp-xs) {
     //   grid-template-columns: 50% 50%;
@@ -55,9 +59,10 @@
   }
 
   &__main-btn {
-    padding: 20px !important;
-    @media (max-width: variables.$bp-sm) {
-      padding: 14px !important;
+    padding: 0 !important;
+    height: 56px;
+    @media (max-width: variables.$bp-md) {
+      height: 40px;
     }
   }
 
@@ -70,6 +75,13 @@
     }
     .show-active {
       display: flex;
+    }
+  }
+
+  .arrow-link {
+    justify-content: end;
+    @media (min-width: variables.$bp-xs) {
+      width: calc(50% - 4px);
     }
   }
 }

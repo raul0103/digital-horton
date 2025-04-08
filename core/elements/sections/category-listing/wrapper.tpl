@@ -3,7 +3,7 @@
 {'!mFilter2' | snippet : [
     'element' => 'msProducts'
     'depth' => $depth
-    'limit' => 10
+    'limit' => 24
     'parents' => $_modx->resource.id
     'filters' => 'ms|price:number,msoption|dlina-mm,msoption|obem-m3,msoption|shirina-mm,msoption|standart,msoption|vysota-mm'
     '-filters' => $filters
@@ -14,7 +14,7 @@
     'tplFilter.row.default' => '@FILE sections/category-listing/filters/tpl-filter-row.tpl'
     'includeTVs' => 'hits_page,remains,priority'
     'sort' => 'tv|priority:asc',
-    'tpls' => '@FILE modules/product-cards/chunks/v1/wrapper.tpl'
+    'tpls' => '@FILE modules/product-cards/chunks/v2/wrapper.tpl'
     'ajaxMode' => 'button'
     'suggestions' => 0
     'showEmptyFilters' => 1

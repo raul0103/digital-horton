@@ -68,11 +68,15 @@
 /* paddings or margins */
 .mr-20{margin-right: 20px;}
 .mb-8{margin-bottom: 8px;}
+.mb-12{margin-bottom: 12px;}
 .mb-16{margin-bottom: 16px;}
 .mb-24{margin-bottom: 24px;}
 .mb-32{margin-bottom: 32px;}
+.mt-16{margin-top: 16px;}
+.m-auto{margin: auto;}
 .ml-auto{margin-left: auto;}
 .ml-right{margin-right: auto;}
+.mt-auto{margin-top: auto;}
 .section-margin{
     margin-bottom: 16px;
     @media (max-width: $bp-sm) { margin-bottom: 24px; }
@@ -94,3 +98,4 @@
 .block-scroll {overflow: hidden;}
 .old-price{color: $secondary-gray;text-decoration: line-through; font-size: 21px;@media (max-width: $bp-md) { font-size: 15px; }}
 .primary-stroke{stroke:$primary-dark}
+.primary-fill{fill:$primary-dark}

@@ -78,7 +78,7 @@
               <label>Показывать по</label>
               <div class="category-listing__controls-item-select">
                   <select name="mse_limit" id="mse2_limit" >
-                      {foreach [50, 75, 100, 150] as $v}
+                      {foreach [24, 48, 98] as $v}
                           <option value="{$v}"{if $limit == $v} selected{/if}>{$v}</option>
                       {/foreach}
                   </select>
