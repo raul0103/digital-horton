@@ -4,7 +4,7 @@
       {if $show_sidebar}
       <div class="categories__menu primary-radius primary-dark-bg">
         <ul>
-          {foreach $_modx->getPlaceholder('map-resources.catalog') as $catalog_item}
+          {foreach $_modx->getPlaceholder('map-resources.categories') as $catalog_item}
           <li>
             <a href="{$catalog_item['uri']}">
                 {if $catalog_item['main_image']}
@@ -18,7 +18,7 @@
       </div>
       {/if}
       <div class="categories__blocks">
-        {foreach $_modx->getPlaceholder('map-resources.catalog') as $index => $catalog_item}
+        {foreach $_modx->getPlaceholder('map-resources.categories') as $index => $catalog_item}
             <div class="categories__blocks__item">
                 <div class="categories__blocks__item-title font-candara d-flex gap-8" data-opened-btn="cb-{$catalog_item['id']}" {if !$catalog_item['children']}style="margin-bottom:0"{/if}>
                     <svg width="16" height="16" class="primary-stroke">
