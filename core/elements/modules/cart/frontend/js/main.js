@@ -65,14 +65,14 @@ class Cart {
       if (notification) notificationService(action);
     },
     // Удаляет товар из корзины
-    remove: async (product_id) => {
+    remove: async (product_id, muted = false) => {
       let action = "remove";
 
       let response = await api.response(action, { id: product_id });
       if (!response && !response?.success) return;
 
       // Уведомление
-      notificationService(action);
+      if (!muted) notificationService(action);
 
       update_elements.cartTotalSumm(response.data);
       update_elements.cartTotalCount(response.data);

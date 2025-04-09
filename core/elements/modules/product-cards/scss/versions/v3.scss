@@ -1,17 +1,19 @@
 .product-card--v3 {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 20px;
 
   padding: 8px;
   background: #fff;
-  border-radius: $primary-radius;
-
+  @media (max-width: $bp-sm) {
+    gap: 8px;
+    align-items: normal;
+  }
   &-image {
     width: 104px;
     height: 104px;
     background: $light-gray;
-    border-radius: $primary-radius;
   }
   &-content {
     display: flex;
@@ -23,6 +25,15 @@
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
+      @media (max-width: $bp-sm) {
+        gap: 4px;
+      }
+      li {
+        color: $secondary-gray;
+        @media (max-width: $bp-sm) {
+          font-size: 13px;
+        }
+      }
     }
   }
 
@@ -34,5 +45,11 @@
     .btn-bucket {
       padding: 15px;
     }
+  }
+
+  .custom-checkbox {
+    position: absolute;
+    top: 8px;
+    left: 8px;
   }
 }

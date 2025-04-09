@@ -1,5 +1,10 @@
-<div class="product-card--v3" id="product_{$product['id']}">
-    <img class="product-card--v3-image" src="{$product['thumb']}" />
+<div class="product-card--v3 sm-d-none br-primary-small" data-change-product="{$product['id']}" id="product_{$product['id']}">
+    <label class="custom-checkbox fw-500">
+        <input type="checkbox" data-checkbox-key="product" value="{$product['id']}"/>
+        <span class="checkmark"></span>
+    </label>
+    
+    <img class="product-card--v3-image br-primary-small" src="{$product['thumb']}" />
     <div class="product-card--v3-content">
         <a class="font-candara fs-17-13 fw-700 text-uppercase" href="{$product['uri']}">{$product['pagetitle']}</a>
         <ul class="product-card--v3-content-info">

@@ -4,6 +4,7 @@ import "../scss/index.scss";
 import GLightbox from "glightbox";
 import "glightbox/dist/css/glightbox.min.css";
 
+import "./modules/onchange.js";
 import iniSliders from "./modules/swipers";
 import initOpened from "./modules/opened";
 import initInputMask from "./modules/input-mask.js";

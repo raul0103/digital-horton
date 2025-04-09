@@ -31,7 +31,7 @@
 
       <a
         class="show-active nohover arrow-link xs-d-none"
-        href="{$_modx->getPlaceholder('makeurls.cart')}"
+        href="{$_modx->makeURL('cart_id' | option)}"
       >
         В корзину
         <svg width="12" height="12">
