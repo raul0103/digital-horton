@@ -30,4 +30,8 @@ window.deleteChangeProduct = function (checkbox_key) {
       cart.events.remove(item.value, true);
     });
   });
+
+  setTimeout(() => {
+    location.reload();
+  }, 500);
 };
