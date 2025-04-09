@@ -7,7 +7,7 @@
 {if $products}
 <div class="section-margin">
     <div class="container">
-        <h2 class="section-title">Популярные товары</h2>
+        <h2 class="section-title--mini">Возможно, вам понадобится</h2>
         {include "file:sections/product-slider/wrapper.tpl" items_html=$products}
     </div>
 </div>

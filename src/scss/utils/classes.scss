@@ -51,6 +51,7 @@
 .fs-18,.fs-18 *{font-size: 18px;}
 .fs-20,.fs-20 *{font-size: 20px;}
 .fs-24,.fs-24 *{font-size: 24px;}
+.fs-17-13{ font-size: 17px; @media (max-width: $bp-md) { font-size: 13px; } }
 .fs-21-15{ font-size: 21px; @media (max-width: $bp-md) { font-size: 15px; } }
 .fs-24-17{ font-size: 24px; @media (max-width: $bp-md) { font-size: 17px; } }
 .fs-28-19{ font-size: 28px; @media (max-width: $bp-md) { font-size: 19px; } }
@@ -58,7 +59,8 @@
 .fs-56-39{ font-size: 56px; @media (max-width: $bp-md) { font-size: 39px; } }
 .fs-96-32{ font-size: 96px; @media (max-width: $bp-md) { font-size: 32px; } }
 
-.section-title{    text-align: center;font-size: 56px;margin-bottom: 24px;@media (max-width: $bp-md) { font-size: 39px;text-align:left; }}
+.section-title{ text-align: center;font-size: 56px;margin-bottom: 24px;@media (max-width: $bp-md) { font-size: 39px;text-align:left; }}
+.section-title--mini{text-align: left;font-size: 32px;margin-bottom: 24px;@media (max-width: $bp-md) { font-size: 23px;}}
 
 .fw-400{font-weight: 400;}
 .fw-500{font-weight: 500;}
@@ -77,6 +79,7 @@
 .ml-auto{margin-left: auto;}
 .ml-right{margin-right: auto;}
 .mt-auto{margin-top: auto;}
+.mb-auto{margin-bottom: auto;}
 .section-margin{
     margin-bottom: 16px;
     @media (max-width: $bp-sm) { margin-bottom: 24px; }
@@ -99,3 +102,4 @@
 .old-price{color: $secondary-gray;text-decoration: line-through; font-size: 21px;@media (max-width: $bp-md) { font-size: 15px; }}
 .primary-stroke{stroke:$primary-dark}
 .primary-fill{fill:$primary-dark}
+.secondary-gray-stroke{stroke:$secondary-gray}

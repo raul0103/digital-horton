@@ -1,0 +1,41 @@
+@use "../../../../../../src/scss/utils/variables.scss";
+
+.cart-product-controls {
+  display: flex;
+  height: max-content;
+  @media (max-width: variables.$bp-xs) {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  button {
+    // height: 100%;
+    padding: 0;
+    width: 56px;
+    min-width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: variables.$bp-md) {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+    }
+  }
+
+  input {
+    font-size: 17px;
+    max-width: 56px;
+    min-width: 20px;
+    width: 100%;
+    text-align: center;
+    background: none;
+    border: none;
+    @media (max-width: variables.$bp-xs) {
+      font-size: 12px;
+    }
+  }
+}

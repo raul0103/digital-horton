@@ -1,0 +1,18 @@
+.cart-page {
+  &__list {
+    &-top {
+    }
+
+    &-row {
+      display: grid;
+      gap: 8px;
+    }
+
+    .product-price {
+      width: 320px;
+      @media (max-width: $bp-md) {
+        width: 180px;
+      }
+    }
+  }
+}

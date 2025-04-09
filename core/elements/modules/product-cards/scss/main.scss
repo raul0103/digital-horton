@@ -1,4 +1,6 @@
 @import "./cart-controls.scss";
+@import "./elements.scss";
+@import "./versions/v3.scss";
 
 .product-card {
   flex-shrink: 0;
@@ -36,21 +38,6 @@
     margin-bottom: 16px;
     @media (max-width: $bp-xs) {
       margin-bottom: 8px;
-    }
-  }
-  &__price {
-    display: flex;
-    gap: 8px;
-    align-items: end;
-    margin-bottom: 24px;
-    @media (max-width: $bp-xs) {
-      align-items: normal;
-      margin-bottom: 16px;
-    }
-    .discount {
-      display: flex;
-      gap: 4px;
-      margin-left: auto;
     }
   }
 
@@ -98,6 +85,19 @@
       width: 100%;
       border-bottom: 1px dashed $blind-gray;
       bottom: 3px;
+    }
+  }
+
+  .product-price {
+    margin-bottom: 24px;
+    @media (max-width: $bp-xs) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .cart-product-controls {
+    @media (min-width: $bp-xs) {
+      width: calc(50% - 4px);
     }
   }
 }

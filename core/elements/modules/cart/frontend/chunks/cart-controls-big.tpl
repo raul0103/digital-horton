@@ -1,6 +1,7 @@
-{set $product_id = $product_id ?: $_modx->resource.id} {set $product_data =
-'@FILE modules/cart/backend/snippets/getProductData.php' | snippet : [
-'product_id' => $product_id ]}
+{set $product_id = $product_id ?: $_modx->resource.id} 
+{set $product_data = '@FILE modules/cart/backend/snippets/getProductData.php' | snippet : [
+  'product_id' => $product_id 
+]}
 
 <form
   class="cart-product-big {if $product_data['count'] > 0}active{/if}"
@@ -18,18 +19,8 @@
 
   <div class="w-100">
     <div class="cart-product-big__row">
-      <div class="cart-product-big__controls show-active">
-        <button class="btn btn-bordered fs-24" data-cart-event="minus">-</button>
-        <input
-          class="fw-600"
-          type="number"
-          value="{$product_data['count'] ?: 1}"
-          onchange="cart.submit(event,this.form);"
-          data-cart-event="change"
-          data-cart-product-count="{$product_id}"
-        />
-        <button class="btn btn-bordered fs-24" data-cart-event="plus">+</button>
-      </div>
+
+      {include "file:modules/cart/frontend/chunks/common/controls.tpl" classes="show-active" product_count=$product_data['count']}
 
       <button
         class="cart-product-big__main-btn hide-active btn btn-primary w-100"

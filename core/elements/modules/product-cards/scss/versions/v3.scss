@@ -1,0 +1,38 @@
+.product-card--v3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  padding: 8px;
+  background: #fff;
+  border-radius: $primary-radius;
+
+  &-image {
+    width: 104px;
+    height: 104px;
+    background: $light-gray;
+    border-radius: $primary-radius;
+  }
+  &-content {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    height: 100%;
+    padding: 8px 0;
+    &-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  }
+
+  &-cart-info {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-left: auto;
+    .btn-bucket {
+      padding: 15px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.product-price {
+  display: flex;
+  gap: 8px;
+  align-items: end;
+
+  @media (max-width: $bp-xs) {
+    align-items: normal;
+  }
+  .discount {
+    display: flex;
+    gap: 4px;
+    margin-left: auto;
+  }
+}

@@ -72,6 +72,7 @@
         </a>
         <a
           class="btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
+          href="{$_modx->makeURL('cart_id' | option)}"
         >
           <svg width="16" height="16">
             <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#cart"></use>
