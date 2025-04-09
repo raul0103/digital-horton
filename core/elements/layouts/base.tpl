@@ -1,7 +1,9 @@
 {'@FILE snippets/ajax/ajax.php' | snippet}
-{include 'file:modules/fast-search/chunks/init.tpl'}
 {'@FILE modules/cart/backend/snippets/ajax.php' | snippet}
-{'@FILE modules/favorites/snippet/setFavoritesPlaceholder.php' | snippet : ["cookie_key" => "favorite-products"]}
+{include 'file:modules/fast-search/chunks/init.tpl'}
+
+{set $product_total = "@FILE modules/cart/backend/snippets/getCartTotal.php" | snippet};
+{$_modx->setPlaceholder('product_total',$product_total)}
 
 {set $catalog_id = "catalog_id" | option}
 {if $catalog_id}
