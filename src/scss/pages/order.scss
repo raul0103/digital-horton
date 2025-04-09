@@ -1,0 +1,39 @@
+.order-page {
+  &__wrap {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 75% 25%;
+
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__sidebar {
+    &__wrap {
+      height: max-content;
+      background: #fff;
+      padding: 24px;
+    }
+  }
+
+  &__forms {
+    gap: 40px;
+    padding: 32px;
+    background: #fff;
+    @media (max-width: $bp-md) {
+      gap: 32px;
+    }
+  }
+  [data-opened-element="order-products"] {
+    .hidden {
+      display: none;
+    }
+
+    &.opened {
+      .hidden {
+        display: flex;
+      }
+    }
+  }
+}

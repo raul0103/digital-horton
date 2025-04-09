@@ -1,0 +1,13 @@
+.product-card--v4 {
+  position: relative;
+  &__mark {
+    position: absolute;
+    background-color: $secondary-light-gray;
+    color: $secondary-gray;
+    border-radius: 24px;
+    padding: 4px;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+  }
+}

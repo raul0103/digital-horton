@@ -15,7 +15,7 @@
 
 /* display and everything */
 .d-flex{display: flex;align-items: center;}
-.d-grid{display: grid;}
+.d-grid{display: grid;height: max-content;}
 .d-block{display: block;}
 .flex-wrap{flex-wrap:wrap}
 .align-center{align-items: center;}
@@ -27,12 +27,15 @@
 .place-center{place-items: center;}
 .gap-4{gap:4px}
 .gap-8{gap:8px}
+.gap-12{gap:12px}
 .gap-16{gap:16px}
 .gap-20{gap:20px}
 .gap-24{gap:24px}
 .gap-32{gap:32px}
 .gap-40{gap:40px}
 .col-2{grid-template-columns: 1fr 1fr;}
+.col-sm-2{grid-template-columns: 1fr 1fr; @media (max-width: $bp-sm) { grid-template-columns: 1fr; }}
+.col-md-3{grid-template-columns: 1fr 1fr 1fr;@media (max-width: $bp-md) { grid-template-columns:1fr 1fr; } @media (max-width: $bp-sm) { grid-template-columns: 1fr; }}
 
 /* text */
 .text-center{text-align: center;}
@@ -44,6 +47,7 @@
 .text-dashed{ border-bottom: 1px dashed;}
 
 /* font-sizes */
+.fs-12{font-size: 12px;}
 .fs-14,.fs-14 *{font-size: 14px;}
 .fs-15,.fs-15 *{font-size: 15px;}
 .fs-16,.fs-16 *{font-size: 16px;}
@@ -107,3 +111,4 @@
 .primary-fill{fill:$primary-dark}
 .secondary-gray-stroke{stroke:$secondary-gray}
 .br-primary-small{border-radius: $primary-radius ;@media (max-width: $bp-sm) {border-radius: $small-radius}}
+.block-title,.block-title *{ font-family: "Candara"; font-size: 28px; font-weight: 700; @media (max-width: $bp-sm) { font-size: 19px; } }

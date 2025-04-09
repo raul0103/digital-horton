@@ -2,7 +2,7 @@
 {'@FILE modules/cart/backend/snippets/ajax.php' | snippet}
 {include 'file:modules/fast-search/chunks/init.tpl'}
 
-{set $product_total = "@FILE modules/cart/backend/snippets/getCartTotal.php" | snippet};
+{set $product_total = "@FILE modules/cart/backend/snippets/getCartTotal.php" | snippet}
 {$_modx->setPlaceholder('product_total',$product_total)}
 
 {set $catalog_id = "catalog_id" | option}

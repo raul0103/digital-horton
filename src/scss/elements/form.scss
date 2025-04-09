@@ -1,5 +1,12 @@
 .form {
-  input {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  input,
+  textarea {
     background-color: $secondary-light-gray;
     padding: 18px 24px;
     border-radius: 100px;
@@ -15,9 +22,12 @@
       color: $secondary-gray;
     }
   }
-  label {
-    display: inline-block;
-    margin-bottom: 6px;
+
+  textarea {
+    border-radius: $primary-radius;
+    @media (max-width: $bp-sm) {
+      border-radius: $small-radius;
+    }
   }
 
   &.dark {
@@ -51,10 +61,12 @@
     .custom-checkbox {
       .checkmark {
         background: #fff;
+
         &:after {
           border-color: $primary-dark;
         }
       }
+
       input:checked + .checkmark {
         background-color: #fff;
         border-color: #fff;
@@ -67,9 +79,49 @@
       color: $secondary-gray;
     }
   }
-  label {
+  label:not(.btn) {
     font-size: 15px;
-    padding: 0 24px;
+    padding: 0px 0 0 24px;
     font-weight: 500;
+
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+
+  .custom-radio {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+
+    label {
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+    }
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .radio-mark {
+      position: relative;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+      transition: 0.2s;
+      border: 4px solid $secondary-light-gray;
+    }
+
+    input:hover + .radio-mark,
+    input:focus + .radio-mark {
+      background: $blind-gray;
+    }
+
+    input:checked + .radio-mark {
+      background: $primary-dark;
+    }
   }
 }

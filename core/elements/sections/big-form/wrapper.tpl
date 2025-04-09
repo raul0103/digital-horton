@@ -38,7 +38,7 @@
 
             <div>
               <label>Адрес доставки</label>
-              {include "file:sections/big-form/address-select.tpl"}
+              {include "file:chunks/form/address-select.tpl"}
             </div>
           </div>
 

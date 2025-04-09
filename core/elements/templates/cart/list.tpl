@@ -37,11 +37,11 @@
 
         <div class="cart-page__sidebar br-primary-small">
             <div class="mb-14">Товары, <span data-cart-total-count>{$_modx->getPlaceholder('product_total')['count']}</span> шт.</div>
-            <div class="cart-page__sidebar-title">
-                Итого <span><span data-cart-total-summ>{$_modx->getPlaceholder('product_total')['summ']}</span>  руб.</span>
+            <div class="cart-page__sidebar-title block-title">
+                Итого<span><span data-cart-total-summ>{$_modx->getPlaceholder('product_total')['summ']}</span>  руб.</span>
             </div>
             <div class="secondary-gray-color fs-14 mb-16">Без учёта стоимости доставки </div>
-            <a class="btn btn-primary w-100 d-block text-center">Перейти к оформлению</a>
+            <a class="btn btn-primary w-100 d-block text-center" href="{$_modx->makeURL('order_id' | option)}">Перейти к оформлению</a>
         </div>
     </div>
 </div>

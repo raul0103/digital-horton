@@ -8,7 +8,8 @@
   border: none;
   font-weight: 700;
   font-family: "Candara";
-  
+  justify-content: center;
+
   @media (max-width: $bp-xs) {
     font-size: 13px;
   }
@@ -86,7 +87,7 @@
   }
 
   &.big-padding {
-    padding: 20px 40px;
+    padding: 20px;
   }
   &.border-radius-right {
     border-top-left-radius: 0;
