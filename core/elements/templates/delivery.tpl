@@ -29,8 +29,10 @@
                     {/foreach}
                 </div>
             </div>
+
+            <div class="delivery-page__bottom-text">Стоимость доставки уточняйте у наших менеджеров</div>
         </div>
     </div>
 
-    {include "file:sections/main-map/wrapper.tpl"}
+    {include "file:sections/callback-map/wrapper.tpl"}
 {/block}

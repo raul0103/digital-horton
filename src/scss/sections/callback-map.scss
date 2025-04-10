@@ -1,0 +1,55 @@
+.callback-map {
+  &__row {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 40% calc(60% - 32px);
+
+    border-radius: $primary-radius;
+    background: #fff;
+
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+      padding: 16px;
+    }
+  }
+  &__contacts {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #c0c7d6;
+    &-row {
+      display: grid;
+      width: max-content;
+      height: max-content;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      @media (max-width: $bp-md) {
+        grid-template-columns: 1fr;
+      }
+      @media (max-width: $bp-xs) {
+        gap: 16px;
+      }
+    }
+  }
+  .form {
+    padding: 40px 64px;
+    @media (max-width: $bp-md) {
+      padding: 16px;
+    }
+    @media (max-width: $bp-sm) {
+      padding: 0;
+    }
+  }
+  h3 {
+    margin-bottom: 32px;
+    text-align: left;
+    @media (max-width: $bp-sm) {
+      margin-bottom: 16px;
+    }
+  }
+
+  iframe {
+    border-radius: $primary-radius;
+    filter: grayscale(1);
+    min-height: 275px;
+  }
+}

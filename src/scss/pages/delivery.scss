@@ -47,6 +47,17 @@
     }
   }
 
+  &__bottom-text {
+    text-align: center;
+    font-size: 21px;
+    margin: 16px 0 32px;
+    @media (max-width: $bp-sm) {
+      margin: 16px 0 24px;
+      font-size: 15px;
+      text-align: start;
+    }
+  }
+
   .text-content {
     margin-bottom: 32px;
     @media (max-width: $bp-sm) {

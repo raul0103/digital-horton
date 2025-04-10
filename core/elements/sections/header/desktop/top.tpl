@@ -31,32 +31,26 @@
             </svg>
             {'address' | config}
           </div>
-          <div class="d-flex gap-8">
-            <svg width="16" height="16" class="primary-stroke" class="primary-stroke">
+          <a class="d-flex gap-8" href="mailto:{'email' | config}">
+            <svg width="16" height="16" class="primary-stroke">
               <use
                 xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#letter"
               ></use>
             </svg>
-            <a href="mailto:{'email' | config}">{'email' | config}</a>
-          </div>
+           {'email' | config}
+          </a>
         </div>
       </div>
 
       <div class="d-flex gap-16 align-end">
-        <div class="d-flex gap-8 header-desktop__social">
-          <a href="{'vk-link' | config}" target="_blank">
-            <img src="/assets/template/icons/social/vk.svg" />
-          </a>
-          <a href="{'wa-link' | config}" target="_blank">
-            <img src="/assets/template/icons/social/wa.svg" />
-          </a>
-        </div>
+        {include "file:chunks/social-links.tpl" classes="header-desktop__social"}
+        
         <div class="d-grid gap-8">
           <a
             class="d-flex gap-8 fs-18 fw-700 w-content"
             href="tel:{'phone' | config}"
           >
-            <svg width="16" height="16" class="primary-stroke" class="primary-stroke">
+            <svg width="16" height="16" class="primary-stroke" >
               <use
                 xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#phone"
               ></use>

@@ -20,14 +20,7 @@
   </div>
 
   <div class="d-flex gap-24 align-end flex-wrap">
-    <div class="d-flex gap-8 sm-d-none">
-      <a href="{'vk-link' | config}" target="_blank">
-        <img src="/assets/template/icons/social/vk.svg" />
-      </a>
-      <a href="{'wa-link' | config}" target="_blank">
-        <img src="/assets/template/icons/social/wa.svg" />
-      </a>
-    </div>
+    {include "file:chunks/social-links.tpl" classes="sm-d-none"}
 
     <div class="d-grid gap-8 footer__contacts-item">
       <span>Телефон:</span>
