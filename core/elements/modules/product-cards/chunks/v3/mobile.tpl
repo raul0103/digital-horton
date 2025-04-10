@@ -16,13 +16,8 @@
         {include "file:modules/product-cards/chunks/common/product-price.tpl" type_simple=true price=$product.price old_price=$product.old_price classes="fw-700 font-candara"}
 
         <div class="mt-auto d-flex gap-16">
-            <button class="btn btn-simple">
-                <svg width="18" height="22" class="secondary-gray-stroke">
-                    <use
-                      xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#favorites"
-                    ></use>
-                </svg>
-            </button>
+            {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" simple=true product_id=$product['id']}
+
             <button class="btn btn-simple btn-bucket" onclick="product_desktop_{$product['id']}.remove();cart.events.remove({$product['id']});">
                 <svg width="22" height="24" class="secondary-gray-stroke">
                     <use

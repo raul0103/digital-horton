@@ -13,13 +13,7 @@
             <li>{$product.price} {if $product.unit}за {$product.unit}{/if}</li>
         </ul>
         <div class="mt-auto">
-            <button class="btn btn-simple">
-                <svg width="18" height="22" class="secondary-gray-stroke">
-                    <use
-                      xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#favorites"
-                    ></use>
-                </svg>
-            </button>
+            {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" simple=true product_id=$product['id']}
         </div>
     </div>
 

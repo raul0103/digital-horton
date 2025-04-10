@@ -1,14 +1,4 @@
 .cart-page {
-  &__empty {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-    margin: auto;
-    margin-bottom: 30px;
-  }
   &__list {
     @media (max-width: $bp-md) {
       order: 2;

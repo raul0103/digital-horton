@@ -6,7 +6,7 @@
 ]} 
         
 {if !$products}
-    {include "file:/templates/cart/empty.tpl"}
+    {include "file:chunks/empty.tpl" page="cart"}
 {else}
 <div class="cart-page mb-32-24">
     <div class="cart-page__wrap">

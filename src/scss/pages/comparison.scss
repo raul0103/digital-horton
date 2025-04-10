@@ -1,0 +1,151 @@
+.comparison-page {
+  .section-title {
+    margin-bottom: 0;
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  &__categories {
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    max-width: 100%;
+    overflow-x: auto;
+
+    &-row {
+      display: flex;
+      gap: 32px;
+      width: max-content;
+    }
+
+    button {
+      font-size: 25px;
+      font-weight: 700;
+      color: #858ea0;
+      &.active {
+        color: $primary-dark;
+      }
+    }
+  }
+  &__products {
+    width: max-content;
+    max-width: 100%;
+    background: #fff;
+    border-radius: $primary-radius;
+
+    max-width: 100%;
+    overflow-x: auto;
+    &-group {
+      display: none;
+      width: max-content;
+      &.opened {
+        display: flex;
+      }
+    }
+  }
+
+  &__product {
+    height: max-content;
+    width: 294px;
+    @media (max-width: $bp-xs) {
+      width: 194px;
+    }
+    &:first-child {
+      //   position: sticky;
+      //   left: 0;
+      // pointer-events: none;
+      .tr-option {
+        @media (max-width: $bp-xs) {
+          max-width: 180px;
+          border-right: 2px solid $secondary-gray;
+        }
+      }
+    }
+  }
+
+  tr {
+    display: block;
+    padding: 0 16px;
+  }
+  .tr {
+    &-image {
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      img {
+        max-height: 200px;
+      }
+    }
+
+    &-border-bottom {
+      border-bottom: 2px solid $primary-dark;
+    }
+
+    &-title {
+      height: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: "Candara";
+    }
+    &-price {
+      height: 30px;
+      font-size: 28px;
+    }
+    &-option {
+      height: 40px;
+      background-color: #fff;
+      &:nth-child(odd) {
+        background-color: #f2f5f8; // Можешь задать свой цвет
+      }
+
+      //   .td-center {
+      //     text-align: center;
+      //     display: block;
+      //   }
+    }
+
+    &-control {
+      height: 63px;
+      .cart-product-big {
+        min-width: 100%;
+      }
+    }
+
+    &-flex-left {
+      display: flex;
+      align-items: center;
+      justify-content: left;
+    }
+
+    &-flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    &-equal-btn {
+      display: block;
+      padding-top: 16px;
+    }
+    &-delete-category {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $primary-light;
+        svg {
+          stroke: $primary-light;
+        }
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

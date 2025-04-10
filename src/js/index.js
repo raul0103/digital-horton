@@ -10,6 +10,7 @@ import initOpened from "./modules/opened";
 import initInputMask from "./modules/input-mask.js";
 import Notifications from "./modules/notifications.js";
 import FilterWindow from "./modules/filter-window.js";
+import initComparison from "./modules/comparison.js";
 
 import "../../core/elements/modules/all";
 
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   iniSliders();
   initOpened();
   initInputMask();
+  initComparison();
 
   window.notifications = new Notifications();
   new FilterWindow().init();

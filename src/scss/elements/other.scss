@@ -136,3 +136,14 @@
 .swiper {
   height: max-content;
 }
+
+.empty-page-block {
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 30px;
+}

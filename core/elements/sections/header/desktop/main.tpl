@@ -51,6 +51,7 @@
 
       <div class="d-flex ml-auto">
         <a
+          href="{$_modx->makeURL('favorites_id' | option)}"
           class="btn btn-primary d-grid gap-4 border-radius-left fs-15 fw-700 place-center"
         >
           <svg width="16" height="16" stroke="white">
@@ -61,6 +62,7 @@
           Избранное
         </a>
         <a
+          href="{$_modx->makeURL('comparison_id' | option)}"
           class="btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
         >
           <svg width="16" height="16">

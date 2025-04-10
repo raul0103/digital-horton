@@ -100,4 +100,27 @@
   &.border-none {
     border-radius: 0;
   }
+
+  &-favorites {
+    svg {
+      fill: none;
+    }
+    &.active {
+      svg {
+        fill: $primary-dark;
+      }
+    }
+  }
+  &-compare {
+    svg {
+      fill: none;
+      stroke: $primary-dark;
+    }
+    &.active {
+      svg {
+        fill: $primary-dark;
+        stroke: #fff;
+      }
+    }
+  }
 }

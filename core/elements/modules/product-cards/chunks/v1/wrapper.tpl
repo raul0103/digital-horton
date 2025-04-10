@@ -1,19 +1,7 @@
 <div class="product-card">
   <div class="product-card__top">
-    <button class="btn btn-bordered">
-      <svg width="18" height="22" class="primary-stroke">
-        <use
-          xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#favorites"
-        ></use>
-      </svg>
-    </button>
-    <button class="btn btn-bordered">
-        <svg width="22" height="22">
-          <use
-            xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#compare"
-          ></use>
-        </svg>
-    </button>
+    {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" product_id=$id}
+    {include "file:modules/store-product-selection/chunks/comparison/btn.tpl" product_id=$id}
   </div>
   <div class="product-card__image">
     <img src="" />

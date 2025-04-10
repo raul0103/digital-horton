@@ -2,6 +2,10 @@
 {'@FILE modules/cart/backend/snippets/ajax.php' | snippet}
 {include 'file:modules/fast-search/chunks/init.tpl'}
 
+{* Плейсхолдеры для модуля избранных и сравнения товаров *}
+{'@FILE modules/store-product-selection/snippet/setPlaceholder.php' | snippet : ["cookie_key" => "favorite-products"]}
+{'@FILE modules/store-product-selection/snippet/setPlaceholder.php' | snippet : ["cookie_key" => "comparison-products"]}
+
 {set $product_total = "@FILE modules/cart/backend/snippets/getCartTotal.php" | snippet}
 {$_modx->setPlaceholder('product_total',$product_total)}
 

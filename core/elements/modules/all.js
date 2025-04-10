@@ -6,9 +6,14 @@ import FastSearch from "./fast-search/js/main.js";
 import initCustomSelect from "./custom-select/main.js";
 import initCart from "./cart/frontend/js/main.js";
 import initProductCard from "./product-cards/js/main.js";
+import initProductSelection from "./store-product-selection/js/main.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   let functions = [
+    {
+      init: initProductSelection,
+      name: "initProductSelection",
+    },
     {
       init: initProductCard,
       name: "initProductCard",
