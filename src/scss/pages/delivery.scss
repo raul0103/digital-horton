@@ -46,4 +46,11 @@
       }
     }
   }
+
+  .text-content {
+    margin-bottom: 32px;
+    @media (max-width: $bp-sm) {
+      margin-bottom: 24px;
+    }
+  }
 }
