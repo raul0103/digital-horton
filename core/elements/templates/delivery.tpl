@@ -1,0 +1,36 @@
+{extends "file:layouts/base.tpl"} 
+
+{block 'content'}
+    {include "file:sections/breadcrumbs/wrapper.tpl"}
+    
+    <div class="delivery-page section-margin">
+        <div class="container">
+            <h1 class="section-title">{$_modx->resource.pagetitle}</h1>
+
+            <div class="text-content">
+                {$_modx->resource.content}
+            </div>
+            <div class="delivery-page__cards">
+                <h3>Собственный автопарк</h3>
+                <div class="delivery-page__row">
+                    {foreach [
+                        ['image' => 'assets/template/images/sections/delivery/1.png', 'title' => 'Газели, 4 м', 'text' => 'Грузоподъемность — 1,6 тонн'],
+                        ['image' => 'assets/template/images/sections/delivery/2.png', 'title' => 'Шаланда, 6 м', 'text' => 'Грузоподъемность — 5 тонн'],
+                        ['image' => 'assets/template/images/sections/delivery/3.png', 'title' => 'Шаланда, 13 м', 'text' => 'Грузоподъемность — 20 тонн'],
+                        ['image' => 'assets/template/images/sections/delivery/4.png', 'title' => 'Манипулятор, 6 м', 'text' => 'Грузоподъемность — 6 тонн'],
+                        ['image' => 'assets/template/images/sections/delivery/5.png', 'title' => 'Манипулятор-шаланда, 12 м', 'text' => 'Грузоподъемность — 6 тонн'],
+                        ['image' => 'assets/template/images/sections/delivery/6.png', 'title' => 'Тентованная фура', 'text' => 'Грузоподъемность — 22 тонны'],
+                    ] as $card}
+                    <div class="delivery-page__card">
+                        <img class="delivery-page__card-image" src="{$card['image']}" />
+                        <div class="delivery-page__card-title">{$card['title']}</div>
+                        <div class="delivery-page__card-text">{$card['text']}</div>
+                    </div>
+                    {/foreach}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {include "file:sections/main-map/wrapper.tpl"}
+{/block}

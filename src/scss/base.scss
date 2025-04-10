@@ -21,6 +21,18 @@ body {
   background-color: #eef2f5;
 }
 
+h3 {
+  font-family: "Candara";
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-align: center;
+  @media (max-width: $bp-sm) {
+    font-size: 33px;
+    margin-bottom: 24px;
+  }
+}
+
 .container {
   padding: 0 40px;
   width: 100%;
@@ -41,8 +53,13 @@ a {
 }
 
 .text-content {
+  max-width: 1530px;
+  margin: auto;
   margin-bottom: 24px;
   @media (max-width: $bp-xs) {
+    margin-bottom: 16px;
+  }
+  h2 {
     margin-bottom: 16px;
   }
   li {

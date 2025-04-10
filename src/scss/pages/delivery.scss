@@ -1,0 +1,49 @@
+.delivery-page {
+  &__cards {
+    padding: 64px;
+    border-radius: $primary-radius;
+    background: #fff;
+
+    @media (max-width: $bp-sm) {
+      background: none;
+      padding: 0;
+    }
+  }
+  &__row {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: $bp-md) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: $bp-sm) {
+      gap: 8px;
+    }
+  }
+
+  &__card {
+    text-align: center;
+    @media (max-width: $bp-sm) {
+      padding: 12px 8px;
+      background: #fff;
+      border-radius: $primary-radius;
+    }
+    &-image {
+      width: 100%;
+    }
+    &-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      @media (max-width: $bp-sm) {
+        font-size: 19px;
+      }
+    }
+    &-text {
+      color: $secondary-gray;
+      @media (max-width: $bp-sm) {
+        font-size: 13px;
+      }
+    }
+  }
+}

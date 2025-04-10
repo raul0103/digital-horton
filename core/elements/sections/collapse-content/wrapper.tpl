@@ -1,9 +1,10 @@
 <div class="collapse-content section-margin">
   <div class="container">
-    <h2 class="text-start section-title">
-      Качественное производство пластиковых труб: наши технологии и материалы
-    </h2>
     <div class="text-content">
+      <h2 class="text-start section-title">
+        Качественное производство пластиковых труб: наши технологии и материалы
+      </h2>
+
       <p>
         Наше производство пластиковых труб – это высокотехнологичный процесс,
         основанный на использовании современного оборудования, качественного
@@ -24,11 +25,11 @@
       </p>
     </div>
 
-    <div class="collapse-content__wrap" data-opened-element="collapse-content">
+    <div class="collapse-content__wrap text-content" data-opened-element="collapse-content">
       <h2 class="text-start section-title">
         Экологичность и надежность наших пластиковых труб
       </h2>
-      <div class="text-content">
+      <div>
         <p>
           Мы заботимся не только о качестве нашей продукции, но и об окружающей
           среде. Наше производство оснащено системами переработки отходов, а
@@ -45,7 +46,11 @@
       </div>
     </div>
 
-    <button class="btn btn-show-more" data-opened-btn="collapse-content" data-active-text="Скрыть">
+    <button
+      class="btn btn-show-more"
+      data-opened-btn="collapse-content"
+      data-active-text="Скрыть"
+    >
       Показать все
     </button>
   </div>
