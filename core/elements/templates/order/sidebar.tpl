@@ -14,6 +14,8 @@ snippet}
         <span>Стоимость товаров</span>
         <b><span>{$_modx->getPlaceholder('product_total')['summ']}</span> руб.</b>
         </div>
+
+        <div class="xx">Без учёта стоимости доставки</div>
     </div>
 
     <div class="d-grid gap-8">
@@ -24,7 +26,7 @@ snippet}
                 {include "file:modules/product-cards/chunks/v4/wrapper.tpl" index=$index product=$product}
             {/foreach}
         </div>
-        <button class="btn btn-show-more primary-light-color" data-opened-btn="order-products" data-active-text="Скрыть">
+        <button class="btn btn-show-more primary-light-color" type="button" data-opened-btn="order-products" data-active-text="Скрыть">
             Показать все
         </button>
     </div>
