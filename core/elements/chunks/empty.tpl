@@ -20,6 +20,13 @@
       />
     </svg>
     {set $title = "В сравнении ничего нет"}
+
+    {elseif $page == "favorites"}
+    <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="70" height="70" rx="35" fill="white"/>
+      <path d="M20 16C20 15.4477 20.4477 15 21 15H49C49.5523 15 50 15.4477 50 16V53.9325C50 54.3564 49.5056 54.588 49.1799 54.3166L35 42.5L20.8201 54.3166C20.4944 54.588 20 54.3564 20 53.9325V16Z" stroke="#5779BC" stroke-width="2" stroke-linejoin="round"/>
+    </svg>
+    {set $title = "В избранном ничего нет"}
   {/if}
 
   <div class="fs-48-33 font-candara fw-700">{$title}</div>

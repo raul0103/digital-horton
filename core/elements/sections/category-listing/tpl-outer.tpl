@@ -43,8 +43,8 @@
 
       <div class="category-listing__content">
      
-          <div class="category-listing__controls">
-            <button class="sm-d-block category-listing__controls-filter font-candara" data-filter-window-open>
+          <div class="sortby__controls">
+            <button class="sm-d-block sortby__controls-filter font-candara" data-filter-window-open>
               <svg width="18" height="12" stroke="#000">
                 <use
                   xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#filter"
@@ -53,10 +53,10 @@
               Фильтр
             </button>
 
-            <div class="category-listing__controls-item sm-d-none" id="mse2_sort">
+            <div class="sortby__controls-item sm-d-none" id="mse2_sort">
               <label class="sm-d-none">Сортировать по </label>
               <a
-                class="category-listing__controls-item-sort-item"
+                class="sortby__controls-item-sort-item"
                 href="#"
                 data-sort="tv|hits_page"
                 data-default="desc"
@@ -65,7 +65,7 @@
                 Популярности
               </a>
               <a
-                class="category-listing__controls-item-sort-item"
+                class="sortby__controls-item-sort-item"
                 href="#"
                 data-sort="ms|price"
                 data-default="desc"
@@ -74,9 +74,9 @@
               </a>
             </div>
 
-            <div class="category-listing__controls-item font-candara arrow-bottom">
+            <div class="sortby__controls-item font-candara arrow-bottom">
               <label>Показывать по</label>
-              <div class="category-listing__controls-item-select">
+              <div class="sortby__controls-item-select">
                   <select name="mse_limit" id="mse2_limit" >
                       {foreach [24, 48, 98] as $v}
                           <option value="{$v}"{if $limit == $v} selected{/if}>{$v}</option>

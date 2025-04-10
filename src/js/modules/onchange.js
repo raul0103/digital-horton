@@ -15,10 +15,14 @@ window.changeCheckboxAll = function (checkbox_key, e) {
   });
 };
 
-window.deleteChangeProduct = function (checkbox_key) {
+window.deleteChangeProduct = async function (checkbox_key) {
   let items = document.querySelectorAll(
     `[data-checkbox-key="${checkbox_key}"]`
   );
+
+  // Массив промисов для отслеживания всех асинхронных операций
+  let promises = [];
+
   items.forEach((item) => {
     if (!item.checked) return;
 
@@ -27,11 +31,14 @@ window.deleteChangeProduct = function (checkbox_key) {
     );
     product_cards.forEach((product_card) => {
       product_card.remove();
-      cart.events.remove(item.value, true);
+
+      // Добавляем промис на асинхронную операцию
+      let promise = cart.events.remove(item.value, true);
+      promises.push(promise);
     });
   });
 
-  setTimeout(() => {
-    location.reload();
-  }, 500);
+  await Promise.all(promises);
+
+  location.reload();
 };

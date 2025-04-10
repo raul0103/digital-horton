@@ -36,6 +36,7 @@
 .col-2{grid-template-columns: 1fr 1fr;}
 .col-sm-2{grid-template-columns: 1fr 1fr; @media (max-width: $bp-sm) { grid-template-columns: 1fr; }}
 .col-md-3{grid-template-columns: 1fr 1fr 1fr;@media (max-width: $bp-md) { grid-template-columns:1fr 1fr; } @media (max-width: $bp-sm) { grid-template-columns: 1fr; }}
+.col-md-5{grid-template-columns: repeat(5,1fr);@media (max-width: $bp-md) { grid-template-columns:1fr 1fr 1fr; } @media (max-width: $bp-sm) { grid-template-columns: 1fr 1fr; }}
 
 /* text */
 .text-center{text-align: center;}
