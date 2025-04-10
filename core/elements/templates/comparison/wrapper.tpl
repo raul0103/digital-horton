@@ -106,6 +106,7 @@
                 </div>
             {else}
                 {include "file:chunks/empty.tpl" page="compare"}
+                {include "file:sections/need-product/wrapper.tpl"}
             {/if}
         </div>
     </div>

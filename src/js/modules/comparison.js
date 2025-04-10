@@ -18,14 +18,31 @@ export default function initComparison() {
       }
     });
 
+    // items.forEach((item) => {
+    //   const key = item.dataset.comparisonKey;
+    //   if (grouped[key].size > 1) {
+    //     item.style.display = "";
+    //   } else {
+    //     item.style.display = "none"; // Скрываем одинаковые
+    //   }
+    // });
+
+    let hedden_elements = [];
     items.forEach((item) => {
       const key = item.dataset.comparisonKey;
       if (grouped[key].size > 1) {
-        item.style.display = "";
       } else {
-        item.style.display = "none"; // Скрываем одинаковые
+        hedden_elements.push(item);
       }
     });
+
+    if (items.length == hedden_elements.length) {
+      notifications.warning("Отличий не найдено");
+    } else {
+      hedden_elements.forEach((item) => {
+        item.style.display = "none";
+      });
+    }
   };
 
   let comparisonShowEqual = () => {
