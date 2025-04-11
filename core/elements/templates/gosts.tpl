@@ -3,10 +3,10 @@
 {block 'content'}
     {include "file:sections/breadcrumbs/wrapper.tpl"}
 
-    <div class="tabs-inform-page certificates-page section-margin">
+    <div class="tabs-inform-page section-margin">
         <div class="container">
             {set $data = "@FILE snippets/getJsonData.php" | snippet : [
-                "path" => "/assets/template/json/sections/certificates.json"
+                "path" => "/assets/template/json/sections/gosts.json"
             ]}
 
             <h1 class="section-title text-start">{$_modx->resource.pagetitle}</h1>
@@ -19,15 +19,9 @@
                         <a class="fs-28-19 {if $count++ == 0}active{/if}" data-opened-btn="{$category_name}" data-toggle-not="true" data-close-early="certs">{$category_name}</a>
                     {/foreach}
                 </div>
+
                 <div>
-                    {set $count = 0}
-                    {foreach $data['data'] as $category_name => $items}
-                    <div class="certificates-page__images {if $count++ == 0}opened{/if}" data-opened-element="{$category_name}">
-                        {foreach $items as $item}
-                            <a href="{$item}" class="glightbox"><img src="{$item}" /></a>
-                        {/foreach}
-                    </div>
-                    {/foreach}
+                    xxx
                 </div>
             </div>
             {/if}
