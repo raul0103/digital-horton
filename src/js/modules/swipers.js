@@ -103,7 +103,7 @@ export default function iniSliders() {
     loop: false,
     slidesPerView: "auto",
     slideClass: "subcat-slider__item",
-    
+
     // spaceBetween: 16,
 
     // breakpoints: {
@@ -117,6 +117,31 @@ export default function iniSliders() {
     //     slidesPerView: 2,
     //   },
     // },
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+
+    direction: "horizontal",
+  });
+
+  new Swiper('[data-swiper="projects-gallery"]', {
+    modules: [Navigation],
+    // slidesPerView: "auto",
+    loop: false,
+    spaceBetween: 16,
+    slidesPerView: 1,
+    lazy: { loadPrevNext: true },
+
+    breakpoints: {
+      1024: {
+        slidesPerView: 3,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+    },
 
     navigation: {
       nextEl: ".swiper-button-next",
