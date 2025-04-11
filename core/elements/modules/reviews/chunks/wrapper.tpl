@@ -13,7 +13,8 @@
           {include "file:chunks/buttons/swiper-left.tpl"}
           {include "file:chunks/buttons/swiper-right.tpl"}
         </div>',
-        'limit' => $_modx->getPlaceholder('custom-placeholders')['limits']['reviews-section']
+        'limit' => 10
+        '-where' => ["source"=>"yandex-map"]
         'ratingRowClass' => 'rating-stars-static'
       ]}
 
@@ -23,5 +24,3 @@
     </div>
   </div>
 </div>
-
-{include 'file:modules/reviews/chunks/review-modals.tpl'}

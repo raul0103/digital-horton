@@ -73,10 +73,13 @@
 
     &-footer {
       margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     &-logo {
-      max-width: 110px;
+      max-width: 24px;
     }
 
     &-info {

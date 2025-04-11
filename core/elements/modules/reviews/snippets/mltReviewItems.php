@@ -7,6 +7,7 @@
  * @var string $tplOuter - Обертка отзывов
  * @var string $ratingRowClass - Класс для обертки рейтинга
  * @var string $ratingItemClass - Класс для элемента рейтинга
+ * @var string $context_key - Контекст
  */
 
 if (!$pdoTools = $modx->getService("pdoTools")) return;
@@ -34,25 +35,39 @@ if (!function_exists('publishedUserReview')) {
 $modx->getService('mainService', 'mainService', MODX_CORE_PATH . 'components/mltreviews/services/');
 
 if (empty($tpl)) {
-    $tpl = 'tplItemReview';
+    $tpl = '@FILE modules/mltreviews/chunks/tplItemReview.tpl';
 }
 if (empty($tplOuter)) {
-    $tplOuter = 'tplItemOuter';
+    $tplOuter =  '@FILE modules/mltreviews/chunks/tplItemOuter.tpl';
 }
+
+// >>> sources
+$option_sources = $modx->getOption('mltreviews_sources');
+if ($option_sources) {
+    $option_sources = json_decode($option_sources, true);
+    $sources = [];
+    foreach ($option_sources as $source) {
+        $sources[$source['key']] = $source;
+    }
+}
+// <<<
 
 $user_session = $_REQUEST['PHPSESSID'] ?: $_COOKIE['PHPSESSID'];
 
-if (!empty($where)) {
-    $where = json_decode($where,true);
+if (!$where) {
+    $where = [];
 }
-
 if ($user_reviews) {
     $where['session'] = $user_session;
-    // $where['published'] = 0;
+    $where['published'] = 0;
 }
 
 if ($resource_id) {
     $where['resource_id'] = $resource_id;
+}
+
+if ($context_key) {
+    $where['context_key'] = $context_key;
 }
 
 $query = $modx->newQuery('mltReview');
@@ -64,7 +79,6 @@ $items = $modx->getCollection('mltReview', $query);
 
 
 $output = '';
-$idx = 1;
 foreach ($items as $item) {
     if (
         ($user_reviews && !publishedUserReview($item)) || // Если это найденные неопубликованные отзывы пользователя и они меньше определенного времени - публикуем
@@ -84,7 +98,14 @@ foreach ($items as $item) {
     }
     $rating_html .= "</div>";
 
-    $output .= $pdoTools->getChunk($tpl, array_merge(['rating_html' => $rating_html, 'idx' => $idx++], $item->toArray()));
+    // >>> source
+    if ($sources) {
+        $item_source = $item->get('source');
+        $item->set('source', $sources[$item_source]);
+    }
+    // <<<
+
+    $output .= $pdoTools->getChunk($tpl, array_merge(['rating_html' => $rating_html], $item->toArray()));
 }
 
 if (!empty($output)) {

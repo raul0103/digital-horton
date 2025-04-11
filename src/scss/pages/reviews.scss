@@ -1,0 +1,18 @@
+.reviews-page {
+  &__row {
+    display: grid;
+    gap: 24px;
+  }
+  &__group {
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+
+      img {
+        max-width: 40px;
+      }
+    }
+  }
+}
