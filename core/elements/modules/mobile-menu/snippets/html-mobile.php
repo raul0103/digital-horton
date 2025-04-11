@@ -37,7 +37,7 @@ foreach ($data as $catalog_item) {
     // $bestseller = $catalog_item['bestseller'] ? '<div class="rating-stars-static"><span class="full"></span></div>' : '';
     $open_btn = "";
     if ($catalog_item['children']) {
-        $open_btn = "<spandata-mobile-modal-open='mobile-modal-{$catalog_item['id']}'></span>";
+        $open_btn = "<span data-mobile-modal-open='mobile-modal-{$catalog_item['id']}'></span>";
 
         generateModal($menu_modals, $catalog_item);
     }

@@ -54,4 +54,11 @@
   [data-opened-element]:not(.opened) {
     display: none;
   }
+
+  img {
+    width: 100%;
+  }
+  svg {
+    flex: none;
+  }
 }

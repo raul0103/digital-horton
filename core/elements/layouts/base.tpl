@@ -25,7 +25,7 @@
 {"@FILE modules/map-resources/mapResources.php" | snippet : [
   'parents' => 0
   'depth' => 2
-  'where' => '{"class_key":"modDocument"}'
+  'where' => '{"class_key":"modDocument","deleted":0}'
   'toPlaceholder' => 'map-resources.menu'
 ]}
 
