@@ -29,8 +29,12 @@
     </svg>
     {set $title = "В избранном ничего нет"}
 
-    {elseif $page = "category"}
+    {elseif $page == "category"}
       {set $title = "В данной категории товары не найдены"}
+
+    {elseif $page == "error"}
+      {set $title = "Страница не найдена"}
+      {set $text = "Возможно она была удалена. Воспользуйтесь поиском или вернитесь на главную"}
   {/if}
 
   <div class="fs-48-33 font-candara fw-700">{$title}</div>

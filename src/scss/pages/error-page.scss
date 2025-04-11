@@ -1,0 +1,10 @@
+.error-page {
+  &__image {
+    max-width: 880px;
+    margin: 64px auto;
+    display: block;
+  }
+  .empty-page-block {
+    margin-top: -120px;
+  }
+}
