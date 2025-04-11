@@ -42,6 +42,6 @@
       <label>Телефон *</label>
       <input type="tel" name="phone" placeholder="+7 (___) ___-__-__"  required/>
     </div>
-    <button class="btn btn-primary big-padding w-100">Закать звонок</button>
+    <button class="btn btn-primary big-btn w-100">Закать звонок</button>
   </div>
 </form>

@@ -104,3 +104,16 @@
     text-transform: uppercase;
   }
 }
+
+.contacts-block {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 14px;
+      padding: 0px 0 0 24px;
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+  }
+}

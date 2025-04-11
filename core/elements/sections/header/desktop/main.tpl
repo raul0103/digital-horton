@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header-desktop__main-row">
       <button
-        class="catalog-button btn btn-primary border-radius-right d-flex gap-8 fs-20 big-padding mr-20"
+        class="catalog-button btn btn-primary border-radius-right d-flex gap-8 fs-20 big-btn mr-20"
         data-opened-btn="catalog-desktop"
       >
         <svg width="16" height="16" class="primary-stroke">

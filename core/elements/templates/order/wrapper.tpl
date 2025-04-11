@@ -50,7 +50,7 @@
 
           <div class="d-grid col-sm-2 gap-16">
             <label
-              class="btn big-padding btn-bordered d-flex gap-8 cursor-pointer w-100"
+              class="btn big-btn btn-bordered d-flex gap-8 cursor-pointer w-100"
             >
               <svg class="primary-stroke" width="15" height="15">
                 <use

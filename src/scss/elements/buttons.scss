@@ -86,8 +86,11 @@
     padding: 0;
   }
 
-  &.big-padding {
-    padding: 20px;
+  &.big-btn {
+    height: 56px;
+    @media (max-width: $bp-xs) {
+      height: auto;
+    }
   }
   &.border-radius-right {
     border-top-left-radius: 0;
