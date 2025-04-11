@@ -1,0 +1,61 @@
+.requisites-page {
+  &__row {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr;
+
+    border-radius: $primary-radius;
+    background: #fff;
+
+    padding-bottom: 40px;
+
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+      padding: 16px;
+    }
+  }
+
+  &__info {
+    padding: 40px 64px 0;
+    @media (max-width: $bp-sm) {
+      padding: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    @media (max-width: $bp-xs) {
+      gap: 12px;
+    }
+    .delimiter {
+      position: absolute;
+      width: 100%;
+      border-bottom: 1px dashed #c0c7d6;
+      bottom: 3px;
+    }
+    span:not(.delimiter) {
+      background: #fff;
+      z-index: 1;
+      @media (max-width: $bp-xs) {
+        font-size: 12px;
+      }
+      &:last-child {
+        text-align: end;
+      }
+    }
+  }
+
+  iframe {
+    filter: grayscale(1);
+    min-height: 420px;
+  }
+
+  .form {
+    @media (min-width: $bp-sm) {
+      padding-right: 20px;
+    }
+  }
+}

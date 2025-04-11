@@ -10,7 +10,7 @@
                 <div class="contacts-page__info">
                     <h1 class="section-title text-start">{$_modx->resource.pagetitle}</h1>
                     {include "file:templates/contacts/info.tpl"}
-                    {include "file:templates/contacts/form.tpl"}
+                    {include "file:sections/horizontal-form/wrapper.tpl"}
                 </div>
 
                 {include "file:chunks/map-script.tpl" height='100%'}
