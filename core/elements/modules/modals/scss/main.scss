@@ -32,6 +32,15 @@
     margin-bottom: 20px;
   }
 
+  &-content {
+    .modal-container {
+      max-width: 90%;
+      max-height: 90%;
+      overflow-y: auto;
+      padding: 16px;
+    }
+  }
+
   &-callback {
     .modal-container {
       max-width: 370px;

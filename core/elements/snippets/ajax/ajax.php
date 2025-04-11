@@ -10,6 +10,16 @@ if (empty($data['ajax_connect']) || empty($data['action'])) return;
 $pdoTools = $modx->getService("pdoTools");
 
 switch ($data['action']) {
+    case 'get-news-resource':
+        if (!$data['resource_id']) exit("Не передан resource_id");
+        $resource = $modx->getObject('modResource', $data['resource_id']);
+        if (!$resource) exit("Ресурс не найден");
+
+        $outer = $pdoTools->getChunk("@FILE templates/news/full-item.tpl", [
+            "resource" => $resource
+        ]);
+
+        exit($outer);
     case 'get-product-data':
         // sleep(1); // Без этого слишком быстро товар появляется и стремный резкий скачок происходит
         if (!$data['product_id']) exit("Не передан product_id");
@@ -21,23 +31,23 @@ switch ($data['action']) {
         ]);
 
         exit($outer);
-    case 'get-catalog':
-        $cache_options = [
-            xPDO::OPT_CACHE_KEY => 'default/map-resources/' . $modx->context->key . '/',
-        ];
+        // case 'get-catalog':
+        //     $cache_options = [
+        //         xPDO::OPT_CACHE_KEY => 'default/map-resources/' . $modx->context->key . '/',
+        //     ];
 
-        if ($cache_data = $modx->cacheManager->get($data['cache_name'], $cache_options)) {
-            if ($data['device'] == 'desktop') {
-                $output = $pdoTools->runSnippet("@FILE modules/catalog/snippets/html-desktop.php", [
-                    'data' => $cache_data
-                ]);
-            } elseif ($data['device'] == 'mobile') {
-                $output = $pdoTools->runSnippet("@FILE modules/mobile-menu/snippets/html-mobile.php", [
-                    'data' => $cache_data
-                ]);
-                $output = json_encode($output);
-            }
+        //     if ($cache_data = $modx->cacheManager->get($data['cache_name'], $cache_options)) {
+        //         if ($data['device'] == 'desktop') {
+        //             $output = $pdoTools->runSnippet("@FILE modules/catalog/snippets/html-desktop.php", [
+        //                 'data' => $cache_data
+        //             ]);
+        //         } elseif ($data['device'] == 'mobile') {
+        //             $output = $pdoTools->runSnippet("@FILE modules/mobile-menu/snippets/html-mobile.php", [
+        //                 'data' => $cache_data
+        //             ]);
+        //             $output = json_encode($output);
+        //         }
 
-            exit($output);
-        }
+        //         exit($output);
+        //     }
 }
