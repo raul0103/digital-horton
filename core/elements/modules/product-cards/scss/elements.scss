@@ -13,7 +13,7 @@
   }
 }
 
-.sortby__controls {
+.sortby-controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,7 +29,7 @@
     }
   }
 
-  &-item {
+  &__item {
     display: flex;
     gap: 8px;
 

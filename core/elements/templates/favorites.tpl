@@ -21,18 +21,18 @@
                 </button>
             </div>
 
-            <div class="sortby__controls">
-                <div class="sortby__controls-item" id="mse2_sort">
+            <div class="sortby-controls">
+                <div class="sortby-controls__item" id="mse2_sort">
                 <label>Сортировать по </label>
                 <a
-                    class="sortby__controls-item-sort-item"
+                    class="sortby-controls__item-sort-item"
                     id="sort-by-date"
                     data-dir="asc"
                 >
                     Дате добавления
                 </a>
                 <a
-                    class="sortby__controls-item-sort-item"
+                    class="sortby-controls__item-sort-item"
                     id="sort-by-price"
                     data-dir="asc"
                 >
@@ -45,6 +45,7 @@
                 {set $params = [
                     'parents' => 0
                     'tpl' => '@FILE modules/product-cards/chunks/v2/wrapper.tpl'
+                    'limit' => 0
                 ]}
 
                 {if $.get['date_direction'] == 'desc'}
