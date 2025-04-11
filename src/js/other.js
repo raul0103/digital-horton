@@ -6,4 +6,13 @@ export default function initOtherFuncs() {
         cart_form.querySelector('[data-cart-event="plus"]').click();
     });
   };
+
+  window.downloadFile = (url, filename = null) => {
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename || url.split("/").pop();
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
 }

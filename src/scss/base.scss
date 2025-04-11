@@ -16,7 +16,9 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-
+svg {
+  min-width: max-content;
+}
 body {
   background-color: #eef2f5;
   min-height: 100vh;

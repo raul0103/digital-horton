@@ -1,4 +1,5 @@
 .tabs-inform-page {
+  min-height: 600px;
   &__row {
     display: grid;
     grid-template-columns: 20% 1fr;
@@ -22,5 +23,17 @@
         color: $primary-dark;
       }
     }
+  }
+  &__item {
+    background: #fff;
+    border-radius: $primary-radius;
+    padding: 24px;
+    @media (max-width: $bp-xs) {
+      padding: 16px 12px;
+    }
+  }
+
+  [data-opened-element]:not(.opened) {
+    display: none;
   }
 }
