@@ -24,7 +24,7 @@
 
         <div class="d-grid gap-16 fw-500 header-desktop__address-block">
           <div class="d-flex gap-8">
-            <svg width="16" height="16" class="primary-stroke" class="primary-stroke">
+            <svg width="16" height="16" class="primary-stroke">
               <use
                 xlink:href="/assets/template/icons/sprite.svg?v=19c#house"
               ></use>
