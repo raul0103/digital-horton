@@ -30,10 +30,10 @@
                 ]}
 
                 <div class="comparison-page__categories">
-                    {set $index = 0}
+                    {set $product_idx = 0}
                     <div class="comparison-page__categories-row">
                         {foreach $data as $parent_id => $products}
-                            <button class="btn btn-simple {if $index++ == 0}active{/if}" data-opened-btn="parent-{$parent_id}" data-close-early="compare" data-toggle-not="true">
+                            <button class="btn btn-simple {if $product_idx++ == 0}active{/if}" data-opened-btn="parent-{$parent_id}" data-close-early="compare" data-toggle-not="true">
                                 {$products[0]['parent_title']} ({count($products)})
                             </button>
                         {/foreach}
@@ -49,9 +49,9 @@
                 </div>
 
                 <div class="comparison-page__products">
-                    {set $index = 0}
+                    {set $product_idx = 0}
                     {foreach $data as $parent_id => $products}
-                    <div class="comparison-page__products-group {if $index++ == 0}opened{/if}" data-opened-element="parent-{$parent_id}">
+                    <div class="comparison-page__products-group {if $product_idx++ == 0}opened{/if}" data-opened-element="parent-{$parent_id}">
                         <table class="comparison-page__product sm-d-none table-sticky">
                             <tr class="tr-image tr-equal-btn">
                                 <td>
@@ -86,7 +86,7 @@
                         <table class="comparison-page__product">
                             <tr class="tr-image"><td><img src="{$product['image']}" /></td></tr>
                             <tr class="tr-title"><td><a href="{$product['uri']}">{$product['pagetitle'] | truncate : 30 : ' ... '}</a></td></tr>
-                            <tr class="tr-price"><td>{$product['price']} руб.</td></tr>
+                            <tr class="tr-price"><td class="fs-28-19">{$product['price']} руб.</td></tr>
                             <tr class="tr-control">
                                 <td class="d-flex">
                                     {include "file:modules/cart/frontend/chunks/cart-controls-big.tpl" product_id=$product['id']}

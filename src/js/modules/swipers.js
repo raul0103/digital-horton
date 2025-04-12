@@ -150,4 +150,30 @@ export default function iniSliders() {
 
     direction: "horizontal",
   });
+
+  let direction = "vertical";
+  let slidesPerView = 6.5;
+  if (innerWidth < 1024) {
+    direction = "horizontal";
+    slidesPerView = 4;
+  }
+  let product_thumbs = new Swiper('[data-swiper="product-gallery-thumbs"]', {
+    modules: [Navigation],
+    slidesPerView,
+    spaceBetween: 16,
+    freeMode: true,
+    watchSlidesProgress: true,
+    direction,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+  new Swiper('[data-swiper="product-gallery-preview"]', {
+    modules: [Thumbs],
+
+    thumbs: {
+      swiper: product_thumbs,
+    },
+  });
 }

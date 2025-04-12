@@ -4,7 +4,7 @@
         <span class="checkmark"></span>
     </label>
     
-    <img class="product-card--v3-image br-primary-small" src="{$product['thumb']}" />
+    <img class="product-card--v3-image br-primary-small" src="{$product['thumb']}" loading="lazy"/>
     <div class="product-card--v3-content">
         <a class="font-candara fs-17-13 fw-700 text-uppercase" href="{$product['uri']}">{$product['pagetitle']}</a>
         <ul class="product-card--v3-content-info">
@@ -19,7 +19,7 @@
 
     <div class="product-card--v3-cart-info">
         {include "file:modules/cart/frontend/chunks/cart-controls-default.tpl" product_count=$product.count product_id=$product.id price=$product.price}
-        {include "file:modules/product-cards/chunks/common/product-price.tpl" type_simple=true price=$product.price old_price=$product.old_price}
+        {include "file:modules/product-cards/chunks/common/product-price.tpl" type_simple=true type_simple=true price=$product.price old_price=$product.old_price}
         <button class="btn btn-simple btn-bucket" onclick="product_{$product['id']}.remove();cart.events.remove({$product['id']});">
             <svg width="22" height="24" class="secondary-gray-stroke">
                 <use

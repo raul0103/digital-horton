@@ -3,8 +3,8 @@
     {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" product_id=$id}
     {include "file:modules/store-product-selection/chunks/comparison/btn.tpl" product_id=$id}
   </div>
-  <div class="product-card__image">
-    <img src="" />
+  <div class="product-card__image {if !$thumb}bg{/if}">
+    {if $thumb}<img src="{$thumb}" loading="lazy"/>{/if}
   </div>
   <a class="fs-28-19 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle}</a>
   
@@ -14,7 +14,7 @@
       {include "file:chunks/rating-stars.tpl"}
     </div>
 
-    {include "file:modules/product-cards/chunks/common/product-price.tpl"}
+    {include "file:modules/product-cards/chunks/common/product-price.tpl" old_price_width_full=true type_simple=true}
     {include "file:modules/product-cards/chunks/v2/options.tpl"}
 
   <div class="product-card__controls mt-auto">

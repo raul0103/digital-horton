@@ -4,7 +4,7 @@
         <span class="checkmark"></span>
     </label>
     
-    <img class="product-card--v3-image br-primary-small" src="{$product['thumb']}" />
+    <img class="product-card--v3-image br-primary-small" src="{$product['thumb']}" loading="lazy"/>
     <div class="product-card--v3-content">
         <a class="font-candara fs-17-13 fw-700 text-uppercase" href="{$product['uri']}">{$product['pagetitle']}</a>
         <ul class="product-card--v3-content-info">
@@ -13,7 +13,7 @@
             <li>{$product.price} {if $product.unit}за {$product.unit}{/if}</li>
         </ul>
 
-        {include "file:modules/product-cards/chunks/common/product-price.tpl" type_simple=true price=$product.price old_price=$product.old_price classes="fw-700 font-candara"}
+        {include "file:modules/product-cards/chunks/common/product-price.tpl" old_price_width_full=true type_simple=true price=$product.price old_price=$product.old_price classes="fw-700 font-candara"}
 
         <div class="mt-auto d-flex gap-16">
             {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" simple=true product_id=$product['id']}

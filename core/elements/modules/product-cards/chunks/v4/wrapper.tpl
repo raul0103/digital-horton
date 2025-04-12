@@ -4,6 +4,7 @@
     src="{$product.thumb}"
     width="64"
     height="64"
+    loading="lazy"
   />
   <div class="d-grid gap-8">
     <div class="fs-15">{$product.pagetitle}</div>

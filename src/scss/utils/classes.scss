@@ -65,6 +65,7 @@
 .fs-25-18{ font-size: 25px; @media (max-width: $bp-md) { font-size: 18px; } }
 .fs-28-19{ font-size: 28px; @media (max-width: $bp-md) { font-size: 19px; } }
 .fs-32-19{ font-size: 32px; @media (max-width: $bp-md) { font-size: 19px; } }
+.fs-32-23{ font-size: 32px; @media (max-width: $bp-md) { font-size: 23px; } }
 .fs-48-33{ font-size: 48px; @media (max-width: $bp-md) { font-size: 33px; } }
 .fs-56-39{ font-size: 56px; @media (max-width: $bp-md) { font-size: 39px; } }
 .fs-96-32{ font-size: 96px; @media (max-width: $bp-md) { font-size: 32px; } }
@@ -116,7 +117,7 @@
 .xs-d-block{@media (min-width: $bp-xs) {display: none!important;}}
 .sm-d-block{@media (min-width: $bp-sm) {display: none!important;}}
 .block-scroll {overflow: hidden;}
-.old-price{color: $secondary-gray;text-decoration: line-through; font-size: 21px;@media (max-width: $bp-md) { font-size: 13px; }}
+.old-price{color: $secondary-gray;text-decoration: line-through; font-size: 21px;@media (max-width: $bp-md) { font-size: 14px; }}
 .primary-stroke{stroke:$primary-dark}
 .primary-fill{fill:$primary-dark}
 .secondary-gray-stroke{stroke:$secondary-gray}
