@@ -86,6 +86,7 @@
 .mb-32{margin-bottom: 32px;}
 .mt-16{margin-top: 16px;}
 .mt-32{margin-top: 32px;}
+.mt-32-16{margin-top: 32px; @media (max-width: $bp-sm) { margin-top: 16px; }}
 .m-auto{margin: auto;}
 .ml-auto{margin-left: auto;}
 .ml-right{margin-right: auto;}
