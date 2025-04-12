@@ -8,9 +8,9 @@
         {set $active = "active"}
     {/if}
 
-    <button class="btn btn-bordered btn-compare {$active}"
+    <button class="btn {if $simple}btn-simple{else}btn-bordered{/if} btn-compare {$active}"
             onclick="window.addProductSelection(this,{$product_id},'comparison-products', { warning:'Товар удален из сравнения',success:'Товар добавлен в сравнение' })">
-        <svg width="22" height="22">
+        <svg width="22" height="22" class="{if $gray}secondary-gray-stroke{else}primary-stroke{/if}">
           <use
             xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#compare"
           ></use>

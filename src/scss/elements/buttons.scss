@@ -114,6 +114,9 @@
       svg {
         fill: $primary-dark;
       }
+      svg.secondary-gray-stroke {
+        fill: $secondary-gray;
+      }
     }
   }
   &-compare {

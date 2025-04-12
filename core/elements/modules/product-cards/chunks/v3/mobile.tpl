@@ -16,7 +16,7 @@
         {include "file:modules/product-cards/chunks/common/product-price.tpl" old_price_width_full=true type_simple=true price=$product.price old_price=$product.old_price classes="fw-700 font-candara"}
 
         <div class="mt-auto d-flex gap-16">
-            {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" simple=true product_id=$product['id']}
+            {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" gray=true simple=true product_id=$product['id']}
 
             <button class="btn btn-simple btn-bucket" onclick="product_desktop_{$product['id']}.remove();cart.events.remove({$product['id']});">
                 <svg width="22" height="24" class="secondary-gray-stroke">

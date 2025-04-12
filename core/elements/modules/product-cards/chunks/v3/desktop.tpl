@@ -13,7 +13,7 @@
             <li>{$product.price} {if $product.unit}за {$product.unit}{/if}</li>
         </ul>
         <div class="mt-auto">
-            {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" simple=true product_id=$product['id']}
+            {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" gray=true simple=true product_id=$product['id']}
         </div>
     </div>
 

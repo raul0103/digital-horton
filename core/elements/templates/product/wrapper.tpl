@@ -7,10 +7,11 @@
         <div class="container">
             <div class="product-page__row">
                 {include "file:templates/product/gallery/wrapper.tpl"}
-                <div>
+                <div class="d-grid gap-24">
                     <h1 class="font-candara fs-32-23 text-uppercase">{$_modx->resource.pagetitle}</h1>
                     <div class="product-page__info-row">
                         {include "file:templates/product/content.tpl"}
+                        <button class="btn btn-bordered w-100 sm-d-block">Заказать сейчас</button>
                         {include "file:templates/product/sidebar.tpl"}
                     </div>
                 </div>
