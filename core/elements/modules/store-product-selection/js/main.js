@@ -90,8 +90,16 @@ class ProductSelection {
       this.find_elements.counters[cookie_key] = counter_elements;
     }
 
-    counter_elements.forEach((counter_element) => {
+    this.find_elements.counters[cookie_key].forEach((counter_element) => {
       counter_element.textContent = count;
+
+      if (counter_element.dataset.totalHideEmpty == "true") {
+        if (count < 1) {
+          counter_element.classList.add("hidden");
+        } else {
+          counter_element.classList.remove("hidden");
+        }
+      }
     });
   }
 }
