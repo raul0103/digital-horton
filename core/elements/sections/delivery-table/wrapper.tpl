@@ -2,7 +2,7 @@
     "path" => "/assets/template/json/sections/delivery-table.json"
 ]}
 
-<div>
+<div class="delivery-table">
   <div class="text-content">
     <p>
       Мы предлагаем быструю и удобную доставку 24/7, в том числе в выходные дни

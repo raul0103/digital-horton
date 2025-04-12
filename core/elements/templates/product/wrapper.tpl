@@ -20,6 +20,7 @@
         </div>
     </div>
     
+    {include "file:sections/need-product/wrapper.tpl"}
     {include "file:sections/advantages/wrapper.tpl"}
     {include "file:sections/big-form/wrapper.tpl"}
     {include "file:sections/main-map/wrapper.tpl"}

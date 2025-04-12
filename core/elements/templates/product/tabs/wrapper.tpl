@@ -12,7 +12,7 @@
     <div class="product-page__tabs-controls-row">
       {foreach $btns as $btn}
       <button
-        class="{$btn['classlist']}"
+        class="fs-25-18 {$btn['classlist']}"
         data-opened-btn="{$btn['id']}"
         data-close-early="tabs"
         data-toggle-not="true"
@@ -37,15 +37,15 @@
     </div>
 
     <div class="product-page__tabs-content" data-opened-element="tab4">
-      Сервис в разработке
+      {include "file:sections/loading-pipes/wrapper.tpl"}
     </div>
 
     <div class="product-page__tabs-content" data-opened-element="tab5">
-      Сервис в разработке
+      
     </div>
 
-    <div class="product-page__tabs-content" data-opened-element="tab5">
-      Сервис в разработке
+    <div class="product-page__tabs-content" data-opened-element="tab6">
+      <button class="btn btn-bordered big-btn">Оставить отзыв</button>
     </div>
   </div>
 </div>
