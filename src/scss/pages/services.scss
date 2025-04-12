@@ -1,0 +1,18 @@
+.services-page {
+  &__item {
+    &-content {
+      @media (max-width: $bp-xs) {
+        order: 2;
+        button {
+          width: 100%;
+        }
+      }
+    }
+    &-image {
+      img {
+        border-radius: $primary-radius;
+        width: 100%;
+      }
+    }
+  }
+}

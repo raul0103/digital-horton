@@ -88,8 +88,10 @@
 
   &.big-btn {
     height: 56px;
+    min-width: 200px;
     @media (max-width: $bp-xs) {
       height: auto;
+      min-width: max-content;
     }
   }
   &.border-radius-right {
