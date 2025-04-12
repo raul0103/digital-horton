@@ -17,8 +17,8 @@
                 <div class="accordion__row">
                     {foreach $data['data'] as $index => $item}
                     <div class="accordion__item">
-                        <div class="accordion__item-header fw-700 font-candara fs-25-18" data-opened-btn="content-{$index_column}{$index}">{$item['header']}</div>
-                        <div class="accordion__item-content" data-opened-element="content-{$index_column}{$index}">
+                        <div class="accordion__item-header fw-700 font-candara fs-25-18 {if $index == 0}active{/if}" data-opened-btn="content-{$index_column}{$index}">{$item['header']}</div>
+                        <div class="accordion__item-content {if $index == 0}opened{/if}" data-opened-element="content-{$index_column}{$index}">
                             <div class="text-content">
                                 {foreach $item['content'] as $key => $values}
                                     <div class="d-grid col-sm-30-1">
