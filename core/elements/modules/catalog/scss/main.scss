@@ -39,6 +39,8 @@
     }
   }
   &__container {
+    overflow-y: auto;
+
     background-color: variables.$primary-dark;
     border-top-right-radius: variables.$primary-radius;
     border-bottom-right-radius: variables.$primary-radius;

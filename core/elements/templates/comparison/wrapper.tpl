@@ -40,11 +40,19 @@
                     </div>
                 </div>
 
+                <div class="sm-d-block mb-16">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" onchange="window.comparisonEqual(this)">
+                        <span class="checkmark border"></span>
+                        Показать только отличия
+                    </label>
+                </div>
+
                 <div class="comparison-page__products">
                     {set $index = 0}
                     {foreach $data as $parent_id => $products}
                     <div class="comparison-page__products-group {if $index++ == 0}opened{/if}" data-opened-element="parent-{$parent_id}">
-                        <table class="comparison-page__product">
+                        <table class="comparison-page__product sm-d-none table-sticky">
                             <tr class="tr-image tr-equal-btn">
                                 <td>
                                     <label class="custom-checkbox">
@@ -74,7 +82,7 @@
                                 <tr class="tr-option tr-flex-left" data-comparison-key="{$option}"><td>{$options_title[$idx]}</td></tr>
                             {/foreach}
                         </table>
-                        {foreach $products as $product}
+                        {foreach $products as $index => $product}
                         <table class="comparison-page__product">
                             <tr class="tr-image"><td><img src="{$product['image']}" /></td></tr>
                             <tr class="tr-title"><td><a href="{$product['uri']}">{$product['pagetitle'] | truncate : 30 : ' ... '}</a></td></tr>
@@ -95,9 +103,14 @@
                                 </td>
                             </tr>
 
-                            <tr class="tr-option tr-border-bottom"><td></td></tr>
-                            {foreach $options as $option}
-                                <tr class="tr-option tr-flex-center" data-comparison-key="{$option}" data-comparison-key="{$option}" data-comparison-value="{$product[$option]}"><td class="td-center">{$product[$option]}</td></tr>
+                            <tr class="tr-option tr-border-bottom"><td>{if $index == 0}<b class="sm-d-block fs-12">Технические характеристики</b>{/if}</td></tr>
+                            {foreach $options as $idx => $option}
+                                <tr class="tr-option tr-flex-center" data-comparison-key="{$option}" data-comparison-key="{$option}" data-comparison-value="{$product[$option]}">
+                                    <td {if $index == 0}class="td-sm-d-flex"{/if}>
+                                        {if $index == 0}<b class="sm-d-block secondary-gray-color">{$options_title[$idx]}</b>{/if}
+                                        {$product[$option]}
+                                    </td>
+                                </tr>
                             {/foreach}
                         </table>
                         {/foreach}
