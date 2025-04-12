@@ -3,8 +3,39 @@
     display: grid;
     gap: 24px;
     grid-template-columns: 40% 1fr;
+    margin-bottom: 32px;
     @media (max-width: $bp-sm) {
       grid-template-columns: 1fr;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__options {
+    display: grid;
+    gap: 16px;
+    max-width: 800px;
+    &-item {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      position: relative;
+      .delimiter {
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px dashed #c0c7d6;
+        bottom: 3px;
+      }
+      div {
+        background-color: #eef2f5;
+        z-index: 1;
+      }
+      &-value {
+        @media (min-width: $bp-md) {
+          width: 200px;
+          text-align: left;
+        }
+      }
     }
   }
 
@@ -13,33 +44,6 @@
     gap: 16px;
 
     &-top {
-    }
-    &-options {
-      display: grid;
-      gap: 16px;
-      &-item {
-        display: flex;
-        align-items: end;
-        justify-content: space-between;
-        gap: 16px;
-        position: relative;
-        .delimiter {
-          position: absolute;
-          width: 100%;
-          border-bottom: 1px dashed #c0c7d6;
-          bottom: 3px;
-        }
-        div {
-          background-color: #eef2f5;
-          z-index: 1;
-        }
-        &-value {
-          @media (min-width: $bp-md) {
-            width: 200px;
-            text-align: left;
-          }
-        }
-      }
     }
   }
 
@@ -157,6 +161,51 @@
       margin: auto;
       @media (max-width: $bp-md) {
         display: none;
+      }
+    }
+  }
+
+  &__tabs {
+    &-row {
+      max-width: 1220px;
+    }
+
+    &-controls {
+      margin-bottom: 24px;
+      overflow: auto;
+      @media (max-width: $bp-sm) {
+        margin-bottom: 16px;
+      }
+      button {
+        padding: 5px 10px;
+        text-transform: uppercase;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 20px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+        &.active {
+          color: red;
+        }
+      }
+
+      &-row {
+        width: max-content;
+      }
+    }
+
+    &-content {
+      display: none;
+      //   min-height: 200px;
+      &.opened {
+        display: block;
       }
     }
   }

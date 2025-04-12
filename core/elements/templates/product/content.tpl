@@ -12,9 +12,5 @@
       </div>
     </div>
   </div>
-  <div class="product-page__content-options">
-    {'msProductOptions' | snippet : [
-        'tpl' => '@FILE templates/product/tpl-options-item.tpl'
-    ]}
-  </div>
+  {include "file:templates/product/options/wrapper.tpl"}
 </div>

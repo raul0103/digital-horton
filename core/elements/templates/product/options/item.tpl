@@ -5,10 +5,10 @@
       {set $value = $option.value}
   {/if}
   {if $value}
-    <div class="product-page__content-options-item">
+    <div class="product-page__options-item">
         <div>{$option.caption}</div>
         <span class="delimiter"></span>
-        <div class="product-page__content-options-item-value">{$value}</div>
+        <div class="product-page__options-item-value">{$value}</div>
     </div>
   {/if}
 {/foreach}

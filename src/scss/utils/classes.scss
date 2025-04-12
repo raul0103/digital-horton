@@ -124,3 +124,4 @@
 .secondary-gray-stroke{stroke:$secondary-gray}
 .br-primary-small{border-radius: $primary-radius ;@media (max-width: $bp-sm) {border-radius: $small-radius}}
 .block-title,.block-title *{ font-family: "Candara"; font-size: 28px; font-weight: 700; @media (max-width: $bp-sm) { font-size: 19px; } }
+.link{color: $primary-light;}

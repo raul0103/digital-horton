@@ -16,6 +16,7 @@
                     </div>
                 </div>
             </div>
+            {include "file:templates/product/tabs/wrapper.tpl"}
         </div>
     </div>
     
