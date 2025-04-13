@@ -1,3 +1,5 @@
+{block "before"}{/block}
+
 {'@FILE snippets/ajax/ajax.php' | snippet}
 {'@FILE modules/cart/backend/snippets/ajax.php' | snippet}
 {include 'file:modules/fast-search/chunks/init.tpl'}
@@ -15,7 +17,7 @@
     'parents' => 'catalog_id' | config
     'toPlaceholder' => 'map-resources.categories'
     'includeTVs' => 'main_image'
-    'where' => '{"class_key":"msCategory", "template":4, "deleted":0}'
+    'where' => '{"class_key":"msCategory", "template":30, "deleted":0}'
     'depth' => 10,
   ]}
 {else}

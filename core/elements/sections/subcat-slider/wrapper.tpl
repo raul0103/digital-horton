@@ -9,7 +9,7 @@
         <div class="subcat-slider__wrap swiper" data-swiper="subcat-slider">
             <div class="swiper-wrapper">
                 {foreach $items as $item}
-                    <a class="subcat-slider__item" href="{$item['uri']}">{$item['menutitle'] ?: $item['menutitle']}</a> 
+                    <a class="subcat-slider__item" href="{$item['uri']}">{$item['menutitle'] ?: $item['pagetitle']}</a> 
                 {/foreach}
             </div>
             {include "file:chunks/buttons/swiper-left.tpl"}

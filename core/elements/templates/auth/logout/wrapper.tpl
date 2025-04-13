@@ -1,0 +1,1 @@
+{'Login' | snippet : ['logoutKey' => 'logout','logoutResourceId'=>'login_id'|config]}
