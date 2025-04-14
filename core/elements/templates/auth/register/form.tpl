@@ -4,8 +4,8 @@
 
     <div class="form__group">
       <label>Имя</label>
-      <input type="text" name="username:required:minLength=4" class="[[+error.username:notempty=` is-invalid`]]" value="[[+username]]">
-      [[+error.username]]
+      <input type="text" name="fullname:required:minLength=4" class="[[+error.fullname:notempty=` is-invalid`]]" value="[[+fullname]]">
+      [[+error.fullname]]
     </div>
 
     <div class="form__group">
