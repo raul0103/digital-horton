@@ -12,6 +12,7 @@
 
   &__options {
     display: grid;
+    height: max-content;
     gap: 16px;
     max-width: 800px;
     &-item {
@@ -42,9 +43,7 @@
   &__content {
     display: grid;
     gap: 16px;
-
-    &-top {
-    }
+    height: max-content;
   }
 
   &__sidebar {

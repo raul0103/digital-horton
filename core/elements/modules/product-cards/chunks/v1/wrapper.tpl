@@ -3,10 +3,10 @@
     {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" product_id=$id}
     {include "file:modules/store-product-selection/chunks/comparison/btn.tpl" product_id=$id}
   </div>
-  <div class="product-card__image {if !$thumb}bg{/if}">
-    {if $thumb}<img src="{$thumb}" loading="lazy"/>{/if}
+  <div class="product-card__image {if !$medium}bg{/if}">
+    {if $medium}<img src="{$medium}" loading="lazy"/>{/if}
   </div>
-  <a class="fs-28-19 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle}</a>
+  <a class="fs-28-19 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle ?: $pagetitle}</a>
   
   {include "file:modules/product-cards/chunks/common/product-price.tpl"}
 
