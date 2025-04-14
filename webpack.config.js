@@ -70,14 +70,14 @@ module.exports = {
     proxy: [
       {
         context: () => true,
-        target: "https://horton-v2",
+        target: "https://horton-new",
         changeOrigin: true,
         secure: false,
       },
     ],
     watchFiles: ["src/**/*", "core/elements/**/*"],
     open: true,
-    host: "horton-v2",
+    host: "horton-new",
     port: 8080,
     hot: true,
     liveReload: true,
