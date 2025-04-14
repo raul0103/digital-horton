@@ -50,6 +50,7 @@
                     'parents' => 0
                     'tpl' => '@FILE modules/product-cards/chunks/v2/wrapper.tpl'
                     'limit' => 0
+                    'includeThumbs' => 'medium'
                 ]}
 
                 {if $.get['date_direction'] == 'desc'}
