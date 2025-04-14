@@ -1,5 +1,3 @@
-{block "before"}{/block}
-
 {'@FILE snippets/ajax/ajax.php' | snippet}
 {'@FILE modules/cart/backend/snippets/ajax.php' | snippet}
 {include 'file:modules/fast-search/chunks/init.tpl'}
