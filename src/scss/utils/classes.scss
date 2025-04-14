@@ -6,7 +6,7 @@
 .white-color{color:#fff!important}
 .blind-gray-color{color: $blind-gray!important;}
 .secondary-gray-color,.secondary-gray-color *{color: $secondary-gray!important;}
-.error-color{color:$error-color}
+.error-color,.error-color *{color:$error-color}
 
 .primary-dark-bg{background-color: $primary-dark;}
 .primary-blue-bg{background-color: $primary-blue;}

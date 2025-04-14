@@ -35,6 +35,7 @@
 ```js
 cart.events.clear(); // Полностью очистит корзину
 cart.events.remove(PRODUCT_ID); // Удалит товар из корзины
+cart.events.minishopCreateOrder(); // Создаст заказ в minishop2
 ```
 
 ## BACKEND
@@ -64,3 +65,7 @@ cart.events.remove(PRODUCT_ID); // Удалит товар из корзины
 ## Зависмости
 
 - Модуль notifications js/modules/notifications.js. Подключается в frontend/js/services/notification-service.js
+
+## Обновления
+
+- Добавли функционал для работы с корзиной минишопа `core\elements\modules\cart\backend\processors\minishoporder.class.php`

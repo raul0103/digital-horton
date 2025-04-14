@@ -14,6 +14,7 @@ import FilterWindow from "./modules/filter-window.js";
 import initComparison from "./modules/comparison.js";
 import initOtherFuncs from "./other.js";
 import initAjax from "./modules/ajax.js";
+import fetchItObserve from "./modules/fetchit-observe.js";
 
 import "../../core/elements/modules/all";
 
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initComparison();
   initOtherFuncs();
   initAjax();
+  fetchItObserve();
 
   window.notifications = new Notifications();
   new FilterWindow().init();

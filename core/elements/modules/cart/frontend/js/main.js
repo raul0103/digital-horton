@@ -77,6 +77,9 @@ class Cart {
       update_elements.cartTotalSumm(response.data);
       update_elements.cartTotalCount(response.data);
     },
+    minishopCreateOrder: async (product_data) => {
+      await api.response("minishoporder", product_data);
+    },
   };
 
   states = {
