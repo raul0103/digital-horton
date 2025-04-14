@@ -126,4 +126,16 @@
       background: $primary-dark;
     }
   }
+
+  &-auth {
+    max-width: 500px;
+    margin: auto;
+
+    background: #fff;
+    padding: 40px;
+    border-radius: $primary-radius;
+    @media (max-width: $bp-sm) {
+      padding: 16px;
+    }
+  }
 }

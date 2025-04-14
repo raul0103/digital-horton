@@ -10,8 +10,8 @@
 
             [[!ConfirmRegister?
                 &authenticate=`1`
-                &redirectTo=`45975`
-                &errorPage=`45975`
+                &redirectTo=`[[++login_id]]`
+                &errorPage=`[[++login_id]]`
             ]]
         </div>
     </div>

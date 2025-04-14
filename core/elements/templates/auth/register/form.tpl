@@ -1,32 +1,37 @@
-<div class="container pt-3">
+<form action="[[~[[*id]]]]" class="form form-auth" method="post">
+  <div class="d-grid gap-16">
+    <div class="block-title">Регистрация</div>
 
-  <div class="card text-dark bg-white mx-auto mb-3" style="max-width: 30rem;">
-    <div class="card-body">
-      [[!+error.message:eq=``:then=`
-        <form class="form" action="[[~[[*id]]]]" method="post">
-        <div class="mb-3">
-          <label for="fullname" class="form-label">Имя</label>
-          <input type="text" name="fullname" class="form-control[[!+reg.error.fullname:notempty=` is-invalid`]]" value="[[!+reg.fullname]]">
-          <div class="invalid-feedback">[[!+reg.error.fullname]]</div>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" name="email" class="form-control[[!+reg.error.email:notempty=` is-invalid`]]" value="[[!+reg.email]]">
-          <div class="invalid-feedback">[[!+reg.error.email]]</div>
-        </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Пароль</label>
-          <input type="password" name="password" class="form-control[[!+reg.error.password:notempty=` is-invalid`]]" value="[[!+reg.password]]">
-          <div class="invalid-feedback">[[!+reg.error.password]]</div>
-        </div>
-        <div class="mb-3">
-          <label for="password_confirm" class="form-label">Введите пароль ещё раз</label>
-          <input type="password" name="password_confirm" class="form-control[[!+reg.error.password_confirm:notempty=` is-invalid`]]" value="[[!+reg.password_confirm]]">
-          <div class="invalid-feedback">[[!+reg.error.password_confirm]]</div>
-        </div>
-        <input type="submit" name="login-register-btn" class="btn btn-primary" value="Отправить">
-      </form>
-      `:else=`[[!+error.message]]`]]
+    <div class="form__group">
+      <label>Имя</label>
+      <input type="text" name="username:required:minLength=4" class="[[+error.username:notempty=` is-invalid`]]" value="[[+username]]">
+      [[+error.username]]
+    </div>
+
+    <div class="form__group">
+      <label>Email</label>
+      <input type="email" name="email" class="form-control[[+error.email:notempty=` is-invalid`]]" value="[[+email]]">
+      [[+error.email]]
+    </div>
+
+    <div class="form__group">
+      <label>Пароль</label>
+      <input type="password" name="password:required:minLength=8" class="form-control[[+error.password:notempty=` is-invalid`]]" value="[[+password]]">
+      [[+error.password]]
+    </div>
+
+    <div class="form__group">
+      <label>Пароль</label>
+      <input type="password" name="password_confirm:password_confirm=`password`" class="form-control[[+error.password:notempty=` is-invalid`]]" value="[[+password_confirm]]">
+      [[+error.password]]
+    </div>
+
+    <input class="returnUrl" type="hidden" name="returnUrl" value="[[+request_uri]]" />
+    <input class="loginLoginValue" type="hidden" name="service" value="login">
+    
+    <div class="d-grid gap-4">
+      <button class="btn btn-primary w-100 big-btn" type="submit">Зарегистрироваться</button>
+      <a href="{$_modx->makeURL('login_id'|config)}" class="btn btn-bordered w-100 big-btn d-flex">Войти</a>
     </div>
   </div>
-</div>
+</form>

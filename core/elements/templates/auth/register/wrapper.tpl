@@ -11,24 +11,13 @@
             {include "file:templates/auth/register/form.tpl"}
         
             [[!Register?
-                &submitVar=`login-register-btn`
-                &activation=`1`
-                &activationEmailSubject=`Подтверждение регистрации`
-                &activationResourceId=`45972`
-                &successMsg=`Спасибо за регистрацию. На вашу электронную почту [[!+reg.email]] отправлено письмо, содержащее ссылку, необходимую для активации аккаунта. Перейдите по ссылке в письме, чтобы завершить процедуру регистрации.`
                 &usergroups=`Users`
                 &usernameField=`email`
-                &passwordField=`password`
-                &validate=`nospam:blank,
-                password:required:minLength=^8^,
-                password_confirm:password_confirm=^password^,
-                fullname:required,
-                email:required:email`
-                &placeholderPrefix=`reg.`
-          ]]
-          
+                &submittedResourceId=`[[++register_thanks_id]]`
+                &activationResourceId=`[[++register_confirm_id]]`
+                &errTpl=`<div class="error-color">[[+error]]</div>`
+            ]]
+
         </div>
     </div>
-
-
 {/block}

@@ -1,0 +1,16 @@
+.profile-page {
+  &__row {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 16px;
+  }
+  &__nav {
+    display: grid;
+    height: max-content;
+    gap: 24px;
+    a {
+      font-weight: 700;
+      color: $secondary-gray;
+    }
+  }
+}
