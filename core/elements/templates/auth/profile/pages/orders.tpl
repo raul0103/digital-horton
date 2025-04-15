@@ -1,5 +1,6 @@
 {set $orders = "@FILE modules/cart/backend/snippets/getMinishopOrdersByUser.php" | snippet}
 
+{if $orders}
 <div class="profile-orders">
     {foreach $orders as $order}
     <div class="profile-orders__item">
@@ -38,3 +39,6 @@
     </div>
     {/foreach}
 </div>
+{else}
+    {include "file:chunks/empty.tpl" page="orders"}
+{/if}

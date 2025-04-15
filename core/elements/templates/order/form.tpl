@@ -1,21 +1,23 @@
+[[!Profile]]
+
 <form class="form order-page__wrap" data-form-id="order-form">
   <div class="order-page__forms d-grid col-sm-2 br-primary-small">
     <div class="d-grid gap-16">
       <div class="block-title">Покупатель</div>
-
+      
       <div class="form__group">
         <label>Контактное лицо *</label>
-        <input type="text" name="name" placeholder="ФИО" required />
+        <input type="text" name="name" placeholder="ФИО" required value="[[+fullname]]" />
       </div>
 
       <div class="d-grid col-sm-2 gap-16">
         <div class="form__group">
           <label>Электронная почта *</label>
-          <input type="email" name="email" required />
+          <input type="email" name="email" required value="[[+email]]"/>
         </div>
         <div class="form__group">
           <label>Телефон *</label>
-          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" />
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" value="[[+phone]]" />
           <span class="error-color" data-error="phone" style="display: none;"></span>
         </div>
       </div>

@@ -40,6 +40,15 @@
     </svg>
     {set $title = "В избранном ничего нет"}
 
+    {elseif $page == "orders"}
+        <svg width="71" height="70" viewBox="0 0 71 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.5" width="70" height="70" rx="35" fill="white"/>
+          <path d="M55.8587 25H16.1413M42.2492 31.8749C37.3676 31.8749 29.7492 31.8749 29.7492 31.8749M56 26.1803V50C56 52.7614 53.7614 55 51 55H21C18.2386 55 16 52.7614 16 50V26.1803C16 25.4041 16.1807 24.6385 16.5279 23.9443L19.9635 17.0729C20.5987 15.8025 21.8972 15 23.3176 15H48.6824C50.1028 15 51.4013 15.8025 52.0365 17.0729L55.4721 23.9443C55.8193 24.6385 56 25.4041 56 26.1803Z" stroke="#5779BC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      
+        {set $title = "У вас пока нет заказов"}
+        {set $text = "empty"}
+
     {elseif $page == "category"}
       {set $title = "В данной категории товары не найдены"}
 
@@ -49,6 +58,8 @@
   {/if}
 
   <div class="fs-48-33 font-candara fw-700">{$title}</div>
-  <div>{$text ?: "Воспользуйтесь каталогом или вернитесь на главную страницу"}</div>
+  {if $text !== "empty"}
+    <div>{$text ?: "Воспользуйтесь каталогом или вернитесь на главную страницу"}</div>
+  {/if}
   <a class="btn btn-primary" href="/">На главную</a>
 </div>
