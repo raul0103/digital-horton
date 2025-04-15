@@ -17,6 +17,12 @@
                 &logoutTpl=`[[++core_path]]elements/templates/auth/login/logout-form.tpl`
             ]]
 
+            {if $.get.service !== 'logout'}
+                {"@FILE snippets/RedirectIfAuthenticated.php" | snippet : [
+                    "page_id" => "auth_orders_id"|config
+                ]}
+            {/if}
+
         </div>
     </div>
 

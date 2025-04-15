@@ -104,61 +104,91 @@ a {
   &.right {
     right: 0;
     .arrow-bg {
-      left: -62px;
+      left: -25px;
       @media (max-width: $bp-xs) {
-        left: -34px;
+        left: 3px;
       }
     }
   }
   .arrow-bg {
     // width: 100px;
     position: absolute;
-    z-index: 3;
-    top: -62px;
+    z-index: 1;
+    // top: -62px;
+
+    width: 63px;
+    height: 130px;
+    left: -10px;
+    top: -47px;
+
     @media (max-width: $bp-xs) {
-      width: 35px;
-      top: -46px;
+      width: 35px !important;
+      top: -19px;
       height: 72px;
     }
   }
 }
 .swiper-button-prev {
-  left: 1px !important;
-  top: -4px !important;
+  button {
+    left: 6px !important;
+    top: -4px !important;
+    @media (max-width: $bp-xs) {
+      // left: -8px !important;
+
+      top: -5px !important;
+      left: -6px !important;
+    }
+  }
 }
 .swiper-button-next {
-  right: 1px !important;
-  top: -4px !important;
+  button {
+    right: 6px !important;
+    top: -4px !important;
+    @media (max-width: $bp-xs) {
+      right: -7px !important;
+      top: -5px !important;
+    }
+  }
 }
 .swiper-button-next,
 .swiper-button-prev {
-  background-color: #fff;
-  border: none;
-  width: 58px;
-  height: 58px;
-  min-width: 58px;
-  min-height: 58px;
-  border-radius: 100%;
-  position: relative;
-
-  box-shadow: 0px 3px 15px 0px #18264126;
-
   &:after {
     display: none;
   }
-  svg {
-    width: auto !important;
-    height: auto !important;
-    z-index: 1;
-  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  @media (max-width: $bp-xs) {
-    width: 31px;
-    height: 31px;
-    min-width: 31px;
-    min-height: 31px;
-    max-width: 31px;
-    max-height: 31px;
+    z-index: 5;
+    background-color: #fff;
+    border: none;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    min-height: 58px;
+    border-radius: 100%;
+    position: relative;
+
+    box-shadow: 0px 3px 15px 0px #18264126;
+
+    &:after {
+      display: none;
+    }
+    svg {
+      width: auto !important;
+      height: auto !important;
+      z-index: 1;
+    }
+
+    @media (max-width: $bp-xs) {
+      width: 31px;
+      height: 31px;
+      min-width: 31px;
+      min-height: 31px;
+      max-width: 31px;
+      max-height: 31px;
+    }
   }
 }
 // <<< swiper button
@@ -191,7 +221,7 @@ hr {
   border: 1px solid $secondary-gray;
 }
 
-.order-status{
+.order-status {
   padding: 8px 10px;
   display: flex;
   gap: 4px;
