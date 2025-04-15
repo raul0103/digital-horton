@@ -8,7 +8,7 @@
   />
   <div class="d-grid gap-8">
     <div class="fs-15">{$product.pagetitle}</div>
-    <div class="font-candara">{$product.price} РУБ.</div>
+    <div class="font-candara">{$product.price+0|number_format:0:',':' '} РУБ.</div>
   </div>
 
   <div class="product-card--v4__mark">

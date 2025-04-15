@@ -26,8 +26,38 @@ if (!$user) {
 }
 
 // Получаем заказы этого пользователя
-$orders = $modx->getCollection('msOrder', [
+$q = $modx->newQuery('msOrder');
+$q->where([
     'user_id' => $user->get('id')
 ]);
+$q->sortby('createdon', 'DESC');
+$orders = $modx->getCollection('msOrder', $q);
+
+// Получаем поля по товарам в заказе
+foreach ($orders as $order) {
+    $order_products_by_id = [];
+    foreach ($order->Products as $product) {
+        $order_products_by_id[$product->product_id] = $product->toArray();
+    }
+
+    $products = $modx->getCollection('msProduct', ['id:in' => array_keys($order_products_by_id)]);
+
+    $output = [];
+    foreach ($products as $product) {
+        $order_product = $order_products_by_id[$product->id];
+
+        $output[] = [
+            "pagetitle" => $order_product['name'],
+            "price" => $order_product['price'],
+            "count" => $order_product['count'],
+
+            "thumb" => $product->get('thumb'),
+            "unit" => $product->get('unit'),
+        ];
+    }
+
+    $order->set('ProductsArray', $output);
+}
+
 
 return $orders;

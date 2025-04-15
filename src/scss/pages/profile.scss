@@ -3,6 +3,9 @@
     display: grid;
     grid-template-columns: 20% 1fr;
     gap: 16px;
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+    }
   }
   &__nav {
     display: grid;
