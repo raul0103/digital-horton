@@ -1,12 +1,9 @@
 <?php
 
 $options = [
-    ["title" => "Объем, м3", "key" => "obem-m3"],
-    ["title" => "Вес, т", "key" => "mass-t"],
-    ["title" => "Масса, т", "key" => "massa-t"],
-    ["title" => "Длина, мм", "key" => "dlina-mm"],
-    ["title" => "Ширина, мм", "key" => "shirina-mm"],
-    ["title" => "Высота, мм", "key" => "vysota-mm"],
+    ["title" => "Диаметр, мм", "key" => "diametr_mm"],
+    ["title" => "Тип", "key" => "product_type"],
+    ["title" => "Толщина, мм", "key" => "tolshina_mm"],
 ];
 
 // $ids_plitdorozh = $modx->getOption('ids_plitdorozh');

@@ -26,25 +26,38 @@
     width: max-content;
   }
 
-  &-item {
+  .mse2_selected_link {
     padding: 3px 5px;
     background: $primary-dark;
     border-radius: 4px;
     font-size: 14px;
     padding-right: 24px;
+    display: flex;
+    position: relative;
 
     &:hover {
       opacity: 0.7;
     }
-    &__name {
+    em {
+      color: #fff;
       font-size: 13px;
-      color: #fff;
-    }
-
-    &__title {
-      color: #fff;
       font-weight: 600;
     }
+    sup {
+      color: #fff;
+      position: absolute;
+      right: 5px;
+      top: -1px;
+    }
+    // &__name {
+    //   font-size: 13px;
+    //   color: #fff;
+    // }
+
+    // &__title {
+    //   color: #fff;
+    //   font-weight: 600;
+    // }
   }
   &-item__cross {
     position: relative;

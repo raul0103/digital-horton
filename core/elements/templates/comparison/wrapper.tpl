@@ -22,8 +22,8 @@
             </div>
 
             {if $product_ids && $product_ids | count}
-                {set $options = ['gost', 'obem-m3', 'dlina-mm', 'marka']}
-                {set $options_title = ['ГОСТ', "Объем, м3", "Длина, мм","Марка"]}
+                {set $options = ['diametr_mm', 'product_type', 'tolshina_mm']}
+                {set $options_title = ['Диаметр, мм', "Тип", "Толщина, мм"]}
                 {set $data = "@FILE templates/comparison/snippets/getData.php" | snippet : [
                     'product_ids' => $product_ids
                     'options' => $options

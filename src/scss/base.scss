@@ -206,7 +206,7 @@ a {
 //   }
 // }
 
-.loading {
+.loading:not(#mse2_mfilter) {
   pointer-events: none;
   opacity: 0.7;
 }
