@@ -37,7 +37,9 @@ class minishoporder extends Main
 
             // 1. Добавляем товары в корзину
             foreach ($products as $product) {
-                $miniShop2->cart->add($product['id'], $product['count']);
+                $miniShop2->cart->add($product['id'], $product['count'], [
+                    'user_discount' => $form_data['user_discount']
+                ]);
             }
 
             // 2. Добавляем данные пользователя в заказ

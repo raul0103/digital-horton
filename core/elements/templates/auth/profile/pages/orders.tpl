@@ -3,6 +3,13 @@
 {if $orders}
 <div class="profile-orders">
     {foreach $orders as $order}
+
+    {set $get_cost_price = "@FILE snippets/getPrice.php" | snippet : [
+      'price' => $order->cost,
+      'user_discount' => $order->ProductsArray[0].options.user_discount
+    ]}
+    {set $cost_price = $get_cost_price['user_price'] ?: $get_cost_price['price']}
+
     <div class="profile-orders__item">
         <div class="profile-orders__item-header">
             <div class="fs-28-19 font-candara">Заказ №{$order->num} от {$order->createdon | date : 'd.m.Y'}</div>
@@ -13,7 +20,13 @@
                 {if $order->status == 1000}
                     <span class="success-color fs-21-15">Оплачен</span>
                 {/if}
-                <span class="fw-700 font-candara fs-25-18">{$order->cost|number_format:0:',':' '} руб.</span>
+
+                <div class="d-flex gap-8">
+                    <span class="fw-700 font-candara fs-25-18">{$cost_price} руб.</span>
+                    {if $get_cost_price['user_price']}
+                        <span class="old-price fs-15">{$get_cost_price['price']} руб.</span>
+                    {/if}
+                </div>
             </div>
         </div>
         

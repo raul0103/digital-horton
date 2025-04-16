@@ -1,9 +1,21 @@
-{if $old_price}
+{if $_modx->getPlaceholder('user_discount')}
+  {set $discount = $_modx->getPlaceholder('user_discount')}
+{else}
+  {if $old_price}
     {set $discount = "@FILE snippets/discount.php" | snippet : [
         'old_price' => $old_price,
         'price' => $price
     ]}
+  {/if}
 {/if}
+
+{set $get_price = "@FILE snippets/getPrice.php" | snippet : [
+  'price' => $price,
+  'user_discount' => $_modx->getPlaceholder('user_discount')
+]}
+
+{set $price = $get_price['user_price'] ?: $get_price['price']}
+{set $old_price = $get_price['user_price'] ? $get_price['price'] : $old_price}
 
 <div class="product-price">
   <div class="d-flex flex-wrap gap-4 align-end">

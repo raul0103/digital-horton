@@ -1,5 +1,11 @@
-{set $products = "@FILE modules/cart/backend/snippets/getProducts.php" |
-snippet}
+{set $products = "@FILE modules/cart/backend/snippets/getProducts.php" | snippet}
+
+{set $total_summ = $_modx->getPlaceholder('product_total')['summ']}
+{set $get_price = "@FILE snippets/getPrice.php" | snippet : [
+  'price' => $total_summ,
+  'user_discount' => $_modx->getPlaceholder('user_discount')
+]}
+{set $total_summ = $get_price['user_price'] ?: $get_price['price']}
 
 <div class="order-page__sidebar">
   <div class="order-page__sidebar__wrap br-primary-small mb-24">
@@ -12,10 +18,10 @@ snippet}
         </div>
         <div class="d-flex justify-between">
         <span>Стоимость товаров</span>
-        <b><span>{$_modx->getPlaceholder('product_total')['summ']}</span> руб.</b>
+        <b><span>{$total_summ}</span> руб.</b>
         </div>
 
-        <div class="xx">Без учёта стоимости доставки</div>
+        <div>Без учёта стоимости доставки</div>
     </div>
 
     <div class="d-grid gap-8">

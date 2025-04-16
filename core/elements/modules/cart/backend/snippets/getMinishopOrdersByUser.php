@@ -50,6 +50,7 @@ foreach ($orders as $order) {
             "pagetitle" => $order_product['name'],
             "price" => $order_product['price'],
             "count" => $order_product['count'],
+            "options" => $order_product['options'],
 
             "thumb" => $product->get('thumb'),
             "unit" => $product->get('unit'),

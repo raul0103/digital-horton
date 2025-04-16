@@ -8,10 +8,7 @@
   data-cart-form="{$product_id}"
   onsubmit="cart.submit(event)"
 >
-  <input type="hidden" name="id" value="{$product_id}" />
-  <input type="hidden" name="price" value="{$price}" />
-  <input type="hidden" name="old_price" value="{$old_price}" />
-  <input type="hidden" name="unit" value="{$unit | gettype == 'array' ? $unit[0] : $unit}" />
+  {include "file:modules/cart/frontend/chunks/common/price-inputs.tpl"}
 
   <div class="w-100">
     <div class="cart-product-mini__row">

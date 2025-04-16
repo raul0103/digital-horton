@@ -1,6 +1,8 @@
 [[!Profile]]
 
 <form class="form order-page__wrap" data-form-id="order-form">
+  <input type="hidden" name="user_discount" value="{$_modx->getPlaceholder('user_discount')}">
+
   <div class="order-page__forms d-grid col-sm-2 br-primary-small">
     <div class="d-grid gap-16">
       <div class="block-title">Покупатель</div>
