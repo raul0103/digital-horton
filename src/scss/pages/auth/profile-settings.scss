@@ -1,0 +1,45 @@
+.profile-settings {
+  .form {
+    display: grid;
+    gap: 24px;
+
+    background: #fff;
+    border-radius: $primary-radius;
+    padding: 32px;
+    @media (max-width: $bp-xs) {
+      padding: 16px;
+      gap: 16px;
+    }
+    &__group,
+    button {
+      width: 100%;
+      max-width: 256px;
+      @media (max-width: $bp-xs) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__footer {
+    background: #fff;
+    border-radius: $primary-radius;
+    padding: 32px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    @media (max-width: $bp-xs) {
+      padding: 16px;
+      gap: 16px;
+      flex-direction: column;
+      text-align: center;
+
+      button {
+        width: 100%;
+      }
+      .btn-bordered {
+        height: 39px !important;
+      }
+    }
+  }
+}
