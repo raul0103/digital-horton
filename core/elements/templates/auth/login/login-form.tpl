@@ -15,7 +15,7 @@
     <input class="returnUrl" type="hidden" name="returnUrl" value="[[+request_uri]]" />
     <input class="loginLoginValue" type="hidden" name="service" value="login">
     
-    <div class="d-grid gap-4">
+    <div class="d-grid gap-8 mt-16">
       <button class="btn btn-primary w-100 big-btn" type="submit">Вход</button>
       <a href="{$_modx->makeURL('register_id'|config)}" class="btn btn-bordered w-100 big-btn d-flex">Регистрация</a>
     </div>
