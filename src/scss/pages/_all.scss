@@ -13,6 +13,8 @@
 @import "./news.scss";
 @import "./services.scss";
 @import "./product.scss";
-@import "./profile.scss";
-@import "./profile-orders.scss";
-@import "./profile-feedback.scss";
+
+@import "./auth/common.scss";
+@import "./auth/profile.scss";
+@import "./auth/profile-orders.scss";
+@import "./auth/profile-feedback.scss";

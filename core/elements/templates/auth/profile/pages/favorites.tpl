@@ -1,1 +1,1 @@
-favorites
+{include "file:chunks/empty.tpl" page="favorites"}

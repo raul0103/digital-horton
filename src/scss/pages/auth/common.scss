@@ -1,0 +1,18 @@
+.auth-navigation {
+  display: grid;
+  height: max-content;
+  gap: 24px;
+  a:not(.btn) {
+    font-weight: 700;
+    color: $secondary-gray;
+    &.active {
+      color: $primary-dark;
+    }
+  }
+
+  &__discount {
+    background: #fff;
+    border-radius: $primary-radius;
+    padding: 24px;
+  }
+}

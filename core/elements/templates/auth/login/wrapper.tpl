@@ -14,12 +14,11 @@
             [[!Login?
                 &tplType=`file`
                 &loginTpl=`[[++core_path]]elements/templates/auth/login/login-form.tpl`
-                &logoutTpl=`[[++core_path]]elements/templates/auth/login/logout-form.tpl`
             ]]
 
             {if $.get.service !== 'logout'}
                 {"@FILE snippets/RedirectIfAuthenticated.php" | snippet : [
-                    "page_id" => "auth_orders_id"|config
+                    "page_id" => "profile_id"|config
                 ]}
             {/if}
 

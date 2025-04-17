@@ -61,5 +61,5 @@
   {if $text !== "empty"}
     <div>{$text ?: "Воспользуйтесь каталогом или вернитесь на главную страницу"}</div>
   {/if}
-  <a class="btn btn-primary" href="/">На главную</a>
+  <a class="btn btn-primary big-btn d-flex" href="/">На главную</a>
 </div>

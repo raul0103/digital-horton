@@ -325,4 +325,20 @@
       stroke-linejoin="round"
     />
   </symbol>
+
+  <symbol
+    id="back-arrow"
+    width="23"
+    height="18"
+    viewBox="0 0 23 18"
+    fill="none"
+  >
+    <path
+      d="M6.4523 1.80019L1.89844 6.41569M1.89844 6.41569L6.4523 11.0312M1.89844 6.41569L17.0984 6.41569C19.3076 6.41569 21.0984 8.20655 21.0984 10.4157L21.0984 12.2002C21.0984 14.4093 19.3076 16.2002 17.0984 16.2002L11.4984 16.2002"
+      stroke="#182641"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
 </svg>

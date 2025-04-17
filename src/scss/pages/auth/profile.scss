@@ -1,0 +1,15 @@
+.profile-page {
+  &__row {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 16px;
+    @media (max-width: $bp-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+  // .auth-navigation {
+  //   @media (max-width: $bp-sm) {
+  //     display: none;
+  //   }
+  // }
+}
