@@ -3,9 +3,9 @@
     {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" product_id=$id}
     {include "file:modules/store-product-selection/chunks/comparison/btn.tpl" product_id=$id}
   </div>
-  <div class="product-card__image {if !$medium}bg{/if}">
+  <a class="product-card__image {if !$medium}bg{/if}" href="{$uri}">
     {if $medium}<img src="{$medium}" loading="lazy"/>{/if}
-  </div>
+  </a>
   <a class="fs-28-19 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle ?: $pagetitle}</a>
   
   {include "file:modules/product-cards/chunks/common/product-price.tpl"}

@@ -7,7 +7,7 @@
       'tplOuter' => '@INLINE {$wrapper}'
   ]}
 
-  <a class="fs-28-19" href="{$_modx->makeURL('login_id'|config)}?service=logout">Выход</a>
+  {*<a class="fs-28-19" href="{$_modx->makeURL('login_id'|config)}?service=logout">Выход</a>*}
 
   <a class="d-flex gap-8 btn btn-bordered big-btn w-100" href="{$_modx->makeURL('catalog_id'|config)}">
     <svg width="23" height="18" class="primary-stroke">
