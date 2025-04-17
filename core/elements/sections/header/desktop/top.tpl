@@ -57,7 +57,7 @@
             </svg>
             {'phone' | config}
           </a>
-          <button class="btn btn-primary fs-15 w-100">Заказать звонок</button>
+          <button onclick="modals.events.open('modal-callback')" class="btn btn-primary fs-15 w-100">Заказать звонок</button>
         </div>
       </div>
     </div>

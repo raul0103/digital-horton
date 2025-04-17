@@ -11,13 +11,10 @@
 
     <div data-modal-body-before>
       <div class="modal-callback__header">
-        <div class="modal-title fs-title-1">{$title}</div>
+        <div class="modal-title fs-25-18 fw-700">{$title}</div>
       </div>
       <div class="modal-callback__body">
         {block 'body'}{/block}
-        <div class="modal-require-info fs-caption muted-color">
-          <span class="error-color">*</span> — обязательные поля
-        </div>
       </div>
 
       <div class="modal-icon-close" data-modal-close></div>

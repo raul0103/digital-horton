@@ -41,7 +41,7 @@
             <button class="btn btn-primary big-btn">Повторить заказ</button>
             
             {if $order->status == 1000}
-                <button class="btn btn-bordered big-btn d-flex gap-8">
+                <button class="btn btn-bordered big-btn d-flex gap-8" onclick="window.order_id={$order->id};modals.events.open('modal-order-add-review')">
                     <svg width="20" height="22" class="primary-stroke">
                         <use xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#download"></use>
                     </svg>

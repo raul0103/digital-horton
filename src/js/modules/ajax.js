@@ -31,4 +31,37 @@ export default function initAjax() {
       }
     }
   };
+
+  window.addOrderReview = async (event) => {
+    event.preventDefault();
+
+    let form = event.target;
+    form.classList.add("loading");
+
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        action: "add-order-review",
+        ajax_connect: true,
+        content: form.content.value,
+        order_id: window.order_id, // Устанавливается на кнопке открытия модалки
+      }),
+    });
+
+    form.classList.remove("loading");
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    let data = await response.json();
+
+    if (data.success) {
+      modals.events.closeCurrent();
+      notifications.success(data.message);
+    } else notifications.error(data.message);
+  };
 }

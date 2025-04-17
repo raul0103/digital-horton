@@ -31,6 +31,39 @@ switch ($data['action']) {
         ]);
 
         exit($outer);
+
+    case 'add-order-review':
+        // sleep(1); // Без этого слишком быстро товар появляется и стремный резкий скачок происходит
+        if (!$data['content']) exit(json_encode([
+            "success" => false,
+            "message" => "Не передан content"
+        ]));
+        if (strlen($data['content']) < 4) exit(json_encode([
+            "success" => false,
+            "message" => "Введите больше символов"
+        ]));
+
+        $modx->addPackage('usershop', $modx->getOption('core_path') . 'components/usershop/model/');
+
+        $new_review = $modx->newObject('OrderReviews', [
+            "user_id" => $modx->user->id,
+            "order_id" => $data['order_id'],
+            "content" => $data['content'],
+            "status" => "pending"
+        ]);
+
+        if ($new_review->save()) {
+            exit(json_encode([
+                "success" => true,
+                "message" => "Отзыв успешно отправлен"
+            ]));
+        } else {
+            exit(json_encode([
+                "success" => false,
+                "message" => "Ошибка при создании отзыва"
+            ]));
+        }
+
         // case 'get-catalog':
         //     $cache_options = [
         //         xPDO::OPT_CACHE_KEY => 'default/map-resources/' . $modx->context->key . '/',

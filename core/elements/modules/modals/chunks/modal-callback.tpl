@@ -9,26 +9,26 @@
   {set $email_subject = 'Сообщение со страницы '~$_modx->resource.pagetitle}
   {'!FetchIt' | snippet : [
     'form' => '@INLINE 
-      <form class="form" data-modal-id="modal-callback">
+      <form class="form d-grid gap-16" data-modal-id="modal-callback">
         <div class="form__group">
-          <label>Ваше имя <span class="error-color">*</span></label>
-          <input type="text" name="name" aria-label="user-name"/>
+          <label>Ваше имя</label>
+          <input type="text" name="name"/>
         </div>
 
         <div class="form__group">
-          <label>Телефон <span class="error-color">*</span></label>
-          <input type="text" name="phone" required aria-label="user-phone"/>
+          <label>Телефон</label>
+          <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required/>
           <span class="error-color fs-caption" data-error="phone" style="display: none;"></span>
         </div>
 
         <label class="custom-checkbox">
-          <input type="checkbox" checked required aria-label="policy"/>
+          <input type="checkbox" checked required/>
           <span class="checkmark"></span>
-          Я согласен на обработку <a href="{$_modx->makeURL(45956)}" class="btn-link">персональных данных</a>
+          Я согласен на обработку <a href="{$_modx->makeURL("policy_id"|config)}" class="btn-link">персональных данных</a>
         </label>
 
         <div class="form__footer">
-          <button class="btn btn-primary" type="submit">Отправить</button>
+          <button class="btn btn-primary big-btn w-100" type="submit">Отправить</button>
         </div>
       </form>
     '

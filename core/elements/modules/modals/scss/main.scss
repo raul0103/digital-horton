@@ -42,9 +42,9 @@
   }
 
   &-callback {
-    .modal-container {
-      max-width: 370px;
-    }
+    // .modal-container {
+    //   max-width: 370px;
+    // }
 
     &-success {
       .modal-container {
@@ -78,7 +78,7 @@
     width: 90%;
     max-width: 500px;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: $primary-radius;
     padding: 24px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }

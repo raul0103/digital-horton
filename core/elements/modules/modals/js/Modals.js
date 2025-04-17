@@ -17,6 +17,7 @@ export default class Modals {
     };
 
     this.events_init = {}; // События которые уже определены
+    this.current_opened = null; // Текущая открая модалка
   }
 
   events = {
@@ -33,6 +34,7 @@ export default class Modals {
       if (!modal) return;
 
       modal.classList.add("opened");
+      this.current_opened = modal;
 
       // Записали для каких модалок уже была инициализация события
       if (!this.events_init[modal_id]) {
@@ -60,6 +62,12 @@ export default class Modals {
           }
         });
       });
+    },
+
+    closeCurrent: () => {
+      if (!this.current_opened) return;
+      this.current_opened.classList.remove("opened");
+      this.current_opened = null;
     },
   };
 
