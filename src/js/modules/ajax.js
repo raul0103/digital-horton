@@ -62,6 +62,48 @@ export default function initAjax() {
     if (data.success) {
       modals.events.closeCurrent();
       notifications.success(data.message);
-    } else notifications.error(data.message);
+
+      form.content.value = null;
+    } else {
+      notifications.error(data.message);
+    }
+  };
+
+  window.addTicket = async (event) => {
+    event.preventDefault();
+
+    let form = event.target;
+    form.classList.add("loading");
+
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        action: "add-ticket",
+        ajax_connect: true,
+        subject: form.subject.value,
+        content: form.content.value,
+      }),
+    });
+
+    form.classList.remove("loading");
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    let data = await response.json();
+
+    if (data.success) {
+      modals.events.closeCurrent();
+      notifications.success(data.message);
+
+      form.subject.value = null;
+      form.content.value = null;
+    } else {
+      notifications.error(data.message);
+    }
   };
 }

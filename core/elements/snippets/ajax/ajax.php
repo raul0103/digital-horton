@@ -21,7 +21,6 @@ switch ($data['action']) {
 
         exit($outer);
     case 'get-product-data':
-        // sleep(1); // Без этого слишком быстро товар появляется и стремный резкий скачок происходит
         if (!$data['product_id']) exit("Не передан product_id");
         $product = $modx->getObject('msProduct', $data['product_id']);
         if (!$product) exit("Товар не найден");
@@ -33,7 +32,6 @@ switch ($data['action']) {
         exit($outer);
 
     case 'add-order-review':
-        // sleep(1); // Без этого слишком быстро товар появляется и стремный резкий скачок происходит
         if (!$data['content']) exit(json_encode([
             "success" => false,
             "message" => "Не передан content"
@@ -49,7 +47,6 @@ switch ($data['action']) {
             "user_id" => $modx->user->id,
             "order_id" => $data['order_id'],
             "content" => $data['content'],
-            "status" => "pending"
         ]);
 
         if ($new_review->save()) {
@@ -61,6 +58,32 @@ switch ($data['action']) {
             exit(json_encode([
                 "success" => false,
                 "message" => "Ошибка при создании отзыва"
+            ]));
+        }
+
+    case 'add-ticket':
+        if (strlen($data['subject']) < 4 || strlen($data['content']) < 4) exit(json_encode([
+            "success" => false,
+            "message" => "Введите больше символов"
+        ]));
+
+        $modx->addPackage('usershop', $modx->getOption('core_path') . 'components/usershop/model/');
+
+        $new_review = $modx->newObject('UserTickets', [
+            "user_id" => $modx->user->id,
+            "subject" => $data['subject'],
+            "content" => $data['content'],
+        ]);
+
+        if ($new_review->save()) {
+            exit(json_encode([
+                "success" => true,
+                "message" => "Обращение успешно отправлено"
+            ]));
+        } else {
+            exit(json_encode([
+                "success" => false,
+                "message" => "Ошибка при создании обращения"
             ]));
         }
 
