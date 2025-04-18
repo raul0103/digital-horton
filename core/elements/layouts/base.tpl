@@ -61,13 +61,11 @@
 
   </head>
   <body>
- 
-{include "file:sections/mobile-fixed-navigation/wrapper.tpl"}
-
     {include 'file:sections/header/wrapper.tpl'}
     {block 'content'}{/block}
     {include 'file:sections/footer/wrapper.tpl'}
 
+    {include "file:sections/mobile-fixed-navigation/wrapper.tpl"}
     {include "file:modules/modals/chunks/all.tpl"}
     {block 'modals'}{/block}
 
