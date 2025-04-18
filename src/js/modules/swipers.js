@@ -176,4 +176,19 @@ export default function iniSliders() {
       swiper: product_thumbs,
     },
   });
+
+  if (window.innerWidth > 640)
+    new Swiper('[data-slider="navigation"]', {
+      // modules: [Autoplay],
+      // autoplay: {
+      //   delay: 2000,
+      //   disableOnInteraction: false,
+      // },
+
+      loop: false,
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      slideClass: "navigation-slide",
+      direction: "horizontal",
+    });
 }

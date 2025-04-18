@@ -3,16 +3,20 @@
 ]}
 
 {if $data['status'] == 'success'}
-<div class="loading-pipes">
-    {foreach $data['data'] as $data}
-    <div class="loading-pipes__row">
-        <ul>
-            {foreach $data['items'] as $item}
-                <li>{$item}</li>
-            {/foreach}
-        </ul>
-        <img src="{$data['image']}" />
+<!--noindex-->
+<noindex>
+    <div class="loading-pipes">
+        {foreach $data['data'] as $data}
+        <div class="loading-pipes__row">
+            <ul>
+                {foreach $data['items'] as $item}
+                    <li>{$item}</li>
+                {/foreach}
+            </ul>
+            <img src="{$data['image']}" />
+        </div>
+        {/foreach}
     </div>
-    {/foreach}
-</div>
+</noindex>
+<!--/noindex-->
 {/if}

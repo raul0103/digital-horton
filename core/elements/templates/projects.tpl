@@ -14,11 +14,13 @@
             {if $data['status'] == 'success'}
             <div class="projects-page__row">
                 <div class="projects-page__categories">
-                    <div class="projects-page__categories-wrap">
-                        {set $count = 0}
-                        {foreach $data['data'] as $category_name => $items}
-                            <a class="fs-28-19 font-candara fw-700 {if $count++ == 0}active{/if}" data-opened-btn="{$category_name}" data-toggle-not="true" data-close-early="certs">{$category_name}</a>
-                        {/foreach}
+                    <div class="swiper" data-slider="navigation">
+                        <div class="swiper-wrapper">
+                            {set $count = 0}
+                            {foreach $data['data'] as $category_name => $items}
+                                <a class="navigation-slide fs-28-19 font-candara fw-700 {if $count++ == 0}active{/if}" data-opened-btn="{$category_name}" data-toggle-not="true" data-close-early="certs">{$category_name}</a>
+                            {/foreach}
+                        </div>
                     </div>
                 </div>
 
