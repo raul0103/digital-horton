@@ -17,7 +17,7 @@
                         ['image' => 'assets/template/images/sections/delivery/1.png', 'title' => 'Газели, 4 м', 'text' => 'Грузоподъемность — 1,6 тонн'],
                         ['image' => 'assets/template/images/sections/delivery/2.png', 'title' => 'Шаланда, 6 м', 'text' => 'Грузоподъемность — 5 тонн'],
                         ['image' => 'assets/template/images/sections/delivery/3.png', 'title' => 'Шаланда, 13 м', 'text' => 'Грузоподъемность — 20 тонн'],
-                        ['image' => 'assets/template/images/sections/delivery/4.png', 'title' => 'Манипулятор, 6 м', 'text' => 'Грузоподъемность — 6 тонн'],
+                        ['image' => 'assets/template/images/sections/delivery/4.png', 'title' => 'Газель Next 6', 'text' => 'Грузоподъемность — 2 тонны'],
                         ['image' => 'assets/template/images/sections/delivery/5.png', 'title' => 'Манипулятор-шаланда, 12 м', 'text' => 'Грузоподъемность — 6 тонн'],
                         ['image' => 'assets/template/images/sections/delivery/6.png', 'title' => 'Тентованная фура', 'text' => 'Грузоподъемность — 22 тонны'],
                     ] as $card}
