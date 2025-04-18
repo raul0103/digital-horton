@@ -19,7 +19,7 @@
                     <div class="accordion__item">
                         <div class="accordion__item-header fw-700 font-candara fs-28-19 {if $index == 0}active{/if}" data-opened-btn="content-{$index_column}{$index}">{$item['header']}</div>
                         <div class="accordion__item-content {if $index == 0}opened{/if}" data-opened-element="content-{$index_column}{$index}">
-                            <div class="text-content">
+                            <div class="accordion__item-content__wrap text-content">
                                 {foreach $item['content'] as $key => $values}
                                     <div class="d-grid col-sm-30-1">
                                         <div class="fw-700 mt-32-16 fs-25-18 font-candara">{$key}</div>

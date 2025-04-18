@@ -19,7 +19,7 @@
                             <div class="accordion__item-header fw-700 font-candara fs-32-19 {if $idx == 1}active{/if}" data-opened-btn="content-{$idx}">{$pagetitle}</div>
                             <div class="accordion__item-content {if $idx == 1}opened{/if}" data-opened-element="content-{$idx}">
                                 
-                                <div class="d-grid col-sm-2 gap-24">
+                                <div class="accordion__item-content__wrap d-grid {if $main_image}col-sm-2{/if} gap-24">
                                     <div class="services-page__item-content">
                                         <div class="fs-28-19 mb-32-16">{$resource_price}</div>
                                         {if $content}<div class="mb-32-16">{$content}</div>{/if}
