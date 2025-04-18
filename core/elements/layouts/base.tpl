@@ -67,6 +67,7 @@
     {include 'file:sections/footer/wrapper.tpl'}
 
     {include "file:modules/modals/chunks/all.tpl"}
+    {block 'modals'}{/block}
 
     <script src="/assets/template/js/main.js?{'file_version' | config}" defer ></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

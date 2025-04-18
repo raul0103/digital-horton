@@ -104,6 +104,38 @@ switch ($data['action']) {
                 "message" => "Ошибка при удалении аккаунта"
             ]));
         }
+
+    case 'change-password':
+        $user = $modx->getObject('modUser', $modx->user->id);
+        if (!$user) exit(json_encode([
+            "success" => false,
+            "message" => "Аккаунт не найден"
+        ]));
+        if (empty($data['old_password']))  exit(json_encode([
+            "success" => false,
+            "message" => "Введите старый пароль"
+        ]));
+        if ($data['new_password'] !==  $data['new_password_confirm'])  exit(json_encode([
+            "success" => false,
+            "message" => "Пароли не совпадают"
+        ]));
+        if (strlen($data['new_password']) < 8)  exit(json_encode([
+            "success" => false,
+            "message" => "Пароль должен содержать больше 8 символов"
+        ]));
+
+        if ($user->changePassword($data['new_password'], $data['old_password'])) {
+            exit(json_encode([
+                "success" => true,
+                "message" => "Пароль успешно изменен"
+            ]));
+        } else {
+            exit(json_encode([
+                "success" => false,
+                "message" => "Ошибка при смене пароля"
+            ]));
+        }
+
         // case 'get-catalog':
         //     $cache_options = [
         //         xPDO::OPT_CACHE_KEY => 'default/map-resources/' . $modx->context->key . '/',

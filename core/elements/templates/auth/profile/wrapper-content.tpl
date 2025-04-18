@@ -24,3 +24,7 @@
     </div>
   </div>
 {/block}
+
+{block 'modals'}
+  {include "file:modules/modals/chunks/auth/all.tpl"}
+{/block}

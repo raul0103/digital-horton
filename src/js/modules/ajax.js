@@ -138,4 +138,39 @@ export default function initAjax() {
       notifications.error(data.message);
     }
   };
+
+  window.changePassword = async (event) => {
+    event.preventDefault();
+
+    let form = event.target;
+    form.classList.add("loading");
+
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        action: "change-password",
+        ajax_connect: true,
+        old_password: form.old_password.value,
+        new_password: form.new_password.value,
+        new_password_confirm: form.new_password_confirm.value,
+      }),
+    });
+    form.classList.remove("loading");
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    let data = await response.json();
+
+    if (data.success) {
+      modals.events.closeCurrent();
+      notifications.success(data.message);
+    } else {
+      notifications.error(data.message);
+    }
+  };
 }
