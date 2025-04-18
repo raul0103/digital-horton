@@ -75,17 +75,7 @@
               </a>
             </div>
 
-            <div class="sortby-controls__item font-candara arrow-bottom">
-              <label>Показывать по</label>
-              <div class="sortby-controls__item-select">
-                  <select name="mse_limit" id="mse2_limit" >
-                      {foreach [24, 48, 98] as $v}
-                          <option value="{$v}"{if $limit == $v} selected{/if}>{$v}</option>
-                      {/foreach}
-                  </select>
-              </div>
-            </div>
-
+            {include "file:sections/category-listing/select-limit-items.tpl"}
           </div>
 
           <div class="chips">

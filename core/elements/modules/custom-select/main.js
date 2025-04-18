@@ -13,6 +13,7 @@ export default function initCustomSelect() {
       `[data-custom-select-element="${key}"]`
     );
     let input = btn.querySelector("input");
+    let select = btn.querySelector("select"); // Настоящий селект который скрыт на странице
 
     // Открытие и закрытие выпадающего списка
     btn.addEventListener("click", () => {
@@ -23,11 +24,13 @@ export default function initCustomSelect() {
     // Выбор
     dropdown.addEventListener("click", (event) => {
       if (event.target.hasAttribute("data-custom-select-item")) {
-        if (input) {
-          input.value = event.target.textContent.trim();
-        } else {
-          btn.textContent = event.target.textContent;
+        input.value = event.target.textContent.trim();
+
+        if (select) {
+          select.value = input.value;
+          select.dispatchEvent(new Event("change", { bubbles: true }));
         }
+
         btn.classList.remove("active");
         btn.classList.add("selected");
         dropdown.classList.add("hidden");

@@ -28,6 +28,16 @@
       font-size: 14px;
     }
   }
+  .custom-select {
+    input {
+      border: none;
+      background: none;
+      display: inline-block;
+      width: 65px;
+      color: #182641 !important;
+      cursor: pointer;
+    }
+  }
 
   &__item {
     display: flex;
