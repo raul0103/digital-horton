@@ -1,6 +1,6 @@
 {set $key = $table ~ $delimeter ~ $filter}
-<fieldset class="category-listing__filter opened" id="mse2_{$key}">
-  <div class="category-listing__filter-title filter_title">
+<fieldset class="category-listing__filter opened" id="mse2_{$key}" data-opened-element="filter-{$key}">
+  <div class="category-listing__filter-title filter_title" data-opened-btn="filter-{$key}">
     {('mse2_filter_' ~ $table ~ '_' ~ $filter) | lexicon}
   </div>
 

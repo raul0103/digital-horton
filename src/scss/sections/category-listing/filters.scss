@@ -96,12 +96,13 @@
   }
 
   &__filter {
-    // height: 21px;
-    // overflow: hidden;
-    // &.opened {
-    //   height: max-content;
-    // }
     margin-bottom: 24px;
+    max-height: 22px;
+    overflow: hidden;
+    transition: 0.3s;
+    &.opened {
+      max-height: max-content;
+    }
 
     &-more-btn {
       width: max-content;
@@ -164,6 +165,26 @@
       font-size: 18px;
       font-weight: 700;
       cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 10px;
+      &.active {
+        &:after {
+          transform: rotate(45deg);
+        }
+      }
+      &:after {
+        content: "";
+        transform: rotate(224deg) translateY(-5px) translateX(-4px);
+        border: solid #000;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        transition: 0.2s;
+        margin-top: -6px;
+      }
     }
     .search-by-words {
       margin-bottom: 12px;
