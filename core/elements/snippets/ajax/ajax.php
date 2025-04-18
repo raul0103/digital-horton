@@ -87,6 +87,23 @@ switch ($data['action']) {
             ]));
         }
 
+    case 'delete-account':
+        $user = $modx->getObject('modUser', $modx->user->id);
+        if (!$user)     exit(json_encode([
+            "success" => false,
+            "message" => "Аккаунт не найден"
+        ]));
+        if ($user->remove()) {
+            exit(json_encode([
+                "success" => true,
+                "message" => "Аккаунт успешно удален"
+            ]));
+        } else {
+            exit(json_encode([
+                "success" => false,
+                "message" => "Ошибка при удалении аккаунта"
+            ]));
+        }
         // case 'get-catalog':
         //     $cache_options = [
         //         xPDO::OPT_CACHE_KEY => 'default/map-resources/' . $modx->context->key . '/',

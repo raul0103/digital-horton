@@ -106,4 +106,36 @@ export default function initAjax() {
       notifications.error(data.message);
     }
   };
+
+  window.deleteAccount = async (e) => {
+    e.classList.add("loading");
+
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        action: "delete-account",
+        ajax_connect: true,
+      }),
+    });
+
+    e.classList.remove("loading");
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    let data = await response.json();
+
+    if (data.success) {
+      modals.events.closeCurrent();
+      notifications.success(data.message);
+
+      setTimeout(() => location.reload(), 1000);
+    } else {
+      notifications.error(data.message);
+    }
+  };
 }

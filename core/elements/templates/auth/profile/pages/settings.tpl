@@ -61,6 +61,11 @@
     </button>
 
     <button class="btn btn-simple text-uppercase">Изменить пароль</button>
-    <button class="btn btn-simple text-uppercase">Удалить аккаунт</button>
+    <button
+      class="btn btn-simple text-uppercase"
+      onclick="modals.events.open('modal-delete-account')"
+    >
+      Удалить аккаунт
+    </button>
   </div>
 </div>
