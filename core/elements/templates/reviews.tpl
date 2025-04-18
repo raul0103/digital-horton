@@ -18,7 +18,6 @@
                             'tpl' => '@FILE modules/reviews/chunks/review-item-page.tpl',
                             'tplOuter' => '@INLINE {$items}',
                             'where' => ["source"=> $source['key']]
-                            'ratingRowClass' => 'rating-stars-static'
                         ]}
                         {if $reviews_outer}
                             <div class="reviews-page__group">
@@ -37,7 +36,6 @@
                         'tpl' => '@FILE modules/reviews/chunks/review-item-page.tpl',
                         'tplOuter' => '@INLINE {$items}',
                         'where' => ["source"=> null]
-                        'ratingRowClass' => 'rating-stars-static'
                     ]}
                     {if $reviews_outer}
                     <div class="reviews-page__group">

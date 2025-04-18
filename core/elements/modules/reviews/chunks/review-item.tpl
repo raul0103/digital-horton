@@ -15,8 +15,16 @@
         {$user_name}
       </div>
     </div>
-
-    {$rating_html}
+  
+    <div class="rating-stars-static">
+        {foreach range(1,$rating) as $rate}
+          <svg width="16" height="16" class="primary-stroke">
+            <use
+              xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#star"
+            ></use>
+          </svg>
+        {/foreach}
+      </div>
   </div>
     
     <div class="reviews-section__item-content">{$content}</div>

@@ -89,14 +89,14 @@ foreach ($items as $item) {
 
     if (!$item->published) continue;
 
-    $rating_html = "<div class='$ratingRowClass'>";
-    for ($i = 1; $i <= 5; $i++) {
-        if ($i <= $item->rating) $active_class = 'full';
-        else $active_class = 'empty';
+    // $rating_html = "<div class='$ratingRowClass'>";
+    // for ($i = 1; $i <= 5; $i++) {
+    //     if ($i <= $item->rating) $active_class = 'full';
+    //     else $active_class = 'empty';
 
-        $rating_html .= "<span class='$ratingItemClass $active_class'></span>";
-    }
-    $rating_html .= "</div>";
+    //     $rating_html .= "<span class='$ratingItemClass $active_class'></span>";
+    // }
+    // $rating_html .= "</div>";
 
     // >>> source
     if ($sources) {
