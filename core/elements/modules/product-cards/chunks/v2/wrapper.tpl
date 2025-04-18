@@ -14,7 +14,7 @@
       {include "file:chunks/rating-stars.tpl"}
     </div>
 
-    {include "file:modules/product-cards/chunks/common/product-price.tpl" old_price_width_full=true type_simple=true}
+    {include "file:modules/product-cards/chunks/common/product-price.tpl" type_simple=true}
     {include "file:modules/product-cards/chunks/v2/options.tpl"}
 
   <div class="product-card__controls mt-auto">

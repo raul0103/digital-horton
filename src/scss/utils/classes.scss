@@ -121,7 +121,7 @@
 .xs-d-block{@media (min-width: $bp-xs) {display: none!important;}}
 .sm-d-block{@media (min-width: $bp-sm) {display: none!important;}}
 .block-scroll {overflow: hidden;}
-.old-price{color: $secondary-gray;text-decoration: line-through; font-size: 21px;@media (max-width: $bp-md) { font-size: 14px; }}
+.old-price{color: $secondary-gray;text-decoration: line-through;@media (max-width: $bp-md) { font-size: 14px; }}
 .primary-stroke{stroke:$primary-dark}
 .primary-fill{fill:$primary-dark}
 .secondary-gray-stroke{stroke:$secondary-gray}

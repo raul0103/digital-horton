@@ -4,6 +4,7 @@
 @import "./versions/v4.scss";
 
 .product-card {
+  overflow: hidden;
   flex-shrink: 0;
 
   //   min-width: 368px;

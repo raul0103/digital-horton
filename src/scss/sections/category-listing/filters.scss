@@ -4,15 +4,17 @@
   }
 
   &__filters {
-    width: 17%;
     height: max-content;
     position: relative;
 
     padding: 16px 20px;
     background: #fff;
 
-    @media (max-width: $bp-md) {
-      width: 25%;
+    // @media (max-width: $bp-md) {
+    //   width: 25%;
+    // }
+    @media (min-width: $bp-sm) {
+      max-width: 293px;
     }
 
     @media (max-width: $bp-sm) {
