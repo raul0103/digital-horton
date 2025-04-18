@@ -3,6 +3,9 @@
 
   background-color: $primary-dark;
   padding: 40px 0;
+  @media (max-width: $bp-md) {
+    padding-bottom: 80px;
+  }
   * {
     color: #fff;
   }

@@ -52,9 +52,9 @@
       <div class="d-flex ml-auto">
         <a
           href="{$_modx->makeURL('favorites_id' | option)}"
-          class="header-counters btn btn-primary d-grid gap-4 border-radius-left fs-15 fw-700 place-center"
+          class="p-relative btn btn-primary d-grid gap-4 border-radius-left fs-15 fw-700 place-center"
         >
-          <span class="header-counters__mark {if count($_modx->getPlaceholder('favorite-products')) == 0}hidden{/if}" data-selection-key="favorite-products" data-total-hide-empty="true">
+          <span class="counters-mark {if count($_modx->getPlaceholder('favorite-products')) == 0}hidden{/if}" data-selection-key="favorite-products" data-total-hide-empty="true">
             {count($_modx->getPlaceholder('favorite-products'))}
           </span>
           <svg width="16" height="16" stroke="white" fill="none">
@@ -66,9 +66,9 @@
         </a>
         <a
           href="{$_modx->makeURL('comparison_id' | option)}"
-          class="header-counters btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
+          class="p-relative btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
         >
-          <span class="header-counters__mark {if count($_modx->getPlaceholder('comparison-products')) == 0}hidden{/if}" data-selection-key="comparison-products" data-total-hide-empty="true">
+          <span class="counters-mark {if count($_modx->getPlaceholder('comparison-products')) == 0}hidden{/if}" data-selection-key="comparison-products" data-total-hide-empty="true">
             {count($_modx->getPlaceholder('comparison-products'))}
           </span>
           <svg width="16" height="16">
@@ -79,10 +79,10 @@
           Сравнение
         </a>
         <a
-          class="header-counters btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
+          class="p-relative btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
           href="{$_modx->makeURL('cart_id' | option)}"
         >
-        <span class="header-counters__mark {if $_modx->getPlaceholder('product_total')['count'] == 0}hidden{/if}" data-cart-total-count data-total-hide-empty="true">
+        <span class="counters-mark {if $_modx->getPlaceholder('product_total')['count'] == 0}hidden{/if}" data-cart-total-count data-total-hide-empty="true">
           {$_modx->getPlaceholder('product_total')['count']}
         </span>
           <svg width="16" height="16">

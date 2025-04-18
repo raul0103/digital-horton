@@ -1,0 +1,12 @@
+.mobile-fixed-navigation {
+  width: 100%;
+  justify-content: center;
+  display: none;
+  background: #182641;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  @media (max-width: $bp-md) {
+    display: flex;
+  }
+}

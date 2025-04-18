@@ -62,6 +62,8 @@
   </head>
   <body>
  
+{include "file:sections/mobile-fixed-navigation/wrapper.tpl"}
+
     {include 'file:sections/header/wrapper.tpl'}
     {block 'content'}{/block}
     {include 'file:sections/footer/wrapper.tpl'}
