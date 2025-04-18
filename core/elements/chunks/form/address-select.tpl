@@ -1,8 +1,7 @@
 <div class="custom-select">
-  <button data-custom-select-btn="big-form-address" type="button">
-    Введите или выберите из списка
-  </button>
-
+  <div data-custom-select-btn="big-form-address">
+    <input name="address" placeholder="Введите или выберите из списка" value="" />
+  </div>
   <div
     data-custom-select-element="big-form-address"
     class="custom-select__dropdown hidden"

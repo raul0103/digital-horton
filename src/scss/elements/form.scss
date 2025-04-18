@@ -43,18 +43,16 @@
     }
 
     .custom-select {
-      button {
-        background-color: transparent;
-        color: $secondary-gray;
+      [data-custom-select-btn] {
         &:after {
           border-color: #fff;
         }
-        &.active {
-          border-color: $blue-light;
-        }
-        &.selected {
-          color: #fff;
-        }
+        // &.active {
+        //   border-color: $blue-light;
+        // }
+        // &.selected {
+        //   color: #fff;
+        // }
       }
     }
 
@@ -74,11 +72,6 @@
     }
   }
 
-  .custom-select {
-    button {
-      color: $secondary-gray;
-    }
-  }
   label:not(.btn) {
     font-size: 15px;
     padding: 0px 0 0 24px;

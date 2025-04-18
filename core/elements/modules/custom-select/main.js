@@ -12,6 +12,7 @@ export default function initCustomSelect() {
     let dropdown = document.querySelector(
       `[data-custom-select-element="${key}"]`
     );
+    let input = btn.querySelector("input");
 
     // Открытие и закрытие выпадающего списка
     btn.addEventListener("click", () => {
@@ -22,7 +23,12 @@ export default function initCustomSelect() {
     // Выбор
     dropdown.addEventListener("click", (event) => {
       if (event.target.hasAttribute("data-custom-select-item")) {
-        btn.textContent = event.target.textContent;
+        if (input) {
+          input.value = event.target.textContent.trim();
+        } else {
+          btn.textContent = event.target.textContent;
+        }
+        btn.classList.remove("active");
         btn.classList.add("selected");
         dropdown.classList.add("hidden");
       }
