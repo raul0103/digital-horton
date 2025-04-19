@@ -4,13 +4,13 @@
       <a href="/"><img src="/assets/template/images/logo.png" /></a>
 
       <div class="header-desktop__top-centered">
-        <a class="d-flex fs-15 gap-4 cursor-pointer fw-500">
+        <a class="d-flex fs-15 gap-4 cursor-pointer fw-500" onclick="city_changer.activate();modals.events.open('modal-city-changer')">
           <svg width="16" height="16" class="primary-stroke">
             <use
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#location"
             ></use>
           </svg>
-          <span class="text-dashed">Москва</span>
+          <span class="text-dashed" data-city-changer-select-value></span>
           <svg width="10" height="10" class="primary-stroke" stroke-width="2">
             <use
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#icon-arrow-down"

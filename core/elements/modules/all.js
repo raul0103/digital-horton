@@ -7,6 +7,7 @@ import initCustomSelect from "./custom-select/main.js";
 import initCart from "./cart/frontend/js/main.js";
 import initProductCard from "./product-cards/js/main.js";
 import initProductSelection from "./store-product-selection/js/main.js";
+import CityChanger from "./city-changer/js/main.js";
 
 document.addEventListener("DOMContentLoaded", function () {
   let functions = [
@@ -63,5 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
     window.modals = new Modals();
   } catch (e) {
     console.error(`Ошибка в классе Modals: ${e}`);
+  }
+
+  try {
+    window.city_changer = new CityChanger();
+    window.city_changer.init();
+  } catch (e) {
+    console.error(`Ошибка в классе CityChanger: ${e}`);
   }
 });

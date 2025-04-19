@@ -132,3 +132,20 @@
     }
   }
 }
+
+input.input {
+  background-color: $secondary-light-gray;
+  padding: 16px 24px;
+  border-radius: 100px;
+  border: 1px solid $secondary-light-gray;
+  color: $primary-dark;
+  font-weight: 500;
+  width: 100%;
+  transition: 0.2s;
+  &:focus {
+    border-color: $primary-dark;
+  }
+  &::placeholder {
+    color: $secondary-gray;
+  }
+}
