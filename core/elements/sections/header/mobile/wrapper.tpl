@@ -32,7 +32,7 @@
       </a>
 
       <a
-        class="d-flex gap-8 fs-18 fw-700 header-mobile__phone"
+        class="d-flex gap-8 fw-700 header-mobile__phone"
         href="tel:{'phone' | config}"
       >
         <svg
