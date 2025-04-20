@@ -1,8 +1,5 @@
 /**
  * Управление модальными окнами
- * data-show-body-before - Если есть такой аттрибут на модальном окне -
- *                         то закрыть сообщение об успешной отправке и
- *                         открыть основное окно после пторного открытия модалки
  *
  * Вторичные элементы
  *  - data-modal-body-before - Блок который отображается до отправки формы
@@ -34,21 +31,13 @@ export default class Modals {
       if (!modal) return;
 
       modal.classList.add("opened");
+
       this.current_opened = modal;
 
       // Записали для каких модалок уже была инициализация события
       if (!this.events_init[modal_id]) {
         this.events_init[modal_id] = true;
         this.events.close(modal, close_callback);
-      }
-
-      /**
-       * Показать основное окно
-       * На случай если форма была успешно отправлена и сейчас открыто окно об отправке
-       */
-
-      if (modal.dataset.showBodyBefore == "true") {
-        this.showBodyBefore(modal);
       }
     },
     close: (modal, close_callback) => {
@@ -63,7 +52,6 @@ export default class Modals {
         });
       });
     },
-
     closeCurrent: () => {
       if (!this.current_opened) return;
       this.current_opened.classList.remove("opened");
@@ -71,10 +59,29 @@ export default class Modals {
     },
   };
 
-  showBodyBefore(modal) {
-    let show_body_before = modal.querySelector(this.selectors.show_body_before);
-    console.log(this.selectors.show_body_before);
+  // Показывает контент из data-modal-body-after
+  showBodyAfter() {
+    let modal = this.current_opened;
 
+    if (!modal) return;
+
+    let show_body_before = modal.querySelector(this.selectors.show_body_before);
+    if (!show_body_before) return;
+
+    let show_body_after = modal.querySelector(this.selectors.show_body_after);
+    if (!show_body_after) return;
+
+    show_body_before.classList.add("hide");
+    show_body_after.classList.add("show");
+  }
+
+  // Показывает контент из data-modal-body-before
+  showBodyBefore() {
+    let modal = this.current_opened;
+
+    if (!modal) return;
+
+    let show_body_before = modal.querySelector(this.selectors.show_body_before);
     if (!show_body_before) return;
 
     let show_body_after = modal.querySelector(this.selectors.show_body_after);

@@ -3,7 +3,6 @@
 {block 'params'}
   {set $id='modal-buy-click'}
   {set $title="Купить в 1 клик"}
-  {set $show_body_before=true}
 {/block}
 
 {block 'body'}

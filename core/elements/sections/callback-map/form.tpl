@@ -1,3 +1,5 @@
+{'!FetchIt' | snippet : [
+'form' => '@INLINE
 <form class="form">
   <h3>Свяжитесь с нами</h3>
   <div class="callback-map__contacts">
@@ -6,26 +8,26 @@
         <label>Телефон</label>
         <a
           class="d-flex gap-8 fs-24 fw-700 w-content"
-          href="tel:{'phone' | config}"
+          href="tel:{"phone" | config}"
         >
           <svg width="16" height="16" class="primary-stroke">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#phone"
+              xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#phone"
             ></use>
           </svg>
-          {'phone' | config}
+          {"phone" | config}
         </a>
       </div>
 
       <div class="form__group">
         <label>E-mail</label>
-        <a class="d-flex gap-8 fs-18" href="mailto:{'email' | config}">
+        <a class="d-flex gap-8 fs-18" href="mailto:{"email" | config}">
           <svg width="16" height="16" class="primary-stroke">
             <use
-              xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#letter"
+              xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#letter"
             ></use>
           </svg>
-          {'email' | config}
+          {"email" | config}
         </a>
       </div>
 
@@ -45,3 +47,12 @@
     <button class="btn btn-primary big-btn w-100">Закать звонок</button>
   </div>
 </form>
+'
+  'emailTo' => 'email' | config
+  'emailSubject' => $email_subject
+  'emailTpl' => '@FILE chunks/fetchit-email-tpl.tpl'
+  'hooks' => 'email'
+  'snippet' => 'FormIt'
+  'customValidators' => 'phone-format'
+  'validate' => 'phone:required:phone-format'
+]}

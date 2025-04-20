@@ -22,6 +22,7 @@ export default function fetchItObserve() {
       location.reload();
     } else {
       notifications.success("Форма успешно отправлена");
+      modals.showBodyAfter();
     }
 
     console.log(event.detail);

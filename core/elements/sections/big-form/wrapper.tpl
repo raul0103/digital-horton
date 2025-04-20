@@ -9,6 +9,9 @@
           Наш менеджер свяжется с вами в ближайшее рабочее время
         </div>
       </div>
+
+      {'!FetchIt' | snippet : [
+      'form' => '@INLINE
       <form class="form dark">
         <div class="d-grid gap-16">
           <div class="d-flex xs-column gap-16">
@@ -18,11 +21,11 @@
             </div>
             <div class="w-100">
               <label>E-mail</label>
-              <input type="email" placeholder="email@email.ru" />
+              <input type="email" name="email" placeholder="email@email.ru" />
             </div>
             <div class="w-100">
               <label>Телефон *</label>
-              <input type="tel" placeholder="+7" required />
+              <input type="tel" name="phone" placeholder="+7" required />
             </div>
           </div>
 
@@ -94,7 +97,15 @@
             </label>
           </div>
         </div>
-      </form>
+      </form>'
+        'emailTo' => 'email' | config
+        'emailSubject' => $email_subject
+        'emailTpl' => '@FILE chunks/fetchit-email-tpl.tpl'
+        'hooks' => 'email'
+        'snippet' => 'FormIt'
+        'customValidators' => 'phone-format'
+        'validate' => 'phone:required:phone-format'
+      ]}
     </div>
   </div>
 </div>
