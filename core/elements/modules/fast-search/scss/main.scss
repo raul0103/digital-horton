@@ -10,7 +10,7 @@
 
 .fast-search {
   position: absolute;
-  top: 50px;
+  top: 65px;
   z-index: 12;
   background: #ffffff;
   border: 1px solid #f0f0f0;
@@ -67,7 +67,8 @@
   }
   &-close-button {
     right: -100%;
-    top: 10px;
+    top: 80px;
+    z-index: 99;
     opacity: 0;
     pointer-events: none;
     position: absolute;
@@ -111,11 +112,11 @@
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1024px) {
   .fast-search {
     width: 100%;
     left: 0;
-    max-height: calc(100vh - 120px);
+    height: 100vh;
     overflow: auto;
     & ul {
       width: 100%;

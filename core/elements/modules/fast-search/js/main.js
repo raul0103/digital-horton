@@ -60,12 +60,12 @@ export default class FastSearch {
 
     clearInterval(this.search_timer);
     this.search_timer = setTimeout(() => {
-      this.search_input.classList.add("search-loading");
+      this.search_input.classList.add("loading");
       // this.search_input.setAttribute("readonly", "true");
 
       // >>> Анимация загрузки
       const loader = document.createElement("div");
-      loader.className = "loading-block";
+      loader.className = "loading";
       this.search_form.insertBefore(loader, this.search_input.nextSibling);
       // <<<
 
@@ -109,7 +109,7 @@ export default class FastSearch {
         })
         .finally(() => {
           // Убираем индикатор загрузки в любом случае
-          this.search_input.classList.remove("search-loading");
+          this.search_input.classList.remove("loading");
           loader.remove();
           // this.search_input.removeAttribute('readonly');
         });
@@ -179,7 +179,7 @@ export default class FastSearch {
 
         if (!inside && !this.search_input.contains(event.target)) {
           this.hidePopup();
-          this.search_input.value = "";
+          // this.search_input.value = "";
         }
       });
     }

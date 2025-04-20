@@ -20,7 +20,7 @@
         </a>
 
         
-        {include "file:sections/header/common/search.tpl"}
+        {include "file:sections/header/common/search.tpl" device="desktop"}
 
         <div class="d-grid gap-16 fw-500 header-desktop__address-block">
           <div class="d-flex gap-8">

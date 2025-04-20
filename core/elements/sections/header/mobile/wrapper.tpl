@@ -51,7 +51,7 @@
   </div>
 </div>
 <div class="header-mobile__modal" id="mobile-menu">
-  {include "file:sections/header/common/search.tpl"}
+  {include "file:sections/header/common/search.tpl" device="mobile"}
 
   <div class="header-mobile__catalog mb-16">
     <div class="header-mobile__catalog-items" data-mobile-modal-items>

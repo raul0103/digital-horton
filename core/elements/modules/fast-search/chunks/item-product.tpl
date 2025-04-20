@@ -1,8 +1,8 @@
 <li>
   <a href="/{$uri}">
-    {* {if $image}
+    {if $image}
     <img src="{$image}" />
-    {/if} *}
+    {/if}
     <span data-fast-search-result-text>{$menutitle}</span>
   </a>
 </li>
