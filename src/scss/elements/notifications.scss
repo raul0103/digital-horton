@@ -23,14 +23,14 @@
   }
 
   .notification.success {
-    background-color: #41cc4f;
+    background-color: $success-color;
   }
 
   .notification.error {
-    background-color: #f95959;
+    background-color: $error-color;
   }
 
   .notification.warning {
-    background-color: #3f96fd;
+    background-color: $warning-color;
   }
 }
