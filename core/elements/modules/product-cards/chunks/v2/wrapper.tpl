@@ -19,6 +19,6 @@
 
   <div class="product-card__controls mt-auto">
     {include "file:modules/cart/frontend/chunks/cart-controls-big.tpl" product_id=$id}
-    <button class="btn btn-simple-v2 m-auto">Купить в 1 клик</button>
+    <button class="btn btn-simple-v2 m-auto" onclick="product_card.events.buyOneClick({$id})">Купить в 1 клик</button>
   </div>
 </div>

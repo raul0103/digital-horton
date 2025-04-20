@@ -9,7 +9,7 @@
   {set $email_subject = 'Сообщение со страницы '~$_modx->resource.pagetitle}
   {'!FetchIt' | snippet : [
     'form' => '@INLINE 
-      <form class="form" data-modal-id="modal-buy-click">
+      <form class="form d-grid gap-16" data-modal-id="modal-buy-click">
         <div class="form__group">
           <label>Ваше имя</label>
           <input type="text" name="name"/>
@@ -30,7 +30,7 @@
         </label>
 
         <div class="form__footer">
-          <button class="btn btn-primary" type="submit">Отправить</button>
+          <button class="btn btn-primary big-btn w-100" type="submit">Отправить</button>
         </div>
       </form>
     '

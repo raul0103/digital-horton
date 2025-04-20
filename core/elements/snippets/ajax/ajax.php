@@ -25,7 +25,7 @@ switch ($data['action']) {
         $product = $modx->getObject('msProduct', $data['product_id']);
         if (!$product) exit("Товар не найден");
 
-        $outer = $pdoTools->getChunk("@FILE modules/product-cards/chunks/mini-product/item.tpl", [
+        $outer = $pdoTools->getChunk("@FILE modules/product-cards/chunks/v4/wrapper.tpl", [
             "product" => $product->toArray()
         ]);
 

@@ -95,7 +95,7 @@
 
                             <tr class="tr-control">
                                 <td class="d-flex gap-8 justify-between">
-                                    <button class="btn btn-simple-v2">Купить сейчас</button>
+                                    <button class="btn btn-simple-v2" onclick="product_card.events.buyOneClick({$product['id']})">Купить сейчас</button>
                                     <div class="d-flex gap-8">
                                         {include "file:modules/store-product-selection/chunks/favorites/btn.tpl" product_id=$product['id']}
                                         {include "file:modules/store-product-selection/chunks/comparison/btn.tpl" product_id=$product['id']}

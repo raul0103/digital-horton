@@ -12,11 +12,16 @@ export default function initProductCard() {
           return;
         }
 
+        // Отркыли модалку
+        modals.events.open("modal-buy-click");
+
+        // Контейнер куда будет добавлена инфа о товаре
         let buy_click_container = document.getElementById(
           "buy-click-container"
         );
         if (!buy_click_container) {
           console.warn("Не найден контейнер для товара");
+          return;
         }
 
         buy_click_container.innerHTML = "";
