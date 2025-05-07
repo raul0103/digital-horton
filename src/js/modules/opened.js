@@ -6,6 +6,7 @@
  * data-active-text - Текст кнопки при активном состоянии
  * data-close-early="basket-window" - Закрыть передыдущие элементы. Указать название, для группировки элементов
  * data-toggle-not - Имея такой аттрибут элемент не будет закрыт при повторном нажатии
+ * data-event-mouseover="true" - Тогда так же срабатывает на событие наведения
  */
 
 export default function initOpened() {
@@ -16,8 +17,9 @@ export default function initOpened() {
     let open_btn_text = open_btn.textContent; // Соханяем для дальнейших манипуляций
     let early_id = open_btn.dataset.closeEarly; // Если надо закрывать предыдущие элменты
     let open_btn_toggle_not = open_btn.dataset.toggleNot;
+    let event_mouseover = open_btn.dataset.eventMouseover;
 
-    open_btn.addEventListener("click", () => {
+    let handler = () => {
       let elem_id = open_btn.dataset.openedBtn;
       if (!elem_id) return;
 
@@ -46,7 +48,12 @@ export default function initOpened() {
       if (early_id) {
         early.update(open_btn, find_open_elem, early_elements[early_id]);
       }
-    });
+    };
+
+    open_btn.addEventListener("click", handler);
+    if (event_mouseover) {
+      open_btn.addEventListener("mouseover", handler);
+    }
   });
 }
 
