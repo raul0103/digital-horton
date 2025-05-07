@@ -28,8 +28,10 @@
       {/if}
     </div>
   </div>
-
+  
+  {if $product.count}
   <div class="product-card--v4__mark">
     {$product.count} {$product.unit ?: "шт."}
   </div>
+  {/if}
 </div>

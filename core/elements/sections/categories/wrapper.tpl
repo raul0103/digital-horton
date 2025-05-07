@@ -7,8 +7,8 @@
           {foreach $_modx->getPlaceholder('map-resources.categories') as $catalog_item}
           <li>
             <a href="{$catalog_item['uri']}">
-                {if $catalog_item['main_image']}
-                    <img src="{$catalog_item['main_image']}" />
+                {if $catalog_item['category_icon']}
+                    <img src="{$catalog_item['category_icon']}" />
                 {/if}
                 {$catalog_item['menutitle']}
             </a>

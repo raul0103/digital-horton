@@ -42,7 +42,7 @@ foreach ($data as $catalog_item) {
         generateModal($menu_modals, $catalog_item);
     }
 
-    $menu_items .= "<div class='mobile-menu__item'> <a href='{$catalog_item['uri']}'><img src='{$catalog_item['main_image']}'/> $menutitle</a> $open_btn </div>";
+    $menu_items .= "<div class='mobile-menu__item'> <a href='{$catalog_item['uri']}'><img src='{$catalog_item['category_icon']}'/> $menutitle</a> $open_btn </div>";
 }
 
 return [

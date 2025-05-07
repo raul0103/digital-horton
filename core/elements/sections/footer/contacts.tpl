@@ -31,7 +31,7 @@
         <a href="tel:{'phone' | config}">{'phone' | config}</a>
       </div>
     </div>
-    <button class="btn btn-white footer__contacts-callback fs-14">
+    <button class="btn btn-white footer__contacts-callback fs-14" onclick="modals.events.open('modal-callback')">
       Заказать звонок
     </button>
   </div>

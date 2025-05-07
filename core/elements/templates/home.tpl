@@ -2,7 +2,7 @@
 
 {block 'content'}
     {include "file:sections/banner/wrapper.tpl"}
-    {include "file:sections/categories/wrapper.tpl"}
+    {include "file:sections/categories/wrapper.tpl" show_sidebar=true}
     {include "file:sections/about/wrapper.tpl"}
     {include "file:modules/reviews/chunks/wrapper.tpl"}
     {include "file:sections/big-form/wrapper.tpl"}

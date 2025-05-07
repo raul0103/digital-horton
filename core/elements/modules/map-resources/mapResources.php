@@ -99,7 +99,7 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
                 LEFT JOIN {$table_prefix}site_tmplvar_contentvalues AS stc
                     ON st.id = stc.tmplvarid
                 WHERE stc.contentid IN (" . implode(',', $resources_prev_ids) . ") 
-                AND st.name IN ($includeTVs);";
+                AND st.name IN $includeTVs;";
 
             $result = $modx->query($sql);
             $rows = $result->fetchAll(PDO::FETCH_ASSOC);

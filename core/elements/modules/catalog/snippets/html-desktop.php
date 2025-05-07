@@ -19,8 +19,8 @@ foreach ($data as $catalog_item) {
             $subcat_html .= "</ul>";
         }
 
-        if ($catalog_item['main_image']) {
-            $image = "<img src='{$catalog_item['main_image']}' />";
+        if ($catalog_item['category_icon']) {
+            $image = "<img src='{$catalog_item['category_icon']}' />";
         }else{
             $image = "";
         }

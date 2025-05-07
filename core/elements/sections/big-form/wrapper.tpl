@@ -36,7 +36,7 @@
           <div class="d-grid xs-column col-2 gap-16">
             <div>
               <label>Ваш заказ</label>
-              <input type="text" placeholder="Плиты укрепления П-1, 20 шт." />
+              <input type="text" placeholder="Название товара" />
             </div>
 
             <div>

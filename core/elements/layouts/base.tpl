@@ -17,7 +17,7 @@
   {"@FILE modules/map-resources/mapResources.php" | snippet : [
     'parents' => 'catalog_id' | config
     'toPlaceholder' => 'map-resources.categories'
-    'includeTVs' => 'main_image'
+    'includeTVs' => 'main_image,category_icon'
     'where' => '{"class_key":"msCategory", "template":30, "deleted":0}'
     'depth' => 10,
   ]}
