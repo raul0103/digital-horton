@@ -21,6 +21,14 @@
     'where' => '{"class_key":"msCategory", "template":30, "deleted":0}'
     'depth' => 10,
   ]}
+
+  {* Объедененный массив категорий (используется не везде) *}
+  {set $merge_categories = $_modx->getPlaceholder('map-resources.categories')}
+  {set $staticCategories = "@FILE snippets/data/staticCategories.php" | snippet}
+  {foreach $staticCategories as $staticCategory}
+    {set $merge_categories[] = $staticCategory}
+  {/foreach}
+  {$_modx->setPlaceholder('map-resources.merge-categories', $merge_categories)}
 {else}
   Не найдена опция catalog_id
 {/if}

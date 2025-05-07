@@ -2,20 +2,21 @@
   <div class="container">
     <div class="categories__row">
       {if $show_sidebar}
-      <div class="categories__menu primary-radius primary-dark-bg">
-        <ul>
-          {foreach $_modx->getPlaceholder('map-resources.categories') as $catalog_item}
-          <li>
-            <a href="{$catalog_item['uri']}">
-                {if $catalog_item['category_icon']}
-                    <img src="{$catalog_item['category_icon']}" />
-                {/if}
-                {$catalog_item['menutitle']}
-            </a>
-          </li>
-          {/foreach}
-        </ul>
-      </div>
+        {set $items = $_modx->getPlaceholder('map-resources.merge-categories')}
+        <div class="categories__menu primary-radius primary-dark-bg">
+          <ul>
+            {foreach $items as $catalog_item}
+            <li>
+              <a href="{$catalog_item['uri']}">
+                  {if $catalog_item['category_icon']}
+                      <img src="{$catalog_item['category_icon']}" />
+                  {/if}
+                  {$catalog_item['menutitle']}
+              </a>
+            </li>
+            {/foreach}
+          </ul>
+        </div>
       {/if}
       <div class="categories__blocks">
         {foreach $_modx->getPlaceholder('map-resources.categories') as $index => $catalog_item}

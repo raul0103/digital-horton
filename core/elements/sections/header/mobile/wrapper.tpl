@@ -1,5 +1,5 @@
 {set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
-  'data' => $_modx->getPlaceholder('map-resources.categories')
+  'data' => $_modx->getPlaceholder('map-resources.merge-categories')
 ]}
 
 {set $menu_items = "@FILE modules/map-resources/mapGetResourcesByWhere.php" | snippet : [

@@ -3,6 +3,12 @@
 $outer = '<ul class="catalog-header__items">';
 foreach ($data as $catalog_item) {
 
+    if ($catalog_item['category_icon']) {
+        $image = "<img src='{$catalog_item['category_icon']}' />";
+    }else{
+        $image = "";
+    }
+    
     $menutitle = $catalog_item['menutitle'] ?: $catalog_item['pagetitle'];
 
     // Идем по категориям
@@ -17,12 +23,6 @@ foreach ($data as $catalog_item) {
                                  </li>";
             }
             $subcat_html .= "</ul>";
-        }
-
-        if ($catalog_item['category_icon']) {
-            $image = "<img src='{$catalog_item['category_icon']}' />";
-        }else{
-            $image = "";
         }
 
         $outer .= "<li class='catalog-header__item'>
@@ -40,8 +40,13 @@ foreach ($data as $catalog_item) {
                         $subcat_html
                    </li>";
     } else {
-        $outer .= "<li>
-                        <a href='{$catalog_item['uri']}'>{$menutitle}</a>
+        $outer .= "<li class='catalog-header__item'>
+                        <div class='catalog-header__item-title'>
+                          <a href='{$catalog_item['uri']}'>
+                            $image
+                            $menutitle
+                          </a>
+                        </div>
                    </li>";
     }
 }
