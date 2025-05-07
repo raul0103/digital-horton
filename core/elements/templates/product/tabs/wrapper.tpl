@@ -4,21 +4,23 @@
   ['title' => 'Доставка', 'id' => 'tab3'],
   ['title' => 'Нормы загрузки труб', 'id' => 'tab4'],
   ['title' => 'Документация', 'id' => 'tab5'],
-  ['title' => 'Отзывы', 'id' => 'tab6'],
+  ['title' => 'Отзывы', 'id' => 'tab6','disabled'=>true],
 ]}
 
 <div class="product-page__tabs section-margin">
   <div class="product-page__tabs-controls">
     <div class="product-page__tabs-controls-row">
       {foreach $btns as $btn}
-      <button
-        class="fs-25-18 {$btn['classlist']}"
-        data-opened-btn="{$btn['id']}"
-        data-close-early="tabs"
-        data-toggle-not="true"
-      >
-        {$btn['title']}
-      </button>
+        {if !$btn['disabled']}
+          <button
+            class="fs-25-18 {$btn['classlist']}"
+            data-opened-btn="{$btn['id']}"
+            data-close-early="tabs"
+            data-toggle-not="true"
+          >
+            {$btn['title']}
+          </button>
+        {/if}
       {/foreach}
     </div>
   </div>
@@ -44,8 +46,10 @@
       
     </div>
 
-    <div class="product-page__tabs-content" data-opened-element="tab6">
-      <button class="btn btn-bordered big-btn">Оставить отзыв</button>
-    </div>
+  {*
+  <div class="product-page__tabs-content" data-opened-element="tab6">
+    <button class="btn btn-bordered big-btn">Оставить отзыв</button>
+  </div>
+  *}
   </div>
 </div>
