@@ -115,6 +115,7 @@
     border-radius: $primary-radius;
     @media (max-width: $bp-md) {
       padding: 24px;
+      justify-content: center;
     }
     &-content {
       position: relative;

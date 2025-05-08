@@ -50,10 +50,10 @@ export default function iniSliders() {
       slideClass: "reviews-section__item", // Указываем класс слайдов
 
       breakpoints: {
-        1280: {
+        1400: {
           slidesPerView: 4,
         },
-        1024: {
+        1300: {
           slidesPerView: 3,
           spaceBetween: 16,
         },
@@ -79,10 +79,10 @@ export default function iniSliders() {
     slideClass: "product-card",
 
     breakpoints: {
-      1280: {
+      1400: {
         slidesPerView: 4.8,
       },
-      1024: {
+      1300: {
         slidesPerView: 3,
       },
       200: {
@@ -107,10 +107,10 @@ export default function iniSliders() {
     // spaceBetween: 16,
 
     // breakpoints: {
-    //   1280: {
+    //   1400: {
     //     slidesPerView: 4.8,
     //   },
-    //   1024: {
+    //   1300: {
     //     slidesPerView: 3,
     //   },
     //   200: {
@@ -135,7 +135,7 @@ export default function iniSliders() {
     lazy: { loadPrevNext: true },
 
     breakpoints: {
-      1024: {
+      1300: {
         slidesPerView: 3,
       },
       768: {
@@ -153,7 +153,7 @@ export default function iniSliders() {
 
   let direction = "vertical";
   let slidesPerView = 6.5;
-  if (innerWidth < 1024) {
+  if (innerWidth < 1300) {
     direction = "horizontal";
     slidesPerView = 4;
   }

@@ -25,8 +25,15 @@ $success-color: #00d054;
 $error-color: #ff4141;
 
 // breakpoint
+// $bp-xs: 640px;
+// $bp-sm: 768px;
+// $bp-md: 1024px;
+// $bp-lg: 1280px;
+// $bp-xl: 1536px;
+
+
 $bp-xs: 640px;
 $bp-sm: 768px;
-$bp-md: 1024px;
-$bp-lg: 1280px;
-$bp-xl: 1536px;
+$bp-md: 1300px; // было 1024px
+$bp-lg: 1400px; // было 1280px
+$bp-xl: 1700px; // было 1536px
