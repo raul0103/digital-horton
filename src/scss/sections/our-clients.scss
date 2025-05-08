@@ -1,0 +1,32 @@
+.our-clients {
+  &__block {
+    background: #fff;
+    border-radius: $primary-radius;
+    padding: 64px 0;
+    @media (max-width: $bp-sm) {
+      padding: 16px 12px;
+    }
+  }
+
+  &__row {
+    padding: 64px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    @media (max-width: $bp-sm) {
+      padding: 24px 0;
+      gap: 16px;
+    }
+    img {
+      width: 120px;
+      object-fit: contain;
+      @media (max-width: $bp-sm) {
+        width: 60px;
+      }
+    }
+  }
+}
