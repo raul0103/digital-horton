@@ -64,6 +64,8 @@ a {
 }
 
 .text-content {
+  text-align: justify;
+
   max-width: 1530px;
   margin: auto;
   margin-bottom: 24px;
@@ -241,9 +243,12 @@ hr {
     flex-direction: column;
     label {
       font-size: 14px;
-      padding: 0px 0 0 24px;
+      padding: 0px 0 0 30px;
       display: inline-block;
       margin-bottom: 6px;
+    }
+    svg {
+      min-width: 22px;
     }
   }
 }

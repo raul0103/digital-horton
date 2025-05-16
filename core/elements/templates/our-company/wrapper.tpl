@@ -31,7 +31,7 @@
                 <div class="our-company__banner-tab {$tab['classes']}" data-opened-btn="tab-{$index}" data-close-early="tabs" data-toggle-not="true" data-event-mouseover="true">
                     <div class="our-company__banner-tab-content">
                         <div class="our-company__banner-tab-content-row">
-                            <div class="fs-28-19 font-candara our-company__banner-tab-content-title">{$tab['title']}</div>
+                            <div class="font-candara our-company__banner-tab-content-title">{$tab['title']}</div>
                             <div>{$tab['text']}</div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <div class="our-company__info section-margin">
+        <div class="our-company__info section-margin" >
             <div class="our-company__info-content" data-stats>
                 <div class="our-company__info-content-item">
                     <div class="fw-700 fs-96-32 primary-blue-color"><span data-stat data-target="10">0</span>+</div>
@@ -63,7 +63,6 @@
                 </div>
             </div>
 
-            <img src="/assets/template/images/pages/our-company/info.png" />
         </div>
 
         <div class="our-company__history section-margin">

@@ -1,7 +1,7 @@
 <div class="header-desktop__top">
   <div class="container">
     <div class="header-desktop__top-row">
-      <a href="/"><img src="/assets/template/images/logo.png" /></a>
+      <a href="/" class="header-desktop__top-logo"><img src="/assets/template/images/logo.png" /></a>
 
       <div class="header-desktop__top-centered">
         <a class="d-flex fs-15 gap-4 cursor-pointer fw-500" onclick="city_changer.activate();modals.events.open('modal-city-changer')">

@@ -4,15 +4,20 @@
   @media (max-width: $bp-md) {
     display: none;
   }
-  &__menu {
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
+
   &__top {
     position: relative;
     z-index: 2;
     background: #fff;
     padding-bottom: 24px;
+    padding-top: 24px;
+    &-logo {
+      img {
+        @media (max-width: $bp-ls) {
+          max-width: 200px;
+        }
+      }
+    }
     &-row {
       display: flex;
       gap: 24px;
@@ -31,6 +36,12 @@
   &__address-block {
     max-width: 250px;
     min-width: 250px;
+    * {
+      @media (max-width: $bp-ls) {
+        font-size: 12px;
+      }
+    }
+
     svg {
       min-width: 16px;
     }
@@ -93,6 +104,9 @@
           min-width: max-content;
           border-bottom: 3px solid transparent;
           opacity: 1;
+          @media (max-width: $bp-ls) {
+            padding: 10px;
+          }
           &:hover {
             border-color: inherit;
           }

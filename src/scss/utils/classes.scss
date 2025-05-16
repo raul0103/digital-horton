@@ -20,6 +20,7 @@
 .d-grid{display: grid;height: max-content;}
 .d-block{display: block;}
 .flex-wrap{flex-wrap:wrap}
+.align-normal{align-items: normal;}
 .align-center{align-items: center;}
 .align-end{align-items: end;}
 .align-start{align-items: start;}
@@ -120,7 +121,9 @@
 .font-montserrat,.font-montserrat *{font-family: "Montserrat"!important;}
 .sm-d-none{@media (max-width: $bp-sm) {display: none!important;}}
 .xs-d-none{@media (max-width: $bp-xs) {display: none!important;}}
+.xl-d-none{@media (max-width: $bp-xl) {display: none!important;}}
 .xs-d-block{@media (min-width: $bp-xs) {display: none!important;}}
+.xl-d-block{@media (min-width: $bp-xl) {display: none!important;}}
 .sm-d-block{@media (min-width: $bp-sm) {display: none!important;}}
 .block-scroll {overflow: hidden;}
 .old-price{color: $secondary-gray;text-decoration: line-through;@media (max-width: $bp-md) { font-size: 14px; }}

@@ -24,6 +24,7 @@
       border-radius: $small-radius;
       background: $light-gray;
       height: 380px;
+
       @media (max-width: $bp-xs) {
         height: 222px;
       }
@@ -39,6 +40,7 @@
     display: grid;
     gap: 16px;
     grid-template-columns: 30% 1fr;
+
     @media (max-width: $bp-sm) {
       grid-template-columns: 1fr;
     }
@@ -46,13 +48,15 @@
       display: grid;
       gap: 12px;
       height: max-content;
+
+      padding: 24px;
     }
     &-image {
       overflow: hidden;
       border-radius: $small-radius;
       background: $light-gray;
       height: max-content;
-
+      height: 100%;
       @media (max-width: $bp-sm) {
         max-height: 222px;
       }

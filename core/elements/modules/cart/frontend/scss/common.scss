@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width: variables.$bp-lg) {
+    @media (max-width: variables.$bp-xl) {
       width: 40px;
       height: 40px;
       min-width: 40px;

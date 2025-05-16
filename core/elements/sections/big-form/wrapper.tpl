@@ -41,7 +41,8 @@
 
             <div>
               <label>Адрес доставки</label>
-              {include "file:chunks/form/address-select.tpl"}
+              {*include "file:chunks/form/address-select.tpl"*}
+              <input name="address" placeholder="Укажите полный адрес" value="" />
             </div>
           </div>
 

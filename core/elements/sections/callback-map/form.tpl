@@ -7,7 +7,7 @@
       <div class="form__group">
         <label>Телефон</label>
         <a
-          class="d-flex gap-8 fs-24 fw-700 w-content"
+          class="d-flex gap-8 fs-18 fw-500 "
           href="tel:{"phone" | config}"
         >
           <svg width="16" height="16" class="primary-stroke">
@@ -21,8 +21,8 @@
 
       <div class="form__group">
         <label>E-mail</label>
-        <a class="d-flex gap-8 fs-18" href="mailto:{"email" | config}">
-          <svg width="16" height="16" class="primary-stroke">
+        <a class="d-flex gap-8 fs-18 fw-500 " href="mailto:{"email" | config}">
+          <svg width="20" height="20" class="primary-stroke">
             <use
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#letter"
             ></use>

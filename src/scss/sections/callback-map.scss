@@ -32,6 +32,9 @@
   }
   .form {
     padding: 40px 64px;
+    @media (max-width: $bp-ls) {
+      padding: 24px;
+    }
     @media (max-width: $bp-md) {
       padding: 16px;
     }

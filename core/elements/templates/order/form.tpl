@@ -72,7 +72,8 @@
     <div class="d-grid gap-16">
       <div class="block-title">Адрес доставки</div>
 
-      {include "file:chunks/form/address-select.tpl"}
+      {*include "file:chunks/form/address-select.tpl"*}
+      <input name="address" placeholder="Укажите полный адрес" value="" />
 
       <div class="form__group">
         <label>Улица</label>

@@ -1,6 +1,8 @@
 <div class="news-page__item" onclick="getNewsResource({$id},this)">
     <div class="news-page__item-image">
+        {if $main_image}
         <img src="{$main_image}" />
+        {/if}
     </div>
     <div class="news-page__item-content">
         <div class="fs-25-18 font-candara">{$introtext}</div>

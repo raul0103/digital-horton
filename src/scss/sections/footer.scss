@@ -12,7 +12,7 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    gap: 10%;
+    gap: 8%;
 
     @media (max-width: $bp-md) {
       flex-direction: column;
@@ -20,6 +20,10 @@
       .gap-32 {
         gap: 16px;
       }
+    }
+
+    @media (max-width: $bp-xl) {
+      gap: 5%;
     }
   }
   &__info {
@@ -38,12 +42,27 @@
     flex-wrap: wrap;
     gap: 20px;
     justify-content: space-between;
+    @media (max-width: $bp-xl) {
+      justify-content: end;
+    }
+    @media (max-width: $bp-ls) {
+      margin-bottom: -50px;
+    }
     @media (max-width: $bp-md) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      margin-bottom: 0;
     }
+
     @media (max-width: $bp-sm) {
       grid-template-columns: 1fr;
+    }
+    &-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      // width: 50%;
     }
     &-callback {
       padding: 16px;
@@ -54,6 +73,26 @@
     }
     &-item {
       max-width: 320px;
+      span {
+        font-size: 14px;
+        margin-left: 32px;
+      }
+      svg {
+        min-width: 24px;
+      }
+    }
+    &-social {
+      height: max-content;
+      @media (max-width: $bp-md) {
+        height: max-content;
+      }
+      @media (max-width: $bp-ls) {
+        display: grid;
+      }
+
+      a {
+        line-height: 0;
+      }
     }
   }
   &__menu {

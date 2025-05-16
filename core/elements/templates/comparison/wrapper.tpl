@@ -66,7 +66,8 @@
                             <tr class="tr-price"><td></td></tr>
                             <tr class="tr-control"><td class="d-flex"></td></tr>
 
-                            <tr class="tr-control tr-delete-category"><td>
+                            <tr class="tr-control tr-delete-category"></tr>
+                            {*<tr class="tr-control tr-delete-category"><td>
                                 <button class="btn btn-simple">
                                     <svg stroke="white" width="15" height="15">
                                         <use
@@ -75,7 +76,7 @@
                                     </svg>
                                     Очистить категорию
                                 </button>
-                            </td></tr>
+                            </td></tr>*}
 
                             <tr class="tr-option tr-flex-left tr-border-bottom"><td><b>Технические характеристики</b></td></tr>
                             {foreach $options as $idx => $option}

@@ -1,6 +1,8 @@
 <div class="category-listing section-margin" id="mse2_mfilter">
   <div class="container">
-    {if $results}
+    {if $results != "Подходящих результатов не найдено."}
+
+    <h1 class="section-title">{$_modx->resource.pagetitle}</h1>
     <div class="category-listing__row">
       <div class="category-listing__filters" data-filter-window>
 
@@ -91,7 +93,11 @@
       </div>
     </div>
     {else}
-      {include "file:chunks/empty.tpl" page="category"}
+      <div class="empty-page-block">
+        <div class="fs-48-33 font-candara fw-700">В данной категории товары не найдены</div>
+            <div>Воспользуйтесь каталогом или вернитесь на главную страницу</div>
+          <a class="btn btn-primary big-btn d-flex" href="/">На главную</a>
+      </div>
     {/if}
   </div>
 </div>

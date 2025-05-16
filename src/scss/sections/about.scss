@@ -14,18 +14,20 @@
 
   &__main {
     width: 100%;
-    background: linear-gradient(90deg, #2d4167 0%, #182641 100%);
+    background-color: linear-gradient(90deg, #2d4167 0%, #182641 100%);
     border-radius: $primary-radius;
     padding: 64px;
     position: relative;
     overflow: hidden;
+
+    background-image: url(/assets/template/images/sections/about/bg-desktop.png);
+    background-size: cover;
+    background-position: center;
     @media (max-width: $bp-sm) {
       padding: 16px;
-      min-height: 402px;
-    }
-    @media (max-width: $bp-xs) {
-      padding: 16px;
       min-height: 602px;
+      background-position: bottom;
+      background-image: url(/assets/template/images/sections/about/bg-mobile.png);
     }
 
     &-btn-more {
@@ -41,42 +43,11 @@
       color: white;
     }
     &-content {
-      max-width: 700px;
+      width: 70%;
       position: relative;
       z-index: 1;
-    }
-    &-image {
-      position: absolute;
-      right: 0;
-      top: 0;
-      bottom: -100%;
-
-      @media (max-width: $bp-lg) {
-        transform: scale(0.4);
-        // bottom: -582px;
-      }
-
-      //   @media (max-width: $bp-sm) {
-      //     transform: scale(0.4);
-      //     bottom: -582px;
-      //   }
-      //   @media (max-width: $bp-xs) {
-      //     transform: scale(0.4);
-      //     bottom: -582px;
-      //   }
-      img:first-child {
-        position: absolute;
-        top: -67px;
-        right: -155px;
-        opacity: 0.1;
-        z-index: 0;
-      }
-      img:last-child {
-        position: absolute;
-        right: -14px;
-        top: 140px;
-        max-width: 500px;
-        z-index: 0;
+      @media (max-width: $bp-sm) {
+        width: 100%;
       }
     }
   }

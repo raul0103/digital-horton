@@ -1,6 +1,8 @@
 <div class="news-page__item-full">
     <div class="news-page__item-full-image">
+        {if $resource->getTVvalue('main_image')}
         <img src="{$resource->getTVvalue('main_image')}" />
+        {/if}
     </div>
     <div class="news-page__item-full-content">
         <div class="fs-25-18 font-candara">{$resource->introtext}</div>

@@ -22,11 +22,7 @@
             разные точки России, сотни наименований запорной арматуры,
             более 27000 единиц стальных и полимерных фитингов.
           </div>
-          <a class="btn btn-white about__main-btn-more fs-17">Подробнее</a>
-        </div>
-        <div class="about__main-image">
-          <img src="/assets/template/images/sections/about/1.png" />
-          <img src="/assets/template/images/sections/about/2.png" />
+          <a class="btn btn-white about__main-btn-more fs-17" href="/about/">Подробнее</a>
         </div>
       </div>
       <div class="about__image">
