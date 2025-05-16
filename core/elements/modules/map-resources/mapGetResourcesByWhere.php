@@ -48,23 +48,25 @@ if (!function_exists('filterResources')) {
                             break;
                     }
 
-                    // Если уже не совпало — выходим
                     if (!$matched) break;
                 }
 
-                // Обрабатываем потомков, если есть
                 if (isset($item['children']) && is_array($item['children'])) {
                     $handler($item['children']);
                 }
 
                 if ($matched) {
-                    // unset($item['children']);
                     $result[] = $item;
                 }
             }
         };
 
         $handler($data);
+
+        // Сортировка по полю id по возрастанию
+        usort($result, function ($a, $b) {
+            return ($a['id'] ?? 0) <=> ($b['id'] ?? 0);
+        });
 
         return $result;
     }

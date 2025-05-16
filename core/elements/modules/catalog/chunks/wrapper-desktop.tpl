@@ -1,5 +1,10 @@
+{set $data = $_modx->getPlaceholder('map-resources.categories')}
+{foreach $_modx->getPlaceholder('static-categories') as $static_category}
+  {set $data[] = $static_category}
+{/foreach}
+
 {set $output = "@FILE modules/catalog/snippets/html-desktop.php" | snippet : [
-  'data' => $_modx->getPlaceholder('map-resources.merge-categories')
+  'data' => $data
 ]}
 
 <div id="catalog-desktop" class="catalog-header" data-opened-element="catalog-desktop">

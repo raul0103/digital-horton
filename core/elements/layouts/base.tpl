@@ -22,13 +22,9 @@
     'depth' => 10,
   ]}
 
-  {* Объедененный массив категорий (используется не везде) *}
-  {set $merge_categories = $_modx->getPlaceholder('map-resources.categories')}
+  {* Статичные категории *}
   {set $staticCategories = "@FILE snippets/data/staticCategories.php" | snippet}
-  {foreach $staticCategories as $staticCategory}
-    {set $merge_categories[] = $staticCategory}
-  {/foreach}
-  {$_modx->setPlaceholder('map-resources.merge-categories', $merge_categories)}
+  {$_modx->setPlaceholder('static-categories', $staticCategories)}
 {else}
   Не найдена опция catalog_id
 {/if}

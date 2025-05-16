@@ -1,5 +1,10 @@
+{set $data = $_modx->getPlaceholder('map-resources.categories')}
+{foreach $_modx->getPlaceholder('static-categories') as $static_category}
+  {set $data[] = $static_category}
+{/foreach}
+
 {set $catalog_html = "@FILE modules/mobile-menu/snippets/html-mobile.php" | snippet : [
-  'data' => $_modx->getPlaceholder('map-resources.merge-categories')
+  'data' => $data
 ]}
 
 {set $menu_items = "@FILE modules/map-resources/mapGetResourcesByWhere.php" | snippet : [

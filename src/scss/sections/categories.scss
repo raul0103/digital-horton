@@ -2,12 +2,26 @@
   &__row {
     display: flex;
     gap: 16px;
+    @media (max-width: $bp-md) {
+      flex-direction: column;
+    }
   }
   &__blocks {
     width: 100%;
-    display: grid;
+    height: max-content;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
+
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    &.opened {
+      display: grid;
+      opacity: 1;
+      visibility: visible;
+    }
+
     @media (max-width: $bp-sm) {
       grid-template-columns: 1fr;
     }
@@ -15,6 +29,7 @@
       border-radius: $primary-radius;
       background: #fff;
       padding: 5% 10%;
+
       @media (max-width: $bp-sm) {
         border-radius: $small-radius;
         padding: 12px;
@@ -88,13 +103,39 @@
   }
   &__menu {
     max-width: 295px;
+    width: max-content;
     height: max-content;
     position: sticky;
     top: 16px;
+    border-radius: $primary-radius;
+
     @media (max-width: $bp-md) {
-      display: none;
+      overflow-x: auto;
+      max-width: 100%;
+      border-radius: $small-radius;
     }
+    ul {
+      @media (max-width: $bp-md) {
+        display: flex;
+        width: max-content;
+      }
+    }
+
     li {
+      overflow: hidden;
+      &:first-child {
+        @media (min-width: $bp-sm) {
+          border-top-right-radius: $primary-radius;
+          border-top-left-radius: $primary-radius;
+        }
+      }
+
+      &:last-child {
+        @media (min-width: $bp-sm) {
+          border-bottom-right-radius: $primary-radius;
+          border-bottom-left-radius: $primary-radius;
+        }
+      }
       &:not(:last-child) {
         border-bottom: 1px solid #2b3c5e;
       }
@@ -102,11 +143,20 @@
         color: #fff;
         font-weight: 700;
         min-height: 95px;
+        min-width: 200px;
         padding: 16px 24px;
 
         display: flex;
         align-items: center;
         gap: 16px;
+        @media (max-width: $bp-sm) {
+          padding: 12px;
+          min-height: 58px;
+          opacity: 1;
+        }
+        &.active {
+          background-color: $primary-light;
+        }
       }
     }
   }
