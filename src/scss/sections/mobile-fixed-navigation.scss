@@ -6,6 +6,7 @@
   position: fixed;
   bottom: 0;
   z-index: 999;
+  border-top: 1px solid #f2f5f8;
   @media (max-width: $bp-md) {
     display: flex;
   }

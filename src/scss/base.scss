@@ -271,3 +271,7 @@ hr {
     display: none;
   }
 }
+
+[data-scroll-element] {
+  transition: 0.3s;
+}

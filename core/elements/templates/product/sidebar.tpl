@@ -1,4 +1,4 @@
-<div class="product-page__sidebar" data-scroll-element>
+<div class="product-page__sidebar">
   {include "file:modules/product-cards/chunks/common/product-price.tpl" type_simple=true}
 
   {include "file:modules/cart/frontend/chunks/cart-controls-big.tpl"}

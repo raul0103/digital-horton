@@ -11,7 +11,7 @@
                     <h1 class="font-candara fs-32-23 text-uppercase">{$_modx->resource.pagetitle}</h1>
                     <div class="product-page__info-row">
                         {include "file:templates/product/content.tpl"}
-                        <button class="btn btn-bordered w-100 sm-d-block">Заказать сейчас</button>
+                        <button class="btn btn-bordered w-100 sm-d-block" onclick="modals.events.open('modal-callback')">Заказать сейчас</button>
                         {include "file:templates/product/sidebar.tpl"}
                     </div>
                 </div>

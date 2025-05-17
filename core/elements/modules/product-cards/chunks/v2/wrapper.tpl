@@ -6,9 +6,8 @@
   <a class="product-card__image {if !$medium}bg{/if}" href="{$uri}">
     {if $medium}<img src="{$medium}" loading="lazy"/>{/if}
   </a>
-  <a class="fs-28-19 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle ?: $pagetitle}</a>
+  <a class="fs-28-19-14 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle ?: $pagetitle}</a>
   
- 
     <div class="d-flex justify-between flex-wrap gap-8 mb-12">
       {include "file:chunks/availability.tpl"}
       {include "file:chunks/rating-stars.tpl"}

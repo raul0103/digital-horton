@@ -15,12 +15,16 @@
     height: max-content;
     gap: 16px;
     max-width: 800px;
+    @media (max-width: $bp-sm) {
+      gap: 8px;
+    }
     &-item {
       display: flex;
       align-items: end;
       justify-content: space-between;
       gap: 16px;
       position: relative;
+
       .delimiter {
         position: absolute;
         width: 100%;
@@ -30,6 +34,10 @@
       div {
         background-color: #eef2f5;
         z-index: 1;
+        @media (max-width: $bp-sm) {
+          font-size: 12px;
+          max-width: 135px;
+        }
       }
       &-value {
         @media (min-width: $bp-md) {
@@ -59,7 +67,7 @@
       border-radius: 0;
     }
     @media (max-width: $bp-xs) {
-      max-height: 74px;
+      // max-height: 74px;
       position: fixed;
       bottom: 0;
       width: 100%;
@@ -68,7 +76,7 @@
       display: grid;
       align-items: center;
       grid-template-columns: 1fr 1fr;
-      padding: 12px 16px;
+      padding: 9px 16px;
     }
     .price {
       font-size: 32px;

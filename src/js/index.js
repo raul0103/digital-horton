@@ -7,6 +7,7 @@ import "glightbox/dist/css/glightbox.min.css";
 import "./modules/sorting-btn.js";
 import "./modules/onchange.js";
 import "./modules/stats.js";
+import "./modules/showScrollelements.js";
 import iniSliders from "./modules/swipers";
 import initOpened from "./modules/opened";
 import initInputMask from "./modules/input-mask.js";
