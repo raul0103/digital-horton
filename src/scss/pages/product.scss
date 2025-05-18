@@ -41,7 +41,8 @@
       }
       &-value {
         @media (min-width: $bp-md) {
-          width: 200px;
+          width: max-content;
+          max-width: 200px;
           text-align: left;
         }
       }
