@@ -7,9 +7,11 @@ if (element) {
     if (currentScrollY > lastScrollY) {
       // Прокрутка вниз — скрываем
       element.style.opacity = "0";
+      element.style["pointer-events"] = "none";
     } else {
       // Прокрутка вверх — показываем
       element.style.opacity = "1";
+      element.style["pointer-events"] = "all";
     }
 
     lastScrollY = currentScrollY;
