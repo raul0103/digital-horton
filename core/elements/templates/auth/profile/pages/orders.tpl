@@ -38,7 +38,7 @@
         </div>
 
         <div class="profile-orders__item-controls">
-            <button class="btn btn-primary big-btn">Повторить заказ</button>
+            <button class="btn btn-primary big-btn" onclick="copyOrder(this,{$order->id})">Повторить заказ</button>
             
             {if $order->status == 1000}
                 <button class="btn btn-bordered big-btn d-flex gap-8" onclick="window.order_id={$order->id};modals.events.open('modal-order-add-review')">

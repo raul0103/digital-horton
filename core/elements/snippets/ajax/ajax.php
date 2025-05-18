@@ -136,6 +136,87 @@ switch ($data['action']) {
             ]));
         }
 
+    case "copy-order":
+        if (!$miniShop2 = $modx->getService('miniShop2')) exit(json_encode([
+            "success" => false,
+            "message" => "Не удалось подключить minishop2"
+        ]));
+        $miniShop2->initialize($modx->context->key);
+
+        $user = $modx->getObject('modUser', $modx->user->id);
+        if (!$user) exit(json_encode([
+            "success" => false,
+            "message" => "Пользователь не найден"
+        ]));
+
+        $user_discount = $pdoTools->runSnippet("@FILE snippets/getUserDiscount.php");
+
+        // >>> Получаем заказы этого пользователя для проверки
+        $q = $modx->newQuery('msOrder');
+        $q->where([
+            'user_id' => $user->get('id')
+        ]);
+        $q->sortby('createdon', 'DESC');
+        $orders = $modx->getCollection('msOrder', $q);
+        $user_order_ids = [];
+        foreach ($orders as $order) {
+            $user_order_ids[] = $order->id;
+        }
+
+        if (!in_array($data['order_id'], $user_order_ids)) exit(json_encode([
+            "success" => false,
+            "message" => "Заказ не пренадлежит данному пользователю"
+        ]));
+        // <<<
+
+        // >>> Товары в новый заказ
+        $order = $modx->getObject('msOrder', $data['order_id']);
+        if (!$order) exit(json_encode([
+            "success" => false,
+            "message" => "Заказ не найден"
+        ]));
+        foreach ($order->Products as $product) {
+            $miniShop2->cart->add($product->product_id, $product->count, [
+                'user_discount' => $user_discount
+            ]);
+        }
+        // <<<
+
+
+        // Добавляем данные пользователя в заказ
+        $order_data = $order->toArray();
+        $order_address_data = $order->Address->toArray();
+
+        $miniShop2->order->add('email', $order_address_data['email']);
+        $miniShop2->order->add('receiver', $ororder_address_datader_data['name']);
+        $miniShop2->order->add('phone', $order_address_data['phone']);
+        $miniShop2->order->add('street', $order_address_data['street']);
+        $miniShop2->order->add('city', $order_address_data['city']);
+        $miniShop2->order->add('comment', $order_address_data['comment']);
+        $miniShop2->order->add('delivery', $order_data['delivery']);
+        $miniShop2->order->add('payment', $order_data['payment']);
+
+
+        $profile = $user->getOne('Profile');
+        if ($profile) {
+            $miniShop2->order->add('email', $profile->email);
+            $miniShop2->order->add('receiver', $profile->fullname);
+            $miniShop2->order->add('phone', $profile->phone);
+        }
+
+        // Отправка заказа
+        $response = $miniShop2->order->submit();
+        if (!$response->success) exit(json_encode([
+            "success" => true,
+            "message" => "Ошибка при добавлении товаров в корзину"
+        ]));
+
+        exit(json_encode([
+            "success" => true,
+            "message" => "Заказ скопирован"
+        ]));;
+
+
         // case 'get-catalog':
         //     $cache_options = [
         //         xPDO::OPT_CACHE_KEY => 'default/map-resources/' . $modx->context->key . '/',

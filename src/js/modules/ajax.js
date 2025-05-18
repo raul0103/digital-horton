@@ -173,4 +173,43 @@ export default function initAjax() {
       notifications.error(data.message);
     }
   };
+
+  window.copyOrder = async (e, order_id) => {
+    e.classList.add("loading");
+
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        action: "copy-order",
+        order_id: order_id,
+        ajax_connect: true,
+      }),
+    });
+
+    e.classList.remove("loading");
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    let text = await response.text();
+    let data;
+    try {
+      data = text ? JSON.parse(text) : null;
+    } catch (e) {
+      console.error("Ошибка при парсинге JSON", e);
+      data = null;
+    }
+
+    if (data?.success !== false) {
+      notifications.success("Заказ скопирован");
+
+      setTimeout(() => location.reload(), 1000);
+    } else {
+      notifications.error(data.message);
+    }
+  };
 }
