@@ -5,7 +5,7 @@ use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 // === Создание структуры директорий ===
-$uploadDir = MODX_CORE_PATH . 'files/order-excel/' . date('Y') . '/' . date('M') . '/';
+$uploadDir = MODX_BASE_PATH . 'files/order-excel/' . date('Y') . '/' . date('M') . '/';
 if (!is_dir($uploadDir)) {
     mkdir($uploadDir, 0775, true);
 }
@@ -65,4 +65,4 @@ $writer = new Xlsx($spreadsheet);
 $writer->save($filepath);
 
 // === Вернуть путь или что-то сделать ===
-return $filepath;
+return str_replace(MODX_BASE_PATH, "http://{$_SERVER['HTTP_HOST']}/", $filepath);

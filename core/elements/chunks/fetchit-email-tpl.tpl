@@ -25,9 +25,11 @@
 
 {set $products = "@FILE modules/cart/backend/snippets/getProducts.php" | snippet}
 {if $products}
+    {set $excel_href = "@FILE snippets/orderEXCEL.php" | snippet : ['products' => $products, 'form_data' => $form_data]}
+    
     <br>
     <br>
-    <p><b>Ссылка на EXCEL:</b> {"@FILE snippets/orderEXCEL.php" | snippet : ['products' => $products, 'form_data' => $form_data]}</p>
+    <p><b>Ссылка на EXCEL:</b> <a href="{$excel_href}">Скачать</a></p>
     <p><b>ТОВАРЫ В КОРЗИНЕ</b></p>
     {foreach $products as $product}
         <p><b>{$product['pagetitle']}</b>: {$product['count']} x {$product['price']} руб.</p>
