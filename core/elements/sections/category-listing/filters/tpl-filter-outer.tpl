@@ -15,7 +15,7 @@
 
   <div
     class="category-listing__filter-row"
-    data-opened-element="filter-{$key}"
+    data-opened-element="filter-values-{$key}"
     data-search-by-words-container="{$key}"
   >
     {$rows}
@@ -25,7 +25,7 @@
   {if $_modx->getPlaceholder('category-listing-show-btn-more')}
   <div
     class="category-listing__filter-more-btn"
-    data-opened-btn="filter-{$key}"
+    data-opened-btn="filter-values-{$key}"
     data-active-text="Скрыть"
   >
     Смотреть все

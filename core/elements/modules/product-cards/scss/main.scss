@@ -45,6 +45,10 @@
   }
   &__title {
     margin-bottom: 16px;
+
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: break-word;
     @media (max-width: $bp-xs) {
       margin-bottom: 8px;
     }
