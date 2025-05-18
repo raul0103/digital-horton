@@ -12,7 +12,7 @@
 
       {'!FetchIt' | snippet : [
       'form' => '@INLINE
-      <form class="form dark">
+      <form class="form dark" enctype="multipart/form-data">
         <div class="d-grid gap-16">
           <div class="d-flex xs-column gap-16">
             <div class="w-100">
@@ -100,7 +100,7 @@
         </div>
       </form>'
         'emailTo' => 'email' | config
-        'emailSubject' => $email_subject
+        'emailSubject' => "Заявка на расчет стоимости"
         'emailTpl' => '@FILE chunks/fetchit-email-tpl.tpl'
         'hooks' => 'email'
         'snippet' => 'FormIt'
