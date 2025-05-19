@@ -1,24 +1,15 @@
 <div class="categories section-margin">
   <div class="container">
     <div class="categories__row">
-      {if $show_sidebar}
-        {set $items = $_modx->getPlaceholder('map-resources.categories')}
+      {if $sidebar_items}
+        {set $current_url = "@FILE snippets/getCurrentUrl.php" | snippet}
+
         <div class="categories__menu primary-dark-bg">
           <ul>
-            {foreach $items as $index => $catalog_item}
+            {foreach $sidebar_items as $catalog_item}
             <li>
-              <a class="{if $index == 0}active{/if}" data-opened-btn="category-{$catalog_item['id']}" data-toggle-not="true" data-close-early="categories">
-                  {if $catalog_item['category_icon']}
-                      <img src="{$catalog_item['category_icon']}" />
-                  {/if}
-                  {$catalog_item['menutitle'] ?: $catalog_item['pagetitle']}
-              </a>
-            </li>
-            {/foreach}
-
-            {foreach $_modx->getPlaceholder('static-categories') as $index => $catalog_item}
-            <li>
-              <a href="{$catalog_item['uri']}">
+             
+              <a class="{if $catalog_item['uri'] == $current_url}active{/if}" href="{$catalog_item['uri']}">
                   {if $catalog_item['category_icon']}
                       <img src="{$catalog_item['category_icon']}" />
                   {/if}
@@ -30,38 +21,32 @@
         </div>
       {/if}
 
-      {foreach $_modx->getPlaceholder('map-resources.categories') as $index => $catalog_item}
-        {set $childrens = "@FILE modules/map-resources/mapGetResourcesByWhere.php" | snippet : [
-          'data' => $_modx->getPlaceholder('map-resources.categories'),
-          'where' => '{"parent":'~$catalog_item['id']~'}'
-        ]}
+      <div class="categories__blocks">
+            {foreach $categories as $category}
+            <div class="categories__blocks__item">
+              <div class="categories__blocks__item-title font-candara d-flex gap-8" data-opened-btn="cb-{$category['id']}" {if !$category['children']}style="margin-bottom:0"{/if}>
+                  <svg width="16" height="16" class="primary-stroke">
+                      <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-right"></use>
+                  </svg>
+                  {$category['menutitle'] ?: $category['pagetitle']}
+              </div>
+              {if $category['children']}
+              <div class="categories__blocks__item-childs" data-opened-element="cb-{$category['id']}">
+                  {foreach $category['children'] as $children}
+                    <a href="{$children['uri']}" class="categories__blocks__item-childs-item">
+                      {if $children['main_image']}
+                          <img src="{$children['main_image']}" />
+                      {/if}
 
-        <div class="categories__blocks {if $index == 0}opened{/if}" data-opened-element="category-{$catalog_item['id']}">
-              {foreach $childrens as $child}
-              <div class="categories__blocks__item">
-                <div class="categories__blocks__item-title font-candara d-flex gap-8" data-opened-btn="cb-{$child['id']}" {if !$child['children']}style="margin-bottom:0"{/if}>
-                    <svg width="16" height="16" class="primary-stroke">
-                        <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-right"></use>
-                    </svg>
-                    {$child['menutitle'] ?: $child['pagetitle']}
-                </div>
-                {if $child['children']}
-                <div class="categories__blocks__item-childs" data-opened-element="cb-{$child['id']}">
-                    {foreach $child['children'] as $child}
-                      <a href="{$child['uri']}" class="categories__blocks__item-childs-item">
-                        {if $child['main_image']}
-                            <img src="{$child['main_image']}" />
-                        {/if}
+                      {$children['menutitle'] ?: $children['pagetitle']}
+                    </a>
+                  {/foreach}
+              </div>
+              {/if}
+          </div>
+            {/foreach}
+      </div>
 
-                        {$child['menutitle'] ?: $child['pagetitle']}
-                      </a>
-                    {/foreach}
-                </div>
-                {/if}
-            </div>
-              {/foreach}
-        </div>
-      {/foreach}
     </div>
   </div>
 </div>

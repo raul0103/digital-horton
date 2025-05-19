@@ -11,16 +11,17 @@
     height: max-content;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-    &.opened {
-      display: grid;
-      opacity: 1;
-      visibility: visible;
-    }
+    display: grid;
+    
+    // display: none;
+    // opacity: 0;
+    // visibility: hidden;
+    // transition: 0.3s;
+    // &.opened {
+    //   display: grid;
+    //   opacity: 1;
+    //   visibility: visible;
+    // }
 
     @media (max-width: $bp-sm) {
       grid-template-columns: 1fr;
