@@ -1,12 +1,11 @@
 {set $depth = $_modx->resource.depth ?: 3}
-{set $filters = $_modx->resource.filters}
+{set $filters = $_modx->resource.filters ?: 'ms|price:number'}
 {'!mFilter2' | snippet : [
     'element' => 'msProducts'
     'depth' => $depth
     'includeThumbs' => 'medium'
     'limit' => 24
     'parents' => $_modx->resource.id
-    '-filters' => 'ms|price:number,msoption|diametr_mm,msoption|product_type,msoption|tolshina_mm'
     'filters' => $filters
     'tplOuter' => '@FILE sections/category-listing/tpl-outer.tpl'
     'tplFilter.outer.ms|price' => '@FILE sections/category-listing/filters/tpl-filter-slider.tpl'

@@ -18,7 +18,6 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
     $depth = isset($depth) ? $depth : 0;
     $fields = ["id", "pagetitle", "menutitle", "parent", "alias", "uri", "template"]; // Поля получаемые у товаров
     $table_prefix = $modx->getOption('table_prefix');
-
     // Формируем параметр $where
     if (!empty($where)) {
         $where = json_decode($where, true);
@@ -30,6 +29,13 @@ if (!$output = $modx->cacheManager->get($cache_name, $cache_options)) {
         }
     } else {
         $where = [];
+    }
+
+    // Преобразуем значения с ключами, содержащими :in
+    foreach (array_keys($where) as $key) {
+        if (strpos($key, ':in') !== false && is_array($where[$key])) {
+            $where[$key] = '(' . implode(',', $where[$key]) . ')';
+        }
     }
 
     $where['hidemenu'] = 0;

@@ -7,7 +7,11 @@
         {if $.get.category_id}
             {set $category_id = $.get.category_id}
         {else}
-            {set $category_id = 'catalog_id' | config}
+            {if $_modx->context.key == 'web'}
+                {set $category_id = 439}
+            {else}
+                {set $category_id = 'catalog_id' | config}
+            {/if}
         {/if}
         
         {set $sidebar_items = "@FILE snippets/data/staticCategories.php" | snippet : ['show_all' => true]}

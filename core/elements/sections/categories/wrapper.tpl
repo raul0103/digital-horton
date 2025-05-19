@@ -24,11 +24,14 @@
       <div class="categories__blocks">
             {foreach $categories as $category}
             <div class="categories__blocks__item">
-              <div class="categories__blocks__item-title font-candara d-flex gap-8" data-opened-btn="cb-{$category['id']}" {if !$category['children']}style="margin-bottom:0"{/if}>
-                  <svg width="16" height="16" class="primary-stroke">
+              <div class="categories__blocks__item-title justify-between d-flex gap-8" {if !$category['children']}style="margin-bottom:0"{/if}>
+                  <a class="font-candara" href="{$category['uri']}">
+                    {$category['menutitle'] ?: $category['pagetitle']}
+                  </a>
+
+                  <svg data-opened-btn="cb-{$category['id']}" width="16" height="16" class="primary-stroke">
                       <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-right"></use>
                   </svg>
-                  {$category['menutitle'] ?: $category['pagetitle']}
               </div>
               {if $category['children']}
               <div class="categories__blocks__item-childs" data-opened-element="cb-{$category['id']}">

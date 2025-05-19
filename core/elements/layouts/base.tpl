@@ -18,7 +18,7 @@
     'parents' => 'catalog_id' | config
     'toPlaceholder' => 'map-resources.categories'
     'includeTVs' => 'main_image,category_icon'
-    'where' => '{"class_key":"msCategory", "template":30, "deleted":0}'
+    'where' => '{"class_key":"msCategory", "template:in":[30,37], "deleted":0}'
     'depth' => 10,
   ]}
 
