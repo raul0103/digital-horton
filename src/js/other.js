@@ -15,4 +15,14 @@ export default function initOtherFuncs() {
     a.click();
     document.body.removeChild(a);
   };
+
+  // Показать все зарактеристики в карточке товоара
+  window.showAllCharact = () => {
+    const target = document.querySelector('[data-opened-btn="tab2"]');
+
+    if (target) {
+      target.click();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 }

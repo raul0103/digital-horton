@@ -125,7 +125,7 @@ const update_elements = {
    */
   cartTotalSumm(data) {
     let summ = data.total.summ;
-    if (data.product_data.user_discount) {
+    if (data?.product_data?.user_discount) {
       summ = summ.replace(/[\s\u00A0]/g, "");
       summ = summ - (summ / 100) * data.product_data.user_discount;
       summ = summ.toLocaleString("ru-RU");

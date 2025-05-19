@@ -12,5 +12,20 @@
       </div>
     </div>
   </div>
-  {include "file:templates/product/options/wrapper.tpl"}
+
+  {set $options = "@FILE snippets/getOptions.php" | snippet}
+  {set $option_keys = []}
+  {foreach $options as $option}
+      {set $option_keys[] = $option['key']}
+  {/foreach}
+
+  <div class="product-page__options">
+      {'msProductOptions' | snippet : [
+          'onlyOptions' => $option_keys | join
+          'tpl' => '@FILE templates/product/options/item.tpl'
+      ]}
+  </div>
+
+  <button class="btn btn-show-more" onclick="showAllCharact()">Показать все</button>
+
 </div>

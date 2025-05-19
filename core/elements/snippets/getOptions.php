@@ -1,20 +1,60 @@
 <?php
 
 $options = [
-    ["title" => "Диаметр, мм", "key" => "diametr_mm"],
-    ["title" => "Тип", "key" => "product_type"],
-    ["title" => "Толщина, мм", "key" => "tolshina_mm"],
+    "web" => [
+        ["key" => "unit", "title" => "Единица измерения"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+    ],
+    "kip" => [
+        ["key" => "unit", "title" => "Единица измерения"],
+        ["key" => "massa-kg", "title" => "Масса, кг"],
+        ["key" => "klass-tochnosti", "title" => "Класс точности"],
+        ["key" => "stepen-pylevlagozashchity", "title" => "Степень пылевлагозащиты"],
+        // ["key" => "steklo", "title" => "Стекло"],
+        // ["key" => "material", "title" => "Материал"],
+        ["key" => "srok-sluzhby", "title" => "Срок службы"],
+    ],
+    "pozharka" => [
+        ["key" => "unit", "title" => "Единица измерения"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+    ],
+    "neft" => [
+        ["key" => "unit", "title" => "Единица измерения"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+    ],
+    "zhbi" => [
+        ["key" => "unit", "title" => "Единица измерения"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+    ],
+    "svet" => [
+        ["key" => "unit", "title" => "Единица измерения"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+        ["key" => "xxx", "title" => "xxxx"],
+    ],
 ];
 
-// $ids_plitdorozh = $modx->getOption('ids_plitdorozh');
-// if (!empty($ids_plitdorozh)) {
-//     $ids_plitdorozh = explode(',', $ids_plitdorozh);
-// } else {
-//     $ids_plitdorozh = [];
-// }
-
-// if (!in_array($modx->resource->id, $ids_plitdorozh)) {
-//     array_unshift($options, ["title" => "ГОСТ", "key" => "gost"]);
-// }
-
-return $options;
+return $options[$modx->context->key];
