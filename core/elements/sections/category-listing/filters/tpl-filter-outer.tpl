@@ -1,6 +1,16 @@
+{set $option_idx = $_modx->getPlaceholder('option-idx') ?: 0}
+{set $option_idx = $option_idx + 1}
+{$_modx->setPlaceholder('option-idx',$option_idx)}
+
+{if $option_idx < 10}
+  {set $class_names = ['opened'=>'opened','active'=>'active']}
+{else}
+  {set $class_names = ['opened'=>'','active'=>'']}
+{/if}
+
 {set $key = $table ~ $delimeter ~ $filter}
-<fieldset class="category-listing__filter opened" id="mse2_{$key}" data-opened-element="filter-{$key}">
-  <div class="category-listing__filter-title filter_title" data-opened-btn="filter-{$key}">
+<fieldset class="category-listing__filter {$class_names['opened']}" id="mse2_{$key}" data-opened-element="filter-{$key}">
+  <div class="category-listing__filter-title filter_title {$class_names['active']}" data-opened-btn="filter-{$key}">
     {('mse2_filter_' ~ $table ~ '_' ~ $filter) | lexicon}
   </div>
 

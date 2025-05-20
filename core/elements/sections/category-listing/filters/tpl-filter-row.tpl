@@ -8,4 +8,4 @@
 {/if}
 
 
-<div class="category-listing__filter-value {$classes}"> <label class="{$disabled} custom-checkbox" for="mse2_{$key}_{$idx}"> <input type="checkbox" name="{$filter_key}" id="mse2_{$key}_{$idx}" value="{$value}" {$checked} {$disabled} /> <span class="checkmark"></span> <span>{$title}</span> </label> </div>
+<div class="category-listing__filter-value {$classes}"> <div class="{$disabled} custom-checkbox" for="mse2_{$key}_{$idx}"> <input type="checkbox" name="{$filter_key}" id="mse2_{$key}_{$idx}" value="{$value}" {$checked} {$disabled} /> <span class="checkmark"></span> <span>{$title}</span> </div> </div>

@@ -17,11 +17,8 @@
     'tpls' => '@FILE modules/product-cards/chunks/v2/wrapper.tpl'
     'ajaxMode' => 'button'
     'suggestions' => 0
-    'showEmptyFilters' => 1
+    'showEmptyFilters' => 0
     'suggestionsMaxFilters' => 0
     'suggestionsMaxResults' => 0
     'suggestionsSliders' => false
-    'filterOptions' => '{ 
-        "more_tpl" : "<button class=/"category-listing__btn-more/" type=/"button/">Показать еще</button>"
-    }'
 ]}
