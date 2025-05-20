@@ -38,7 +38,11 @@
                   {foreach $category['children'] as $children}
                     <a href="{$children['uri']}" class="categories__blocks__item-childs-item">
                       {if $children['main_image']}
-                          <img src="{$children['main_image']}" />
+                        {set $thumb = 'phpthumbon' | snippet : [
+                          'input' => "{$children['main_image']}",
+                          'options' => '&w=65&zc=1'
+                        ]}
+                          <img src="{$thumb}" />
                       {/if}
 
                       {$children['menutitle'] ?: $children['pagetitle']}
