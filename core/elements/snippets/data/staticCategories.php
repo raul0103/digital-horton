@@ -24,8 +24,17 @@ $categories = [
         ]
     ],
     [
+        'id' => 18062,
         'menutitle' => 'Полимерные колодцы',
         'category_icon' => 'assets/images/categories/common/icons/kolodc.png',
+        'uri' => $domains['web'] . '?category_id=18062',
+        'children' => [
+            ['id' => 472, 'menutitle' => 'Перепадные пластиковые колодцы', 'uri' => $domains['web'] . 'perepadnye-plastikovye-kolodcy/'],
+            ['id' => 473, 'menutitle' => 'Канализационные пластиковые колодцы', 'uri' => $domains['web'] . 'kanalizacionnye-plastikovye-kolodcy/'],
+            ['id' => 474, 'menutitle' => 'Дождеприемные (ливневые) пластиковые колодцы', 'uri' => $domains['web'] . 'dozhdepriemnye-livnevye-plastikovye-kolodcy/'],
+            ['id' => 463, 'menutitle' => 'Колодцы для напорных систем', 'uri' => $domains['web'] . 'kolodcy-dlya-napornyh-sistem/'],
+            ['id' => 486, 'menutitle' => 'Пластиковые кабельные колодцы', 'uri' => $domains['web'] . 'plastikovye-kabelnye-kolodcy/'],
+        ]
     ],
     [
         'id' => 584,

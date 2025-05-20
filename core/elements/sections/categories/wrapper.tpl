@@ -24,7 +24,11 @@
       <div class="categories__blocks">
             {foreach $categories as $category}
             <div class="categories__blocks__item">
-              <div class="categories__blocks__item-title justify-between d-flex gap-8" {if !$category['children']}style="margin-bottom:0"{/if}>
+              <div class="categories__blocks__item-title d-flex gap-16" {if !$category['children']}style="margin-bottom:0"{/if}>
+                  <svg width="16" height="16" class="primary-stroke desktop-arrow">
+                    <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-right"></use>
+                  </svg>
+
                   <a class="font-candara" href="{$category['uri']}">
                     {$category['menutitle'] ?: $category['pagetitle']}
                   </a>
