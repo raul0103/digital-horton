@@ -13,14 +13,12 @@
                 {set $category_id = 'catalog_id' | config}
             {/if}
         {/if}
-        
-        {set $sidebar_items = "@FILE snippets/data/staticCategories.php" | snippet : ['show_all' => true]}
-        
+
         {set $categories = "@FILE modules/map-resources/mapGetResourcesByWhere.php" | snippet : [
             'data' => $_modx->getPlaceholder('map-resources.categories'),
             'where' => '{"parent":'~$category_id~'}'
         ]}
-        {include "file:sections/categories/wrapper.tpl" categories=$categories sidebar_items=$sidebar_items}
+        {include "file:sections/categories/wrapper.tpl" categories=$categories sidebar_items=$_modx->getPlaceholder('static-categories')}
     {* Данные для категорий *}
 
     {include "file:sections/about/wrapper.tpl"}

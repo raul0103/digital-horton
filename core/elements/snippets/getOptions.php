@@ -4,7 +4,7 @@ $options = [
     "web" => [
         ["key" => "unit", "title" => "Единица измерения"],
         ["key" => "massa-kg", "title" => "Масса, кг"],
-        ["key" => "material", "title" => "Материал"],
+        // ["key" => "material", "title" => "Материал"],
         ["key" => "strana-izgotovitel", "title" => "Страна изготовитель"],
         ["key" => "marka-stali", "title" => "Марка стали"],
         ["key" => "tip-zatvora", "title" => "Тип затвора"],
