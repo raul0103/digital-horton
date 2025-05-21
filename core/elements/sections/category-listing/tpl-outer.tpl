@@ -60,9 +60,9 @@
               <label class="sm-d-none">Сортировать по </label>
               <a
                 class="sortby-controls__item-sort-item"
-                href="#"
-                data-sort="tv|hits_page"
-                data-default="desc"
+                {*href="#"*}
+                {*data-sort="tv|hits_page"*}
+                {*data-default="desc"*}
               >
               <span class="sm-d-block"></span>
                 Популярности
