@@ -21,9 +21,11 @@
 
         
         {include "file:sections/header/common/search.tpl" device="desktop"}
+      </div>
 
-        <div class="d-grid gap-16 fw-500 header-desktop__address-block">
-          <div class="d-flex gap-8">
+      <div class="d-grid w-100">
+        <div class="d-flex justify-between gap-16">
+          <div class="d-flex gap-8 header-desktop__address">
             <svg width="16" height="16" class="primary-stroke">
               <use
                 xlink:href="/assets/template/icons/sprite.svg?v=19c#house"
@@ -31,21 +33,6 @@
             </svg>
             {'address' | config}
           </div>
-          <a class="d-flex gap-8" href="mailto:{'email' | config}">
-            <svg width="16" height="16" class="primary-stroke">
-              <use
-                xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#letter"
-              ></use>
-            </svg>
-           {'email' | config}
-          </a>
-        </div>
-      </div>
-
-      <div class="d-flex gap-16 align-end">
-        {include "file:chunks/social-links.tpl" classes="header-desktop__social"}
-        
-        <div class="d-grid gap-8">
           <a
             class="d-flex gap-8 fs-18 fw-700 w-content"
             href="tel:{'phone' | config}"
@@ -57,9 +44,25 @@
             </svg>
             {'phone' | config}
           </a>
-          <button onclick="modals.events.open('modal-callback')" class="btn btn-primary fs-15 w-100">Заказать звонок</button>
+        </div>
+
+        <div class="d-flex justify-between gap-16">
+          <a class="d-flex gap-8" href="mailto:{'email' | config}">
+            <svg width="16" height="16" class="primary-stroke">
+              <use
+                xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#letter"
+              ></use>
+            </svg>
+           {'email' | config}
+          </a>
+
+          <div class="header-desktop__callback-wrap">
+            {include "file:chunks/social-links.tpl" classes="header-desktop__social"}
+            <button onclick="modals.events.open('modal-callback')" class="w-content btn btn-primary fs-15 w-100">Заказать звонок</button>
+          </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>

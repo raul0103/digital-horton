@@ -5,6 +5,21 @@
     display: none;
   }
 
+  &__callback-wrap {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    gap: 8px;
+    .header-desktop__social,
+    button {
+      max-width: calc(50% - 4px);
+    }
+  }
+
+  &__address {
+    max-width: 285px;
+  }
+
   &__top {
     position: relative;
     z-index: 2;
@@ -31,6 +46,9 @@
       gap: 24px;
       width: 100%;
       gap: 24px;
+      @media (max-width: $bp-ls) {
+        max-width: 360px;
+      }
     }
   }
   &__address-block {

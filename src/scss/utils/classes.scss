@@ -115,7 +115,7 @@
 
 /* other */
 .cursor-pointer{cursor: pointer;}
-.w-content{width: max-content;}
+.w-content{min-width: max-content;}
 .w-100{width: 100%!important;}
 .primary-radius{border-radius:$primary-radius}
 .font-candara,.font-candara *{font-family: "Candara";}
