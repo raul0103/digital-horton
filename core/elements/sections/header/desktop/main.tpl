@@ -49,7 +49,7 @@
         Отсуствует конфиг header_menu_ids
       {/if}
 
-      <div class="d-flex ml-auto">
+      <div class="d-flex ml-auto header-desktop__fast-nav">
         <a
           href="{$_modx->makeURL('favorites_id' | option)}"
           class="p-relative btn btn-primary d-grid gap-4 border-radius-left fs-15 fw-700 place-center"
@@ -62,7 +62,7 @@
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#favorites"
             ></use>
           </svg>
-          Избранное
+          <span class="hide-text">Избранное</span>
         </a>
         <a
           href="{$_modx->makeURL('comparison_id' | option)}"
@@ -76,7 +76,7 @@
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#comparison"
             ></use>
           </svg>
-          Сравнение
+          <span class="hide-text">Сравнение</span>
         </a>
         <a
           class="p-relative btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
@@ -88,7 +88,7 @@
           <svg width="16" height="16">
             <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#cart"></use>
           </svg>
-          Корзина
+          <span class="hide-text">Корзина</span>
         </a>
         <a
           class="btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
@@ -99,7 +99,7 @@
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#login"
             ></use>
           </svg>
-          Войти
+          <span class="hide-text">Войти</span>
         </a>
       </div>
     </div>

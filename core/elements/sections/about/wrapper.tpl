@@ -11,7 +11,7 @@
       <div class="about__main">
         <div class="about__main-content">
           <div class="blind-gray-color fw-400 fs-24-17 mb-16-8">О компании</div>
-          <div class="mb-24-16 fs-96-32 font-candara">Horton Group</div>
+          <div class="about__main-content-title mb-24-16">Horton Group</div>
           <div class="fs-21-15 mb-16-8">
             В настоящий момент компания HORTON GROUP - это сплоченная команда
             специалистов в области поставок инженерных решений для разных

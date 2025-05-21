@@ -5,6 +5,15 @@
     display: none;
   }
 
+  &__fast-nav {
+    .hide-text {
+      color: #fff;
+      // @media (max-width: $bp-ls) {
+      //   display: none;
+      // }
+    }
+  }
+
   &__callback-wrap {
     display: flex;
     justify-content: end;
@@ -143,6 +152,8 @@
         box-shadow: 0px 5px 20px 0px #1826411a;
         background-color: #fff;
         min-width: 250px;
+        width: max-content;
+        max-width: 340px;
         a {
           display: block;
           padding: 20px 0;

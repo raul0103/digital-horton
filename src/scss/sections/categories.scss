@@ -29,11 +29,18 @@
     &__item {
       border-radius: $primary-radius;
       background: #fff;
-      padding: 5% 10%;
-
+      padding: 30px 60px;
+      @media (max-width: $bp-md) {
+        padding: 24px;
+      }
       @media (max-width: $bp-sm) {
         border-radius: $small-radius;
         padding: 12px;
+      }
+      &.grid-column-2 {
+        @media (min-width: $bp-sm) {
+          grid-column: span 2;
+        }
       }
       &-title {
         // cursor: pointer;
@@ -111,7 +118,11 @@
           align-items: center;
           gap: 16px;
           font-weight: 700;
+          word-break: break-word;
           // height: 63px;
+          @media (max-width: $bp-ls) {
+            font-size: 14px;
+          }
           @media (max-width: $bp-md) {
             width: calc(50% - 8px);
             font-size: 12px;
@@ -149,6 +160,10 @@
     li {
       overflow: hidden;
       &:first-child {
+        @media (max-width: $bp-md) {
+          border-top-right-radius: $small-radius;
+          border-top-left-radius: $small-radius;
+        }
         @media (min-width: $bp-sm) {
           border-top-right-radius: $primary-radius;
           border-top-left-radius: $primary-radius;
@@ -156,6 +171,10 @@
       }
 
       &:last-child {
+        @media (max-width: $bp-md) {
+          border-bottom-right-radius: $small-radius;
+          border-bottom-left-radius: $small-radius;
+        }
         @media (min-width: $bp-sm) {
           border-bottom-right-radius: $primary-radius;
           border-bottom-left-radius: $primary-radius;

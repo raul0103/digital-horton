@@ -47,7 +47,7 @@
         </div>
 
         <div class="d-flex justify-between gap-16">
-          <a class="d-flex gap-8" href="mailto:{'email' | config}">
+          <a class="d-flex gap-8 w-content" href="mailto:{'email' | config}">
             <svg width="16" height="16" class="primary-stroke">
               <use
                 xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#letter"

@@ -23,7 +23,7 @@
 
       <div class="categories__blocks">
             {foreach $categories as $category}
-            <div class="categories__blocks__item">
+            <div class="categories__blocks__item {if $category['id'] == 487}grid-column-2{/if}">
               <div class="categories__blocks__item-title d-flex gap-16" {if !$category['children']}style="margin-bottom:0"{/if}>
                   <svg width="16" height="16" class="primary-stroke desktop-arrow">
                     <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#arrow-right"></use>
@@ -44,7 +44,7 @@
                       {if $children['main_image']}
                         {set $thumb = 'phpthumbon' | snippet : [
                           'input' => "{$children['main_image']}",
-                          'options' => '&w=65&zc=1'
+                          'options' => '&w=65'
                         ]}
                           <img src="{$thumb}" />
                       {/if}

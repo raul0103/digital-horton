@@ -118,7 +118,7 @@
 .w-content{min-width: max-content;}
 .w-100{width: 100%!important;}
 .primary-radius{border-radius:$primary-radius}
-.font-candara,.font-candara *{font-family: "Candara";}
+.font-candara,.font-candara *{font-family: "Candara";font-weight: 700;}
 .font-montserrat,.font-montserrat *{font-family: "Montserrat"!important;}
 .sm-d-none{@media (max-width: $bp-sm) {display: none!important;}}
 .xs-d-none{@media (max-width: $bp-xs) {display: none!important;}}

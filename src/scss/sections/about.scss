@@ -49,6 +49,18 @@
       @media (max-width: $bp-sm) {
         width: 100%;
       }
+
+      &-title {
+        font-size: 96px;
+        font-family: "Candara";
+        @media (max-width: $bp-ls) {
+          font-size: 56px;
+        }
+
+        @media (max-width: $bp-sm) {
+          font-size: 32px;
+        }
+      }
     }
   }
 

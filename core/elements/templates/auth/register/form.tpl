@@ -21,7 +21,7 @@
     </div>
 
     <div class="form__group">
-      <label>Пароль</label>
+      <label>Повторите пароль</label>
       <input type="password" name="password_confirm:password_confirm=`password`" class="form-control[[+error.password:notempty=` is-invalid`]]" value="[[+password_confirm]]">
       [[+error.password]]
     </div>

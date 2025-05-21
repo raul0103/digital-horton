@@ -16,6 +16,8 @@
     @media (max-width: $bp-xl) {
       flex-direction: column;
       gap: 24px;
+    }
+    @media (max-width: $bp-md) {
       padding: 24px 16px;
     }
   }

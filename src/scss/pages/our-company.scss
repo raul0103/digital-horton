@@ -130,6 +130,7 @@
 
     background: url("/assets/template/images/pages/our-company/bg.png");
     background-size: cover;
+    background-position: center;
 
     @media (max-width: $bp-md) {
       padding: 24px;

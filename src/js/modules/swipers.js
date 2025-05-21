@@ -80,7 +80,7 @@ export default function iniSliders() {
 
     breakpoints: {
       1400: {
-        slidesPerView: 4.8,
+        slidesPerView: 4,
       },
       1300: {
         slidesPerView: 3,
