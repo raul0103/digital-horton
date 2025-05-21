@@ -52,7 +52,7 @@
       <div class="d-flex ml-auto header-desktop__fast-nav">
         <a
           href="{$_modx->makeURL('favorites_id' | option)}"
-          class="p-relative btn btn-primary d-grid gap-4 border-radius-left fs-15 fw-700 place-center"
+          class="p-relative btn btn-primary d-grid gap-4 border-radius-left place-center"
         >
           <span class="counters-mark {if count($_modx->getPlaceholder('favorite-products')) == 0}hidden{/if}" data-selection-key="favorite-products" data-total-hide-empty="true">
             {count($_modx->getPlaceholder('favorite-products'))}
@@ -66,7 +66,7 @@
         </a>
         <a
           href="{$_modx->makeURL('comparison_id' | option)}"
-          class="p-relative btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
+          class="p-relative btn btn-primary d-grid gap-4 border-none place-center"
         >
           <span class="counters-mark {if count($_modx->getPlaceholder('comparison-products')) == 0}hidden{/if}" data-selection-key="comparison-products" data-total-hide-empty="true">
             {count($_modx->getPlaceholder('comparison-products'))}
@@ -79,7 +79,7 @@
           <span class="hide-text">Сравнение</span>
         </a>
         <a
-          class="p-relative btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
+          class="p-relative btn btn-primary d-grid gap-4 border-none place-center"
           href="{$_modx->makeURL('cart_id' | option)}"
         >
         <span class="counters-mark {if $_modx->getPlaceholder('product_total')['count'] == 0}hidden{/if}" data-cart-total-count data-total-hide-empty="true">
@@ -91,7 +91,7 @@
           <span class="hide-text">Корзина</span>
         </a>
         <a
-          class="btn btn-primary d-grid gap-4 border-none fs-15 fw-700 place-center"
+          class="btn btn-primary d-grid gap-4 border-none place-center"
           href="{$_modx->makeURL('login_id' | option)}"
         >
           <svg width="16" height="16">
