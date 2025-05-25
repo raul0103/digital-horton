@@ -1,18 +1,24 @@
 <?php
 
-/**
- * Скрипт отдает одномерный массив ресурсов найденных по where
- * 
- * @param $where - JSON
- * @param $data - массив данных
- */
-
 if (empty($data) || empty($where)) return;
 
-// if (gettype($ids) == 'string')
-//     $ids = explode(',', $ids);
-
 $where = json_decode($where, true);
+
+// Рекурсивная сортировка по menuindex
+if (!function_exists('sortByMenuIndexRecursive')) {
+    function sortByMenuIndexRecursive(array &$items): void
+    {
+        usort($items, function ($a, $b) {
+            return ($a['menuindex'] ?? 0) <=> ($b['menuindex'] ?? 0);
+        });
+
+        foreach ($items as &$item) {
+            if (isset($item['children']) && is_array($item['children'])) {
+                sortByMenuIndexRecursive($item['children']);
+            }
+        }
+    }
+}
 
 if (!function_exists('filterResources')) {
     function filterResources($data, $where)
@@ -27,12 +33,10 @@ if (!function_exists('filterResources')) {
                     $field = $key;
                     $operator = '=';
 
-                    // Разделяем ключ на поле и оператор
                     if (strpos($key, ':') !== false) {
                         [$field, $operator] = explode(':', $key, 2);
                     }
 
-                    // Выполняем проверку в зависимости от оператора
                     switch ($operator) {
                         case 'in':
                             if (!in_array($item[$field] ?? null, $value)) {
@@ -51,6 +55,7 @@ if (!function_exists('filterResources')) {
                     if (!$matched) break;
                 }
 
+                // Обрабатываем детей
                 if (isset($item['children']) && is_array($item['children'])) {
                     $handler($item['children']);
                 }
@@ -61,17 +66,15 @@ if (!function_exists('filterResources')) {
             }
         };
 
-        $handler($data);
+        // Сначала сортируем всё дерево
+        sortByMenuIndexRecursive($data);
 
-        // Сортировка по полю id по возрастанию
-        usort($result, function ($a, $b) {
-            return ($a['id'] ?? 0) <=> ($b['id'] ?? 0);
-        });
+        // Потом фильтруем
+        $handler($data);
 
         return $result;
     }
 }
-
 
 $cache_name = md5(serialize($scriptProperties));
 $cache_options = [
