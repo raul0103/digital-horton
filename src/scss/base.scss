@@ -275,3 +275,29 @@ hr {
 [data-scroll-element] {
   transition: 0.3s;
 }
+
+// scroll-header
+body.header-scroll {
+  header {
+    padding-bottom: 63px;
+  }
+  .header-desktop__main {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    width: 100%;
+
+    animation-name: scroll-header;
+    animation-duration: 0.2s;
+  }
+}
+
+@keyframes scroll-header {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+// scroll-header

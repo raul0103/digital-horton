@@ -87,6 +87,7 @@
 
   &__main {
     background-color: #fff;
+
     .container {
       padding: 0;
     }
@@ -108,6 +109,10 @@
       //     grid-area: two;
       //   }
       // }
+    }
+
+    .catalog-button {
+      padding: 20px 40px;
     }
   }
 
@@ -182,9 +187,5 @@
         // }
       }
     }
-  }
-
-  .catalog-button {
-    padding: 20px 40px;
   }
 }

@@ -141,10 +141,13 @@
     max-width: 295px;
     width: max-content;
     height: max-content;
-    position: sticky;
-    top: 16px;
+
     border-radius: $primary-radius;
 
+    @media (min-width: $bp-md) {
+      position: sticky;
+      top: 80px;
+    }
     @media (max-width: $bp-md) {
       overflow-x: auto;
       max-width: 100%;

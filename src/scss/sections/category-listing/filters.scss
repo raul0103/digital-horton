@@ -5,7 +5,9 @@
 
   &__filters {
     height: max-content;
-    position: relative;
+
+    top: 80px;
+    position: sticky;
 
     padding: 16px 20px;
     background: #fff;

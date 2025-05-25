@@ -1,9 +1,9 @@
 .breadcrumbs {
   margin: 24px 0 14px;
   padding-bottom: 10px;
+  overflow-x: auto;
   min-height: max-content;
   @media (max-width: $bp-md) {
-    overflow-x: auto;
     margin-top: 0;
   }
 

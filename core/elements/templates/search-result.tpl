@@ -5,7 +5,7 @@
 
 <div class="search-page">
     <div class="container">
-        {'SimpleSearch' | snippet : [
+        {'!SimpleSearch' | snippet : [
             'containerTpl' => '@INLINE 
             <p class="simplesearch-results fs-24-17">{$resultInfo}</p>
 
