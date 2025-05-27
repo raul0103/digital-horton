@@ -1,5 +1,5 @@
 <li>
-  <a href="/{$uri}">
+  <a href="{$uri}">
     {if $image}
     <img src="{$image}" />
     {/if}

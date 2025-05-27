@@ -619,7 +619,7 @@ if (!class_exists('MLTSearch')) {
 
             foreach ($data as $val) {
                 $menutitle = $val['menutitle'] ?: $val['pagetitle'];
-                $uri = $modx->pdoTools->makeUrl($val['id']);
+                $uri = $modx->makeUrl($val['id'], '', '', 'full');
                 $image = $val['thumb'] ?: '';
 
                 $result .= $modx->pdoTools->getChunk($chunk, [
@@ -708,7 +708,7 @@ if (!class_exists('MLTSearch')) {
             $query .= " WHERE  `resources`.`class_key` = 'msProduct'
                     AND `resources`.`published` = 1
                     AND `resources`.`deleted` = 0
-                    AND `resources`.`context_key` = '" . $modx->context->key . "'
+                   # AND `resources`.`context_key` = '" . $modx->context->key . "'
                     AND ($where)
               GROUP BY resources.id
               ORDER BY CAST(`TVpriority1`.`value` AS DECIMAL(13,3)) ASC, CAST(`TVhitspage`.`value` AS DECIMAL(13,3)) ASC";
@@ -743,7 +743,9 @@ if (!class_exists('MLTSearch')) {
             FROM
                 `modx_site_content` AS `resources`
             WHERE
-                `resources`.`class_key` = 'msCategory' AND `resources`.`published` = 1 AND `resources`.`deleted` = 0 AND `resources`.`context_key` = '" . $modx->context->key . "' AND `resources`.`template` IN(" . self::SEO_TEMPLATES . ") AND($wherePagetitle)
+                `resources`.`class_key` = 'msCategory' AND `resources`.`published` = 1 AND `resources`.`deleted` = 0 
+                # AND `resources`.`context_key` = '" . $modx->context->key . "' 
+                AND `resources`.`template` IN(" . self::SEO_TEMPLATES . ") AND($wherePagetitle)
             GROUP BY
             resources.id
             LIMIT " . self::LIMIT_CATEGORIES;
@@ -774,7 +776,7 @@ if (!class_exists('MLTSearch')) {
                   WHERE  `resources`.`class_key` = 'msCategory' 
                         AND `resources`.`published` = 1 
                         AND `resources`.`deleted` = 0 
-                        AND `resources`.`context_key` = '" . $modx->context->key . "'
+                        # AND `resources`.`context_key` = '" . $modx->context->key . "'
                         AND ($whereCategories)  
                   GROUP BY resources.id 
                   ORDER BY id
