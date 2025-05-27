@@ -301,3 +301,15 @@ body.header-scroll {
   }
 }
 // scroll-header
+
+[data-sidebar-scroll] {
+  cursor: grab;
+  &.dragging {
+    pointer-events: none;
+    // .custom-checkbox {
+    //   pointer-events: none;
+    // }
+  }
+
+  user-select: none;
+}

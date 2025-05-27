@@ -4,7 +4,7 @@
 
     <h1 class="section-title">{$_modx->resource.pagetitle}</h1>
     <div class="category-listing__row">
-      <div class="category-listing__filters" data-filter-window>
+      <div class="category-listing__filters" data-filter-window data-sidebar-scroll>
 
         <div class="category-listing__filters-header sm-d-block">
           <button class="btn btn-simple" data-filter-window-close>

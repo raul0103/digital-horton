@@ -9,6 +9,7 @@ import "./modules/onchange.js";
 import "./modules/stats.js";
 import "./modules/showScrollelements.js";
 import "./modules/header-scroll.js";
+import "./modules/sidebar-scroll.js";
 
 import iniSliders from "./modules/swipers";
 import initOpened from "./modules/opened";
@@ -19,6 +20,7 @@ import initComparison from "./modules/comparison.js";
 import initOtherFuncs from "./other.js";
 import initAjax from "./modules/ajax.js";
 import fetchItObserve from "./modules/fetchit-observe.js";
+import SearchByWords from "./modules/search-by-words.js";
 
 import "../../core/elements/modules/all";
 
@@ -39,4 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.notifications = new Notifications();
   new FilterWindow().init();
+
+  try {
+    new SearchByWords().init();
+  } catch {
+    console.error("Ошибка SearchByWords");
+  }
 });
