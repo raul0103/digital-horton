@@ -3,7 +3,8 @@
 {block 'content'}
     {include "file:sections/breadcrumbs/wrapper.tpl"}
 
-    {include "file:sections/subcat-slider/wrapper.tpl"}
+    {*include "file:sections/subcat-slider/wrapper.tpl"*}
+    {include "file:sections/subcat-rows/wrapper.tpl"}
     {include "file:sections/category-listing/wrapper.tpl"}
     {*include "file:sections/collapse-content/wrapper.tpl"*}
     {include "file:sections/advantages/wrapper.tpl"}

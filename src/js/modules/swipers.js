@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation, Autoplay, Thumbs } from "swiper/modules";
+import {Navigation, Autoplay, Thumbs} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -11,7 +11,7 @@ export default function iniSliders() {
     loop: false,
     slidesPerView: 1,
     spaceBetween: 24,
-    lazy: { loadPrevNext: true },
+    lazy: {loadPrevNext: true},
     // autoplay: {
     //   delay: 5000,
     //   disableOnInteraction: false,
@@ -46,7 +46,7 @@ export default function iniSliders() {
       loop: false,
       spaceBetween: 44,
       // slidesPerView: 1,
-      lazy: { loadPrevNext: true },
+      lazy: {loadPrevNext: true},
       slideClass: "reviews-section__item", // Указываем класс слайдов
 
       breakpoints: {
@@ -75,7 +75,7 @@ export default function iniSliders() {
     modules: [Navigation],
     loop: false,
     spaceBetween: 16,
-    lazy: { loadPrevNext: true },
+    lazy: {loadPrevNext: true},
     slideClass: "product-card",
 
     breakpoints: {
@@ -98,33 +98,33 @@ export default function iniSliders() {
     direction: "horizontal",
   });
 
-  new Swiper('[data-swiper="subcat-slider"]', {
-    modules: [Navigation],
-    loop: false,
-    slidesPerView: "auto",
-    slideClass: "subcat-slider__item",
+  // new Swiper('[data-swiper="subcat-slider"]', {
+  //   modules: [Navigation],
+  //   loop: false,
+  //   slidesPerView: "auto",
+  //   slideClass: "subcat-slider__item",
 
-    // spaceBetween: 16,
+  //   // spaceBetween: 16,
 
-    // breakpoints: {
-    //   1400: {
-    //     slidesPerView: 4.8,
-    //   },
-    //   1300: {
-    //     slidesPerView: 3,
-    //   },
-    //   200: {
-    //     slidesPerView: 2,
-    //   },
-    // },
+  //   // breakpoints: {
+  //   //   1400: {
+  //   //     slidesPerView: 4.8,
+  //   //   },
+  //   //   1300: {
+  //   //     slidesPerView: 3,
+  //   //   },
+  //   //   200: {
+  //   //     slidesPerView: 2,
+  //   //   },
+  //   // },
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
 
-    direction: "horizontal",
-  });
+  //   direction: "horizontal",
+  // });
 
   new Swiper('[data-swiper="projects-gallery"]', {
     modules: [Navigation],
@@ -132,7 +132,7 @@ export default function iniSliders() {
     loop: false,
     spaceBetween: 16,
     slidesPerView: 1,
-    lazy: { loadPrevNext: true },
+    lazy: {loadPrevNext: true},
 
     breakpoints: {
       1300: {

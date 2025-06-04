@@ -78,7 +78,7 @@ module.exports = {
     watchFiles: ["src/**/*", "core/elements/**/*"],
     open: true,
     host: "horton",
-    port: 8080,
+    port: 8081,
     hot: true,
     liveReload: true,
   },
