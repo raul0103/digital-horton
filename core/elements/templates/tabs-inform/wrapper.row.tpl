@@ -1,0 +1,38 @@
+{extends "file:layouts/base.tpl"} 
+
+{block 'content'}
+    {include "file:sections/breadcrumbs/wrapper.tpl"}
+
+    <div class="tabs-inform-row section-margin">
+        <div class="container">
+            {set $data = "@FILE snippets/getJsonData.php" | snippet : [
+                "path" => "/assets/template/json/sections/"~$_modx->resource.alias~".json"
+            ]}
+
+            <h1 class="section-title text-start">{$_modx->resource.pagetitle}</h1>
+
+            {if $data['status'] == 'success'}
+            <div class="tabs-inform-row__wrap">
+                <div class="tabs-inform-row__categories">
+                    {set $count = 0}
+                    {foreach $data['data'] as $category_name => $items}
+                        <a class="fs-28-19 {if $count++ == 0}active{/if}" data-opened-btn="{$category_name}" data-toggle-not="true" data-close-early="certs">{$category_name}</a>
+                    {/foreach}
+                </div>
+
+                {set $count = 0}
+                {foreach $data['data'] as $category_name => $items}
+                    <div class="d-grid gap-16 col-md-3 {if $count++ == 0}opened{/if}" data-opened-element="{$category_name}">
+                        {foreach $items as $item}
+                            {include "file:templates/tabs-inform/item-info.tpl" item=$item}
+                        {/foreach}
+                    </div>
+                {/foreach}
+            </div>
+            {/if}
+        </div>
+    </div>
+
+    {include "file:sections/big-form/wrapper.tpl"}
+    {include "file:sections/main-map/wrapper.tpl"}
+{/block}

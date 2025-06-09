@@ -31,6 +31,10 @@
 
   &__address {
     max-width: 285px;
+
+    svg {
+      min-width: 16px;
+    }
   }
 
   &__top {

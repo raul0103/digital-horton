@@ -37,17 +37,6 @@ $categories = [
         ]
     ],
     [
-        'id' => 584,
-        'menutitle' => 'Кабель и провод',
-        'category_icon' => 'assets/images/categories/common/icons/kabel.png',
-        'uri' => $domains['web'] . '?category_id=584',
-        'children' => [
-            ['id' => 585, 'menutitle' => 'Кабели связи', 'uri' => $domains['web'] . 'kabeli-svyazi/'],
-            ['id' => 586, 'menutitle' => 'Провода установочные', 'uri' => $domains['web'] . 'provoda-ustanovochnye/'],
-            ['id' => 587, 'menutitle' => 'Кабели силовые', 'uri' => $domains['web'] . 'kabeli-silovye/'],
-        ]
-    ],
-    [
         'id' => 754,
         'menutitle' => 'Железобетонные изделия',
         'category_icon' => 'assets/images/categories/common/icons/zhbi.png',
@@ -57,6 +46,61 @@ $categories = [
             ['id' => 419, 'menutitle' => 'Колодцы сетей связи', 'uri' => $domains['zhbi'] . 'kolodczyi-setej-svyazi/'],
             ['id' => 423, 'menutitle' => 'Железобетонные плиты', 'uri' => $domains['zhbi'] . 'zhelezobetonnyie-plityi/'],
             ['id' => 427, 'menutitle' => 'Железобетонные кольца', 'uri' => $domains['zhbi'] . 'zhelezobetonnyie-kolcza/'],
+        ]
+    ],
+    [
+        'id' => 507,
+        'menutitle' => 'Запорная арматура',
+        'category_icon' => 'assets/images/categories/common/icons/armatur.png',
+        'uri' => $domains['web'] . '?category_id=507',
+        'children' => [
+            ['id' => 508, 'menutitle' => 'Запорно-регулирующая арматура', 'uri' => $domains['web'] . 'zaporno-reguliruyushchaya-armatura/'],
+            ['id' => 512, 'menutitle' => 'Задвижки чугунные', 'uri' => $domains['web'] . 'zadvizhki-chugunnye/'],
+            ['id' => 517, 'menutitle' => 'Задвижки стальные', 'uri' => $domains['web'] . 'zadvizhki-stalnye/'],
+            ['id' => 520, 'menutitle' => 'Затворы', 'uri' => $domains['web'] . 'zatvory/'],
+            ['id' => 529, 'menutitle' => 'Шаровые краны', 'uri' => $domains['web'] . 'sharovye-krany/'],
+        ]
+    ],
+    [
+        'id' => 573,
+        'menutitle' => 'Люки и дождеприёмники',
+        'category_icon' => 'assets/images/categories/common/icons/luk.png',
+        'uri' => $domains['web'] . '?category_id=573',
+        'children' => [
+            ['id' => 574, 'menutitle' => 'Люки', 'uri' => $domains['web'] . 'lyuki/'],
+            ['id' => 577, 'menutitle' => 'Дождеприемники', 'uri' => $domains['web'] . 'dozhdepriemniki/'],
+        ]
+    ],
+    [
+        'id' => 541,
+        'menutitle' => 'Детали трубопроводов',
+        'category_icon' => 'assets/images/categories/common/icons/trubop.png',
+        'uri' => $domains['web'] . '?category_id=541',
+        'children' => [
+            ['id' => 542, 'menutitle' => 'Чугунные детали', 'uri' => $domains['web'] . 'chugunnye-detali/'],
+            ['id' => 546, 'menutitle' => 'Стальные детали', 'uri' => $domains['web'] . 'stalnye-detali/'],
+        ]
+    ],
+    [
+        'id' => 793,
+        'menutitle' => 'Освещение',
+        'category_icon' => 'assets/images/categories/common/icons/svet.png',
+        'uri' => $domains['svet'],
+        'children' => [
+            ['id' => 430, 'menutitle' => 'Светильники уличные', 'uri' => $domains['svet'] . 'svetilniki-ulichnyie/'],
+            ['id' => 435, 'menutitle' => 'Светильники промышленные', 'uri' => $domains['svet'] . 'svetilniki-promyishlennyie/'],
+            ['id' => 438, 'menutitle' => 'Опоры освещения', 'uri' => $domains['svet'] . 'oporyi-osveshheniya/'],
+        ]
+    ],
+    [
+        'id' => 794,
+        'menutitle' => 'КИП',
+        'category_icon' => 'assets/images/categories/common/icons/kip.png',
+        'uri' => $domains['kip'],
+        'children' => [
+            ['id' => 367, 'menutitle' => 'Манометры', 'uri' => $domains['kip'] . 'manometryi/'],
+            ['id' => 368, 'menutitle' => 'Термометры', 'uri' => $domains['kip'] . 'termometryi/'],
+            ['id' => 371, 'menutitle' => 'Датчики', 'uri' => $domains['kip'] . 'datchiki/'],
         ]
     ],
     [
@@ -84,58 +128,14 @@ $categories = [
         ]
     ],
     [
-        'id' => 573,
-        'menutitle' => 'Люки и дождеприёмники',
-        'category_icon' => 'assets/images/categories/common/icons/luk.png',
-        'uri' => $domains['web'] . '?category_id=573',
+        'id' => 584,
+        'menutitle' => 'Кабель и провод',
+        'category_icon' => 'assets/images/categories/common/icons/kabel.png',
+        'uri' => $domains['web'] . '?category_id=584',
         'children' => [
-            ['id' => 574, 'menutitle' => 'Люки', 'uri' => $domains['web'] . 'lyuki/'],
-            ['id' => 577, 'menutitle' => 'Дождеприемники', 'uri' => $domains['web'] . 'dozhdepriemniki/'],
-        ]
-    ],
-    [
-        'id' => 541,
-        'menutitle' => 'Детали трубопроводов',
-        'category_icon' => 'assets/images/categories/common/icons/trubop.png',
-        'uri' => $domains['web'] . '?category_id=541',
-        'children' => [
-            ['id' => 542, 'menutitle' => 'Чугунные детали', 'uri' => $domains['web'] . 'chugunnye-detali/'],
-            ['id' => 546, 'menutitle' => 'Стальные детали', 'uri' => $domains['web'] . 'stalnye-detali/'],
-        ]
-    ],
-    [
-        'id' => 507,
-        'menutitle' => 'Запорная арматура',
-        'category_icon' => 'assets/images/categories/common/icons/armatur.png',
-        'uri' => $domains['web'] . '?category_id=507',
-        'children' => [
-            ['id' => 508, 'menutitle' => 'Запорно-регулирующая арматура', 'uri' => $domains['web'] . 'zaporno-reguliruyushchaya-armatura/'],
-            ['id' => 512, 'menutitle' => 'Задвижки чугунные', 'uri' => $domains['web'] . 'zadvizhki-chugunnye/'],
-            ['id' => 517, 'menutitle' => 'Задвижки стальные', 'uri' => $domains['web'] . 'zadvizhki-stalnye/'],
-            ['id' => 520, 'menutitle' => 'Затворы', 'uri' => $domains['web'] . 'zatvory/'],
-            ['id' => 529, 'menutitle' => 'Шаровые краны', 'uri' => $domains['web'] . 'sharovye-krany/'],
-        ]
-    ],
-    [
-        'id' => 793,
-        'menutitle' => 'Освещение',
-        'category_icon' => 'assets/images/categories/common/icons/svet.png',
-        'uri' => $domains['svet'],
-        'children' => [
-            ['id' => 430, 'menutitle' => 'Светильники уличные', 'uri' => $domains['svet'] . 'svetilniki-ulichnyie/'],
-            ['id' => 435, 'menutitle' => 'Светильники промышленные', 'uri' => $domains['svet'] . 'svetilniki-promyishlennyie/'],
-            ['id' => 438, 'menutitle' => 'Опоры освещения', 'uri' => $domains['svet'] . 'oporyi-osveshheniya/'],
-        ]
-    ],
-    [
-        'id' => 794,
-        'menutitle' => 'КИП',
-        'category_icon' => 'assets/images/categories/common/icons/kip.png',
-        'uri' => $domains['kip'],
-        'children' => [
-            ['id' => 367, 'menutitle' => 'Манометры', 'uri' => $domains['kip'] . 'manometryi/'],
-            ['id' => 368, 'menutitle' => 'Термометры', 'uri' => $domains['kip'] . 'termometryi/'],
-            ['id' => 371, 'menutitle' => 'Датчики', 'uri' => $domains['kip'] . 'datchiki/'],
+            ['id' => 585, 'menutitle' => 'Кабели связи', 'uri' => $domains['web'] . 'kabeli-svyazi/'],
+            ['id' => 586, 'menutitle' => 'Провода установочные', 'uri' => $domains['web'] . 'provoda-ustanovochnye/'],
+            ['id' => 587, 'menutitle' => 'Кабели силовые', 'uri' => $domains['web'] . 'kabeli-silovye/'],
         ]
     ],
 ];

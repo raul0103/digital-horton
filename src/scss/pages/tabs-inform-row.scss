@@ -1,0 +1,61 @@
+.tabs-inform-row {
+  min-height: 600px;
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  &__categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    @media (max-width: $bp-xs) {
+      gap: 8px;
+    }
+    a {
+      font-weight: 700;
+      font-family: "Candara";
+      color: #858ea0;
+      &.active {
+        color: $primary-dark;
+      }
+    }
+  }
+  &__item {
+    background: #fff;
+    border-radius: $primary-radius;
+    padding: 24px;
+    display: grid;
+    gap: 24px;
+    @media (max-width: $bp-xs) {
+      padding: 16px 12px;
+      gap: 16px;
+    }
+
+    &-controls {
+      display: flex;
+      gap: 16px;
+      margin-top: auto;
+      .btn {
+        display: flex;
+        align-items: center;
+        height: 56px;
+        width: 50%;
+        @media (max-width: $bp-xs) {
+          height: 40px;
+        }
+      }
+    }
+  }
+
+  [data-opened-element]:not(.opened) {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+  }
+  svg {
+    flex: none;
+  }
+}
