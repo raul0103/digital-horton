@@ -4,43 +4,45 @@
 
    
     <div class="category-listing__row">
-      <div class="category-listing__filters" data-filter-window data-sidebar-scroll>
+      <div class="category-listing__filters" data-filter-window>
 
-        <div class="category-listing__filters-header sm-d-block">
-          <button class="btn btn-simple" data-filter-window-close>
-            <svg width="14" height="14" stroke="#000">
-              <use
-                xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#close"
-              ></use>
-            </svg>
-          </button>
-        </div>
+      <div class="category-listing__filters-scroll">
+                <div class="category-listing__filters-header sm-d-block">
+                <button class="btn btn-simple" data-filter-window-close>
+                  <svg width="14" height="14" stroke="#000">
+                    <use
+                      xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#close"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
 
-        <div class="category-listing__filters__wrap">
-          <div class="category-listing__filters-title">
-            Фильтры
-            <button class="btn btn-simple category-listing__filters-close" data-mfilter-reset data-filter-window-close>
-              Сбросить
-              <svg width="10" height="10">
-                <use
-                  xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#close"
-                ></use>
-              </svg>
-            </button>
-          </div>
+              <div class="category-listing__filters__wrap">
+                <div class="category-listing__filters-title">
+                  Фильтры
+                  <button class="btn btn-simple category-listing__filters-close" data-mfilter-reset data-filter-window-close>
+                    Сбросить
+                    <svg width="10" height="10">
+                      <use
+                        xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#close"
+                      ></use>
+                    </svg>
+                  </button>
+                </div>
 
-          <form
-            class="form category-listing__filters-row"
-            action="{$_modx->resource.id | url}"
-            method="post"
-            id="mse2_filters"
-          >
-            {$filters}
-            
-            <button class="sm-d-block mb-8 w-100 btn btn-primary" data-filter-window-close>Применить</button>
-            <button class="w-100 btn btn-bordered" type="reset">Сбросить фильтры</button>
-          </form>
-        </div>
+                <form
+                  class="form category-listing__filters-row"
+                  action="{$_modx->resource.id | url}"
+                  method="post"
+                  id="mse2_filters"
+                >
+                  {$filters}
+                  
+                  <button class="sm-d-block mb-8 w-100 btn btn-primary" data-filter-window-close>Применить</button>
+                  <button class="w-100 btn btn-bordered" type="reset">Сбросить фильтры</button>
+                </form>
+              </div>
+      </div>
 
       </div>
 

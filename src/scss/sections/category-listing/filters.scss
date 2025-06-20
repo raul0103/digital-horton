@@ -47,7 +47,15 @@
     @media (min-width: $bp-sm) {
       border-radius: $primary-radius;
     }
+    &-scroll {
+      height: max-content;
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
 
+      scrollbar-width: thin;
+      scrollbar-color: #182641 #fff;
+      padding-right: 10px;
+    }
     &-header {
       padding: 21px;
       position: absolute;
@@ -168,6 +176,11 @@
       overflow-x: hidden;
       overflow-y: auto;
       max-height: 500px;
+
+      scrollbar-width: thin;
+      scrollbar-color: #182641 #fff;
+      padding-right: 10px;
+
       &.opened {
         .category-listing__filter-value.hidden {
           display: block;

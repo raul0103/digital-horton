@@ -4,7 +4,7 @@
       {if $sidebar_items}
         {set $current_url = "@FILE snippets/getCurrentUrl.php" | snippet}
 
-        <div class="categories__menu primary-dark-bg" data-sidebar-scroll>
+        <div class="categories__menu primary-dark-bg">
           <ul>
             {foreach $sidebar_items as $catalog_item}
             <li>
