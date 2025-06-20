@@ -16,7 +16,7 @@
     position: relative;
     display: flex;
     align-items: center;
-    &:before {
+    &:not(.no-shadow):before {
       content: "";
       position: absolute;
       width: 100%;
