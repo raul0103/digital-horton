@@ -96,7 +96,7 @@
     </div>
     {else}
       <div class="empty-page-block">
-        <div class="fs-48-33 font-candara fw-700">В данной категории товары не найдены</div>
+        <div class="fs-48-33-26 font-candara fw-700">В данной категории товары не найдены</div>
             <div>Воспользуйтесь каталогом или вернитесь на главную страницу</div>
           <a class="btn btn-primary big-btn d-flex" href="/">На главную</a>
       </div>

@@ -7,7 +7,7 @@
 <div class="our-clients section-margin">
   <div class="container">
     <div class="our-clients__block">
-      <h2 class="font-candara text-center fs-56-39">Наши клиенты</h2>
+      <h2 class="font-candara text-center fs-56-39-30">Наши клиенты</h2>
 
       <div class="our-clients__row">
         {foreach $data['data'] as $image}

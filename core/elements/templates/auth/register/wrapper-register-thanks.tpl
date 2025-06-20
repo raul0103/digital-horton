@@ -5,7 +5,7 @@
         <div class="container">
 
             <div class="empty-page-block" style="max-width: 800px;">
-                <div class="fs-48-33 font-candara fw-700">Спасибо за регистрацию</div>
+                <div class="fs-48-33-26 font-candara fw-700">Спасибо за регистрацию</div>
                 <div class="text-content">
                     <p>
                       На вашу электронную почту <b>{$.get.email}</b> отправлено письмо,

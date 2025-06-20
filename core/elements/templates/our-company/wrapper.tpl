@@ -20,7 +20,7 @@
 
         <div class="our-company__banner section-margin">
             <div class="our-company__banner-content">
-                <div class="fs-56-39 fw-700 font-candara mb-16">Помогаем строить будущее</div>
+                <div class="fs-56-39-30 fw-700 font-candara mb-16">Помогаем строить будущее</div>
                 <div class="fs-21-15">
                     С каждым годом география наших поставок растет и клиенты доверяют нам не только важную часть работы по подбору и поставке труб, запорной арматуры, фитингов и оборудования для нефтебаз, но и работы по монтажу и сварке ПНД труб диаметром до 900 мм включительно.
                 </div>
@@ -67,7 +67,7 @@
 
         <div class="our-company__history section-margin">
             <div class="our-company__history-content">
-                <div class="fs-56-39 font-candara">История компании</div>
+                <div class="fs-56-39-30 font-candara">История компании</div>
                 <div class="fs-21-15">За 10  лет работы мы поставили более 18000 тонн полимерных труб в разные точки России , сотни наименований запорной арматуры, более 27000 единиц стальных и полимерных фитингов.</div>
             </div>
             <div class="our-company__history-image">

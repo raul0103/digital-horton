@@ -87,7 +87,7 @@
                         <table class="comparison-page__product">
                             <tr class="tr-image"><td><img src="{$product['image']}" /></td></tr>
                             <tr class="tr-title"><td><a href="{$product['uri']}">{$product['pagetitle'] | truncate : 30 : ' ... '}</a></td></tr>
-                            <tr class="tr-price"><td class="fs-28-19">{$product['price']} руб.</td></tr>
+                            <tr class="tr-price"><td class="fs-28-19-16">{$product['price']} руб.</td></tr>
                             <tr class="tr-control">
                                 <td class="d-flex">
                                     {include "file:modules/cart/frontend/chunks/cart-controls-big.tpl" product_id=$product['id']}

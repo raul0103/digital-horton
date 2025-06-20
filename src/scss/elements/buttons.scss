@@ -7,11 +7,15 @@
   cursor: pointer;
   border: none;
   font-weight: 700;
-  font-family: "Candara";
+  // font-family: "Candara";
   justify-content: center;
 
-  @media (max-width: $bp-xs) {
+  @media (max-width: $bp-md) {
     font-size: 13px;
+  }
+  @media (max-width: $bp-sm) {
+    padding: 8px;
+    font-size: 11px;
   }
 
   &:hover {

@@ -23,9 +23,11 @@
     background-image: url(/assets/template/images/sections/about/bg-desktop.png);
     background-size: cover;
     background-position: center;
-    @media (max-width: $bp-sm) {
+    @media (max-width: $bp-md) {
       padding: 16px;
-      min-height: 602px;
+    }
+    @media (max-width: $bp-sm) {
+      min-height: 536px;
       background-position: bottom;
       background-image: url(/assets/template/images/sections/about/bg-mobile.png);
     }
@@ -33,7 +35,7 @@
     &-btn-more {
       display: block;
       margin-top: 56px;
-      padding: 20px 24px !important;
+      // padding: 20px 24px !important;
       @media (max-width: $bp-sm) {
         margin-top: 24px;
       }

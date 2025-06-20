@@ -13,7 +13,7 @@
     'tplFilter.outer.default' => '@FILE sections/category-listing/filters/tpl-filter-outer.tpl'
     'tplFilter.row.default' => '@FILE sections/category-listing/filters/tpl-filter-row.tpl'
     'includeTVs' => 'priority'
-    'sort' => 'tv|priority:asc',
+    'sort' => 'tv|priority:desc',
     'tpls' => '@FILE modules/product-cards/chunks/v2/wrapper.tpl'
     'ajaxMode' => 'button'
     'suggestions' => 0

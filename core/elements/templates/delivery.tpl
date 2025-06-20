@@ -36,7 +36,7 @@
 
     <div class="container">
         <div class="primary-block">
-            <h2 class="fs-48-33 primary-block__title">Нормы загрузки труб</h2>
+            <h2 class="fs-48-33-26 primary-block__title">Нормы загрузки труб</h2>
             {include "file:sections/loading-pipes/wrapper.tpl"}
         </div>
     </div>

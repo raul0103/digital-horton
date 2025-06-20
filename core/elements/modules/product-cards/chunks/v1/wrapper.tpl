@@ -6,7 +6,7 @@
   <a class="product-card__image {if !$medium}bg{/if}" href="{$uri}">
     {if $medium}<img src="{$medium}" loading="lazy"/>{/if}
   </a>
-  <a class="fs-28-19-14 fw-700 font-candara product-card__title" href="{$uri}">{$menutitle ?: $pagetitle}</a>
+  <a class="fs-24-17-13 fw-700 product-card__title" href="{$uri}">{$menutitle ?: $pagetitle}</a>
   
   {include "file:modules/product-cards/chunks/common/product-price.tpl"}
 

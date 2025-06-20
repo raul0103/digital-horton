@@ -5,7 +5,7 @@
         xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#document"
       ></use>
     </svg>
-    <span class="fw-500 fs-25-18">{$item['title']}</span>
+    <span class="fw-500 fs-25-18-16">{$item['title']}</span>
   </div>
   <div class="tabs-inform-page__item-controls">
     <a class="btn btn-bordered" href="{$item['href']}" target="_blank"

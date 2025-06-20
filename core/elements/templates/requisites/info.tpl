@@ -5,7 +5,7 @@
 {if $data['status'] == 'success'}
 <div class="d-grid gap-16">
     {foreach $data['data'] as $group_name => $items}
-      <div class="fs-25-18 fw-700">{$group_name}</div>
+      <div class="fs-25-18-16 fw-700">{$group_name}</div>
       <div class="d-grid gap-14">
         {foreach $items as $key => $value}
           {switch $value}

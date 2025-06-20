@@ -267,6 +267,9 @@ hr {
   border-radius: 100%;
   color: #fff;
   font-size: 10px;
+  @media (max-width: $bp-xs) {
+    right: 9px;
+  }
   &.hidden {
     display: none;
   }

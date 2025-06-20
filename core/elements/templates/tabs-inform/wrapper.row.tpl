@@ -16,7 +16,7 @@
                 <div class="tabs-inform-row__categories">
                     {set $count = 0}
                     {foreach $data['data'] as $category_name => $items}
-                        <a class="fs-28-19 {if $count++ == 0}active{/if}" data-opened-btn="{$category_name}" data-toggle-not="true" data-close-early="certs">{$category_name}</a>
+                        <a class="fs-28-19-16 {if $count++ == 0}active{/if}" data-opened-btn="{$category_name}" data-toggle-not="true" data-close-early="certs">{$category_name}</a>
                     {/foreach}
                 </div>
 

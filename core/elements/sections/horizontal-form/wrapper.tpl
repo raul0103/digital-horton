@@ -1,7 +1,7 @@
 {'!FetchIt' | snippet : [
 'form' => '@INLINE
 <form class="form">
-  <div class="font-candara fs-25-18 mb-16">
+  <div class="font-candara fs-25-18-16 mb-16">
     {$title ?: "Есть вопросы? Заполните форму ниже и мы перезвоним вам !"}
   </div>
   <div class="d-grid gap-16 col-md-3 align-end">

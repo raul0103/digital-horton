@@ -19,6 +19,11 @@
 
     a {
       color: $primary-dark;
+      span {
+        @media (max-width: $bp-sm) {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

@@ -17,7 +17,7 @@
       {foreach $btns as $btn}
         {if !$btn['disabled']}
           <button
-            class="fs-25-18 {$btn['classlist']}"
+            class="fs-25-18-16 {$btn['classlist']}"
             data-opened-btn="{$btn['id']}"
             data-close-early="tabs"
             data-toggle-not="true"

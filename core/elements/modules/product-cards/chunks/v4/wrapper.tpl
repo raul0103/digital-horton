@@ -22,7 +22,7 @@
   <div class="d-grid gap-8">
     <div class="fs-15">{$product.pagetitle}</div>
     <div class="d-flex gap-8">
-      <div class="font-candara">{$price} РУБ.</div>
+      {$price} РУБ.
       {if $get_price['user_price']}
         <span class="old-price fs-12">{$get_price['price']} руб.</span>
       {/if}

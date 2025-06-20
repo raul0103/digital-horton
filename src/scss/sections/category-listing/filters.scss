@@ -54,7 +54,11 @@
 
       scrollbar-width: thin;
       scrollbar-color: #182641 #fff;
+      padding-top: 10px;
       padding-right: 10px;
+      @media (max-width: $bp-sm) {
+        max-height: max-content;
+      }
     }
     &-header {
       padding: 21px;

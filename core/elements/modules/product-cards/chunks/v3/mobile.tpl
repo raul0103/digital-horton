@@ -6,7 +6,7 @@
     
     <img class="product-card--v3-image br-primary-small" src="{$product['thumb']}" loading="lazy"/>
     <div class="product-card--v3-content">
-        <a class="font-candara fs-17-13 fw-700 text-uppercase" href="{$product['uri']}">{$product['pagetitle']}</a>
+        <a class="fs-17-13 fw-700 text-uppercase" href="{$product['uri']}">{$product['pagetitle']}</a>
         <ul class="product-card--v3-content-info">
             {if $product['option-1']}<li>{$product['option-1']}</li><li>•</li>{/if}
             {if $product['option-2']}<li>{$product['option-2']}</li><li>•</li>{/if}

@@ -67,6 +67,9 @@
           @media (max-width: $bp-md) {
             font-size: 23px;
           }
+          @media (max-width: $bp-sm) {
+            font-size: 20px;
+          }
         }
         svg {
           position: relative;
@@ -196,10 +199,14 @@
         display: flex;
         align-items: center;
         gap: 16px;
-        @media (max-width: $bp-sm) {
+        @media (max-width: $bp-md) {
           padding: 12px;
           min-height: 58px;
           opacity: 1;
+        }
+        @media (max-width: $bp-sm) {
+          font-size: 14px;
+          min-height: 36px;
         }
         &.active {
           background-color: $primary-light;

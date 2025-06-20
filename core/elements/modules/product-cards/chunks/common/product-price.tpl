@@ -19,7 +19,7 @@
 
 <div class="product-price">
   <div class="d-flex flex-wrap gap-4 align-end">
-    <span class="fs-28-19 price {$classes}">{$price} руб.</span>
+    <span class="fs-28-19-16 price {$classes}">{$price} руб.</span>
     {if $old_price && $old_price != 0}
     <div class="d-flex justify-between gap-12 {if $old_price_width_full}w-100{/if}">
       <span class="old-price">{$old_price} руб.</span>

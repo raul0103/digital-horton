@@ -12,7 +12,7 @@
 
     <div class="profile-orders__item">
         <div class="profile-orders__item-header">
-            <div class="fs-28-19 font-candara">Заказ №{$order->num} от {$order->createdon | date : 'd.m.Y'}</div>
+            <div class="fs-28-19-16 font-candara">Заказ №{$order->num} от {$order->createdon | date : 'd.m.Y'}</div>
 
             {include "file:chunks/order-status.tpl" status_id=$order->status}
 
@@ -22,7 +22,7 @@
                 {/if}
 
                 <div class="d-flex gap-8">
-                    <span class="fw-700 font-candara fs-25-18">{$cost_price} руб.</span>
+                    <span class="fw-700 font-candara fs-25-18-16">{$cost_price} руб.</span>
                     {if $get_cost_price['user_price']}
                         <span class="old-price fs-15">{$get_cost_price['price']} руб.</span>
                     {/if}

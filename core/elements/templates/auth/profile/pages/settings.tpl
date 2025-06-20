@@ -7,7 +7,7 @@
 
   <form class="form mb-16" action="[[~[[*id]]]]" method="post">
     <div class="mb-16">
-      <div class="fs-28-19 fw-700 mb-8">[[+fullname]] [[+surname]]</div>
+      <div class="fs-28-19-16 fw-700 mb-8">[[+fullname]] [[+surname]]</div>
       <div class="secondary-gray-color fs-15">
         Зарегистрирован [[+thislogin:date=`%d.%m.%Y`]]
       </div>

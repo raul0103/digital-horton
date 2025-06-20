@@ -21,7 +21,7 @@
                                 
                                 <div class="accordion__item-content__wrap d-grid {if $main_image}col-sm-2{/if} gap-24">
                                     <div class="services-page__item-content">
-                                        <div class="fs-28-19 mb-16">{$resource_price}</div>
+                                        <div class="fs-28-19-16 mb-16">{$resource_price}</div>
                                         {if $content}<div class="mb-32-16">{$content}</div>{/if}
                                         <div>
                                             <button class="btn btn-primary big-btn">Заказать</button>

@@ -53,6 +53,17 @@
     background-color: $light-gray;
     border-radius: $small-radius;
 
+    .fs-15 {
+      @media (max-width: $bp-sm) {
+        font-size: 12px;
+      }
+    }
+    &-content {
+      @media (max-width: $bp-sm) {
+        font-size: 14px;
+      }
+    }
+
     &-avatar {
       width: 50px;
       height: 50px;
@@ -89,6 +100,11 @@
 
     .rating-stars-static {
       margin-left: auto;
+      svg {
+        @media (max-width: $bp-sm) {
+          width: 10px;
+        }
+      }
     }
   }
 
@@ -96,6 +112,9 @@
     background: #fff;
     border-radius: $primary-radius;
     padding: 64px 0;
+    @media (max-width: $bp-md) {
+      padding: 16px 0;
+    }
     @media (max-width: $bp-sm) {
       padding: 16px 12px;
     }
@@ -103,6 +122,9 @@
 
   &__title {
     margin-bottom: 40px;
+    @media (max-width: $bp-sm) {
+      margin-bottom: 20px;
+    }
   }
 
   .swiper-wrapper {

@@ -1,7 +1,7 @@
 <div class="reviews-section section-margin">
   <div class="container">
     <div class="reviews-section__block">
-      <h2 class="reviews-section__title font-candara text-center fs-56-39">Отзывы наших клиентов</h2>
+      <h2 class="reviews-section__title font-candara text-center fs-56-39-30">Отзывы наших клиентов</h2>
 
       {"@FILE modules/reviews/snippets/mltReviewItems.php" | snippet : [
         'tpl' => '@FILE modules/reviews/chunks/review-item.tpl',

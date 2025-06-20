@@ -2,10 +2,10 @@
   <div class="container">
     <div class="big-form__row">
       <div class="big-form__info">
-        <div class="fs-48-33 fw-700 white-color font-candara">
+        <div class="fs-48-33-26 fw-700 white-color font-candara">
           Оставьте заявку на расчёт стоимости и сроки доставки
         </div>
-        <div class="fs-28-19 white-color">
+        <div class="fs-28-19-16 white-color">
           Наш менеджер свяжется с вами в ближайшее рабочее время
         </div>
       </div>
@@ -41,7 +41,6 @@
 
             <div>
               <label>Адрес доставки</label>
-              {*include "file:chunks/form/address-select.tpl"*}
               <input name="address" placeholder="Укажите полный адрес" value="" />
             </div>
           </div>

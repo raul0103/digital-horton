@@ -15,7 +15,7 @@
     gap: 80px;
     @media (max-width: $bp-xl) {
       flex-direction: column;
-      gap: 24px;
+      gap: 16px;
     }
     @media (max-width: $bp-md) {
       padding: 24px 16px;
@@ -49,10 +49,11 @@
       text-align: center;
 
       font-size: 17px;
-
-      @media (max-width: $bp-sm) {
+      @media (max-width: $bp-md) {
+        font-size: 15px;
         padding: 12px 16px;
       }
+
       @media (max-width: $bp-xs) {
         font-size: 13px;
       }

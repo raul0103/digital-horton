@@ -21,7 +21,7 @@
                         ]}
                         {if $reviews_outer}
                             <div class="reviews-page__group">
-                                <div class="reviews-page__group-title fs-28-19 font-candara">
+                                <div class="reviews-page__group-title fs-28-19-16 font-candara">
                                     <img src="{$source['logo']}" />
                                     {$source['name']}
                                 </div>
@@ -39,7 +39,7 @@
                     ]}
                     {if $reviews_outer}
                     <div class="reviews-page__group">
-                        <div class="reviews-page__group-title fs-28-19 font-candara">Отзывы из других источников</div>
+                        <div class="reviews-page__group-title fs-28-19-16 font-candara">Отзывы из других источников</div>
                         <div class="d-grid gap-16 col-md-3">{$reviews_outer}</div>
                     </div>
                     {/if}

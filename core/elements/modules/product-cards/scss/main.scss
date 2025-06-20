@@ -25,6 +25,9 @@
     display: grid;
     text-align: center;
     gap: 16px;
+    @media (max-width: $bp-xs) {
+      gap: 8px;
+    }
   }
   &__image {
     height: 268px;

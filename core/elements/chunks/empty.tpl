@@ -57,7 +57,7 @@
       {set $text = "Возможно она была удалена. Воспользуйтесь поиском или вернитесь на главную"}
   {/if}
 
-  <div class="fs-48-33 font-candara fw-700">{$title}</div>
+  <div class="fs-48-33-26 font-candara fw-700">{$title}</div>
   {if $text !== "empty"}
     <div>{$text ?: "Воспользуйтесь каталогом или вернитесь на главную страницу"}</div>
   {/if}

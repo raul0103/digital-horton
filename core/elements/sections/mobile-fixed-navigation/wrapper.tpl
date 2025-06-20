@@ -7,7 +7,7 @@
 
 <div class="mobile-fixed-navigation" data-scroll-element>
     {foreach $items as $item}
-        <a href="{$_modx->makeURL($item['resource_id'] | option)}" class="p-relative btn btn-primary d-grid gap-4 fs-13 fw-700 place-center">
+        <a href="{$_modx->makeURL($item['resource_id'] | option)}" class="p-relative btn btn-primary d-grid gap-4 fs-13-10 fw-700 place-center">
             <span class="counters-mark {if $item['counters'] == 0}hidden{/if}" {if $item['data-attrs']}{$item['data-attrs']}{else}data-selection-key="{$item['selection-key']}"{/if} data-total-hide-empty="true">
                 {$item['counters']}
             </span>

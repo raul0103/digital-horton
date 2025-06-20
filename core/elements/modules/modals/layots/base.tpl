@@ -6,14 +6,14 @@
   <div class="modal-container">
     <div data-modal-body-before>
       <div class="modal-callback__header">
-        <div class="modal-title fs-25-18 fw-700">{$title}</div>
+        <div class="modal-title fs-25-18-16 fw-700">{$title}</div>
       </div>
       <div class="modal-callback__body">{block 'body'}{/block}</div>
     </div>
 
     <div data-modal-body-after>
       <div class="modal-callback__header">
-        <div class="modal-title fs-25-18 fw-700">Спасибо за обращение!</div>
+        <div class="modal-title fs-25-18-16 fw-700">Спасибо за обращение!</div>
       </div>
       <div class="modal-callback__body">Ожидайте ответа менеджера</div>
     </div>

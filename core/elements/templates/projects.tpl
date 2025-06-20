@@ -18,7 +18,7 @@
                         <div class="swiper-wrapper">
                             {set $count = 0}
                             {foreach $data['data'] as $category_name => $items}
-                                <a class="navigation-slide fs-28-19 font-candara fw-700 {if $count++ == 0}active{/if}" data-opened-btn="{$category_name}" data-toggle-not="true" data-close-early="certs">{$category_name}</a>
+                                <a class="navigation-slide fs-28-19-16 font-candara fw-700 {if $count++ == 0}active{/if}" data-opened-btn="{$category_name}" data-toggle-not="true" data-close-early="certs">{$category_name}</a>
                             {/foreach}
                         </div>
                     </div>

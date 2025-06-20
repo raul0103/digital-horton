@@ -5,7 +5,7 @@
     <div class="modal-callback-success__icon">
       <img src="assets/template/icons/success-bordered.svg" />
     </div>
-    <div class="modal-title fs-25-18 fw-700">Ваша заявка принята!</div>
+    <div class="modal-title fs-25-18-16 fw-700">Ваша заявка принята!</div>
     <div class="modal-callback-success__body">
       Если не перезвоним через 1 минуту, скидка на доставку 10%
     </div>
