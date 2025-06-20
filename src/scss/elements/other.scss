@@ -164,3 +164,30 @@
 .navigation-slide {
   flex-shrink: 0;
 }
+
+.category-white-block {
+  margin: auto;
+  width: 100%;
+  max-width: calc(1920px - 80px);
+  background: #fff;
+  border-radius: $primary-radius;
+  margin-bottom: 24px;
+  padding: 32px 64px;
+  @media (max-width: $bp-md) {
+    padding: 0;
+    background: none;
+  }
+
+  @media (min-width: $bp-md) {
+    .breadcrumbs,
+    .subcat-rows,
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+    .section-title {
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+  }
+}

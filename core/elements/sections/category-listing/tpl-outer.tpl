@@ -2,7 +2,7 @@
   <div class="container">
     {if $results != "Подходящих результатов не найдено."}
 
-    <h1 class="section-title">{$_modx->resource.pagetitle}</h1>
+   
     <div class="category-listing__row">
       <div class="category-listing__filters" data-filter-window data-sidebar-scroll>
 
