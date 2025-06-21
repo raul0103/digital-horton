@@ -1,5 +1,5 @@
 <div class="footer__info">
-  <a href="/"><img src="/assets/template/images/logo-white.png" /></a>
+  <a href="/" class="footer__info-logo"><img src="/assets/template/images/logo-white.png" /></a>
   <div>© {''|date:'Y'} «Horton-Group»</div>
 
   {include "file:chunks/social-links.tpl" classes="xl-d-block"}

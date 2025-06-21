@@ -2,6 +2,9 @@
 
 {block 'content'}
     {set $product_ids = $_modx->getPlaceholder('comparison-products')}
+    {set $product_options = "@FILE snippets/getProductOptionsByIDS.php"|snippet : ['product_ids' => $product_ids]}
+    
+    {$_modx->lexicon->load('msearch2:default')}
 
     {include "file:sections/breadcrumbs/wrapper.tpl"}
     
@@ -22,8 +25,8 @@
             </div>
 
             {if $product_ids && $product_ids | count}
-                {set $options = ['diametr_mm', 'product_type', 'tolshina_mm']}
-                {set $options_title = ['Диаметр, мм', "Тип", "Толщина, мм"]}
+                {set $options = $product_options}
+                
                 {set $data = "@FILE templates/comparison/snippets/getData.php" | snippet : [
                     'product_ids' => $product_ids
                     'options' => $options
@@ -80,7 +83,7 @@
 
                             <tr class="tr-option tr-flex-left tr-border-bottom"><td><b>Технические характеристики</b></td></tr>
                             {foreach $options as $idx => $option}
-                                <tr class="tr-option tr-flex-left" data-comparison-key="{$option}"><td>{$options_title[$idx]}</td></tr>
+                                <tr class="tr-option tr-flex-left" data-comparison-key="{$option}"><td>{$_modx->lexicon('mse2_filter_msoption_'~$option)}</td></tr>
                             {/foreach}
                         </table>
                         {foreach $products as $index => $product}
@@ -108,7 +111,7 @@
                             {foreach $options as $idx => $option}
                                 <tr class="tr-option tr-flex-center" data-comparison-key="{$option}" data-comparison-key="{$option}" data-comparison-value="{$product[$option]}">
                                     <td {if $index == 0}class="td-sm-d-flex"{/if}>
-                                        {if $index == 0}<b class="sm-d-block secondary-gray-color">{$options_title[$idx]}</b>{/if}
+                                        {if $index == 0}<b class="sm-d-block secondary-gray-color">{$_modx->lexicon('mse2_filter_msoption_'~$option)}</b>{/if}
                                         {$product[$option]}
                                     </td>
                                 </tr>
