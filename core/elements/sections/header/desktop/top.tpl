@@ -31,7 +31,7 @@
                 xlink:href="/assets/template/icons/sprite.svg?v=19c#house"
               ></use>
             </svg>
-            {'address' | config}
+            {$_modx->getPlaceholder('virtual')['address']}
           </div>
           <a
             class="d-flex gap-8 fs-18 fw-700 w-content"

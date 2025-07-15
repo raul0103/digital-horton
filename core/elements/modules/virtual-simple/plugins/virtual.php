@@ -11,14 +11,14 @@ if ($modx->context->key == 'mgr') return;
 // $subdomain = explode('.', $_SERVER['HTTP_HOST'])[0];
 // $context_key = $modx->context->key;
 
-$config = include MODX_BASE_PATH . "core/elements/modules/virtual/config.php";
+$config = include MODX_BASE_PATH . "core/elements/modules/virtual-simple/config.php";
 
 $json_data_path = [
-    "current" => MODX_BASE_PATH . "core/elements/modules/virtual/json/{$config['context_key']}/{$config['subdomain']}.json",
-    "default" => MODX_BASE_PATH . "core/elements/modules/virtual/json/{$config['context_key']}/_default.json"
+    "current" => MODX_BASE_PATH . "core/elements/modules/virtual-simple/json/{$config['context_key']}/{$config['subdomain']}.json",
+    "default" => MODX_BASE_PATH . "core/elements/modules/virtual-simple/json/{$config['context_key']}/_default.json"
 ];
-$changes_path = MODX_BASE_PATH . "core/elements/modules/virtual/changes/{$config['context_key']}.php";
-$changes_default_path = MODX_BASE_PATH . "core/elements/modules/virtual/changes/web.php";
+$changes_path = MODX_BASE_PATH . "core/elements/modules/virtual-simple/changes/{$config['context_key']}.php";
+$changes_default_path = MODX_BASE_PATH . "core/elements/modules/virtual-simple/changes/web.php";
 
 $json_data = [];
 foreach ($json_data_path as $key => $path) {

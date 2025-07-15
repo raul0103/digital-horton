@@ -1,12 +1,12 @@
 <?php
 
 $domains = [
-    "web" => "http://soluyacb.beget.tech/",
-    "zhbi" => "http://zhbi.soluyacb.beget.tech/",
-    "kip" => "http://kip.soluyacb.beget.tech/",
-    "pozharka" => "http://pozharka.soluyacb.beget.tech/",
-    "neft" => "http://neft.soluyacb.beget.tech/",
-    "svet" => "http://svet.soluyacb.beget.tech/",
+    "web" => "https://mz-horton.ru/",
+    "zhbi" => "https://zhbi-moskva.mz-horton.ru/",
+    "kip" => "https://kip-moskva.mz-horton.ru/",
+    "pozharka" => "https://pozhsnab-moskva.mz-horton.ru/",
+    "neft" => "https://neft-moskva.mz-horton.ru/",
+    "svet" => "https://svet-moskva.mz-horton.ru/",
 ];
 
 $categories = [

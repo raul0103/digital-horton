@@ -83,7 +83,7 @@
             xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#location"
           ></use>
         </svg>
-        <span class="fw-500 fs-18">{'address' | config}</span>
+        <span class="fw-500 fs-18">{$_modx->getPlaceholder('virtual')['address']}</span>
       </div>
     </div>
   </div>

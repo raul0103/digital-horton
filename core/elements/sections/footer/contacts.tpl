@@ -6,7 +6,7 @@
         <svg width="24" height="24" stroke="white">
           <use xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#house"></use>
         </svg>
-        {'address' | config}
+        {$_modx->getPlaceholder('virtual')['address']}
       </div>
     </div>
   
