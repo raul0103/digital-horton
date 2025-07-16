@@ -72,6 +72,12 @@
     {include "file:modules/modals/chunks/all.tpl"}
     {block 'modals'}{/block}
 
+    <script>
+      const CITY_CHANGE = "{'@FILE modules/city-changer/snippets/cityDefinition.php'|snippet}"
+      const CONTEXT_KEY = "{$_modx->context.key}"
+      const MAIN_HOST = "{'main_host'|config}"
+      const CONTEXT_PREFIX = { web: "", zhbi: "zhbi-", kip: "kip-", pozharka: "pozhsnab-", neft: "neft-", svet: "svet-", };
+    </script>
     <script src="/assets/template/js/main.js?{'file_version' | config}" defer ></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     

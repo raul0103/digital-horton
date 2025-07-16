@@ -2,7 +2,7 @@ export default class CityChanger {
   constructor() {
     this.config = {
       find_cities_limit: 30, // Кол-во найденных городо вчерез поиск
-      default_city: "Москва",
+      default_city: CITY_CHANGE || "Москва",
       storage_key: "city-changer", // Ключ для хранения города в локальном хранилище
     };
     this.data = {
@@ -109,9 +109,9 @@ export default class CityChanger {
    */
   renderDomByData(
     keys = [
-      { key: "districts", element: "districts" },
-      { key: "regions", element: "regions" },
-      { key: "cities", element: "cities" },
+      {key: "districts", element: "districts"},
+      {key: "regions", element: "regions"},
+      {key: "cities", element: "cities"},
     ],
     data = this.render_data
   ) {
@@ -141,7 +141,7 @@ export default class CityChanger {
    * @param {string} key [districts | regions | cities] - Ключ от которого начнется выборка
    * @param {integer} id - Значение
    */
-  generateRenderData(key, id) {
+  async generateRenderData(key, id) {
     // Всегда одни и те же округи
     this.render_data.districts = this.data.value.districts;
 
@@ -185,7 +185,17 @@ export default class CityChanger {
         localStorage.setItem(this.config.storage_key, find_city.name);
       }
 
-      location.reload();
+      const subdomain = await window.getChangeCitySubdomain(find_city.name);
+
+      if (subdomain)
+        location.href =
+          "https://" +
+          CONTEXT_PREFIX[CONTEXT_KEY] +
+          subdomain +
+          "." +
+          MAIN_HOST +
+          location.pathname;
+      else location.reload();
     }
   }
 

@@ -1,4 +1,23 @@
 export default function initAjax() {
+  window.getChangeCitySubdomain = async (city_name) => {
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/text",
+      },
+      body: JSON.stringify({
+        action: "get-change-city-subdomain",
+        ajax_connect: true,
+        city_name,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+    return await response.text();
+  };
+
   window.getNewsResource = async (resource_id, e) => {
     e.classList.add("loading");
 
