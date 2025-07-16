@@ -4,14 +4,10 @@
     {include "file:sections/banner/wrapper.tpl"}
 
     {* Данные для категорий *}
-        {if $.get.category_id}
-            {set $category_id = $.get.category_id}
+        {if $_modx->context.key == 'web'}
+            {set $category_id = 439}
         {else}
-            {if $_modx->context.key == 'web'}
-                {set $category_id = 439}
-            {else}
-                {set $category_id = 'catalog_id' | config}
-            {/if}
+            {set $category_id = 'catalog_id' | config}
         {/if}
 
         {set $categories = "@FILE modules/map-resources/mapGetResourcesByWhere.php" | snippet : [

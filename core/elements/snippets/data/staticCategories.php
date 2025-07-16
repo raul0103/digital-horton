@@ -27,7 +27,7 @@ $categories = [
         'id' => 18062,
         'menutitle' => 'Полимерные колодцы',
         'category_icon' => 'assets/images/categories/common/icons/kolodc.png',
-        'uri' => $domains['web'] . '?category_id=18062',
+        'uri' => $domains['web'] . $modx->makeUrl(18062),
         'children' => [
             ['id' => 472, 'menutitle' => 'Перепадные пластиковые колодцы', 'uri' => $domains['web'] . 'perepadnye-plastikovye-kolodcy/'],
             ['id' => 473, 'menutitle' => 'Канализационные пластиковые колодцы', 'uri' => $domains['web'] . 'kanalizacionnye-plastikovye-kolodcy/'],
@@ -52,7 +52,7 @@ $categories = [
         'id' => 507,
         'menutitle' => 'Запорная арматура',
         'category_icon' => 'assets/images/categories/common/icons/armatur.png',
-        'uri' => $domains['web'] . '?category_id=507',
+        'uri' => $domains['web'] . $modx->makeUrl(507),
         'children' => [
             ['id' => 508, 'menutitle' => 'Запорно-регулирующая арматура', 'uri' => $domains['web'] . 'zaporno-reguliruyushchaya-armatura/'],
             ['id' => 512, 'menutitle' => 'Задвижки чугунные', 'uri' => $domains['web'] . 'zadvizhki-chugunnye/'],
@@ -65,7 +65,7 @@ $categories = [
         'id' => 573,
         'menutitle' => 'Люки и дождеприёмники',
         'category_icon' => 'assets/images/categories/common/icons/luk.png',
-        'uri' => $domains['web'] . '?category_id=573',
+        'uri' => $domains['web'] . $modx->makeUrl(573),
         'children' => [
             ['id' => 574, 'menutitle' => 'Люки', 'uri' => $domains['web'] . 'lyuki/'],
             ['id' => 577, 'menutitle' => 'Дождеприемники', 'uri' => $domains['web'] . 'dozhdepriemniki/'],
@@ -75,7 +75,7 @@ $categories = [
         'id' => 541,
         'menutitle' => 'Детали трубопроводов',
         'category_icon' => 'assets/images/categories/common/icons/trubop.png',
-        'uri' => $domains['web'] . '?category_id=541',
+        'uri' => $domains['web'] .  $modx->makeUrl(541),
         'children' => [
             ['id' => 542, 'menutitle' => 'Чугунные детали', 'uri' => $domains['web'] . 'chugunnye-detali/'],
             ['id' => 546, 'menutitle' => 'Стальные детали', 'uri' => $domains['web'] . 'stalnye-detali/'],
@@ -131,7 +131,7 @@ $categories = [
         'id' => 584,
         'menutitle' => 'Кабель и провод',
         'category_icon' => 'assets/images/categories/common/icons/kabel.png',
-        'uri' => $domains['web'] . '?category_id=584',
+        'uri' => $domains['web'] . $modx->makeUrl(584),
         'children' => [
             ['id' => 585, 'menutitle' => 'Кабели связи', 'uri' => $domains['web'] . 'kabeli-svyazi/'],
             ['id' => 586, 'menutitle' => 'Провода установочные', 'uri' => $domains['web'] . 'provoda-ustanovochnye/'],
