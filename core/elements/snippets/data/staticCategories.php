@@ -4,10 +4,31 @@ $domains = [
     "web" => "https://mz-horton.ru/",
     "zhbi" => "https://zhbi-moskva.mz-horton.ru/",
     "kip" => "https://kip-moskva.mz-horton.ru/",
-    "pozharka" => "https://pozhsnab-moskva.mz-horton.ru/",
+    "pozhsnab" => "https://pozhsnab-moskva.mz-horton.ru/",
     "neft" => "https://neft-moskva.mz-horton.ru/",
     "svet" => "https://svet-moskva.mz-horton.ru/",
 ];
+
+$url = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$host = parse_url($url, PHP_URL_HOST);
+$host_array = explode('.', $host);
+if (count($host_array) > 2) {
+    $subdomain = $host_array[0];
+    $subdomain = str_replace([
+        'zhbi-',
+        'kip-',
+        'pozhsnab-',
+        'neft-',
+        'svet-'
+    ], ['', '', '', '', '', '', '',], $subdomain);
+    foreach ($domains as $key => $url) {
+        if ($key == 'web') {
+            $domains[$key] = "https://$subdomain.mz-horton.ru/";
+        } else {
+            $domains[$key] = "https://$key-$subdomain.mz-horton.ru/";
+        }
+    }
+}
 
 $categories = [
     [
@@ -27,7 +48,7 @@ $categories = [
         'id' => 18062,
         'menutitle' => 'Полимерные колодцы',
         'category_icon' => 'assets/images/categories/common/icons/kolodc.png',
-        'uri' => $domains['web'] . $modx->makeUrl(18062),
+        'uri' => $domains['web'] . 'polimernyie-kolodczyi/',
         'children' => [
             ['id' => 472, 'menutitle' => 'Перепадные пластиковые колодцы', 'uri' => $domains['web'] . 'perepadnye-plastikovye-kolodcy/'],
             ['id' => 473, 'menutitle' => 'Канализационные пластиковые колодцы', 'uri' => $domains['web'] . 'kanalizacionnye-plastikovye-kolodcy/'],
@@ -52,7 +73,7 @@ $categories = [
         'id' => 507,
         'menutitle' => 'Запорная арматура',
         'category_icon' => 'assets/images/categories/common/icons/armatur.png',
-        'uri' => $domains['web'] . $modx->makeUrl(507),
+        'uri' => $domains['web'] . 'zapornaya-armatura/',
         'children' => [
             ['id' => 508, 'menutitle' => 'Запорно-регулирующая арматура', 'uri' => $domains['web'] . 'zaporno-reguliruyushchaya-armatura/'],
             ['id' => 512, 'menutitle' => 'Задвижки чугунные', 'uri' => $domains['web'] . 'zadvizhki-chugunnye/'],
@@ -65,7 +86,7 @@ $categories = [
         'id' => 573,
         'menutitle' => 'Люки и дождеприёмники',
         'category_icon' => 'assets/images/categories/common/icons/luk.png',
-        'uri' => $domains['web'] . $modx->makeUrl(573),
+        'uri' => $domains['web'] . 'lyuki-i-dozhdepriemniki/',
         'children' => [
             ['id' => 574, 'menutitle' => 'Люки', 'uri' => $domains['web'] . 'lyuki/'],
             ['id' => 577, 'menutitle' => 'Дождеприемники', 'uri' => $domains['web'] . 'dozhdepriemniki/'],
@@ -75,7 +96,7 @@ $categories = [
         'id' => 541,
         'menutitle' => 'Детали трубопроводов',
         'category_icon' => 'assets/images/categories/common/icons/trubop.png',
-        'uri' => $domains['web'] .  $modx->makeUrl(541),
+        'uri' => $domains['web'] .  'stalnyie-i-chugunnyie-detali-truboprovodov/',
         'children' => [
             ['id' => 542, 'menutitle' => 'Чугунные детали', 'uri' => $domains['web'] . 'chugunnye-detali/'],
             ['id' => 546, 'menutitle' => 'Стальные детали', 'uri' => $domains['web'] . 'stalnye-detali/'],
@@ -107,12 +128,12 @@ $categories = [
         'id' => 676,
         'menutitle' => 'Пожарное оборудование',
         'category_icon' => 'assets/images/categories/common/icons/pozhar.png',
-        'uri' => $domains['pozharka'],
+        'uri' => $domains['pozhsnab'],
         'children' => [
-            ['id' => 375, 'menutitle' => 'Стальные подставки', 'uri' => $domains['pozharka'] . 'stalnyie-podstavki/'],
-            ['id' => 381, 'menutitle' => 'Чугунные подставки', 'uri' => $domains['pozharka'] . 'chugunnyie-podstavki/'],
-            ['id' => 388, 'menutitle' => 'Гидранты', 'uri' => $domains['pozharka'] . 'gidrantyi/'],
-            ['id' => 391, 'menutitle' => 'Оросители', 'uri' => $domains['pozharka'] . 'orositeli/'],
+            ['id' => 375, 'menutitle' => 'Стальные подставки', 'uri' => $domains['pozhsnab'] . 'stalnyie-podstavki/'],
+            ['id' => 381, 'menutitle' => 'Чугунные подставки', 'uri' => $domains['pozhsnab'] . 'chugunnyie-podstavki/'],
+            ['id' => 388, 'menutitle' => 'Гидранты', 'uri' => $domains['pozhsnab'] . 'gidrantyi/'],
+            ['id' => 391, 'menutitle' => 'Оросители', 'uri' => $domains['pozhsnab'] . 'orositeli/'],
         ]
     ],
     [
@@ -131,7 +152,7 @@ $categories = [
         'id' => 584,
         'menutitle' => 'Кабель и провод',
         'category_icon' => 'assets/images/categories/common/icons/kabel.png',
-        'uri' => $domains['web'] . $modx->makeUrl(584),
+        'uri' => $domains['web'] . 'kabel-i-provod/',
         'children' => [
             ['id' => 585, 'menutitle' => 'Кабели связи', 'uri' => $domains['web'] . 'kabeli-svyazi/'],
             ['id' => 586, 'menutitle' => 'Провода установочные', 'uri' => $domains['web'] . 'provoda-ustanovochnye/'],
