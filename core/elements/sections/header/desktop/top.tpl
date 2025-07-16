@@ -10,7 +10,7 @@
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#location"
             ></use>
           </svg>
-          <span class="text-dashed" data-city-changer-select-value></span>
+          <span class="text-dashed w-content" data-city-changer-select-value></span>
           <svg width="10" height="10" class="primary-stroke" stroke-width="2">
             <use
               xlink:href="/assets/template/icons/sprite.svg?v={"file_version"|config}#icon-arrow-down"
