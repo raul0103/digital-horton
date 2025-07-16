@@ -66,6 +66,7 @@
 .fs-24,.fs-24 *{font-size: 24px;}
 .fs-17-13{ font-size: 17px; @media (max-width: $bp-md) { font-size: 13px; } }
 .fs-21-15,.fs-21-15 *{ font-size: 21px; @media (max-width: $bp-md) { font-size: 15px; } }
+.fs-21-15-13{ font-size: 21px; @media (max-width: $bp-md) { font-size: 15px; } @media (max-width: $bp-xs) { font-size: 13px!important; }}
 .fs-24-12{ font-size: 24px; @media (max-width: $bp-md) { font-size: 12px; } }
 .fs-24-17{ font-size: 24px; @media (max-width: $bp-md) { font-size: 17px; } }
 .fs-24-17-13{ font-size: 24px; @media (max-width: $bp-md) { font-size: 17px; } @media (max-width: $bp-xs) { font-size: 13px!important; }}

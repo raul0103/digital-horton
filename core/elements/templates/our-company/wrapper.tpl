@@ -79,7 +79,7 @@
 </div>
 
     {include "file:modules/reviews/chunks/wrapper.tpl"}
-    {include "file:sections/our-clients/wrapper.tpl"}
+    {*include "file:sections/our-clients/wrapper.tpl"*}
     {include "file:sections/big-form/wrapper.tpl"}
     {include "file:sections/main-map/wrapper.tpl"}
 {/block}
