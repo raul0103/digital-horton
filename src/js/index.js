@@ -9,6 +9,7 @@ import "./modules/onchange.js";
 import "./modules/stats.js";
 import "./modules/showScrollelements.js";
 import "./modules/header-scroll.js";
+import "./modules/breadcrumbs-slice.js";
 
 import iniSliders from "./modules/swipers";
 import initOpened from "./modules/opened";
