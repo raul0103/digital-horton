@@ -23,7 +23,11 @@ if (count($host_array) > 2) {
     ], ['', '', '', '', '', '', '',], $subdomain);
     foreach ($domains as $key => $url) {
         if ($key == 'web') {
-            $domains[$key] = "https://$subdomain.mz-horton.ru/";
+            if ($subdomain === 'moskva') {
+                $domains[$key] = "https://mz-horton.ru/";
+            } else {
+                $domains[$key] = "https://$subdomain.mz-horton.ru/";
+            }
         } else {
             $domains[$key] = "https://$key-$subdomain.mz-horton.ru/";
         }

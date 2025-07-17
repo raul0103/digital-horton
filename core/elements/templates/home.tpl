@@ -14,7 +14,7 @@
             'data' => $_modx->getPlaceholder('map-resources.categories'),
             'where' => '{"parent":'~$category_id~'}'
         ]}
-        {include "file:sections/categories/wrapper.tpl" categories=$categories sidebar_items=$_modx->getPlaceholder('static-categories')}
+        {include "file:sections/categories/wrapper.tpl" categories=$categories}
     {* Данные для категорий *}
 
     {include "file:sections/about/wrapper.tpl"}

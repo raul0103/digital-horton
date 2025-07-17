@@ -1,12 +1,12 @@
 <div class="categories section-margin">
   <div class="container">
     <div class="categories__row">
-      {if $sidebar_items}
+      {if $_modx->resource.show_categories_sidebar}
         {set $current_url = "@FILE snippets/getCurrentUrl.php" | snippet}
 
         <div class="categories__menu primary-dark-bg">
           <ul>
-            {foreach $sidebar_items as $catalog_item}
+            {foreach $_modx->getPlaceholder('static-categories') as $catalog_item}
             <li>
              
               <a class="{if $catalog_item['uri'] == $current_url}active{/if}" href="{$catalog_item['uri']}">

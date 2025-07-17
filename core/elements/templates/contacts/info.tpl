@@ -2,6 +2,19 @@
   <div class="d-grid gap-24">
     <div class="contacts-block__group">
       <label>Отдел продаж</label>
+      {if $_modx->getPlaceholder('virtual')['region_phone']}
+      <a
+        class="d-flex gap-8 fs-24 fw-700 w-content mb-16"
+        href="tel:{$_modx->getPlaceholder('virtual')['region_phone']}"
+      >
+        <svg width="18" height="18" class="primary-stroke">
+          <use
+            xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#phone"
+          ></use>
+        </svg>
+        {$_modx->getPlaceholder('virtual')['region_phone']}
+      </a>
+      {/if}
       <a
         class="d-flex gap-8 fs-24 fw-700 w-content"
         href="tel:{'phone' | config}"
@@ -83,7 +96,9 @@
             xlink:href="/assets/template/icons/sprite.svg?v={'file_version'|config}#location"
           ></use>
         </svg>
-        <span class="fw-500 fs-18">{$_modx->getPlaceholder('virtual')['address']}</span>
+        <span class="fw-500 fs-18"
+          >{$_modx->getPlaceholder('virtual')['address']}</span
+        >
       </div>
     </div>
   </div>

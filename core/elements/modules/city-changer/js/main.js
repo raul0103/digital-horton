@@ -57,7 +57,7 @@ export default class CityChanger {
     if (!this.elements.select_value) return;
 
     let city = localStorage.getItem(this.config.storage_key);
-    if (!city) city = this.config.default_city;
+    if (!city || CITY_CHANGE == "Москва") city = this.config.default_city;
 
     this.elements.select_value.textContent = city;
   }
@@ -185,17 +185,24 @@ export default class CityChanger {
         localStorage.setItem(this.config.storage_key, find_city.name);
       }
 
-      const subdomain = await window.getChangeCitySubdomain(find_city.name);
+      let subdomain = await window.getChangeCitySubdomain(find_city.name);
+      if (!subdomain) {
+        subdomain = "moskva";
+      }
 
-      if (subdomain)
-        location.href =
-          "https://" +
-          CONTEXT_PREFIX[CONTEXT_KEY] +
-          subdomain +
-          "." +
-          MAIN_HOST +
-          location.pathname;
-      else location.reload();
+      if (subdomain) {
+        if (subdomain == "moskva" && !CONTEXT_PREFIX[CONTEXT_KEY]) {
+          location.href = "https://" + MAIN_HOST + location.pathname;
+        } else {
+          location.href =
+            "https://" +
+            CONTEXT_PREFIX[CONTEXT_KEY] +
+            subdomain +
+            "." +
+            MAIN_HOST +
+            location.pathname;
+        }
+      } else location.reload();
     }
   }
 
